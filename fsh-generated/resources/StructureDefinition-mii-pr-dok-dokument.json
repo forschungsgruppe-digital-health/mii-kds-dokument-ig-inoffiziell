@@ -1,8 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-dokument",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/StructureDefinition/mii-pr-dokument",
-  "name": "MII_PR_DokumentMetadaten",
+  "id": "mii-pr-dok-dokument",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/StructureDefinition/mii-pr-dok-dokument",
+  "version": "1.0.0",
+  "name": "MII_PR_Dok_Dokument",
   "title": "MII Profile Dokument",
   "status": "draft",
   "description": "Erforderliche Metadaten für Dokumentenaustausch in der MII",
@@ -14,11 +15,6 @@
   "derivation": "constraint",
   "differential": {
     "element": [
-      {
-        "id": "DocumentReference.meta",
-        "path": "DocumentReference.meta",
-        "mustSupport": true
-      },
       {
         "id": "DocumentReference.masterIdentifier",
         "path": "DocumentReference.masterIdentifier",

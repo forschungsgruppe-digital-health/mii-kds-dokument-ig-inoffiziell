@@ -11,7 +11,7 @@ description: "Medizininformatik Initiative - Modul Dokument"
 status: draft # draft | active | retired | unknown
 version: 2025.0.0-alpha
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2024+
+copyrightYear: 2025+
 releaseLabel: ci-build
 license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#276

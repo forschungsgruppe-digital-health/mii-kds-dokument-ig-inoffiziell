@@ -65,7 +65,7 @@
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/mii-lm-dokument"
+          "reference": "StructureDefinition/mii-lm-dok"
         },
         "name": "MII LM Dokument",
         "description": "MII Logical Model Modul Dokument",
@@ -74,6 +74,14 @@
       {
         "reference": {
           "reference": "StructureDefinition/mii-pr-dokument"
+        },
+        "name": "MII Profile Dokument",
+        "description": "Erforderliche Metadaten für Dokumentenaustausch in der MII",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-dok-dokument"
         },
         "name": "MII Profile Dokument",
         "description": "Erforderliche Metadaten für Dokumentenaustausch in der MII",
@@ -95,7 +103,7 @@
     "parameter": [
       {
         "code": "copyrightyear",
-        "value": "2024+"
+        "value": "2025+"
       },
       {
         "code": "releaselabel",

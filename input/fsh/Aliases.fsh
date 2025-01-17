@@ -1,3 +1,2 @@
-// Aliasse des MII Dokument-Moduls
-// TODO: Offizielles Kürzel für das Modul Dokument?
-Alias: $mii-lm-dokument = https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/StructureDefinition/LogicalModel/mii-lm-dokument
+// Aliases für Profile des MII Dok-Moduls
+Alias: $mii-lm-dok = https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/StructureDefinition/mii-lm-dok

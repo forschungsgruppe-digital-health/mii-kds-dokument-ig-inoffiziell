@@ -1,11 +1,19 @@
 [
   {
-    "outputFile": "StructureDefinition-mii-lm-dokument.json",
-    "fshName": "MII_LM_Dokument",
+    "outputFile": "StructureDefinition-mii-lm-dok.json",
+    "fshName": "MII_LM_Dok",
     "fshType": "Logical",
     "fshFile": "logical-model/Dokument.fsh",
     "startLine": 1,
-    "endLine": 38
+    "endLine": 31
+  },
+  {
+    "outputFile": "StructureDefinition-mii-pr-dok-dokument.json",
+    "fshName": "MII_PR_Dok_Dokument",
+    "fshType": "Profile",
+    "fshFile": "profiles/_Dokument.fsh",
+    "startLine": 5,
+    "endLine": 129
   },
   {
     "outputFile": "StructureDefinition-mii-pr-dokument.json",

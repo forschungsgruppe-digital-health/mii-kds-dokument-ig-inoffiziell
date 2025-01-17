@@ -30,10 +30,10 @@
        "url" : "https://www.medizininformatik-initiative.de"
      }],
      "bugs": {
-       "url": "https://github.com/medizininformatik-initiative/kerndatensatzmodul-dokument/issues"
+       "url": "https://github.com/medizininformatik-initiative/kerndatensatz-dokument/issues"
      },
      "repository": {
        "type": "git",
-       "url": "https://github.com/medizininformatik-initiative/kerndatensatzmodul-dokument.git"
+       "url": "https://github.com/medizininformatik-initiative/kerndatensatz-dokument.git"
      }
    }
