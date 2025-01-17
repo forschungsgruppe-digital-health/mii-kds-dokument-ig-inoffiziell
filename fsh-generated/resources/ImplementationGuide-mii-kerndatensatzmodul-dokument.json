@@ -62,7 +62,16 @@
     }
   ],
   "definition": {
-    "resource": [],
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-lm-dok"
+        },
+        "name": "MII LM Dokument",
+        "description": "MII Logical Model Modul Dokument",
+        "exampleBoolean": false
+      }
+    ],
     "page": {
       "nameUrl": "toc.html",
       "title": "Table of Contents",
