@@ -120,7 +120,6 @@ Description: "Abstraktes klinisches Basisdokument"
 * content.attachment.language ^definition = "Verwendete Sprache in dem Dokument"
 //* content.attachment.language ^comment = "Bei ISiK Kardinalität min = 1 erforderlich. Wenn Angabe nicht vorhanden, dann Erweiterung 'GrundNichtVorhanden' nutzen"
 //* content.attachment.language.extension contains $fhir-data-absent-reason named GrundNichtVorhanden 0..1
-* content.attachment.url ^comment = "Bei ISiK Kardinalität min = 1 erforderlich. Wenn Angabe nicht vorhanden, dann Erweiterung 'GrundNichtVorhanden' nutzen"
 
 // ISiK 4.0.0: 1..1, MS | MIO 1.6.0: 0..1 (R4 default)
 * content.attachment.creation 0..1 MS
@@ -138,6 +137,8 @@ Description: "Abstraktes klinisches Basisdokument"
 * content.attachment.url 0..1 MS
 * content.attachment.url ^short = "URL zum Inhalt"
 * content.attachment.url ^definition = "Verweis auf den (lokalen) Ablageort des Dokuments"
+//* content.attachment.url ^comment = "Bei MIO Kardinalität min = 1 erforderlich. Wenn Angabe nicht vorhanden, dann Erweiterung 'GrundNichtVorhanden' nutzen"
+//* content.attachment.url.extension contains $fhir-data-absent-reason named GrundNichtVorhanden 0..1
 
 // ISiK 4.0.0: 1..1, MS | MIO 1.6.0 Verweis: 0..1 (R4 default) | MIO 1.6.0 Anhang: 1..1
 * content.attachment.contentType 0..1 MS

@@ -285,7 +285,6 @@
         "path": "DocumentReference.content.attachment.url",
         "short": "URL zum Inhalt",
         "definition": "Verweis auf den (lokalen) Ablageort des Dokuments",
-        "comment": "Bei ISiK Kardinalität min = 1 erforderlich. Wenn Angabe nicht vorhanden, dann Erweiterung 'GrundNichtVorhanden' nutzen",
         "mustSupport": true
       },
       {

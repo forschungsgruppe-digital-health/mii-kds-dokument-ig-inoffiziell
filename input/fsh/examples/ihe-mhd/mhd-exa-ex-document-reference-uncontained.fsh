@@ -6,7 +6,7 @@ Alias: $sct = http://snomed.info/sct
 
 // https://simplifier.net/packages/ihe.iti.mhd/4.2.2/files/2439105
 Instance: ex-DocumentReferenceUnContained
-InstanceOf: DocumentReference
+InstanceOf: MII_PR_Dok_Dokument
 Usage: #example
 * meta.profile = "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UnContained.Comprehensive.DocumentReference"
 * meta.security = $v3-ActReason#HTEST
