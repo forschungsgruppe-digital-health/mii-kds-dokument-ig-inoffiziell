@@ -162,14 +162,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-dokument"
-        },
-        "name": "MII Profile Dokument",
-        "description": "Erforderliche Metadaten für Dokumentenaustausch in der MII",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "Patient/PatientinMusterfrau"
         },
         "name": "PatientinMusterfrau",
