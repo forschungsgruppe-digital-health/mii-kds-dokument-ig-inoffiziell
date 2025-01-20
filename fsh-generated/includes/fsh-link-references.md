@@ -1,3 +1,13 @@
+[783be93b-f22a-43de-a54f-bdca08e2fdbf]: DocumentReference-783be93b-f22a-43de-a54f-bdca08e2fdbf.html
+[BeispielBesuch]: Encounter-BeispielBesuch.html
+[dok-beispiel-client-with-binary-jpeg-example]: DocumentReference-dok-beispiel-client-with-binary-jpeg-example.html
+[dok-beispiel-client-with-binary-jpeg-example-short]: DocumentReference-dok-beispiel-client-with-binary-jpeg-example-short.html
+[dok-beispiel-client-with-binary-pdf-example]: DocumentReference-dok-beispiel-client-with-binary-pdf-example.html
+[dok-beispiel-client-with-binary-pdf-example-short]: DocumentReference-dok-beispiel-client-with-binary-pdf-example-short.html
+[ex-DocumentReferenceUnContained]: DocumentReference-ex-DocumentReferenceUnContained.html
+[ex-DocumentReferenceUnContainedFully]: DocumentReference-ex-DocumentReferenceUnContainedFully.html
+[ex-patient]: Patient-ex-patient.html
 [MII_LM_Dok]: StructureDefinition-mii-lm-dok.html
-[MII_PR_DokumentMetadaten]: StructureDefinition-mii-pr-dokument.html
 [MII_PR_Dok_Dokument]: StructureDefinition-mii-pr-dok-dokument.html
+[MII_PR_DokumentMetadaten]: StructureDefinition-mii-pr-dokument.html
+[PatientinMusterfrau]: Patient-PatientinMusterfrau.html

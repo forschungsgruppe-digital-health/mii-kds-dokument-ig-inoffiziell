@@ -1,0 +1,136 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "ex-DocumentReferenceUnContainedFully",
+  "meta": {
+    "profile": [
+      "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UnContained.Comprehensive.DocumentReference"
+    ],
+    "security": [
+      {
+        "code": "HTEST",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+      }
+    ]
+  },
+  "masterIdentifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:oid:1.2.840.113556.1.8000.2554.58783.21864.3474.19410.44358.58254.41281.46340"
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:0c287d32-01e3-4d87-9953-9fcc9404eb21"
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "11369-6",
+          "system": "http://loinc.org"
+        }
+      ]
+    }
+  ],
+  "author": [
+    {
+      "reference": "Practitioner/ex-practitioner"
+    }
+  ],
+  "relatesTo": [
+    {
+      "code": "appends",
+      "target": {
+        "reference": "DocumentReference/ex-documentreference"
+      }
+    }
+  ],
+  "securityLabel": [
+    {
+      "coding": [
+        {
+          "code": "N",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "text/plain",
+        "language": "en",
+        "url": "http://example.com/nowhere.txt",
+        "size": 0,
+        "hash": "ZGEzOWEzZWU1ZTZiNGIwZDMyNTViZmVmOTU2MDE4OTBhZmQ4MDcwOQ==",
+        "title": "DocumentReference for Comprehensive minimally filled metadata",
+        "creation": "2020-12-31T23:50:50-05:00"
+      },
+      "format": {
+        "code": "urn:ihe:iti:xds-sd:text:2008",
+        "system": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"
+      }
+    }
+  ],
+  "context": {
+    "event": [
+      {
+        "coding": [
+          {
+            "code": "ACCTRECEIVABLE",
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+          }
+        ]
+      }
+    ],
+    "period": {
+      "start": "2020-12-31T23:50:50-05:00",
+      "end": "2020-12-31T23:50:50-05:00"
+    },
+    "related": [
+      {
+        "identifier": {
+          "system": "urn:ietf:rfc:3986",
+          "value": "urn:oid:1.2.840.113556.1.8000.2554.17917.46600.21181.17878.33419.62048.57128.2759"
+        }
+      }
+    ],
+    "facilityType": {
+      "coding": [
+        {
+          "code": "82242000",
+          "system": "http://snomed.info/sct"
+        }
+      ]
+    },
+    "practiceSetting": {
+      "coding": [
+        {
+          "code": "408467006",
+          "system": "http://snomed.info/sct"
+        }
+      ]
+    },
+    "sourcePatientInfo": {
+      "reference": "Patient/ex-patient"
+    }
+  },
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "code": "55107-7",
+        "system": "http://loinc.org"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/ex-patient"
+  },
+  "date": "2020-12-31T23:50:50-05:00",
+  "authenticator": {
+    "reference": "Practitioner/ex-practitioner"
+  },
+  "description": "Example of a Comprehensive DocumentReference resource. This is minimally filled for all mandatory elements."
+}

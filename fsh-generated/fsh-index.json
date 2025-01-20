@@ -1,5 +1,85 @@
 [
   {
+    "outputFile": "DocumentReference-783be93b-f22a-43de-a54f-bdca08e2fdbf.json",
+    "fshName": "783be93b-f22a-43de-a54f-bdca08e2fdbf",
+    "fshType": "Instance",
+    "fshFile": "examples/kbv-mio/mio-exa-783be93b-f22a-43de-a54f-bdca08e2fdbf.fsh",
+    "startLine": 8,
+    "endLine": 37
+  },
+  {
+    "outputFile": "DocumentReference-dok-beispiel-client-with-binary-jpeg-example-short.json",
+    "fshName": "dok-beispiel-client-with-binary-jpeg-example-short",
+    "fshType": "Instance",
+    "fshFile": "examples/gematik-isik/isik-exa-dok-beispiel-client-with-binary-jpeg-example-short.fsh",
+    "startLine": 9,
+    "endLine": 28
+  },
+  {
+    "outputFile": "DocumentReference-dok-beispiel-client-with-binary-jpeg-example.json",
+    "fshName": "dok-beispiel-client-with-binary-jpeg-example",
+    "fshType": "Instance",
+    "fshFile": "examples/gematik-isik/isik-exa-dok-beispiel-client-with-binary-jpeg-example.fsh",
+    "startLine": 9,
+    "endLine": 28
+  },
+  {
+    "outputFile": "DocumentReference-dok-beispiel-client-with-binary-pdf-example-short.json",
+    "fshName": "dok-beispiel-client-with-binary-pdf-example-short",
+    "fshType": "Instance",
+    "fshFile": "examples/gematik-isik/isik-exa-dok-beispiel-client-with-binary-pdf-example-short.fsh",
+    "startLine": 9,
+    "endLine": 28
+  },
+  {
+    "outputFile": "DocumentReference-dok-beispiel-client-with-binary-pdf-example.json",
+    "fshName": "dok-beispiel-client-with-binary-pdf-example",
+    "fshType": "Instance",
+    "fshFile": "examples/gematik-isik/isik-exa-dok-beispiel-client-with-binary-pdf-example.fsh",
+    "startLine": 9,
+    "endLine": 28
+  },
+  {
+    "outputFile": "DocumentReference-ex-DocumentReferenceUnContained.json",
+    "fshName": "ex-DocumentReferenceUnContained",
+    "fshType": "Instance",
+    "fshFile": "examples/ihe-mhd/mhd-exa-ex-document-reference-uncontained.fsh",
+    "startLine": 8,
+    "endLine": 31
+  },
+  {
+    "outputFile": "DocumentReference-ex-DocumentReferenceUnContainedFully.json",
+    "fshName": "ex-DocumentReferenceUnContainedFully",
+    "fshType": "Instance",
+    "fshFile": "examples/ihe-mhd/mhd-exa-ex-document-reference-uncontained-fully.fsh",
+    "startLine": 9,
+    "endLine": 45
+  },
+  {
+    "outputFile": "Encounter-BeispielBesuch.json",
+    "fshName": "BeispielBesuch",
+    "fshType": "Instance",
+    "fshFile": "examples/gematik-isik/isik-exa-beispiel-besuch.fsh",
+    "startLine": 15,
+    "endLine": 50
+  },
+  {
+    "outputFile": "Patient-PatientinMusterfrau.json",
+    "fshName": "PatientinMusterfrau",
+    "fshType": "Instance",
+    "fshFile": "examples/gematik-isik/isik-exa-patientin-musterfrau.fsh",
+    "startLine": 5,
+    "endLine": 55
+  },
+  {
+    "outputFile": "Patient-ex-patient.json",
+    "fshName": "ex-patient",
+    "fshType": "Instance",
+    "fshFile": "examples/ihe-mhd/mhd-exa-ex-patient.fsh",
+    "startLine": 4,
+    "endLine": 30
+  },
+  {
     "outputFile": "StructureDefinition-mii-lm-dok.json",
     "fshName": "MII_LM_Dok",
     "fshType": "Logical",
@@ -11,9 +91,9 @@
     "outputFile": "StructureDefinition-mii-pr-dok-dokument.json",
     "fshName": "MII_PR_Dok_Dokument",
     "fshType": "Profile",
-    "fshFile": "profiles/_Dokument.fsh",
-    "startLine": 5,
-    "endLine": 129
+    "fshFile": "profiles/mii-pr-dok-dokument.fsh",
+    "startLine": 1,
+    "endLine": 195
   },
   {
     "outputFile": "StructureDefinition-mii-pr-dokument.json",

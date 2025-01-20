@@ -197,7 +197,7 @@
         "short": "Beschreibung des Dokuments",
         "definition": "Menschenlesbare Beschreibung zum verwiesenen Dokuments",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "string"
@@ -396,7 +396,7 @@
         "mapping": [
           {
             "identity": "mii-map-dok",
-            "map": "DocumentReference.format"
+            "map": "DocumentReference.attachment.contentType"
           }
         ]
       },
@@ -472,7 +472,7 @@
         "mapping": [
           {
             "identity": "mii-map-dok",
-            "map": "DocumentReference.context.facilityType"
+            "map": "DocumentReference.context.practiceSetting"
           }
         ]
       },
@@ -510,7 +510,7 @@
         "mapping": [
           {
             "identity": "mii-map-dok",
-            "map": "DocumentReference.context.practiceSetting"
+            "map": "DocumentReference.context.facilityType"
           }
         ]
       }

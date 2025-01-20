@@ -43,6 +43,18 @@
       "id": "de_gematik_isik_dokumentenaustausch"
     },
     {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.fall",
+      "version": "2025.0.0",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-fall/ImplementationGuide/mii-ig-fall",
+      "id": "de_medizininformatikinitiative_kerndatensatz_fall"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.person",
+      "version": "2025.0.0",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/core/modul-person/ImplementationGuide/mii-ig-person",
+      "id": "de_medizininformatikinitiative_kerndatensatz_person"
+    },
+    {
       "packageId": "kbv.basis",
       "version": "1.6.0",
       "uri": "http://fhir.org/packages/kbv.basis/ImplementationGuide/kbv.basis",
@@ -65,10 +77,87 @@
     "resource": [
       {
         "reference": {
+          "reference": "DocumentReference/783be93b-f22a-43de-a54f-bdca08e2fdbf"
+        },
+        "name": "783be93b-f22a-43de-a54f-bdca08e2fdbf",
+        "description": "Ultraschallbefund vom 01.09.2023",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/StructureDefinition/mii-pr-dok-dokument"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/BeispielBesuch"
+        },
+        "name": "BeispielBesuch",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/dok-beispiel-client-with-binary-jpeg-example"
+        },
+        "name": "dok-beispiel-client-with-binary-jpeg-example",
+        "description": "Fotodokumentation Operation vom 31.12.21",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/StructureDefinition/mii-pr-dok-dokument"
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/dok-beispiel-client-with-binary-jpeg-example-short"
+        },
+        "name": "dok-beispiel-client-with-binary-jpeg-example-short",
+        "description": "Fotodokumentation Operation vom 31.12.21",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/StructureDefinition/mii-pr-dok-dokument"
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/dok-beispiel-client-with-binary-pdf-example"
+        },
+        "name": "dok-beispiel-client-with-binary-pdf-example",
+        "description": "Molekularpathologiebefund vom 31.12.21",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/StructureDefinition/mii-pr-dok-dokument"
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/dok-beispiel-client-with-binary-pdf-example-short"
+        },
+        "name": "dok-beispiel-client-with-binary-pdf-example-short",
+        "description": "Molekularpathologiebefund vom 31.12.21",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/StructureDefinition/mii-pr-dok-dokument"
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/ex-DocumentReferenceUnContained"
+        },
+        "name": "ex-DocumentReferenceUnContained",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/ex-DocumentReferenceUnContainedFully"
+        },
+        "name": "ex-DocumentReferenceUnContainedFully",
+        "description": "Example of a Comprehensive DocumentReference resource. This is minimally filled for all mandatory elements.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/ex-patient"
+        },
+        "name": "ex-patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-lm-dok"
         },
         "name": "MII LM Dokument",
         "description": "MII Logical Model Modul Dokument",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-dok-dokument"
+        },
+        "name": "MII PR Dok Basisdokument",
+        "description": "Abstraktes klinisches Basisdokument",
         "exampleBoolean": false
       },
       {
@@ -81,11 +170,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-dok-dokument"
+          "reference": "Patient/PatientinMusterfrau"
         },
-        "name": "MII Profile Dokument",
-        "description": "Erforderliche Metadaten für Dokumentenaustausch in der MII",
-        "exampleBoolean": false
+        "name": "PatientinMusterfrau",
+        "exampleBoolean": true
       }
     ],
     "page": {
