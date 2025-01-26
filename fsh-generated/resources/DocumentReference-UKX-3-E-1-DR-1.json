@@ -1,0 +1,86 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "UKX-3-E-1-DR-1",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/StructureDefinition/mii-pr-dok-dokument"
+    ]
+  },
+  "type": {
+    "coding": [
+      {
+        "version": "2024",
+        "code": "AD010110",
+        "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+        "display": "Ärztlicher Verlaufsbericht"
+      },
+      {
+        "version": "1.4.0",
+        "code": "BERI",
+        "system": "http://ihe-d.de/CodeSystem/IHEXDStypeCode",
+        "display": "Arztberichte"
+      }
+    ],
+    "text": "Ärztlicher Verlaufsbericht"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "version": "1.4.0",
+          "code": "BRI",
+          "system": "http://ihe-d.de/CodeSystems/IHEXDSclassCode",
+          "display": "Brief"
+        }
+      ],
+      "text": "Brief"
+    }
+  ],
+  "securityLabel": [
+    {
+      "coding": [
+        {
+          "version": "4.0.1",
+          "code": "L",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+          "display": "low"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "version": "4.0.1",
+          "code": "HTEST",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "display": "test health data"
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "text/plain",
+        "language": "de_DE",
+        "data": "77u/QVJDT1MtS0xJTklLIEZMRU5TQlVSRwpBa2FkZW1pc2NoZXMgTGVocmtyYW5rZW5oYXVzCmRlciBPdHRvLVdhYWxrZXMtVW5pdmVyc2l0w6R0IEJvcmt1bQpVcm9sb2dpc2NoZSBBYnRlaWx1bmcKQ0hFRkFSWlQ6IERSLiBNRUQuIEguIEJMQVNFTlNURUlOCgpIZXJybgpIZWxnZSBLbGFiYXV0ZXIKVXJvbG9nZQpGcmllc2lzY2hlIFN0ci4gMjEgYQoyNDkzNyBGbGVuc2J1cmcKIAoKRmxlbnNidXJnLCAyNy4gTcOkcnogMjAyNQpSb3RlIFN0ci4gMyAKVGVsZWZvbiAoMDQ2MSkgNzA4IC0gMjIzCgoKQmV0ci46IEFzZ2VyIEJhYXN0cnVwLCBnZWIuIDUuNy41NCwgU2NobGVzd2lnZXIgU3RyLiA5NWEsIDI0OTQxIEZsZW5zYnVyZyAKCgpTZWhyIGdlZWhydGUgSGVyciBLb2xsZWdlIEtsYWJhdXRlciEKCkhyLiBCYWFzdHJ1cCBBc2dlciB3YXIgdm9tIDguMy4gLSAyMi4zLjIwMjUgYmVpIHVucyBpbiBzdGF0aW9uw6RyZXIgQmVoYW5kbHVuZy4KCkRpYWdub3NlbjogTmFyYmlnZSBCbGFzYW5oYWxzc3Rlbm9zZS4gbmFjaCBQcm9zdGF0YS1BZGVub20tRW51a2xlYXRpbyAyMDA2LgpCZWthbm50ZSBCbGluZGhlaXQgbmFjaCBNYWN1bGFkZWcuIGJkcy4KSGVyemluc3VmZml6aWVuegoKS2xlaW5lcyBQcm9zdGF0YS1DYSBTdGFkaXVtIHBUMWEswrcgRzEuCgoxIFRhZyB2b3IgZGVyIHN0YXRpb27DpHJlbiBBdWZuYWhtZSB3YXIgZWluZSBTYWNoc2XCrVNwYWx0dW5nIGRlciBuYXJiaWdlbiBTdGVub3NlIGR1cmNoZ2Vmw7xocnQgd29yZGVuLiBEZXIgS2F0aGV0ZXIgd2FyIGhlcmF1c2dlZmFsbGVuLiBOYWNoIG5vY2htYWxpZ2VyIHZvcsO8YmVyZ2VoZW5kZXIgS2F0aGV0ZXJ2ZXJzNnJndW5nIGJldHJ1ZyBkZXIgUmVzdHVyaW7Ct2FiZXIgaW1tZXIgbm9jaCAxNTAgbWwuLCBzbyBkYcOfIHdpciB1bnMgenVywrdFbGVrdHJvLVJlc2VrdGlvbiBlbnRzY2hsb3NzZW4gaGFiZW4uCgpEaWUgcHLDpG9wZXJhdGl2ZW4gQmx1dHdlcnRlOiAgUFNBIDAsNyBuZy9tbCwgS3JlYXRpbmluCjEsNSwgSGFybnN0b2ZmIDUxIG1nJSwgRWxla3Ryb2x5dGUgYXVzZ2VnbGljaGVuLiBHZXJpbm51bmdzdmVyaGFsdGVuIHVuYXVmZsOkbGxpZy4KClRoZXJhcGllIHVuZCBWZXJsYXVmOgoKUmVzZWt0aW9uIGRlcyBCbGFzZW5oYWxzZXMgYW0gMTUuMy45NS4gSGlzdG9sb2dpc2NoIHplaWd0ZSBzaWNoIGF1w59lciBOYXJiZW5nZXdlYmUgZWluIHdpbnppZ2VzLCBndXQgZGlmZmVyZW56aWVydGVzIENhcmNpbm9tLiBEaWVzZW4gQmVmdW5kIGhhYmVuIHdpciBkZW0gUGF0aWVudGVuIHZvcmVudGhhbHRlbiwgZGEgZWluZSBUaGVyYXBpZSBhdWZncnVuZCBkZXMgZm9ydGdlc2Nocml0dGVuZW4gQWx0ZXJzIHNpY2hlciBuaWNodCBlcmZvcmRlcmxpY2ggaXN0LgoKTmFjaCBLYXRoZXRlci1FbnRmZXJudW5nIHJlc3RoYXJuZnJlaWUgQmxhc2VuZW50bGVlcnVuZy4gRGllIE1lZGlrYXRpb24gdm9uIEFkYWxhdCB1bmQgTGFuaXRvcCBzb3dpZSBBdWdlbnRyb3BmZW4gCnd1cmRlIGhpZXIgd2VpdGVyZ2Vmw7xocnQuCgpNaXQgZnJldW5kbGljaGVuIEdyw7zDn2VuIGJpbiBpY2gKSWhyCgpEci4gQmxhc2Vuc3RlaW4KQ2hlZmFyenQK",
+        "size": 1590,
+        "title": "Baastrup.txt",
+        "creation": "2024-02-26T09:34:21+01:00"
+      }
+    }
+  ],
+  "context": {
+    "encounter": [
+      {
+        "reference": "Encounter/UKX-3-E-1"
+      }
+    ]
+  },
+  "status": "current",
+  "docStatus": "final",
+  "subject": {
+    "reference": "Patient/UKX-3"
+  },
+  "date": "2025-01-21T13:39:02.997+01:00"
+}

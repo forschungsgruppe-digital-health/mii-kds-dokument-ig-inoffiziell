@@ -2,7 +2,7 @@ Alias: $AufnahmegrundErsteUndZweiteStelle = http://fhir.de/CodeSystem/dkgev/Aufn
 Alias: $AufnahmegrundDritteStelle = http://fhir.de/CodeSystem/dkgev/AufnahmegrundDritteStelle
 Alias: $AufnahmegrundVierteStelle = http://fhir.de/CodeSystem/dkgev/AufnahmegrundVierteStelle
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
+Alias: $v3-act-code = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $kontaktart-de = http://fhir.de/CodeSystem/kontaktart-de
 Alias: $Kontaktebene = http://fhir.de/CodeSystem/Kontaktebene
 Alias: $Fachabteilungsschluessel = http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel
@@ -26,7 +26,7 @@ Usage: #example
 * identifier.system = "https://test.krankenhaus.de/fhir/sid/fallnr"
 * identifier.value = "0123456789"
 * status = #finished
-* class = $v3-ActCode#IMP
+* class = $v3-act-code#IMP
 * type[0] = $kontaktart-de#operation
 * type[+] = $Kontaktebene#abteilungskontakt
 * serviceType = $Fachabteilungsschluessel#0100

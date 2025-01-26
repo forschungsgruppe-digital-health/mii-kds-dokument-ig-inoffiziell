@@ -1,8 +1,8 @@
 Profile: MII_PR_Dok_Dokument
 Parent: DocumentReference
 Id: mii-pr-dok-dokument
-Title: "MII PR Dok Basisdokument"
-Description: "Abstraktes klinisches Basisdokument"
+Title: "MII PR Dok Dokument"
+Description: "Klinisches Dokument inkl. zugehöriger Metadaten"
 * insert PR_Header
 
 // ISiK 4.0.0: 1..1, MS | MIO 1.6.0: 0..1 (R4 default)
@@ -35,20 +35,20 @@ Description: "Abstraktes klinisches Basisdokument"
 * type.coding ^slicing.discriminator.type = #pattern
 * type.coding ^slicing.discriminator.path = "$this"
 * type.coding ^slicing.rules = #open
+* type.coding ^slicing.description = "Slice für Art des verwiesenen Dokument"
+* type.coding ^slicing.ordered = false
 
 // ISiK 4.0.0: 1..1, MS, DVMD KDL (required) | MIO 1.6.0: n.v.
 * type.coding contains KDL 0..1 MS
-* type.coding[KDL] from $dvmd-kdl (required)
+* type.coding[KDL] from $dvmd-kdl-vs (required)
 * type.coding[KDL].system 1..1 MS
 * type.coding[KDL].code 1..1 MS
-* type.coding[KDL].display 1..1 MS
 
 // ISiK 4.0.0: 0..1, MS, IHEXDStypeCode (required) | MIO 1.6.0: 0..1, IHEXDStypeCode (required)
 * type.coding contains XDS 0..1 MS
-* type.coding[XDS] from $ihe-xds-type-code (required)
+* type.coding[XDS] from $ihe-xds-type-code-vs (required)
 * type.coding[XDS].system 1..1 MS
 * type.coding[XDS].code 1..1 MS
-* type.coding[XDS].display 1..1 MS
 
 // ISiK 4.0.0: 0..1, MS, Slicing XDS | MIO 1.6.0: 0..* (R4 default), Slicing XDS
 * category 0..* MS
@@ -59,13 +59,15 @@ Description: "Abstraktes klinisches Basisdokument"
 * category.coding ^slicing.discriminator.type = #pattern
 * category.coding ^slicing.discriminator.path = "$this"
 * category.coding ^slicing.rules = #open
+* category.coding ^slicing.description = "Slice für Kategorie des verwiesenen Dokuments"
+* category.coding ^slicing.ordered = false
+
 
 // ISiK 4.0.0: 1..1, MS, IHEXDSclassCode (required) | MIO 1.6.0: 0..1, IHEXDSclassCode (required)
 * category.coding contains XDS 0..1 MS
-* category.coding[XDS] from $ihe-xds-class-code (required)
+* category.coding[XDS] from $ihe-xds-class-code-vs (required)
 * category.coding[XDS].system 1..1 MS
 * category.coding[XDS].code 1..1 MS
-* category.coding[XDS].display 1..1 MS
 
 // ISiK 4.0.0: 1..1, MS | MIO 1.6.0: 0..1 (R4 default), Extended Custom Profiles
 * subject 0..1 MS
@@ -152,6 +154,7 @@ Description: "Abstraktes klinisches Basisdokument"
 
 // ISiK 4.0.0: 1..1, MS, IHEXDSformatCodeDE (required) | MIO 1.6.0: 0..1 (R4 default)
 * content.format 0..1 MS
+* content.format.code from $ihe-xds-format-code-vs (extensible)
 //* content.format ^comment = "Bei ISiK Kardinalität min = 1 erforderlich. Wenn Angabe nicht vorhanden, dann Erweiterung 'GrundNichtVorhanden' nutzen"
 //* content.format.extension contains $fhir-data-absent-reason named GrundNichtVorhanden 0..1
 
@@ -180,6 +183,18 @@ Description: "Abstraktes klinisches Basisdokument"
 * context.practiceSetting 0..1 MS
 * context.practiceSetting ^short = "Klinisches Fachgebiet zum Vorgang"
 * context.practiceSetting ^definition = "Klinisches Fachgebiet, in dem Dokumenteninhalt erstellt wurde"
+
+* context.practiceSetting.coding ^slicing.discriminator.type = #pattern
+* context.practiceSetting.coding ^slicing.discriminator.path = "$this"
+* context.practiceSetting.coding ^slicing.rules = #open
+* context.practiceSetting.coding ^slicing.description = "Slice für IHE XDS-basierte klinische Fachgebiete"
+* context.practiceSetting.coding ^slicing.ordered = false
+
+* context.practiceSetting.coding contains XDS 0..1 MS
+* context.practiceSetting.coding[XDS] from $ihe-xds-practice-setting-code-vs (required)
+* context.practiceSetting.coding[XDS].system 1..1 MS
+* context.practiceSetting.coding[XDS].code 1..1 MS
+
 //* context.practiceSetting ^comment = "Bei ISiK Kardinalität min = 1 erforderlich. Wenn Angabe nicht vorhanden, dann Erweiterung 'GrundNichtVorhanden' nutzen"
 //* context.practiceSetting.extension contains $fhir-data-absent-reason named GrundNichtVorhanden 0..1
 
@@ -192,5 +207,17 @@ Description: "Abstraktes klinisches Basisdokument"
 * context.facilityType 0..1 MS
 * context.facilityType ^short = "Art der Einrichtung zum Vorgang"
 * context.facilityType ^definition = "Art der Einrichtung, in der die Handlung oder Prozedur am Patienten erfolgte"
+
+* context.facilityType.coding ^slicing.discriminator.type = #pattern
+* context.facilityType.coding ^slicing.discriminator.path = "$this"
+* context.facilityType.coding ^slicing.rules = #open
+* context.facilityType.coding ^slicing.description = "Slice für IHE XDS-basierte Einrichtungsart"
+* context.facilityType.coding ^slicing.ordered = false
+
+* context.facilityType.coding contains XDS 0..1 MS
+* context.facilityType.coding[XDS] from $ihe-xds-healthcare-facility-type-code-vs (required)
+* context.facilityType.coding[XDS].system 1..1 MS
+* context.facilityType.coding[XDS].code 1..1 MS
+
 //* context.facilityType ^comment = "Bei ISiK Kardinalität min = 1 erforderlich. Wenn Angabe nicht vorhanden, dann Erweiterung 'GrundNichtVorhanden' nutzen"
 //* context.facilityType.extension contains $fhir-data-absent-reason named GrundNichtVorhanden 0..1

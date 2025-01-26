@@ -4,7 +4,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/StructureDefinition/mii-pr-dok-dokument",
   "version": "2025.0.0-ballot",
   "name": "MII_PR_Dok_Dokument",
-  "title": "MII PR Dok Basisdokument",
+  "title": "MII PR Dok Dokument",
   "status": "draft",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Abstraktes klinisches Basisdokument",
+  "description": "Klinisches Dokument inkl. zugehöriger Metadaten",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -77,7 +77,9 @@
               "path": "$this"
             }
           ],
-          "rules": "open"
+          "rules": "open",
+          "description": "Slice für Art des verwiesenen Dokument",
+          "ordered": false
         }
       },
       {
@@ -101,12 +103,6 @@
       {
         "id": "DocumentReference.type.coding:KDL.code",
         "path": "DocumentReference.type.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.type.coding:KDL.display",
-        "path": "DocumentReference.type.coding.display",
         "min": 1,
         "mustSupport": true
       },
@@ -135,12 +131,6 @@
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.type.coding:XDS.display",
-        "path": "DocumentReference.type.coding.display",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
         "id": "DocumentReference.category",
         "path": "DocumentReference.category",
         "short": "Kategorien des Dokuments",
@@ -157,7 +147,9 @@
               "path": "$this"
             }
           ],
-          "rules": "open"
+          "rules": "open",
+          "description": "Slice für Kategorie des verwiesenen Dokuments",
+          "ordered": false
         }
       },
       {
@@ -181,12 +173,6 @@
       {
         "id": "DocumentReference.category.coding:XDS.code",
         "path": "DocumentReference.category.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.category.coding:XDS.display",
-        "path": "DocumentReference.category.coding.display",
         "min": 1,
         "mustSupport": true
       },
@@ -300,6 +286,14 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.content.format.code",
+        "path": "DocumentReference.content.format.code",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://ihe-d.de/ValueSets/IHEXDSformatCodeDE"
+        }
+      },
+      {
         "id": "DocumentReference.context",
         "path": "DocumentReference.context",
         "short": "Erzeugungskontext des Dokuments",
@@ -349,10 +343,88 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.context.facilityType.coding",
+        "path": "DocumentReference.context.facilityType.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "description": "Slice für IHE XDS-basierte Einrichtungsart",
+          "ordered": false
+        }
+      },
+      {
+        "id": "DocumentReference.context.facilityType.coding:XDS",
+        "path": "DocumentReference.context.facilityType.coding",
+        "sliceName": "XDS",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode"
+        }
+      },
+      {
+        "id": "DocumentReference.context.facilityType.coding:XDS.system",
+        "path": "DocumentReference.context.facilityType.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.facilityType.coding:XDS.code",
+        "path": "DocumentReference.context.facilityType.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.context.practiceSetting",
         "path": "DocumentReference.context.practiceSetting",
         "short": "Klinisches Fachgebiet zum Vorgang",
         "definition": "Klinisches Fachgebiet, in dem Dokumenteninhalt erstellt wurde",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.practiceSetting.coding",
+        "path": "DocumentReference.context.practiceSetting.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "description": "Slice für IHE XDS-basierte klinische Fachgebiete",
+          "ordered": false
+        }
+      },
+      {
+        "id": "DocumentReference.context.practiceSetting.coding:XDS",
+        "path": "DocumentReference.context.practiceSetting.coding",
+        "sliceName": "XDS",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode"
+        }
+      },
+      {
+        "id": "DocumentReference.context.practiceSetting.coding:XDS.system",
+        "path": "DocumentReference.context.practiceSetting.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.practiceSetting.coding:XDS.code",
+        "path": "DocumentReference.context.practiceSetting.coding.code",
+        "min": 1,
         "mustSupport": true
       }
     ]

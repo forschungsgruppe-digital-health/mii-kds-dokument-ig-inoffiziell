@@ -1,10 +1,10 @@
-Alias: $v3-ActReason = http://terminology.hl7.org/CodeSystem/v3-ActReason
+Alias: $v3-act-reason = http://terminology.hl7.org/CodeSystem/v3-ActReason
 
 // https://simplifier.net/packages/ihe.iti.mhd/4.2.2/files/2439123
 Instance: ex-patient
 InstanceOf: Patient
 Usage: #example
-* meta.security = $v3-ActReason#HTEST
+* meta.security = $v3-act-reason#HTEST
 * name[0].use = #usual
 * name[=].family = "Schmidt"
 * name[=].given = "John"
