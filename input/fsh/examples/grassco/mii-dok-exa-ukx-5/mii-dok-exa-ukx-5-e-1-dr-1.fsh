@@ -1,5 +1,5 @@
 Instance: UKX-5-E-1-DR-1
-InstanceOf: MII_PR_Dok_Dokument
+InstanceOf: MII_PR_Dokument_Dokument
 Usage: #example
 * status = #current
 * docStatus = #final

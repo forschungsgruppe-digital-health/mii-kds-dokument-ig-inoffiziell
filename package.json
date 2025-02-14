@@ -1,7 +1,7 @@
 {
   "name": "de.medizininformatikinitiative.kerndatensatz.dokument",
   "version": "2025.0.0-alpha",
-  "description": "Medizininformatik Initiative - Modul Dokument",
+  "description": "Medizininformatik Initiative - Erweiterungsmodul Dokument",
   "keywords": [
     "MII",
     "KDS",
@@ -9,8 +9,8 @@
   ],
   "type": "IG",
   "license": "CC0-1.0",
-  "canonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/ImplementationGuide/mii-ig-dok-de",
-  "url": "https://simplifier.net/mii-erweiterungsmodul-dokument",
+  "canonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/ImplementationGuide/mii-ig-dokument",
+  "url": "https://simplifier.net/mii-erweiterungsmodul-dokument-2025",
   "title": "MII IG Dokument",
   "author": "Medizininformatik Initiative",
   "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",

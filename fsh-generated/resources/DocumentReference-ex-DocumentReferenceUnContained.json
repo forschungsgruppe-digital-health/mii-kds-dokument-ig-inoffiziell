@@ -3,7 +3,7 @@
   "id": "ex-DocumentReferenceUnContained",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/StructureDefinition/mii-pr-dok-dokument",
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument",
       "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UnContained.Comprehensive.DocumentReference"
     ],
     "security": [

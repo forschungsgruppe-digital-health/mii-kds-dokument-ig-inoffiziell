@@ -352,18 +352,18 @@
     "endLine": 30
   },
   {
-    "outputFile": "StructureDefinition-mii-lm-dok.json",
-    "fshName": "MII_LM_Dok",
+    "outputFile": "StructureDefinition-mii-lm-dokument.json",
+    "fshName": "MII_LM_Dokument",
     "fshType": "Logical",
-    "fshFile": "logical-model/mii-lm-dok.fsh",
+    "fshFile": "logical-model/mii-lm-dokument.fsh",
     "startLine": 1,
     "endLine": 31
   },
   {
-    "outputFile": "StructureDefinition-mii-pr-dok-dokument.json",
-    "fshName": "MII_PR_Dok_Dokument",
+    "outputFile": "StructureDefinition-mii-pr-dokument-dokument.json",
+    "fshName": "MII_PR_Dokument_Dokument",
     "fshType": "Profile",
-    "fshFile": "profiles/mii-pr-dok-dokument.fsh",
+    "fshFile": "profiles/mii-pr-dokument-dokument.fsh",
     "startLine": 1,
     "endLine": 220
   }

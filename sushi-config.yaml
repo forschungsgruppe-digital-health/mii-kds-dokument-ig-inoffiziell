@@ -3,14 +3,15 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: mii-kerndatensatzmodul-dokument
-canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-dok
-name: MII_IG_Dokument_DE
+id: mii-ig-dokument
+canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument
+name: MII_IG_Dokument
 title: "MII IG Dokument"
-description: "Medizininformatik Initiative - Modul Dokument"
+description: "Medizininformatik Initiative - Erweiterungsmodul Dokument"
 status: draft # draft | active | retired | unknown
 version: 2025.0.0-alpha
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+packageId: de.medizininformatikinitiative.kerndatensatz.dokument
 copyrightYear: 2025+
 releaseLabel: ci-build
 license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
@@ -18,7 +19,7 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#276
 publisher:
   name: Medizininformatik-Initiative
   url: https://www.medizininformatik-initiative.de
-  # email: test@example.org
+  email: office@medizininformatik-initiative.de
 language: de-DE
 
 # The dependencies property corresponds to IG.dependsOn. The key is the

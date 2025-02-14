@@ -3,7 +3,7 @@ Alias: $AerztlicheFachrichtungen = http://ihe-d.de/CodeSystems/AerztlicheFachric
 
 // https://simplifier.net/isik-dokumentenaustausch-v4/dok-beispiel-client-with-binary-jpeg-example-short
 Instance: dok-beispiel-client-with-binary-jpeg-example-short
-InstanceOf: MII_PR_Dok_Dokument
+InstanceOf: MII_PR_Dokument_Dokument
 Usage: #example
 * meta.security = $v3-act-reason#HTEST
 * meta.profile = "https://gematik.de/fhir/isik/StructureDefinition/ISiKDokumentenMetadaten"

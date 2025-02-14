@@ -1,8 +1,8 @@
-Mapping: MII_MAP_Dok
-Source: MII_LM_Dok
-Id: mii-map-dok
+Mapping: MII_MAP_Dokument
+Source: MII_LM_Dokument
+Id: mii-map-dokument
 Title: "MII MAP Dokument"
-Description: "MII Mappings Modul Dokument"
+Description: "MII Mappings Erweiterungsmodul Dokument"
 * Dokument                              ->  "DocumentReference"
   * Masteridentifikator                 ->  "DocumentReference.masterIdentifier"
   * Businessidentifikator               ->  "DocumentReference.identifier"

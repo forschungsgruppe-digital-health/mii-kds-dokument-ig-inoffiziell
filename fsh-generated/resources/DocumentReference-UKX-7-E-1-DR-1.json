@@ -3,7 +3,7 @@
   "id": "UKX-7-E-1-DR-1",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/StructureDefinition/mii-pr-dok-dokument"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
     ]
   },
   "securityLabel": [

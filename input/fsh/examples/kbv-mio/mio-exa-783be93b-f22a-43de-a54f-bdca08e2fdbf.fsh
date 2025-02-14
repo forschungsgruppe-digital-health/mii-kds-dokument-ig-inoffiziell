@@ -6,7 +6,7 @@ Alias: $SCT = http://snomed.info/sct
 
 // https://simplifier.net/packages/kbv.basis/1.6.0/files/2433709
 Instance: 783be93b-f22a-43de-a54f-bdca08e2fdbf
-InstanceOf: MII_PR_Dok_Dokument
+InstanceOf: MII_PR_Dokument_Dokument
 Usage: #example
 * meta.profile = "https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_DocumentReference"
 * status = #current

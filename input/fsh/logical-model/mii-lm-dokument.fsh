@@ -1,9 +1,9 @@
-Logical: MII_LM_Dok
+Logical: MII_LM_Dokument
 Parent: Element
-Id: mii-lm-dok
+Id: mii-lm-dokument
 Title: "MII LM Dokument"
-Description: "MII Logical Model Modul Dokument"
-* insert LM_Header($mii-lm-dok)
+Description: "MII Logical Model Erweiterungsmodul Dokument"
+* insert LM_Header($mii-lm-dokument)
 * Dokument                              1..1    BackboneElement     "Dokument"                          "Klinisches Dokument inkl. Metadaten, Inhalt, Erzeugungskontext und Beziehungen"
   * Masteridentifikator                 0..1    Identifier          "Versionsspezifische Kennung"       "Versionsspezifische eindeutige Kennung, die dem Dokument durch die Dokumentenquelle zugewiesen wurde"
   * Businessidentifikator               0..1    Identifier          "Versionsunabhängige Kennung"       "Andere versionsunabhängige Kennung, die dem Dokument (z.B. durch weitere dokumentenverarbeitende Systeme) zugewiesen wurde"

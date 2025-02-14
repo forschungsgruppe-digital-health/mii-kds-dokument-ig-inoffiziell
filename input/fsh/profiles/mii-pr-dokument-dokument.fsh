@@ -1,8 +1,8 @@
-Profile: MII_PR_Dok_Dokument
+Profile: MII_PR_Dokument_Dokument
 Parent: DocumentReference
-Id: mii-pr-dok-dokument
-Title: "MII PR Dok Dokument"
-Description: "Klinisches Dokument inkl. zugehöriger Metadaten"
+Id: mii-pr-dokument-dokument
+Title: "MII PR Dokument Dokument"
+Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert PR_Header
 
 // ISiK 4.0.0: 1..1, MS | MIO 1.6.0: 0..1 (R4 default)

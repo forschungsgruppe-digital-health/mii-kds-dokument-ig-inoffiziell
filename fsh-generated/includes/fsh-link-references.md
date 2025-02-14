@@ -7,8 +7,8 @@
 [ex-DocumentReferenceUnContained]: DocumentReference-ex-DocumentReferenceUnContained.html
 [ex-DocumentReferenceUnContainedFully]: DocumentReference-ex-DocumentReferenceUnContainedFully.html
 [ex-patient]: Patient-ex-patient.html
-[MII_LM_Dok]: StructureDefinition-mii-lm-dok.html
-[MII_PR_Dok_Dokument]: StructureDefinition-mii-pr-dok-dokument.html
+[MII_LM_Dokument]: StructureDefinition-mii-lm-dokument.html
+[MII_PR_Dokument_Dokument]: StructureDefinition-mii-pr-dokument-dokument.html
 [PatientinMusterfrau]: Patient-PatientinMusterfrau.html
 [UKX-1]: Patient-UKX-1.html
 [UKX-1-E-1]: Encounter-UKX-1-E-1.html
