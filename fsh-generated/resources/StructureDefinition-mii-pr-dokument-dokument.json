@@ -73,8 +73,8 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
-              "path": "$this"
+              "type": "value",
+              "path": "system"
             }
           ],
           "rules": "open",
@@ -102,6 +102,30 @@
       },
       {
         "id": "DocumentReference.type.coding:KDL.code",
+        "path": "DocumentReference.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.type.coding:SCT",
+        "path": "DocumentReference.type.coding",
+        "sliceName": "SCT",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://snomed.info/sct"
+        }
+      },
+      {
+        "id": "DocumentReference.type.coding:SCT.system",
+        "path": "DocumentReference.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.type.coding:SCT.code",
         "path": "DocumentReference.type.coding.code",
         "min": 1,
         "mustSupport": true
@@ -143,14 +167,38 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
-              "path": "$this"
+              "type": "value",
+              "path": "system"
             }
           ],
           "rules": "open",
           "description": "Slice für Kategorie des verwiesenen Dokuments",
           "ordered": false
         }
+      },
+      {
+        "id": "DocumentReference.category.coding:SCT",
+        "path": "DocumentReference.category.coding",
+        "sliceName": "SCT",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://snomed.info/sct"
+        }
+      },
+      {
+        "id": "DocumentReference.category.coding:SCT.system",
+        "path": "DocumentReference.category.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.category.coding:SCT.code",
+        "path": "DocumentReference.category.coding.code",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.category.coding:XDS",
@@ -347,14 +395,38 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
-              "path": "$this"
+              "type": "value",
+              "path": "system"
             }
           ],
           "rules": "open",
           "description": "Slice für IHE XDS-basierte Einrichtungsart",
           "ordered": false
         }
+      },
+      {
+        "id": "DocumentReference.context.facilityType.coding:SCT",
+        "path": "DocumentReference.context.facilityType.coding",
+        "sliceName": "SCT",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://snomed.info/sct"
+        }
+      },
+      {
+        "id": "DocumentReference.context.facilityType.coding:SCT.system",
+        "path": "DocumentReference.context.facilityType.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.facilityType.coding:SCT.code",
+        "path": "DocumentReference.context.facilityType.coding.code",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.context.facilityType.coding:XDS",
@@ -393,14 +465,38 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
-              "path": "$this"
+              "type": "value",
+              "path": "system"
             }
           ],
           "rules": "open",
           "description": "Slice für IHE XDS-basierte klinische Fachgebiete",
           "ordered": false
         }
+      },
+      {
+        "id": "DocumentReference.context.practiceSetting.coding:SCT",
+        "path": "DocumentReference.context.practiceSetting.coding",
+        "sliceName": "SCT",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://snomed.info/sct"
+        }
+      },
+      {
+        "id": "DocumentReference.context.practiceSetting.coding:SCT.system",
+        "path": "DocumentReference.context.practiceSetting.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.practiceSetting.coding:SCT.code",
+        "path": "DocumentReference.context.practiceSetting.coding.code",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.context.practiceSetting.coding:XDS",

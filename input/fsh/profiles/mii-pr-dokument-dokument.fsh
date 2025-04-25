@@ -32,8 +32,8 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * type ^definition = "Art des Dokuments auf das verwiesen wird (z.B. Anamnese und Untersuchung, Entlassungsbericht, Verlaufsbericht)"
 //* type.extension contains $fhir-data-absent-reason named GrundNichtVorhanden 0..1
 
-* type.coding ^slicing.discriminator.type = #pattern
-* type.coding ^slicing.discriminator.path = "$this"
+* type.coding ^slicing.discriminator.type = #value
+* type.coding ^slicing.discriminator.path = "system"
 * type.coding ^slicing.rules = #open
 * type.coding ^slicing.description = "Slice für Art des verwiesenen Dokument"
 * type.coding ^slicing.ordered = false
@@ -43,6 +43,12 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * type.coding[KDL] from $dvmd-kdl-vs (required)
 * type.coding[KDL].system 1..1 MS
 * type.coding[KDL].code 1..1 MS
+
+// Experimental SCT Binding
+* type.coding contains SCT 0..1 MS
+* type.coding[SCT] from $SCT (required)
+* type.coding[SCT].system 1..1 MS
+* type.coding[SCT].code 1..1 MS
 
 // ISiK 4.0.0: 0..1, MS, IHEXDStypeCode (required) | MIO 1.6.0: 0..1, IHEXDStypeCode (required)
 * type.coding contains XDS 0..1 MS
@@ -56,12 +62,17 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * category ^definition = "Übergeordnete Kategorie des Dokuments auf das verwiesen wird (z.B. Arztberichte oder Arztdokumentation)"
 //* category.extension contains $fhir-data-absent-reason named GrundNichtVorhanden 0..1
 
-* category.coding ^slicing.discriminator.type = #pattern
-* category.coding ^slicing.discriminator.path = "$this"
+* category.coding ^slicing.discriminator.type = #value
+* category.coding ^slicing.discriminator.path = "system"
 * category.coding ^slicing.rules = #open
 * category.coding ^slicing.description = "Slice für Kategorie des verwiesenen Dokuments"
 * category.coding ^slicing.ordered = false
 
+// Experimental SCT Binding
+* category.coding contains SCT 0..1 MS
+* category.coding[SCT] from $SCT (required)
+* category.coding[SCT].system 1..1 MS
+* category.coding[SCT].code 1..1 MS
 
 // ISiK 4.0.0: 1..1, MS, IHEXDSclassCode (required) | MIO 1.6.0: 0..1, IHEXDSclassCode (required)
 * category.coding contains XDS 0..1 MS
@@ -184,11 +195,17 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * context.practiceSetting ^short = "Klinisches Fachgebiet zum Vorgang"
 * context.practiceSetting ^definition = "Klinisches Fachgebiet, in dem Dokumenteninhalt erstellt wurde"
 
-* context.practiceSetting.coding ^slicing.discriminator.type = #pattern
-* context.practiceSetting.coding ^slicing.discriminator.path = "$this"
+* context.practiceSetting.coding ^slicing.discriminator.type = #value
+* context.practiceSetting.coding ^slicing.discriminator.path = "system"
 * context.practiceSetting.coding ^slicing.rules = #open
 * context.practiceSetting.coding ^slicing.description = "Slice für IHE XDS-basierte klinische Fachgebiete"
 * context.practiceSetting.coding ^slicing.ordered = false
+
+// Experimental SCT Binding
+* context.practiceSetting.coding contains SCT 0..1 MS
+* context.practiceSetting.coding[SCT] from $SCT (required)
+* context.practiceSetting.coding[SCT].system 1..1 MS
+* context.practiceSetting.coding[SCT].code 1..1 MS
 
 * context.practiceSetting.coding contains XDS 0..1 MS
 * context.practiceSetting.coding[XDS] from $ihe-xds-practice-setting-code-vs (required)
@@ -208,11 +225,17 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * context.facilityType ^short = "Art der Einrichtung zum Vorgang"
 * context.facilityType ^definition = "Art der Einrichtung, in der die Handlung oder Prozedur am Patienten erfolgte"
 
-* context.facilityType.coding ^slicing.discriminator.type = #pattern
-* context.facilityType.coding ^slicing.discriminator.path = "$this"
+* context.facilityType.coding ^slicing.discriminator.type = #value
+* context.facilityType.coding ^slicing.discriminator.path = "system"
 * context.facilityType.coding ^slicing.rules = #open
 * context.facilityType.coding ^slicing.description = "Slice für IHE XDS-basierte Einrichtungsart"
 * context.facilityType.coding ^slicing.ordered = false
+
+// Experimental SCT Binding
+* context.facilityType.coding contains SCT 0..1 MS
+* context.facilityType.coding[SCT] from $SCT (required)
+* context.facilityType.coding[SCT].system 1..1 MS
+* context.facilityType.coding[SCT].code 1..1 MS
 
 * context.facilityType.coding contains XDS 0..1 MS
 * context.facilityType.coding[XDS] from $ihe-xds-healthcare-facility-type-code-vs (required)
