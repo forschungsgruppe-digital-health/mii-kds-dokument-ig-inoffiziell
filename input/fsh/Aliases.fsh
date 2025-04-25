@@ -1,5 +1,10 @@
 // Aliases für Profile des MII Dok-Moduls
 Alias: $mii-lm-dokument = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-lm-dokument
+Alias: $mii-cps-dokument = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/metadata
+Alias: $mii-pr-dokument = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/MII_PR_Dokument_Dokument
+
+// Aliases für HL7 FHIR Definitionen
+Alias: $cps-exp = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
 
 // Aliases für Terminologie
 Alias: $dkgev-fachabteilungsschluessel = http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel

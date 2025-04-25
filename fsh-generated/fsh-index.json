@@ -1,5 +1,13 @@
 [
   {
+    "outputFile": "CapabilityStatement-mii-cps-dokument-capabilitystatement.json",
+    "fshName": "mii-cps-dokument-capabilitystatement",
+    "fshType": "Instance",
+    "fshFile": "definitions/mii-cps-dokument-capabilitystatement.fsh",
+    "startLine": 1,
+    "endLine": 61
+  },
+  {
     "outputFile": "DocumentReference-783be93b-f22a-43de-a54f-bdca08e2fdbf.json",
     "fshName": "783be93b-f22a-43de-a54f-bdca08e2fdbf",
     "fshType": "Instance",

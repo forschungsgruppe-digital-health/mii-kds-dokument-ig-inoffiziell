@@ -131,7 +131,7 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 //* content.attachment.creation.extension contains $fhir-data-absent-reason named GrundNichtVorhanden 0..1
 
 // ISiK 4.0.0: 0..1 (R4 default), MS | MIO 1.6.0 Verweis: 0..1 (R4 default) | MIO 1.6.0 Anhang: 1..1
-* content.attachment.data 0..1 MS
+* content.attachment.data 0..1
 * content.attachment.data ^short = "Binärdaten zum Inhalt"
 * content.attachment.data ^definition = "Dokument als Binärdaten"
 

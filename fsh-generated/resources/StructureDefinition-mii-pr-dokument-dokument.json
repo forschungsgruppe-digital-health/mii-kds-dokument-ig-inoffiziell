@@ -263,8 +263,7 @@
         "id": "DocumentReference.content.attachment.data",
         "path": "DocumentReference.content.attachment.data",
         "short": "Binärdaten zum Inhalt",
-        "definition": "Dokument als Binärdaten",
-        "mustSupport": true
+        "definition": "Dokument als Binärdaten"
       },
       {
         "id": "DocumentReference.content.attachment.url",

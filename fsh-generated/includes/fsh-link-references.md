@@ -7,6 +7,7 @@
 [ex-DocumentReferenceUnContained]: DocumentReference-ex-DocumentReferenceUnContained.html
 [ex-DocumentReferenceUnContainedFully]: DocumentReference-ex-DocumentReferenceUnContainedFully.html
 [ex-patient]: Patient-ex-patient.html
+[mii-cps-dokument-capabilitystatement]: CapabilityStatement-mii-cps-dokument-capabilitystatement.html
 [MII_LM_Dokument]: StructureDefinition-mii-lm-dokument.html
 [MII_PR_Dokument_Dokument]: StructureDefinition-mii-pr-dokument-dokument.html
 [PatientinMusterfrau]: Patient-PatientinMusterfrau.html

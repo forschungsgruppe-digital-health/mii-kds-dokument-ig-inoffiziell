@@ -1,4 +1,5 @@
 Output File                                                                Name                                                Type      FSH File                                                                               Lines
+CapabilityStatement-mii-cps-dokument-capabilitystatement.json              mii-cps-dokument-capabilitystatement                Instance  definitions/mii-cps-dokument-capabilitystatement.fsh                                   1 - 61
 DocumentReference-783be93b-f22a-43de-a54f-bdca08e2fdbf.json                783be93b-f22a-43de-a54f-bdca08e2fdbf                Instance  examples/kbv-mio/mio-exa-783be93b-f22a-43de-a54f-bdca08e2fdbf.fsh                      8 - 37
 DocumentReference-UKX-1-E-1-DR-1.json                                      UKX-1-E-1-DR-1                                      Instance  examples/grassco/mii-dok-exa-ukx-1/mii-dok-exa-ukx-1-e-1-dr-1.fsh                      1 - 27
 DocumentReference-UKX-2-E-1-DR-1.json                                      UKX-2-E-1-DR-1                                      Instance  examples/grassco/mii-dok-exa-ukx-2/mii-dok-exa-ukx-2-e-1-dr-1.fsh                      1 - 26
