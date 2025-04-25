@@ -1,0 +1,31 @@
+@startuml Sekundärdatennutzung
+
+left to right direction
+
+title "Sekundärdatennutzung"
+
+actor "Forschungsdatenportal" as FDPG
+actor "Wissenschaftler:in" as RA
+
+' Use Cases FDPG
+(Codes\nauslesen) as (Codes)
+(Profil\nauslesen) as (Profil)
+(Metadaten\nauslesen) as (Metadaten)
+(Beschriftung\nauslesen) as (Beschriftung)
+ 
+' Use Cases Wissenschaftler:in
+(Korpus\nnavigieren) as (Navigation)
+(Machbarkeitsanfrage\nstellen) as (Anfragen)
+
+' Beziehungen
+RA --> (Navigation)
+RA --> (Anfragen)
+
+FDPG --> (Profil)
+FDPG --> (Codes)
+(Codes) -d.> (Metadaten) : <<include>>
+(Codes) -d.> (Beschriftung) : <<include>>
+(Profil) .> (Metadaten) : <<include>>
+(Profil) .> (Beschriftung) : <<include>>
+  
+@enduml
