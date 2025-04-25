@@ -1,6 +1,7 @@
 ---
-parent: 
+Topic: Terminologie
 ---
-## Terminologien
+
+## {{page-title}}
 
 Beschreibung von eigenen ValueSets, Verwendung internationaler Terminologien, Lizenzen...

@@ -1,4 +1,4 @@
 - name: Index
   filename: Index.page.md
-- name: FHIR-Profil (Ressourcentyp)
-  filename: FHIR-Profil--Ressourcentyp.page.md
+- name: Dokument (DocumentReference)
+  filename: Dokument-DocumentReference.page.md
