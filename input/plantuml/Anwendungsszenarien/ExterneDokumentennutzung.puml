@@ -1,0 +1,17 @@
+@startuml Externe Dokumentennutzung
+
+left to right direction
+
+actor "Wissenschaftler:in" as RA
+ 
+' Use Cases Wissenschaftler:in
+(Kohorte\ndefinieren) as (Definition)
+(Daten\nselektieren) as (Selektion)
+(Machbarkeitsanfrage\nstellen) as (Anfragen)
+
+' Beziehungen
+RA --> (Definition)
+RA --> (Selektion)
+RA --> (Anfragen)
+  
+@enduml

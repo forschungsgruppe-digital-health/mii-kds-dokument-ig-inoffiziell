@@ -1,8 +1,6 @@
-@startuml Primärdatennutzung
+@startuml Interne Dokumentennutzung
 
 left to right direction
-
-title "Primärdatennutzung"
 
 actor "Standort" as DIC
 actor "Wissenschaftler:in" as RA
@@ -15,13 +13,13 @@ actor "Wissenschaftler:in" as RA
  
 ' Use Cases Wissenschaftler:in
 (Dokument\nverarbeiten) as (Verarbeitung)
-(Dokument\nversionieren) as (Versionierung)
+(Dokument\nannotieren) as (Annotation)
 (Dokument\npseudonymisieren) as (Pseudonymisierung)
 
 ' Beziehungen
 RA --> (Verarbeitung)
 (Verarbeitung) .> (Pseudonymisierung) : <<include>>
-(Verarbeitung) .> (Versionierung) : <<include>>
+(Verarbeitung) .> (Annotation) : <<include>>
 
 DIC --> (Archivierung)
 DIC --> (Konvertierung)
@@ -31,7 +29,7 @@ DIC --> (Anfragen)
 note "Z.B. Gematik ISiK nach MII KDS" as NoteConversion
   (Konvertierung) .. NoteConversion
   
-note "NLP Verarbeitungsschritte,\nz.B. Verarbeitgungsstatus" as NoteVersioning
-  (Verarbeitung) .. NoteVersioning
+note "NLP Verarbeitungsschritte,\nz.B. Verarbeitgungsstatus" as NoteAnnotation
+  (Verarbeitung) .. NoteAnnotation
   
 @enduml
