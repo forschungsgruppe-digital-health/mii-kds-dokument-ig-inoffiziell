@@ -52,9 +52,9 @@
       "Hash": "DED2D635A2391E6793582020F52708D8"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md": {
-      "Length": 137,
-      "LastWriteTime": "2025-04-25T15:47:34+00:00",
-      "Hash": "6F7364C20852B1F13A752A8419A4D19F"
+      "Length": 1775,
+      "LastWriteTime": "2025-05-16T05:55:28+00:00",
+      "Hash": "EB7544FD33B0B8775EAD8C1FAFD0F56F"
     },
     "fsh-generated/resources/DocumentReference-dok-beispiel-client-with-binary-jpeg-example.json": {
       "Length": 37583,
@@ -152,9 +152,9 @@
       "Hash": "15A46124AE4523A8EB3FA6F6B14FFB8D"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/Referenzen.page.md": {
-      "Length": 2175,
-      "LastWriteTime": "2025-04-25T15:46:08+00:00",
-      "Hash": "A181980F5BE28029764E59CC6AC729C3"
+      "Length": 659,
+      "LastWriteTime": "2025-05-16T06:24:14+00:00",
+      "Hash": "F9670FE21ED7319863B5C29613EA0C7D"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/styles/MIICustomIGStyle/master.html": {
       "Length": 2342,
@@ -178,8 +178,8 @@
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/Index.page.md": {
       "Length": 2520,
-      "LastWriteTime": "2025-04-25T13:20:08+00:00",
-      "Hash": "2E661BA0486BFDA3BD7C07351BE88599"
+      "LastWriteTime": "2025-05-12T16:12:46+00:00",
+      "Hash": "67AC97346E33C7DD8FB695F69BE575BB"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/toc.yaml": {
       "Length": 487,
@@ -512,9 +512,9 @@
       "Hash": "E7DF1A385213C2BA2C0D8BF2A31B9379"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md": {
-      "Length": 994,
-      "LastWriteTime": "2025-03-28T14:16:24+00:00",
-      "Hash": "CC60794B444B5A2ECE4D11CDDE2412BE"
+      "Length": 11860,
+      "LastWriteTime": "2025-05-16T11:38:28+00:00",
+      "Hash": "4B88D8302B014558BB972B1DC3BBCB86"
     },
     "fsh-generated/resources/Patient-UKX-1.json": {
       "Length": 848,
@@ -697,9 +697,9 @@
       "Hash": "022FCEB6C19D030BC51870F6AA65CE86"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md": {
-      "Length": 6262,
-      "LastWriteTime": "2025-04-25T14:47:52+00:00",
-      "Hash": "5A56DE7C54769D3816B33822233C25E9"
+      "Length": 6119,
+      "LastWriteTime": "2025-05-16T09:53:42+00:00",
+      "Hash": "A1309EF4EB47F5875DF861096BB2222F"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/Beschreibung.page.md": {
       "Length": 2232,
@@ -707,9 +707,9 @@
       "Hash": "14B67CFE3F0B13741D56B39C45562D1C"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/Kontext-Bezuege.page.md": {
-      "Length": 6532,
-      "LastWriteTime": "2025-04-25T15:57:06+00:00",
-      "Hash": "E9942E2B0BA0B091F8545182791B884E"
+      "Length": 6530,
+      "LastWriteTime": "2025-05-16T06:20:54+00:00",
+      "Hash": "60B016AB6CB61BFC07CF2F9F7FD57202"
     }
   }
 }

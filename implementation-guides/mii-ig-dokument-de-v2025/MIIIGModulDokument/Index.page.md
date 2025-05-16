@@ -4,7 +4,7 @@ parent:
 # Kerndatensatz Modul 'Modul'
 
 Die vorliegende Spezifikation beschreibt die FHIR Repräsentation des Kerndatensatz Moduls 'Modul' der Medizinformatik Initiative.
-Im Folgenden werden die Use Case des Moduls, sowie die dazuhegörigen FHIR Profile und Terminologie Ressourcen in ihrer verbindlichen Form beschrieben.
+Im Folgenden werden die Use Case des Moduls, sowie die dazugehörigen FHIR Profile und Terminologie Ressourcen in ihrer verbindlichen Form beschrieben.
 
 | Veröffentlichung   |   |
 |---------|---|

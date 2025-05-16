@@ -15,7 +15,7 @@ Dieses MII KDS Modul greift bei bestimmten Datenelementen auf existierende Vorar
 
 |Modul|Beschreibung des Bezugs|Verpflichtende Nutzung|
 |-|-|-|
-|[PERSON](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.person)|Die Mehrheit medizinischer Dokumentation bezieht sich auf Patient:innen. Hierfür wird das MII KDS Modul PERSON genutzt um die Verbindung von Patient:in zu Dokument zu referenzieren. In manchen Fällen liegt der Fokus der Dokumentation auf medizinischen Objekten, Procedere oder Verwaltungsakten. Nur aus diesem Grund ist die Referenz auf das MII KDS Modul PERSON lediglich als optional gekennzeichnet.|Nein|
+|[PERSON](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.person)|Die Mehrheit medizinischer Dokumentation bezieht sich auf Patient:innen. Hierfür wird das MII KDS Modul PERSON genutzt um die Verbindung von Patient:in zu Dokument zu referenzieren. In manchen Fällen liegt der Fokus der Dokumentation auf medizinischen Objekten, Procedere oder Verwaltungsakten. Nur aus diesem Grund ist die Referenz auf das MII KDS Modul PERSON lediglich als optional gekennzeichnet.|Ja|
 |[FALL](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.fall)|Soweit das referenzierte Dokument einen Bezug zu einem Kontakt mit einer Gesundheitseinrichtung herstellt, sollte direkt auf die entsprechende Kontaktebene des MII KDS Modul FALL verwiesen werden.|Nein|
 
 ## Nutzung durch andere MII KDS Module
