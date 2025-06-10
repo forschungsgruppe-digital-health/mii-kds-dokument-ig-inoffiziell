@@ -107,6 +107,30 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.type.coding:LNC",
+        "path": "DocumentReference.type.coding",
+        "sliceName": "LNC",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://loinc.org"
+        }
+      },
+      {
+        "id": "DocumentReference.type.coding:LNC.system",
+        "path": "DocumentReference.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.type.coding:LNC.code",
+        "path": "DocumentReference.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.type.coding:SCT",
         "path": "DocumentReference.type.coding",
         "sliceName": "SCT",
@@ -177,6 +201,30 @@
         }
       },
       {
+        "id": "DocumentReference.category.coding:LNC",
+        "path": "DocumentReference.category.coding",
+        "sliceName": "LNC",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://loinc.org"
+        }
+      },
+      {
+        "id": "DocumentReference.category.coding:LNC.system",
+        "path": "DocumentReference.category.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.category.coding:LNC.code",
+        "path": "DocumentReference.category.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.category.coding:SCT",
         "path": "DocumentReference.category.coding",
         "sliceName": "SCT",
@@ -239,11 +287,6 @@
             ]
           }
         ],
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.subject.reference",
-        "path": "DocumentReference.subject.reference",
         "mustSupport": true
       },
       {
@@ -361,11 +404,6 @@
             ]
           }
         ],
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.context.encounter.reference",
-        "path": "DocumentReference.context.encounter.reference",
         "mustSupport": true
       },
       {
