@@ -1,0 +1,73 @@
+@startuml "Paketabhängigkeiten"
+' General
+left to right direction
+skinparam Linetype ortho
+skinparam Nodesep 50
+skinparam Shadowing false
+
+package "Medizininformatik-Initaitive" #LightGreen {
+    package "de.medizininformatikinitiative.kerndatensatz.dokument" as MiiDokument {}
+    package "de.medizininformatikinitiative.kerndatensatz.fall" as MiiFall {}
+    package "de.medizininformatikinitiative.kerndatensatz.person" as MiiPerson {}
+}
+
+package "HL7 Deutschland" #IndianRed {
+    package "de.basisprofil.r4" as Hl7Basisprofil {}
+}
+
+package "Gematik GmbH" #LightBlue {
+    package "de.gematik.isik-dokumentenaustausch" as GematikIsik {}
+}
+
+package "KBV / MIO42 GmbH" #LightPink {
+    package "kbv.basis" as KbvMio {}
+}
+
+package "IHE International" #MediumPurple {
+    package "ihe.iti.mhd" as IheMhd {}
+    package "ihe.formatcode.fhir" as IheFormatCode {}
+}
+
+package "IHE Deutschland" #MediumPurple {
+    package "de.ihe-d.terminology" as IheTerminology {}
+}
+
+package "DVMD e<U+002e>V<U+002e>" #Orange {
+    package "dvmd.kdl.r4" as DvmdKdl {}
+}
+
+MiiDokument -[dashed]-> MiiFall : "nutzt"
+MiiDokument -[dashed]-> MiiPerson : "nutzt"
+MiiDokument -[dashed]-> DvmdKdl : "nutzt"
+MiiDokument -[dotted]-> GematikIsik : "berücksichtigt"
+MiiDokument -[dotted]-> KbvMio : "berücksichtigt"
+MiiDokument -[dashed]-> IheFormatCode : "nutzt"
+MiiDokument -[dotted]-> IheMhd : "berücksichtigt"
+MiiDokument -[dashed]-> IheTerminology : "nutzt"
+
+GematikIsik -[dashed]-> Hl7Basisprofil
+GematikIsik -[dashed]-> IheFormatCode
+GematikIsik -[dashed]-> IheMhd
+GematikIsik -[dashed]-> IheTerminology
+GematikIsik -[dashed]-> DvmdKdl
+
+KbvMio -[dashed]-> Hl7Basisprofil
+
+'package "de.ihe-d.terminology" {}
+'package "dvmd.kdl.r4" {}
+'package "kbv.basis" {}
+'package "ihe.formatcode.fhir" {}
+'package "ihe.iti.mhd" {}
+
+' Beziehungen
+'de.gematik.isik-dokumentenaustausch -- de.basisprofil.r4
+'Dokument *- "1..*" Anhang: attachment >
+'Dokument *-l- "0..1" Kontext: context >
+'Dokument *-- "0..*" Dokumentenbeziehungen: relatesTo >
+'Dokument o-u- "0..1" Person: subject >
+'Dokumentenbeziehungen -- Dokument: target >
+'Kontext o-d- "0..*" Fall: encounter >
+'Einrichtungskontakt -- "0..*" Abteilungskontakt
+'Abteilungskontakt -- "0..*" Versorgungsstellenkontakt
+
+@enduml
