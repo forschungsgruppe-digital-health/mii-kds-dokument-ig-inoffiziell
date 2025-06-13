@@ -1,73 +1,77 @@
 @startuml "Paketabhängigkeiten"
 ' General
 left to right direction
-skinparam Linetype ortho
-skinparam Nodesep 50
-skinparam Shadowing false
+'top to bottom direction
+skinparam linetype polyline
+'skinparam linetype ortho
+'skinparam nodesep 100
+skinparam ranksep 100
+skinparam shadowing false
 
-package "Medizininformatik-Initaitive" #LightGreen {
-    package "de.medizininformatikinitiative.kerndatensatz.dokument" as MiiDokument {}
-    package "de.medizininformatikinitiative.kerndatensatz.fall" as MiiFall {}
-    package "de.medizininformatikinitiative.kerndatensatz.person" as MiiPerson {}
+legend bottom center
+    = Legende
+    | <#LightGreen>      | Medizininformatik-Initiative |
+    | <#LightBlue>       | gematik GmbH |
+    | <#LightPink>       | KBV / MIO42 GmbH |
+    | <#Orange>          | DVMD e.V. |
+    | <#MediumPurple>    | IHE International / Deutschland |
+    | <size:20><U+21E2></size> | Abhängigkeitsbeziehung |
+end legend
+
+' MII
+package "de.medizininformatikinitiative.kerndatensatz.dokument" as MiiDokument #LightGreen {
+    class MII_PR_Dokument_Dokument
+}
+package "de.medizininformatikinitiative.kerndatensatz.fall" as MiiFall #LightGreen {
+    class MII_PR_Fall_KontaktGesundheitseinrichtung
+}
+package "de.medizininformatikinitiative.kerndatensatz.person" as MiiPerson #LightGreen {
+    class MII_PR_Person_Patient
+    class MII_PR_Person_PatientPseudonymisiert
 }
 
-package "HL7 Deutschland" #IndianRed {
-    package "de.basisprofil.r4" as Hl7Basisprofil {}
+' Gematik
+package "de.gematik.isik-dokumentenaustausch" as GematikIsik #LightBlue {
+    class ISiKDokumentenMetadaten
 }
 
-package "Gematik GmbH" #LightBlue {
-    package "de.gematik.isik-dokumentenaustausch" as GematikIsik {}
+' KBV MIO
+package "kbv.basis" as KbvMio #LightPink {
+    class KBV_PR_Base_DocumentReference
 }
 
-package "KBV / MIO42 GmbH" #LightPink {
-    package "kbv.basis" as KbvMio {}
+' IHE International
+package "ihe.iti.mhd" as IheMhd #MediumPurple {
+    class UnContainedComprehensiveDocumentReference
+}
+package "ihe.formatcode.fhir" as IheFormatCode #MediumPurple {
+    enum IHE_FormatCode_vs
+}
+package "de.ihe-d.terminology" as IheTerminology #MediumPurple {
+    enum IHEXDSclassCode
+    enum IHEXDStypeCode
 }
 
-package "IHE International" #MediumPurple {
-    package "ihe.iti.mhd" as IheMhd {}
-    package "ihe.formatcode.fhir" as IheFormatCode {}
+' DVMD e.V.
+package "dvmd.kdl.r4" as DvmdKdl #Orange {
+    enum ValueSetKDL {}
 }
 
-package "IHE Deutschland" #MediumPurple {
-    package "de.ihe-d.terminology" as IheTerminology {}
-}
+' Explizite Abhängigkeiten
+MiiDokument -[dashed,thickness=2]u-> MiiFall : "context.encounter"
+MiiDokument -[dashed,thickness=2]u-> MiiPerson : "subject"
+MiiDokument -[dashed,thickness=2]u-> DvmdKdl : "type.coding"
+MiiDokument -[dashed,thickness=2]u-> IheFormatCode : "content.format.code"
+MiiDokument -[dashed,thickness=2]u-> IheTerminology : "content.format.code"
 
-package "DVMD e<U+002e>V<U+002e>" #Orange {
-    package "dvmd.kdl.r4" as DvmdKdl {}
-}
+' Berücksichtigte Abhängigkeiten (Profile)
+MiiDokument -[dashed,thickness=2,#DarkGrey]d-> GematikIsik : <color:DarkGrey>berücksichtigt</color>
+MiiDokument -[dashed,thickness=2,#DarkGrey]d-> KbvMio : <color:DarkGrey>berücksichtigt</color>
+MiiDokument -[dashed,thickness=2,#DarkGrey]d-> IheMhd : <color:DarkGrey>berücksichtigt</color>
 
-MiiDokument -[dashed]-> MiiFall : "nutzt"
-MiiDokument -[dashed]-> MiiPerson : "nutzt"
-MiiDokument -[dashed]-> DvmdKdl : "nutzt"
-MiiDokument -[dotted]-> GematikIsik : "berücksichtigt"
-MiiDokument -[dotted]-> KbvMio : "berücksichtigt"
-MiiDokument -[dashed]-> IheFormatCode : "nutzt"
-MiiDokument -[dotted]-> IheMhd : "berücksichtigt"
-MiiDokument -[dashed]-> IheTerminology : "nutzt"
-
-GematikIsik -[dashed]-> Hl7Basisprofil
-GematikIsik -[dashed]-> IheFormatCode
-GematikIsik -[dashed]-> IheMhd
-GematikIsik -[dashed]-> IheTerminology
-GematikIsik -[dashed]-> DvmdKdl
-
-KbvMio -[dashed]-> Hl7Basisprofil
-
-'package "de.ihe-d.terminology" {}
-'package "dvmd.kdl.r4" {}
-'package "kbv.basis" {}
-'package "ihe.formatcode.fhir" {}
-'package "ihe.iti.mhd" {}
-
-' Beziehungen
-'de.gematik.isik-dokumentenaustausch -- de.basisprofil.r4
-'Dokument *- "1..*" Anhang: attachment >
-'Dokument *-l- "0..1" Kontext: context >
-'Dokument *-- "0..*" Dokumentenbeziehungen: relatesTo >
-'Dokument o-u- "0..1" Person: subject >
-'Dokumentenbeziehungen -- Dokument: target >
-'Kontext o-d- "0..*" Fall: encounter >
-'Einrichtungskontakt -- "0..*" Abteilungskontakt
-'Abteilungskontakt -- "0..*" Versorgungsstellenkontakt
-
+' Transitive Abhängigkeiten
+'GematikIsik -[dashed]-> IheFormatCode
+'GematikIsik -[dashed]-> IheMhd
+'GematikIsik -[dashed]-> IheTerminology
+'GematikIsik -[dashed]-> DvmdKdl
 @enduml
