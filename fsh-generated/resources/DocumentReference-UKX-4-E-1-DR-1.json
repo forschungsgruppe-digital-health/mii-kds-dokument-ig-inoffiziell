@@ -9,13 +9,13 @@
   "type": {
     "coding": [
       {
-        "version": "2024",
+        "version": "2025",
         "code": "PT130102",
         "system": "http://dvmd.de/fhir/CodeSystem/kdl",
         "display": "Molekularpathologiebefund"
       },
       {
-        "version": "1.4.0",
+        "version": "3.0.1",
         "code": "PATH",
         "system": "http://ihe-d.de/CodeSystem/IHEXDStypeCode",
         "display": "Pathologiebefundberichte"
@@ -27,7 +27,7 @@
     {
       "coding": [
         {
-          "version": "1.4.0",
+          "version": "3.0.1",
           "code": "BEF",
           "system": "http://ihe-d.de/CodeSystems/IHEXDSclassCode",
           "display": "Befundbericht"

@@ -11,9 +11,9 @@ Usage: #example
 * meta.profile = "https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_DocumentReference"
 * status = #current
 * docStatus = #preliminary
-* type.coding.version = "1.4.0"
+* type.coding.version = "3.0.1"
 * type.coding = $IHEXDStypeCode#BEFU "Ergebnisse Diagnostik"
-* category.coding.version = "1.4.0"
+* category.coding.version = "3.0.1"
 * category.coding = $IHEXDSclassCode#BEF "Befundbericht"
 * subject = Reference(urn:uuid:b5df1dd6-237b-4057-9859-2f7fbacd3261)
 * date = "2023-09-01T09:35:43+01:00"

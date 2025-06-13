@@ -38,27 +38,23 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 // ISiK 4.0.1: 1..1, MS, DVMD KDL (required) | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * type.coding contains KDL 0..1 MS
-* type.coding[KDL] from $dvmd-kdl-vs (required)
-* type.coding[KDL].system 1..1 MS
-* type.coding[KDL].code 1..1 MS
+* type.coding[KDL].system = $dvmd-kdl
+* type.coding[KDL] from $dvmd-kdl-vs
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: DocumentTypeValueSet (preferred)
 * type.coding contains LNC 0..1 MS
-* type.coding[LNC] from $LNC (required)
-* type.coding[LNC].system 1..1 MS
-* type.coding[LNC].code 1..1 MS
+* type.coding[LNC].system = $LNC
+* type.coding[LNC] from $lnc-doc-type-code-vs
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * type.coding contains SCT 0..1 MS
-* type.coding[SCT] from $SCT (required)
-* type.coding[SCT].system 1..1 MS
-* type.coding[SCT].code 1..1 MS
+* type.coding[SCT].system = $SCT
+* type.coding[SCT] from $mii-vs-dokument-sct-dokument-typ
 
 // ISiK 4.0.1: 0..1, MS, IHEXDStypeCode (required) | MIO 1.7.0: 0..1, IHEXDStypeCode (required) | IHE MHD 4.2.2: n.v.
 * type.coding contains XDS 0..1 MS
-* type.coding[XDS] from $ihe-xds-type-code-vs (required)
-* type.coding[XDS].system 1..1 MS
-* type.coding[XDS].code 1..1 MS
+* type.coding[XDS].system = $ihe-xds-type-code
+* type.coding[XDS] from $ihe-xds-type-code-vs
 
 // ISiK 4.0.1: 0..1, MS, Slicing XDS | MIO 1.7.0: 0..* (R4 default), Slicing XDS | IHE MHD 4.2.2: 1..1, MS, DocumentClassValueSet (example)
 * category 0..* MS
@@ -73,21 +69,18 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: DocumentClassValueSet (example)
 * category.coding contains LNC 0..1 MS
-* category.coding[LNC] from $LNC (required)
-* category.coding[LNC].system 1..1 MS
-* category.coding[LNC].code 1..1 MS
+* category.coding[LNC].system = $LNC
+* category.coding[LNC] from $lnc-doc-class-code-vs
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * category.coding contains SCT 0..1 MS
-* category.coding[SCT] from $SCT (required)
-* category.coding[SCT].system 1..1 MS
-* category.coding[SCT].code 1..1 MS
+* category.coding[SCT].system = $SCT
+* category.coding[SCT] from $mii-vs-dokument-sct-dokument-kategorie
 
 // ISiK 4.0.1: 1..1, MS, IHEXDSclassCode (required) | MIO 1.7.0: 0..1, IHEXDSclassCode (required) | IHE MHD 4.2.2: 
 * category.coding contains XDS 0..1 MS
-* category.coding[XDS] from $ihe-xds-class-code-vs (required)
-* category.coding[XDS].system 1..1 MS
-* category.coding[XDS].code 1..1 MS
+* category.coding[XDS].system = $ihe-xds-class-code
+* category.coding[XDS] from $ihe-xds-class-code-vs
 
 // ISiK 4.0.1: 1..1, MS | MIO 1.7.0: 0..1 (R4 default), Extended Custom Profiles | IHE MHD 4.2.2: 1..1, MS Restricted Patient
 * subject 0..1 MS
@@ -161,6 +154,7 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 // ISiK 4.0.1: 1..1, MS, IHEXDSformatCodeDE (required) | MIO 1.7.0: 0..1, DocumentReferenceFormatCodeSet (preferred) (R4 default) | IHE MHD 4.2.2: 1..1, MS, IHE_FormatCode_vs (preferred)
 * content.format 0..1 MS
 * content.format.code from $ihe-xds-format-code-vs (extensible)
+* content.format.code from $ihe-formatcode-vs (extensible)
 
 // ISiK 4.0.1: 1..1, MS | MIO 1.7.0: 0..1 (R4 default) | IHE MHD 4.2.2: 1..1
 * context 0..1 MS
@@ -196,35 +190,31 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * context.facilityType.coding contains SCT 0..1 MS
-* context.facilityType.coding[SCT] from $SCT (required)
-* context.facilityType.coding[SCT].system 1..1 MS
-* context.facilityType.coding[SCT].code 1..1 MS
+* context.facilityType.coding[SCT].system = $SCT
+* context.facilityType.coding[SCT] from $mii-vs-dokument-sct-dokument-einrichtung
 
 // ISiK 4.0.1: 1..1, MS, IHEXDShealthcareFacilityTypeCode (required) | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * context.facilityType.coding contains XDS 0..1 MS
-* context.facilityType.coding[XDS] from $ihe-xds-healthcare-facility-type-code-vs (required)
-* context.facilityType.coding[XDS].system 1..1 MS
-* context.facilityType.coding[XDS].code 1..1 MS
+* context.facilityType.coding[XDS].system = $ihe-xds-healthcare-facility-type-code
+* context.facilityType.coding[XDS] from $ihe-xds-healthcare-facility-type-code-vs
 
 // ISiK 4.0.1: 1..1, MS, IHEXDSpracticeSettingCode (required) | MIO 1.7.0: 0..1, PracticeSettingCodeValueSet (example) (R4 default) | IHE MHD 4.2.2: 1..1, MS, PracticeSettingCodeValueSet (example)
 * context.practiceSetting 0..1 MS
 * context.practiceSetting ^short = "Klinisches Fachgebiet zum Vorgang"
 * context.practiceSetting ^definition = "Klinisches Fachgebiet, in dem Dokumenteninhalt erstellt wurde"
 
-* context.practiceSetting.coding ^slicing.discriminator.type = #value
-* context.practiceSetting.coding ^slicing.discriminator.path = "system"
+* context.practiceSetting.coding ^slicing.discriminator.type = #pattern
+* context.practiceSetting.coding ^slicing.discriminator.path = "$this"
 * context.practiceSetting.coding ^slicing.rules = #open
 * context.practiceSetting.coding ^slicing.description = "Slice für IHE XDS-basierte klinische Fachgebiete"
 * context.practiceSetting.coding ^slicing.ordered = false
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * context.practiceSetting.coding contains SCT 0..1 MS
-* context.practiceSetting.coding[SCT] from $SCT (required)
-* context.practiceSetting.coding[SCT].system 1..1 MS
-* context.practiceSetting.coding[SCT].code 1..1 MS
+//* context.practiceSetting.coding[SCT].system = $SCT
+* context.practiceSetting.coding[SCT] from $mii-vs-dokument-sct-dokument-fachgebiet
 
 // ISiK 4.0.1: 1..1, MS, IHEXDSpracticeSettingCode (required) | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * context.practiceSetting.coding contains XDS 0..1 MS
-* context.practiceSetting.coding[XDS] from $ihe-xds-practice-setting-code-vs (required)
-* context.practiceSetting.coding[XDS].system 1..1 MS
-* context.practiceSetting.coding[XDS].code 1..1 MS
+//* context.practiceSetting.coding[XDS].system from $ihe-aerztliche-fachrichtungen or $ihe-nicht-aerztliche-fachrichtungen
+* context.practiceSetting.coding[XDS] from $ihe-xds-practice-setting-code-vs

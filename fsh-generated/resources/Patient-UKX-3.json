@@ -30,16 +30,6 @@
       "family": "Baastrup"
     }
   ],
-  "address": [
-    {
-      "extension": [
-        {
-          "url": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
-          "valueCode": "unknown"
-        }
-      ]
-    }
-  ],
   "gender": "male",
   "birthDate": "1954-07-05"
 }

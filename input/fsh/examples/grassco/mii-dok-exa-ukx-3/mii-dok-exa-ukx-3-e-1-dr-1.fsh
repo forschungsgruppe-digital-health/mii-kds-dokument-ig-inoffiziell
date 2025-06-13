@@ -3,12 +3,12 @@ InstanceOf: MII_PR_Dokument_Dokument
 Usage: #example
 * status = #current
 * docStatus = #final
-* type.coding[0].version = "2024"
+* type.coding[0].version = "2025"
 * type.coding[=] = $dvmd-kdl#AD010110 "Ärztlicher Verlaufsbericht"
-* type.coding[+].version = "1.4.0"
+* type.coding[+].version = "3.0.1"
 * type.coding[=] = $ihe-xds-type-code#BERI "Arztberichte"
 * type.text = "Ärztlicher Verlaufsbericht"
-* category.coding.version = "1.4.0"
+* category.coding.version = "3.0.1"
 * category.coding = $ihe-xds-class-code#BRI "Brief"
 * category.text = "Brief"
 * subject = Reference(UKX-3)

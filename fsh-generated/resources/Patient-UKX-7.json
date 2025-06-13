@@ -30,16 +30,6 @@
       "family": "Anderer"
     }
   ],
-  "address": [
-    {
-      "extension": [
-        {
-          "url": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
-          "valueCode": "unknown"
-        }
-      ]
-    }
-  ],
   "gender": "female",
   "birthDate": "2017-03-21"
 }

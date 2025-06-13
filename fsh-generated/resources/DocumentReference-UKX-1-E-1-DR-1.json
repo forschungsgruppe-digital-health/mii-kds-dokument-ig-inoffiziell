@@ -9,13 +9,13 @@
   "type": {
     "coding": [
       {
-        "version": "2024",
+        "version": "2025",
         "code": "AD010102",
         "system": "http://dvmd.de/fhir/CodeSystem/kdl",
         "display": "Durchgangsarztbericht"
       },
       {
-        "version": "1.4.0",
+        "version": "3.0.1",
         "code": "BERI",
         "system": "http://ihe-d.de/CodeSystem/IHEXDStypeCode",
         "display": "Arztberichte"
@@ -27,7 +27,7 @@
     {
       "coding": [
         {
-          "version": "1.4.0",
+          "version": "3.0.1",
           "code": "BRI",
           "system": "http://ihe-d.de/CodeSystems/IHEXDSclassCode",
           "display": "Brief"

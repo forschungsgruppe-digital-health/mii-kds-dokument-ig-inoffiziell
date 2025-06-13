@@ -3,12 +3,12 @@ InstanceOf: MII_PR_Dokument_Dokument
 Usage: #example
 * status = #current
 * docStatus = #final
-* type.coding[0].version = "2024"
+* type.coding[0].version = "2025"
 * type.coding[=] = $dvmd-kdl#PT130102 "Molekularpathologiebefund"
-* type.coding[+].version = "1.4.0"
+* type.coding[+].version = "3.0.1"
 * type.coding[=] = $ihe-xds-type-code#PATH "Pathologiebefundberichte"
 * type.text = "Molekularpathologiebefund"
-* category.coding.version = "1.4.0"
+* category.coding.version = "3.0.1"
 * category.coding = $ihe-xds-class-code#BEF "Befundbericht"
 * category.text = "Befundbericht"
 * subject = Reference(UKX-4)

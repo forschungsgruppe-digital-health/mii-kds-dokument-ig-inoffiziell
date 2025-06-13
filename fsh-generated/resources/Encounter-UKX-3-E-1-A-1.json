@@ -22,15 +22,7 @@
           }
         ]
       },
-      "value": "UKX-3-E-1-A-1",
-      "_system": {
-        "extension": [
-          {
-            "url": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
-            "valueCode": "unknown"
-          }
-        ]
-      }
+      "value": "UKX-3-E-1-A-1"
     }
   ],
   "type": [

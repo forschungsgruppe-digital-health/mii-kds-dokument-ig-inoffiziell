@@ -10,7 +10,7 @@
   "type": {
     "coding": [
       {
-        "version": "1.4.0",
+        "version": "3.0.1",
         "code": "BEFU",
         "system": "http://ihe-d.de/CodeSystems/IHEXDStypeCode",
         "display": "Ergebnisse Diagnostik"
@@ -21,7 +21,7 @@
     {
       "coding": [
         {
-          "version": "1.4.0",
+          "version": "3.0.1",
           "code": "BEF",
           "system": "http://ihe-d.de/CodeSystems/IHEXDSclassCode",
           "display": "Befundbericht"

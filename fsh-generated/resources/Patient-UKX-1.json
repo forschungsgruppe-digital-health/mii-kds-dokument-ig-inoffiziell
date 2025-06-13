@@ -30,16 +30,6 @@
       "family": "Albers"
     }
   ],
-  "address": [
-    {
-      "extension": [
-        {
-          "url": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
-          "valueCode": "unknown"
-        }
-      ]
-    }
-  ],
   "gender": "female",
   "birthDate": "1997-04-04"
 }

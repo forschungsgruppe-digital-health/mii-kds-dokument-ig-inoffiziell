@@ -10,5 +10,3 @@ Usage: #example
 * name.given = "Ramòn"
 * gender = #male
 * birthDate = "1968-03-23"
-* address.extension.url = "http://terminology.hl7.org/CodeSystem/data-absent-reason"
-* address.extension.valueCode = #unknown

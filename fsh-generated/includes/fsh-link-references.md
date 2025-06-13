@@ -10,6 +10,10 @@
 [mii-cps-dokument-capabilitystatement]: CapabilityStatement-mii-cps-dokument-capabilitystatement.html
 [MII_LM_Dokument]: StructureDefinition-mii-lm-dokument.html
 [MII_PR_Dokument_Dokument]: StructureDefinition-mii-pr-dokument-dokument.html
+[MII_VS_Dokument_SCT_Dokument_Einrichtung]: ValueSet-mii-vs-dokument-sct-dokument-einrichtung.html
+[MII_VS_Dokument_SCT_Dokument_Fachgebiet]: ValueSet-mii-vs-dokument-sct-dokument-fachgebiet.html
+[MII_VS_Dokument_SCT_Dokument_Kategorie]: ValueSet-mii-vs-dokument-sct-dokument-kategorie.html
+[MII_VS_Dokument_SCT_Dokument_Typ]: ValueSet-mii-vs-dokument-sct-dokument-typ.html
 [PatientinMusterfrau]: Patient-PatientinMusterfrau.html
 [UKX-1]: Patient-UKX-1.html
 [UKX-1-E-1]: Encounter-UKX-1-E-1.html

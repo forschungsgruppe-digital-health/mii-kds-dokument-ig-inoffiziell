@@ -186,6 +186,38 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-dokument-sct-dokument-einrichtung"
+        },
+        "name": "MII VS Dokument SCT Dokument Einrichtung",
+        "description": "SNOMED CT ValueSet zur erzeugenden Einrichtung eines Dokuments",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-dokument-sct-dokument-fachgebiet"
+        },
+        "name": "MII VS Dokument SCT Dokument Fachgebiet",
+        "description": "SNOMED CT ValueSet zum erzeugenden Fachgebiet eines Dokuments",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-dokument-sct-dokument-kategorie"
+        },
+        "name": "MII VS Dokument SCT Dokument Kategorie",
+        "description": "SNOMED CT ValueSet zur Kategorie (oder Klasse) eines Dokuments",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-dokument-sct-dokument-typ"
+        },
+        "name": "MII VS Dokument SCT Dokument Typ",
+        "description": "SNOMED CT ValueSet zum Typ eines Dokuments",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Patient/PatientinMusterfrau"
         },
         "name": "PatientinMusterfrau",
