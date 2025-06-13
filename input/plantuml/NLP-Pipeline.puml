@@ -1,0 +1,69 @@
+@startdot "NLP-Pipeline"
+digraph pipeline {
+    splines=true
+    node [
+        fixedsize=true
+        width=2
+        fontname="sans-serif"
+        fontsize=12
+    ]
+    edge [
+        fontname="sans-serif"
+        fontsize=8
+        style=dotted
+        color=grey
+        fontcolor=grey
+    ]
+
+    subgraph phases {
+        rank=same
+        splines=curved
+        node [
+            style="filled,rounded"
+            shape=box
+            fillcolor=lightyellow
+        ]
+        edge [
+            style=solid
+            color=default
+            fontcolor=default
+        ]
+
+        s1 [label="Ingestion"]
+        s2 [label="Preprocessing"]
+        s3 [label="De-Identification"]
+        s4 [label="Annotation"]
+        s1 -> s2 -> s3 -> s4
+    }
+
+    subgraph results {
+        rank=same
+        node [
+            style=filled
+            shape=note
+            fillcolor=lightgrey
+            width=1.5
+        ]
+        edge [
+            dir=back
+            style=dashed
+            headport=sw
+            tailport=se
+        ]
+
+        r1 [label="PAT.{cda,docx,pdf}"]
+        r2 [label="PAT.txt"]
+        r3 [label="DE-ID.txt"]
+        r4 [label="SEM-ANO.xmi"]
+
+        r1 -> r2 [label="transforms"]
+        r2 -> r3 [label="transforms"] 
+        r3 -> r4 [label="appends"]
+    }
+
+    s1 -> r1
+    s2 -> r2
+    s3 -> r3
+    s4 -> r4
+}
+@enddot
