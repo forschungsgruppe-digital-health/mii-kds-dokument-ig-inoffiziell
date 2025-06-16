@@ -389,7 +389,15 @@
     "fshType": "Profile",
     "fshFile": "profiles/mii-pr-dokument-dokument.fsh",
     "startLine": 1,
-    "endLine": 225
+    "endLine": 227
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-dokument-format-code.json",
+    "fshName": "MII_VS_Dokument_Format_Code",
+    "fshType": "ValueSet",
+    "fshFile": "terminology/mii-vs-dokument-format-code.fsh",
+    "startLine": 1,
+    "endLine": 7
   },
   {
     "outputFile": "ValueSet-mii-vs-dokument-nlp-verarbeitung-dokumentart.json",

@@ -153,8 +153,10 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 // ISiK 4.0.1: 1..1, MS, IHEXDSformatCodeDE (required) | MIO 1.7.0: 0..1, DocumentReferenceFormatCodeSet (preferred) (R4 default) | IHE MHD 4.2.2: 1..1, MS, IHE_FormatCode_vs (preferred)
 * content.format 0..1 MS
-* content.format.code from $ihe-xds-format-code-vs (extensible)
-* content.format.code from $ihe-formatcode-vs (extensible)
+* content.format ^short = "Komplexe Formatangabe"
+* content.format ^definition = "Formatangabe, die über den MIME-Typen hinausgehen"
+* content.format ^comment = "Beinhaltet ValueSets von IHE Deutschland und International"
+* content.format from MII_VS_Dokument_Format_Code (preferred)
 
 // ISiK 4.0.1: 1..1, MS | MIO 1.7.0: 0..1 (R4 default) | IHE MHD 4.2.2: 1..1
 * context 0..1 MS
@@ -185,18 +187,18 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * context.facilityType.coding ^slicing.discriminator.type = #value
 * context.facilityType.coding ^slicing.discriminator.path = "system"
 * context.facilityType.coding ^slicing.rules = #open
-* context.facilityType.coding ^slicing.description = "Slice für IHE XDS-basierte Einrichtungsart"
+* context.facilityType.coding ^slicing.description = "Slice für Einrichtungsart"
 * context.facilityType.coding ^slicing.ordered = false
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * context.facilityType.coding contains SCT 0..1 MS
 * context.facilityType.coding[SCT].system = $SCT
-* context.facilityType.coding[SCT] from $mii-vs-dokument-sct-dokument-einrichtung
+* context.facilityType.coding[SCT] from $mii-vs-dokument-sct-dokument-einrichtung (required)
 
 // ISiK 4.0.1: 1..1, MS, IHEXDShealthcareFacilityTypeCode (required) | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * context.facilityType.coding contains XDS 0..1 MS
 * context.facilityType.coding[XDS].system = $ihe-xds-healthcare-facility-type-code
-* context.facilityType.coding[XDS] from $ihe-xds-healthcare-facility-type-code-vs
+* context.facilityType.coding[XDS] from $ihe-xds-healthcare-facility-type-code-vs (required)
 
 // ISiK 4.0.1: 1..1, MS, IHEXDSpracticeSettingCode (required) | MIO 1.7.0: 0..1, PracticeSettingCodeValueSet (example) (R4 default) | IHE MHD 4.2.2: 1..1, MS, PracticeSettingCodeValueSet (example)
 * context.practiceSetting 0..1 MS
@@ -212,12 +214,12 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * context.practiceSetting.coding contains SCT 0..1 MS
 //* context.practiceSetting.coding[SCT].system = $SCT
-* context.practiceSetting.coding[SCT] from $mii-vs-dokument-sct-dokument-fachgebiet
+* context.practiceSetting.coding[SCT] from $mii-vs-dokument-sct-dokument-fachgebiet (required)
 
 // ISiK 4.0.1: 1..1, MS, IHEXDSpracticeSettingCode (required) | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * context.practiceSetting.coding contains XDS 0..1 MS
 //* context.practiceSetting.coding[XDS].system from $ihe-aerztliche-fachrichtungen or $ihe-nicht-aerztliche-fachrichtungen
-* context.practiceSetting.coding[XDS] from $ihe-xds-practice-setting-code-vs
+* context.practiceSetting.coding[XDS] from $ihe-xds-practice-setting-code-vs (required)
 
 // Extension to classify a NLP processing (intermediate-) outputs (e.g. raw document or XMI file with annotated content)
 * extension contains MII_EX_Dokument_NLP_Verarbeitung_Dokumentart named nlp-verarbeitung-dokumentart 0..1 MS

@@ -1,4 +1,4 @@
-// Aliases für Profile des MII Dok-Moduls
+// Aliases für Profile des Moduls
 Alias: $mii-lm-dokument = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-lm-dokument
 Alias: $mii-cps-dokument = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/metadata
 Alias: $mii-pr-dokument = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument
@@ -7,9 +7,13 @@ Alias: $mii-vs-dokument-sct-dokument-fachgebiet = https://www.medizininformatik-
 Alias: $mii-vs-dokument-sct-dokument-kategorie = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie
 Alias: $mii-vs-dokument-sct-dokument-typ = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ
 
+// Aliases für Erweiterungen des Moduls
 Alias: $mii-ex-dokument-nlp-verarbeitung-dokumentart = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-verarbeitung-dokumentart
+
+// Aliases für Terminologie des Moduls
 Alias: $mii-cs-dokument-nlp-verarbeitung-dokumentart = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-verarbeitung-dokumentart
 Alias: $mii-vs-dokument-nlp-verarbeitung-dokumentart = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-nlp-verarbeitung-dokumentart
+Alias: $mii-vs-dokument-format-code = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-format-code
 
 // Aliases für HL7 FHIR Definitionen
 Alias: $cps-exp = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation

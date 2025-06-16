@@ -170,6 +170,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-dokument-format-code"
+        },
+        "name": "MII CS Dokument Format Code",
+        "description": "ValueSet zum (komplexen) Format Code eines Dokuments",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-dokument-nlp-verarbeitung-dokumentart"
         },
         "name": "MII CS Dokument NLP-Verarbeitung Dokumentart",

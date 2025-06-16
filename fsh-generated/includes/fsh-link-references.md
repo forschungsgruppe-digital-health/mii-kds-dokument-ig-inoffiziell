@@ -8,6 +8,7 @@
 [ex-DocumentReferenceUnContainedFully]: DocumentReference-ex-DocumentReferenceUnContainedFully.html
 [ex-patient]: Patient-ex-patient.html
 [mii-cps-dokument-capabilitystatement]: CapabilityStatement-mii-cps-dokument-capabilitystatement.html
+[MII_VS_Dokument_Format_Code]: ValueSet-mii-vs-dokument-format-code.html
 [MII_VS_Dokument_NLP_Verarbeitung_Dokumentart]: ValueSet-mii-vs-dokument-nlp-verarbeitung-dokumentart.html
 [MII_CS_Dokument_NLP_Verarbeitung_Dokumentart]: CodeSystem-mii-cs-dokument-nlp-verarbeitung-dokumentart.html
 [MII_EX_Dokument_NLP_Verarbeitung_Dokumentart]: StructureDefinition-mii-ex-dokument-nlp-verarbeitung-dokumentart.html
