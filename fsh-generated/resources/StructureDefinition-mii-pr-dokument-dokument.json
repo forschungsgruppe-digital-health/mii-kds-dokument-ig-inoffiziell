@@ -32,6 +32,24 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.extension:nlp-verarbeitung-dokumentart",
+        "path": "DocumentReference.extension",
+        "sliceName": "nlp-verarbeitung-dokumentart",
+        "short": "NLP-Verarbeitung Dokumentart",
+        "definition": "Art des Dokuments als (Zwischen-) Ergebnis der NLP-Verarbeitung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-ex-dokument-nlp-verarbeitung-dokumentart"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.masterIdentifier",
         "path": "DocumentReference.masterIdentifier",
         "short": "Versionsspezifische Kennung",

@@ -170,6 +170,30 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-dokument-nlp-verarbeitung-dokumentart"
+        },
+        "name": "MII CS Dokument NLP-Verarbeitung Dokumentart",
+        "description": "ValueSet zur Art des Dokuments als (Zwischen-) Ergebnis der NLP-Verarbeitung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-dokument-nlp-verarbeitung-dokumentart"
+        },
+        "name": "MII CS Dokument NLP-Verarbeitung Dokumentart",
+        "description": "Art des Dokuments als (Zwischen-) Ergebnis der NLP-Verarbeitung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-ex-dokument-nlp-verarbeitung-dokumentart"
+        },
+        "name": "MII EX Dokument NLP Verarbeitung Dokumentart",
+        "description": "Art des Dokuments als (Zwischen-) Ergebnis der NLP-Verarbeitung",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mii-lm-dokument"
         },
         "name": "MII LM Dokument",

@@ -1,0 +1,94 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "MII_CS_Dokument_NLP_Verarbeitung_Dokumentart",
+  "id": "mii-cs-dokument-nlp-verarbeitung-dokumentart",
+  "title": "MII CS Dokument NLP-Verarbeitung Dokumentart",
+  "description": "Art des Dokuments als (Zwischen-) Ergebnis der NLP-Verarbeitung",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-verarbeitung-dokumentart",
+  "concept": [
+    {
+      "code": "unprocessed",
+      "display": "Originaldokument",
+      "definition": "Originales, unverarbeitetes Dokument",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Original document"
+        }
+      ]
+    },
+    {
+      "code": "preprocessed",
+      "display": "Vorverarbeitetes Dokument",
+      "definition": "Durch computerlinguistische Verfahren verarbeitetes Dokument",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Preprocessed document"
+        }
+      ]
+    },
+    {
+      "code": "de-identified",
+      "display": "De-identifiziertes Dokument",
+      "definition": "Durch de-identifizierende Verfahren verarbeitetes Dokument",
+      "designation": [
+        {
+          "language": "en",
+          "value": "De-identified document"
+        }
+      ]
+    },
+    {
+      "code": "annotated",
+      "display": "Annotiertes Dokument",
+      "definition": "Durch Annotatoren verarbeitetes Dokument ohne Ersetzungen",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Annotated document"
+        }
+      ]
+    },
+    {
+      "code": "surrogated",
+      "display": "Surrogatdokument",
+      "definition": "Durch Annotatoren verarbeites Dokument mit Ersetzungen",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Surrogated document"
+        }
+      ]
+    },
+    {
+      "code": "curated",
+      "display": "Kuratiertes Dokument",
+      "definition": "Durch Kurator geprüftes Dokumente",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Curated document"
+        }
+      ]
+    }
+  ],
+  "version": "2025.0.0-ballot",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "experimental": false,
+  "language": "de-DE",
+  "caseSensitive": true,
+  "count": 6
+}

@@ -218,3 +218,8 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * context.practiceSetting.coding contains XDS 0..1 MS
 //* context.practiceSetting.coding[XDS].system from $ihe-aerztliche-fachrichtungen or $ihe-nicht-aerztliche-fachrichtungen
 * context.practiceSetting.coding[XDS] from $ihe-xds-practice-setting-code-vs
+
+// Extension to classify a NLP processing (intermediate-) outputs (e.g. raw document or XMI file with annotated content)
+* extension contains MII_EX_Dokument_NLP_Verarbeitung_Dokumentart named nlp-verarbeitung-dokumentart 0..1 MS
+* extension[nlp-verarbeitung-dokumentart] ^short = "NLP-Verarbeitung Dokumentart"
+* extension[nlp-verarbeitung-dokumentart] ^definition = "Art des Dokuments als (Zwischen-) Ergebnis der NLP-Verarbeitung"

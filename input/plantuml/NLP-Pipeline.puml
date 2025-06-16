@@ -61,9 +61,9 @@ digraph pipeline {
         r3 -> r4 [label="appends"]
     }
 
-    s1 -> r1
-    s2 -> r2
-    s3 -> r3
-    s4 -> r4
+    s1 -> r1 [label="unprocessed"]
+    s2 -> r2 [label="preprocessed"]
+    s3 -> r3 [label="de-identified"]
+    s4 -> r4 [label="annotated"]
 }
 @enddot
