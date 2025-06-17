@@ -7,6 +7,7 @@ skinparam linetype polyline
 'skinparam nodesep 100
 skinparam ranksep 100
 skinparam shadowing false
+skinparam legendBackgroundColor #White
 
 legend bottom center
     = Legende
@@ -19,50 +20,54 @@ legend bottom center
 end legend
 
 ' MII
-package "de.medizininformatikinitiative.kerndatensatz.dokument" as MiiDokument #LightGreen {
-    class MII_PR_Dokument_Dokument
+package "de.medizininformatikinitiative.kerndatensatz.dokument" as PkgMiiDokument #LightGreen {
+    class "MII_PR_Dokument_Dokument" as MiiDokument
 }
-package "de.medizininformatikinitiative.kerndatensatz.fall" as MiiFall #LightGreen {
-    class MII_PR_Fall_KontaktGesundheitseinrichtung
+package "de.medizininformatikinitiative.kerndatensatz.fall" as PkgMiiFall #LightGreen {
+    class "MII_PR_Fall_KontaktGesundheitseinrichtung" as MiiFall
 }
-package "de.medizininformatikinitiative.kerndatensatz.person" as MiiPerson #LightGreen {
-    class MII_PR_Person_Patient
-    class MII_PR_Person_PatientPseudonymisiert
+package "de.medizininformatikinitiative.kerndatensatz.person" as PkgMiiPerson #LightGreen {
+    class "MII_PR_Person_Patient" as MiiPatient
+    class "MII_PR_Person_PatientPseudonymisiert" as MiiPseudonym
 }
 
 ' Gematik
-package "de.gematik.isik-dokumentenaustausch" as GematikIsik #LightBlue {
-    class ISiKDokumentenMetadaten
+package "de.gematik.isik-dokumentenaustausch" as PkgIsik #LightBlue {
+    class "ISiKDokumentenMetadaten" as GematikIsik
 }
 
 ' KBV MIO
-package "kbv.basis" as KbvMio #LightPink {
-    class KBV_PR_Base_DocumentReference
+package "kbv.basis" as PkgMio #LightPink {
+    class "KBV_PR_Base_DocumentReference" as KbvMio
 }
 
 ' IHE International
-package "ihe.iti.mhd" as IheMhd #MediumPurple {
-    class UnContainedComprehensiveDocumentReference
+package "ihe.iti.mhd" as PkgMhd #MediumPurple {
+    class "UnContainedComprehensiveDocumentReference" as IheMhd
 }
-package "ihe.formatcode.fhir" as IheFormatCode #MediumPurple {
-    enum IHE_FormatCode_vs
+package "ihe.formatcode.fhir" as PkgIheFormatCode #MediumPurple {
+    enum "IHE_FormatCode_vs" as IheFormatCode
 }
-package "de.ihe-d.terminology" as IheTerminology #MediumPurple {
-    enum IHEXDSclassCode
-    enum IHEXDStypeCode
+package "de.ihe-d.terminology" as PkgIheTx #MediumPurple {
+    enum "IHEXDSformatCodeDE" as IheDeFormatCode
+    enum "IHEXDSclassCode" as IheDeClassCode
+    enum "IHEXDStypeCode" as IheDeTypeCode
 }
 
 ' DVMD e.V.
-package "dvmd.kdl.r4" as DvmdKdl #Orange {
-    enum ValueSetKDL {}
+package "dvmd.kdl.r4" as PkgKdl #Orange {
+    enum "ValueSetKDL" as DvmdKdl
 }
 
 ' Explizite Abhängigkeiten
 MiiDokument -[dashed,thickness=2]u-> MiiFall : "context.encounter"
-MiiDokument -[dashed,thickness=2]u-> MiiPerson : "subject"
-MiiDokument -[dashed,thickness=2]u-> DvmdKdl : "type.coding"
-MiiDokument -[dashed,thickness=2]u-> IheFormatCode : "content.format.code"
-MiiDokument -[dashed,thickness=2]u-> IheTerminology : "content.format.code"
+MiiDokument -[dashed,thickness=2]u-> MiiPatient : "subject"
+MiiDokument -[dashed,thickness=2]u-> MiiPseudonym : "subject"
+MiiDokument -[dashed,thickness=2]u-> DvmdKdl : "type"
+MiiDokument -[dashed,thickness=2]u-> IheFormatCode : "content.format"
+MiiDokument -[dashed,thickness=2]u-> IheDeFormatCode : "content.format"
+MiiDokument -[dashed,thickness=2]u-> IheDeClassCode : "category"
+MiiDokument -[dashed,thickness=2]u-> IheDeTypeCode : "type"
 
 ' Berücksichtigte Abhängigkeiten (Profile)
 MiiDokument -[dashed,thickness=2,#DarkGrey]d-> GematikIsik : <color:DarkGrey>berücksichtigt</color>
