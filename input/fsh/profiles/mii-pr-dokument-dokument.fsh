@@ -1,3 +1,6 @@
+// ISiK canonical url: https://gematik.de/fhir/isik/StructureDefinition/ISiKDokumentenMetadaten|4.0.2
+// KBV MIO canonical url: https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_DocumentReference|1.7.0
+
 Profile: MII_PR_Dokument_Dokument
 Parent: DocumentReference
 Id: mii-pr-dokument-dokument
@@ -221,7 +224,7 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 //* context.practiceSetting.coding[XDS].system from $ihe-aerztliche-fachrichtungen or $ihe-nicht-aerztliche-fachrichtungen
 * context.practiceSetting.coding[XDS] from $ihe-xds-practice-setting-code-vs (required)
 
-// Extension to classify a NLP processing (intermediate-) outputs (e.g. raw document or XMI file with annotated content)
-* extension contains MII_EX_Dokument_NLP_Verarbeitung_Dokumentart named nlp-verarbeitung-dokumentart 0..1 MS
-* extension[nlp-verarbeitung-dokumentart] ^short = "NLP-Verarbeitung Dokumentart"
-* extension[nlp-verarbeitung-dokumentart] ^definition = "Art des Dokuments als (Zwischen-) Ergebnis der NLP-Verarbeitung"
+// Extension to classify a NLP processing status
+* extension contains MII_EX_Dokument_NLP_Processing_Status named nlp-processing-status 0..1 MS
+* extension[nlp-processing-status] ^short = "NLP Processing Status"
+* extension[nlp-processing-status] ^definition = "Status der NLP-Verarbeitung des referenzierten Dokuments"

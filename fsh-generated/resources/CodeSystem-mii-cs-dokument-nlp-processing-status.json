@@ -2,11 +2,11 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "MII_CS_Dokument_NLP_Verarbeitung_Dokumentart",
-  "id": "mii-cs-dokument-nlp-verarbeitung-dokumentart",
-  "title": "MII CS Dokument NLP-Verarbeitung Dokumentart",
-  "description": "Art des Dokuments als (Zwischen-) Ergebnis der NLP-Verarbeitung",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-verarbeitung-dokumentart",
+  "name": "MII_CS_Dokument_NLP_Processing_Status",
+  "id": "mii-cs-dokument-nlp-processing-status",
+  "title": "MII CS Dokument NLP Typ",
+  "description": "Status der NLP-Verarbeitung des referenzierten Dokuments",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
   "concept": [
     {
       "code": "unprocessed",
@@ -66,7 +66,7 @@
     {
       "code": "curated",
       "display": "Kuratiertes Dokument",
-      "definition": "Durch Kurator geprüftes Dokumente",
+      "definition": "Durch manuelles oder automatisches Verfahren geprüftes Dokument",
       "designation": [
         {
           "language": "en",
@@ -88,7 +88,7 @@
     }
   ],
   "experimental": false,
-  "language": "de-DE",
+  "language": "de",
   "caseSensitive": true,
   "count": 6
 }

@@ -8,12 +8,12 @@
     "endLine": 61
   },
   {
-    "outputFile": "CodeSystem-mii-cs-dokument-nlp-verarbeitung-dokumentart.json",
-    "fshName": "MII_CS_Dokument_NLP_Verarbeitung_Dokumentart",
+    "outputFile": "CodeSystem-mii-cs-dokument-nlp-processing-status.json",
+    "fshName": "MII_CS_Dokument_NLP_Processing_Status",
     "fshType": "CodeSystem",
-    "fshFile": "terminology/mii-cs-dokument-nlp-verarbeitung-dokumentart.fsh",
+    "fshFile": "terminology/mii-cs-dokument-nlp-processing-status.fsh",
     "startLine": 1,
-    "endLine": 29
+    "endLine": 33
   },
   {
     "outputFile": "DocumentReference-783be93b-f22a-43de-a54f-bdca08e2fdbf.json",
@@ -368,12 +368,12 @@
     "endLine": 30
   },
   {
-    "outputFile": "StructureDefinition-mii-ex-dokument-nlp-verarbeitung-dokumentart.json",
-    "fshName": "MII_EX_Dokument_NLP_Verarbeitung_Dokumentart",
+    "outputFile": "StructureDefinition-mii-ex-dokument-nlp-processing-status.json",
+    "fshName": "MII_EX_Dokument_NLP_Processing_Status",
     "fshType": "Extension",
-    "fshFile": "extensions/mii-ex-dokument-nlp-verarbeitung-dokumentart.fsh",
+    "fshFile": "extensions/mii-ex-dokument-nlp-processing-status.fsh",
     "startLine": 1,
-    "endLine": 16
+    "endLine": 17
   },
   {
     "outputFile": "StructureDefinition-mii-lm-dokument.json",
@@ -388,8 +388,8 @@
     "fshName": "MII_PR_Dokument_Dokument",
     "fshType": "Profile",
     "fshFile": "profiles/mii-pr-dokument-dokument.fsh",
-    "startLine": 1,
-    "endLine": 227
+    "startLine": 4,
+    "endLine": 230
   },
   {
     "outputFile": "ValueSet-mii-vs-dokument-format-code.json",
@@ -400,10 +400,10 @@
     "endLine": 7
   },
   {
-    "outputFile": "ValueSet-mii-vs-dokument-nlp-verarbeitung-dokumentart.json",
-    "fshName": "MII_VS_Dokument_NLP_Verarbeitung_Dokumentart",
+    "outputFile": "ValueSet-mii-vs-dokument-nlp-processing-status.json",
+    "fshName": "MII_VS_Dokument_NLP_Processing_Status",
     "fshType": "ValueSet",
-    "fshFile": "terminology/mii-vs-dokument-nlp-verarbeitung-dokumentart.fsh",
+    "fshFile": "terminology/mii-vs-dokument-nlp-processing-status.fsh",
     "startLine": 1,
     "endLine": 6
   },

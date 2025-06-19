@@ -178,26 +178,26 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-dokument-nlp-verarbeitung-dokumentart"
+          "reference": "ValueSet/mii-vs-dokument-nlp-processing-status"
         },
-        "name": "MII CS Dokument NLP-Verarbeitung Dokumentart",
-        "description": "ValueSet zur Art des Dokuments als (Zwischen-) Ergebnis der NLP-Verarbeitung",
+        "name": "MII CS Dokument NLP Processing Status ValueSet",
+        "description": "ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-dokument-nlp-verarbeitung-dokumentart"
+          "reference": "CodeSystem/mii-cs-dokument-nlp-processing-status"
         },
-        "name": "MII CS Dokument NLP-Verarbeitung Dokumentart",
-        "description": "Art des Dokuments als (Zwischen-) Ergebnis der NLP-Verarbeitung",
+        "name": "MII CS Dokument NLP Typ",
+        "description": "Status der NLP-Verarbeitung des referenzierten Dokuments",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-ex-dokument-nlp-verarbeitung-dokumentart"
+          "reference": "StructureDefinition/mii-ex-dokument-nlp-processing-status"
         },
-        "name": "MII EX Dokument NLP Verarbeitung Dokumentart",
-        "description": "Art des Dokuments als (Zwischen-) Ergebnis der NLP-Verarbeitung",
+        "name": "MII EX Dokument NLP Processing Status",
+        "description": "Status der NLP-Verarbeitung des referenzierten Dokuments",
         "exampleBoolean": false
       },
       {

@@ -1,9 +1,13 @@
-CodeSystem: MII_CS_Dokument_NLP_Verarbeitung_Dokumentart
-Id: mii-cs-dokument-nlp-verarbeitung-dokumentart
-Title: "MII CS Dokument NLP-Verarbeitung Dokumentart"
-Description: "Art des Dokuments als (Zwischen-) Ergebnis der NLP-Verarbeitung"
-* insert CS_Header($mii-cs-dokument-nlp-verarbeitung-dokumentart)
+CodeSystem: MII_CS_Dokument_NLP_Processing_Status
+Id: mii-cs-dokument-nlp-processing-status
+Title: "MII CS Dokument NLP Typ"
+Description: "Status der NLP-Verarbeitung des referenzierten Dokuments"
+* insert CS_Header($mii-cs-dokument-nlp-processing-status)
 
+// Meta information
+* ^language = #de
+
+// Codes
 * #unprocessed "Originaldokument" "Originales, unverarbeitetes Dokument"
 * #unprocessed ^designation.language = #en
 * #unprocessed ^designation.value = "Original document"
@@ -24,6 +28,6 @@ Description: "Art des Dokuments als (Zwischen-) Ergebnis der NLP-Verarbeitung"
 * #surrogated ^designation.language = #en
 * #surrogated ^designation.value = "Surrogated document"
 
-* #curated "Kuratiertes Dokument" "Durch Kurator geprüftes Dokumente"
+* #curated "Kuratiertes Dokument" "Durch manuelles oder automatisches Verfahren geprüftes Dokument"
 * #curated ^designation.language = #en
 * #curated ^designation.value = "Curated document"
