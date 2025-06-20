@@ -1,6 +1,6 @@
 CodeSystem: MII_CS_Dokument_NLP_Processing_Status
 Id: mii-cs-dokument-nlp-processing-status
-Title: "MII CS Dokument NLP Typ"
+Title: "MII CS Dokument NLP Processing Status"
 Description: "Status der NLP-Verarbeitung des referenzierten Dokuments"
 * insert CS_Header($mii-cs-dokument-nlp-processing-status)
 
@@ -24,7 +24,7 @@ Description: "Status der NLP-Verarbeitung des referenzierten Dokuments"
 * #annotated ^designation.language = #en
 * #annotated ^designation.value = "Annotated document"
 
-* #surrogated "Surrogatdokument" "Durch Annotatoren verarbeites Dokument mit Ersetzungen"
+* #surrogated "Surrogatdokument" "Durch Annotatoren verarbeitetes Dokument mit Ersetzungen"
 * #surrogated ^designation.language = #en
 * #surrogated ^designation.value = "Surrogated document"
 

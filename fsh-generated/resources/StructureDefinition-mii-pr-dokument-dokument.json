@@ -170,7 +170,7 @@
         "id": "DocumentReference.type.coding:XDS.system",
         "path": "DocumentReference.type.coding.system",
         "min": 1,
-        "patternUri": "http://ihe-d.de/CodeSystem/IHEXDStypeCode"
+        "patternUri": "http://ihe-d.de/CodeSystems/IHEXDStypeCode"
       },
       {
         "id": "DocumentReference.category",

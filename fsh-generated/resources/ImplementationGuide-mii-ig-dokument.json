@@ -93,71 +93,51 @@
     "resource": [
       {
         "reference": {
-          "reference": "DocumentReference/783be93b-f22a-43de-a54f-bdca08e2fdbf"
+          "reference": "Patient/AmandaAlzheimer"
         },
-        "name": "783be93b-f22a-43de-a54f-bdca08e2fdbf",
-        "description": "Ultraschallbefund vom 01.09.2023",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "reference": {
-          "reference": "Encounter/BeispielBesuch"
-        },
-        "name": "BeispielBesuch",
+        "name": "AmandaAlzheimer",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "DocumentReference/dok-beispiel-client-with-binary-jpeg-example"
+          "reference": "Encounter/AmandaAlzheimerAbteilungskontakt"
         },
-        "name": "dok-beispiel-client-with-binary-jpeg-example",
-        "description": "Fotodokumentation Operation vom 31.12.21",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/dok-beispiel-client-with-binary-jpeg-example-short"
-        },
-        "name": "dok-beispiel-client-with-binary-jpeg-example-short",
-        "description": "Fotodokumentation Operation vom 31.12.21",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/dok-beispiel-client-with-binary-pdf-example"
-        },
-        "name": "dok-beispiel-client-with-binary-pdf-example",
-        "description": "Molekularpathologiebefund vom 31.12.21",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/dok-beispiel-client-with-binary-pdf-example-short"
-        },
-        "name": "dok-beispiel-client-with-binary-pdf-example-short",
-        "description": "Molekularpathologiebefund vom 31.12.21",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/ex-DocumentReferenceUnContained"
-        },
-        "name": "ex-DocumentReferenceUnContained",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/ex-DocumentReferenceUnContainedFully"
-        },
-        "name": "ex-DocumentReferenceUnContainedFully",
-        "description": "Example of a Comprehensive DocumentReference resource. This is minimally filled for all mandatory elements.",
+        "name": "AmandaAlzheimerAbteilungskontakt",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Patient/ex-patient"
+          "reference": "DocumentReference/AmandaAlzheimerAnnotiertesDokument"
         },
-        "name": "ex-patient",
+        "name": "AmandaAlzheimerAnnotiertesDokument",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument"
+        },
+        "name": "AmandaAlzheimerDeIdentifiziertesDokument",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/AmandaAlzheimerEinrichtungskontakt"
+        },
+        "name": "AmandaAlzheimerEinrichtungskontakt",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/AmandaAlzheimerOriginalDokument"
+        },
+        "name": "AmandaAlzheimerOriginalDokument",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/AmandaAlzheimerVersorgungsstellenKontakt"
+        },
+        "name": "AmandaAlzheimerVersorgungsstellenKontakt",
         "exampleBoolean": true
       },
       {
@@ -178,18 +158,18 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-dokument-nlp-processing-status"
+          "reference": "CodeSystem/mii-cs-dokument-nlp-processing-status"
         },
-        "name": "MII CS Dokument NLP Processing Status ValueSet",
-        "description": "ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments",
+        "name": "MII CS Dokument NLP Processing Status",
+        "description": "Status der NLP-Verarbeitung des referenzierten Dokuments",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-dokument-nlp-processing-status"
+          "reference": "ValueSet/mii-vs-dokument-nlp-processing-status"
         },
-        "name": "MII CS Dokument NLP Typ",
-        "description": "Status der NLP-Verarbeitung des referenzierten Dokuments",
+        "name": "MII CS Dokument NLP Processing Status ValueSet",
+        "description": "ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments",
         "exampleBoolean": false
       },
       {
@@ -247,252 +227,6 @@
         "name": "MII VS Dokument SCT Dokument Typ",
         "description": "SNOMED CT ValueSet zum Typ eines Dokuments",
         "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "Patient/PatientinMusterfrau"
-        },
-        "name": "PatientinMusterfrau",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Patient/UKX-1"
-        },
-        "name": "UKX-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-1-E-1"
-        },
-        "name": "UKX-1-E-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-1-E-1-A-1"
-        },
-        "name": "UKX-1-E-1-A-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-1-E-1-A-1-V-1"
-        },
-        "name": "UKX-1-E-1-A-1-V-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/UKX-1-E-1-DR-1"
-        },
-        "name": "UKX-1-E-1-DR-1",
-        "description": "GraSSCO Standardbrief",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-2-E-1"
-        },
-        "name": "UKX-2-E-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-2-E-1-A-1"
-        },
-        "name": "UKX-2-E-1-A-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-2-E-1-A-1-V-1"
-        },
-        "name": "UKX-2-E-1-A-1-V-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/UKX-2-E-1-DR-1"
-        },
-        "name": "UKX-2-E-1-DR-1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "reference": {
-          "reference": "Patient/UKX-3"
-        },
-        "name": "UKX-3",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-3-E-1"
-        },
-        "name": "UKX-3-E-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-3-E-1-A-1"
-        },
-        "name": "UKX-3-E-1-A-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-3-E-1-A-1-V-1"
-        },
-        "name": "UKX-3-E-1-A-1-V-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/UKX-3-E-1-DR-1"
-        },
-        "name": "UKX-3-E-1-DR-1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "reference": {
-          "reference": "Patient/UKX-4"
-        },
-        "name": "UKX-4",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-4-E-1"
-        },
-        "name": "UKX-4-E-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-4-E-1-A-1"
-        },
-        "name": "UKX-4-E-1-A-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-4-E-1-A-1-V-1"
-        },
-        "name": "UKX-4-E-1-A-1-V-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/UKX-4-E-1-DR-1"
-        },
-        "name": "UKX-4-E-1-DR-1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "reference": {
-          "reference": "Patient/UKX-5"
-        },
-        "name": "UKX-5",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-5-E-1"
-        },
-        "name": "UKX-5-E-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-5-E-1-A-1"
-        },
-        "name": "UKX-5-E-1-A-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-5-E-1-A-1-V-1"
-        },
-        "name": "UKX-5-E-1-A-1-V-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/UKX-5-E-1-DR-1"
-        },
-        "name": "UKX-5-E-1-DR-1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "reference": {
-          "reference": "Patient/UKX-6"
-        },
-        "name": "UKX-6",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-6-E-1"
-        },
-        "name": "UKX-6-E-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-6-E-1-A-1"
-        },
-        "name": "UKX-6-E-1-A-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-6-E-1-A-1-V-1"
-        },
-        "name": "UKX-6-E-1-A-1-V-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/UKX-6-E-1-DR-1"
-        },
-        "name": "UKX-6-E-1-DR-1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
-      },
-      {
-        "reference": {
-          "reference": "Patient/UKX-7"
-        },
-        "name": "UKX-7",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-7-E-1"
-        },
-        "name": "UKX-7-E-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-7-E-1-A-1"
-        },
-        "name": "UKX-7-E-1-A-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Encounter/UKX-7-E-1-A-1-V-1"
-        },
-        "name": "UKX-7-E-1-A-1-V-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/UKX-7-E-1-DR-1"
-        },
-        "name": "UKX-7-E-1-DR-1",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
       }
     ],
     "page": {

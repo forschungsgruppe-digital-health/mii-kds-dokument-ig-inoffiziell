@@ -51,7 +51,7 @@
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
-        "short": "NLP Typ",
+        "short": "NLP Processing Status",
         "definition": "Status der NLP-Verarbeitung des referenzierten Dokuments",
         "min": 1,
         "type": [

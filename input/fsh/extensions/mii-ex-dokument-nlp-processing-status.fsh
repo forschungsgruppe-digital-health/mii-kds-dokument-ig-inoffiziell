@@ -7,7 +7,7 @@ Description: "Status der NLP-Verarbeitung des referenzierten Dokuments"
 
 * value[x] 1..1 MS
 * value[x] only CodeableConcept
-* valueCodeableConcept ^short = "NLP Typ"
+* valueCodeableConcept ^short = "NLP Processing Status"
 * valueCodeableConcept ^definition = "Status der NLP-Verarbeitung des referenzierten Dokuments"
 
 * valueCodeableConcept.coding 1..* MS

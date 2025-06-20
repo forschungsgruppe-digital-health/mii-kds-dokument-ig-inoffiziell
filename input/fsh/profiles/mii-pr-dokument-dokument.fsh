@@ -28,7 +28,7 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * docStatus ^short = "Status des Dokuments"
 * docStatus ^definition = "Status des zugrunde liegenden Dokuments (vorläufig, final, geändert oder irrtümlich eingegeben)"
 
-// ISiK 4.0.1: 1..1, MS, Slicing KDS/XDS | MIO 1.7.0: 0..1 (R4 default), Slicing XDS | IHE MHD 4.2.2: 1..1, MS, DocumentTypeValueSet (preferred)
+// ISiK 4.0.1: 1..1, MS, Slicing KDL/XDS | MIO 1.7.0: 0..1 (R4 default), Slicing XDS | IHE MHD 4.2.2: 1..1, MS, DocumentTypeValueSet (preferred)
 * type 0..1 MS
 * type ^short = "Art des Dokuments"
 * type ^definition = "Art des Dokuments auf das verwiesen wird (z.B. Anamnese und Untersuchung, Entlassungsbericht, Verlaufsbericht)"

@@ -15,9 +15,9 @@ digraph pipeline {
         fontcolor=grey
     ]
 
-    subgraph phases {
+    subgraph steps {
         rank=same
-        splines=curved
+        splines=line
         node [
             style="filled,rounded"
             shape=box
@@ -30,7 +30,12 @@ digraph pipeline {
         ]
 
         s1 [label="Ingestion"]
-        s2 [label="Preprocessing"]
+        s2 [
+            label="Preprocessing"
+            style="dashed,rounded"
+            color=lightgrey
+            fontcolor=lightgrey
+        ]
         s3 [label="De-Identification"]
         s4 [label="Annotation"]
         s1 -> s2 -> s3 -> s4
@@ -38,11 +43,12 @@ digraph pipeline {
 
     subgraph results {
         rank=same
+        splines=curved
         node [
             style=filled
             shape=note
             fillcolor=lightgrey
-            width=1.5
+            width=2
         ]
         edge [
             dir=back
@@ -51,19 +57,16 @@ digraph pipeline {
             tailport=se
         ]
 
-        r1 [label="PAT.{cda,docx,pdf}"]
-        r2 [label="PAT.txt"]
-        r3 [label="DE-ID.txt"]
-        r4 [label="SEM-ANO.xmi"]
+        r1 [label="Amanda_Alzheimer.txt"]
+        r3 [label="De-ID.txt"]
+        r4 [label="Annotat.zip"]
 
-        r1 -> r2 [label="transforms"]
-        r2 -> r3 [label="transforms"] 
+        r1 -> r3 [label="transforms"]
         r3 -> r4 [label="appends"]
     }
 
     s1 -> r1 [label="unprocessed"]
-    s2 -> r2 [label="preprocessed"]
-    s3 -> r3 [label="de-identified"]
-    s4 -> r4 [label="annotated"]
+    s3 -> r3 [label="de-identified\ncurated"]
+    s4 -> r4 [label="de-identified\nannotated\ncurated"]
 }
 @enddot
