@@ -65,6 +65,10 @@
         "size": 34548,
         "hash": "ZDY3NzQ2NDkyOWRlZDQxMmExNjBkOTBlNzZlYjc2YWY5ODEwNGFlNgo=",
         "title": "Annotat.zip"
+      },
+      "format": {
+        "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+        "system": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"
       }
     }
   ],

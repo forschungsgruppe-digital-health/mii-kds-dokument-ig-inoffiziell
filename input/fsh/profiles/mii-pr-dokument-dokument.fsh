@@ -177,6 +177,16 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * context.event ^short = "Dokumentierter Vorgang"
 * context.event ^definition = "Handlungen oder Prozeduren, die im Kontext dokumentiert wurden"
 
+* context.event.coding ^slicing.discriminator.type = #pattern
+* context.event.coding ^slicing.discriminator.path = "$this"
+* context.event.coding ^slicing.rules = #open
+* context.event.coding ^slicing.description = "Slice für dokumentierten Vorgang"
+* context.event.coding ^slicing.ordered = false
+
+// ISiK 4.0.1: 0..*, MS, IHEXDSeventCodeList (required) | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
+* context.event.coding contains XDS 0..1 MS
+* context.event.coding[XDS] from $ihe-xds-event-code-vs (required)
+
 // ISiK 4.0.1: 0..1 (R4 default) | MIO 1.7.0: 0..1 (R4 default) | IHE MHD 4.2.2: 0..1, MS
 * context.period 0..1 MS
 * context.period ^short = "Durchführungszeitraum zum Vorgang"

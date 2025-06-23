@@ -65,6 +65,10 @@
         "size": 6736,
         "hash": "M2NlZWFkNjZiYzkxMDkxMTcyOGViYjBjNzBhOWMyMTZlYWIxNWY1Ygo=",
         "title": "De-ID.txt"
+      },
+      "format": {
+        "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+        "system": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"
       }
     }
   ],

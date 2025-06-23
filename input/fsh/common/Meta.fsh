@@ -1,5 +1,6 @@
 RuleSet: Meta
 * meta MS
+* meta.profile MS
 
 RuleSet: CS_VS_Meta(url)
 * ^url = {url}

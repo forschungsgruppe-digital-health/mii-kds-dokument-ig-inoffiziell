@@ -5,11 +5,12 @@
   "keywords": [
     "MII",
     "KDS",
-    "Dokument"
+    "Dokument",
+    "DocumentReference"
   ],
   "type": "IG",
   "license": "CC0-1.0",
-  "canonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dok/ImplementationGuide/mii-ig-dokument",
+  "canonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument",
   "url": "https://simplifier.net/mii-erweiterungsmodul-dokument-2025",
   "title": "MII IG Dokument",
   "author": "Medizininformatik Initiative",
@@ -35,6 +36,7 @@
     "de.gematik.isik-dokumentenaustausch": "4.0.1",
     "de.ihe-d.terminology": "3.0.1",
     "de.medizininformatikinitiative.kerndatensatz.fall": "2025.0.0",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "2025.0.0",
     "de.medizininformatikinitiative.kerndatensatz.person": "2025.0.0",
     "dvmd.kdl.r4": "2025.0.1",
     "kbv.basis": "1.7.0",

@@ -21,6 +21,7 @@ Usage: #example
 * content.attachment.size = 34548
 * content.attachment.hash = "ZDY3NzQ2NDkyOWRlZDQxMmExNjBkOTBlNzZlYjc2YWY5ODEwNGFlNgo="
 * content.attachment.title = "Annotat.zip"
+* content.format = $ihe-formatcode#urn:ihe:iti:xds:2017:mimeTypeSufficient
 * extension[nlp-processing-status].valueCodeableConcept.coding[+] = #de-identified
 * extension[nlp-processing-status].valueCodeableConcept.coding[+] = #annotated
 * extension[nlp-processing-status].valueCodeableConcept.coding[+] = #curated

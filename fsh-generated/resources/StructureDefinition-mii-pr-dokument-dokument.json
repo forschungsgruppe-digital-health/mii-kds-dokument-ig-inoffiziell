@@ -32,6 +32,11 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.meta.profile",
+        "path": "DocumentReference.meta.profile",
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.extension:nlp-processing-status",
         "path": "DocumentReference.extension",
         "sliceName": "nlp-processing-status",
@@ -387,6 +392,33 @@
         "short": "Dokumentierter Vorgang",
         "definition": "Handlungen oder Prozeduren, die im Kontext dokumentiert wurden",
         "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.event.coding",
+        "path": "DocumentReference.context.event.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "description": "Slice für dokumentierten Vorgang",
+          "ordered": false
+        }
+      },
+      {
+        "id": "DocumentReference.context.event.coding:XDS",
+        "path": "DocumentReference.context.event.coding",
+        "sliceName": "XDS",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihe-d.de/ValueSets/IHEXDSeventCodeList"
+        }
       },
       {
         "id": "DocumentReference.context.period",

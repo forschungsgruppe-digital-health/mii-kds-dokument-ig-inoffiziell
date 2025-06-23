@@ -1,7 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
   "id": "mii-cps-dokument-capabilitystatement",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/metadata",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/mii-cps-dokument-capabilitystatement",
   "contact": [
     {
       "telecom": [
@@ -38,7 +38,7 @@
             }
           ],
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/metadata"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/mii-cps-dokument-capabilitystatement/metadata"
           ],
           "_supportedProfile": [
             {
@@ -89,17 +89,6 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "name": "_lastUpdated",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
-              "type": "date"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
               "name": "_profile",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-profile",
               "type": "uri"
@@ -112,7 +101,7 @@
                 }
               ],
               "name": "identifier",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-identifier",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-identifier",
               "type": "token"
             },
             {
@@ -133,8 +122,19 @@
                   "valueCode": "SHALL"
                 }
               ],
+              "name": "doc-status",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/SearchParameter/DocumentReference-doc-status",
+              "type": "token"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
               "name": "type",
-              "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-type",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-type",
               "type": "token"
             },
             {
@@ -156,18 +156,7 @@
                 }
               ],
               "name": "patient",
-              "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-patient",
-              "type": "reference"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
-              "name": "relatesto",
-              "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-relatesto",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-patient",
               "type": "reference"
             },
             {
@@ -180,6 +169,17 @@
               "name": "relation",
               "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-relation",
               "type": "token"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "relatesto",
+              "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-relatesto",
+              "type": "reference"
             },
             {
               "extension": [
@@ -254,6 +254,17 @@
                   "valueCode": "SHALL"
                 }
               ],
+              "name": "creation",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/SearchParameter/DocumentReference-creation",
+              "type": "date"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
               "name": "format",
               "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-format",
               "type": "token"
@@ -266,7 +277,7 @@
                 }
               ],
               "name": "encounter",
-              "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-encounter",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-encounter",
               "type": "reference"
             },
             {
@@ -312,6 +323,17 @@
               "name": "setting",
               "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-setting",
               "type": "token"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "nlp-processing-status",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/SearchParameter/DocumentReference-nlp-processing-status",
+              "type": "token"
             }
           ],
           "type": "DocumentReference"
@@ -327,7 +349,7 @@
   "description": "\n    Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss,\n    um das Modul Dokument der Medizininformatik Initiative zu implementieren.",
   "status": "active",
   "experimental": false,
-  "date": "2025-04-25",
+  "date": "2025-06-23",
   "kind": "requirements",
   "fhirVersion": "4.0.1"
 }

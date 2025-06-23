@@ -1,6 +1,11 @@
 Instance: AmandaAlzheimerOriginalDokument
 InstanceOf: MII_PR_Dokument_Dokument
 Usage: #example
+* masterIdentifier.system = "urn:ietf:rfc:3986"
+* masterIdentifier.value = "urn:oid:1.2.840.113556.1.8000.2554.58783.21864.3474.19410.44358.58254.41281.46340"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:0c287d32-01e3-4d87-9953-9fcc9404eb21"
+* identifier.use = #official
 * status = #current
 * docStatus = #final
 * type.coding[+].version = "2025"
@@ -20,5 +25,12 @@ Usage: #example
 * content.attachment.size = 6450
 * content.attachment.hash = "MzFiZGQwOTU2ZDNkMTgyZTY5YzA4MjJlZDM1MDYzMDgxYzM2YThjMwo="
 * content.attachment.title = "Amanda_Alzheimer.txt"
+* content.attachment.creation = "2028-02-06"
+* content.format = $ihe-formatcode#urn:ihe:iti:xds:2017:mimeTypeSufficient
 * context.encounter = Reference(Encounter/AmandaAlzheimerEinrichtungskontakt)
+* context.event = $ihe-fallkontext-bei-dokumentenerstellung#E234 // Entlassung zur nachstationären Behandlung
+* context.period.start = "2028-01-24"
+* context.period.end = "2028-02-06"
+* context.facilityType = $ihe-patient-bezogene-gesundheitsversorgung#KHS // Krankenhaus
+* context.practiceSetting = $ihe-aerztliche-fachrichtungen#INTZ // Interdisziplinäre Zusammenarbeit
 * extension[nlp-processing-status].valueCodeableConcept = #unprocessed

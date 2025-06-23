@@ -5,7 +5,7 @@
     "fshType": "Instance",
     "fshFile": "definitions/mii-cps-dokument-capabilitystatement.fsh",
     "startLine": 1,
-    "endLine": 61
+    "endLine": 64
   },
   {
     "outputFile": "CodeSystem-mii-cs-dokument-nlp-processing-status.json",
@@ -21,7 +21,7 @@
     "fshType": "Instance",
     "fshFile": "examples/alzheimer/mii-exa-dokument-document-nlp-annotiert.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 27
   },
   {
     "outputFile": "DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.json",
@@ -29,7 +29,7 @@
     "fshType": "Instance",
     "fshFile": "examples/alzheimer/mii-exa-dokument-document-nlp-de-identifiziert.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 26
   },
   {
     "outputFile": "DocumentReference-AmandaAlzheimerOriginalDokument.json",
@@ -37,7 +37,7 @@
     "fshType": "Instance",
     "fshFile": "examples/alzheimer/mii-exa-dokument-document-nlp-original.fsh",
     "startLine": 1,
-    "endLine": 24
+    "endLine": 36
   },
   {
     "outputFile": "Encounter-AmandaAlzheimerAbteilungskontakt.json",
@@ -93,7 +93,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/mii-pr-dokument-dokument.fsh",
     "startLine": 4,
-    "endLine": 230
+    "endLine": 240
   },
   {
     "outputFile": "ValueSet-mii-vs-dokument-format-code.json",

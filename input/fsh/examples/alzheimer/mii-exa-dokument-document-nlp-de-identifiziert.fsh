@@ -21,5 +21,6 @@ Usage: #example
 * content.attachment.size = 6736
 * content.attachment.hash = "M2NlZWFkNjZiYzkxMDkxMTcyOGViYjBjNzBhOWMyMTZlYWIxNWY1Ygo="
 * content.attachment.title = "De-ID.txt"
+* content.format = $ihe-formatcode#urn:ihe:iti:xds:2017:mimeTypeSufficient
 * extension[nlp-processing-status].valueCodeableConcept.coding[+] = #de-identified
 * extension[nlp-processing-status].valueCodeableConcept.coding[+] = #curated
