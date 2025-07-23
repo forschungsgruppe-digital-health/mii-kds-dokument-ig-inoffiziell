@@ -24,3 +24,28 @@ RuleSet: SupportSearchParam(name, canonical, type, expectation)
 * rest.resource[=].searchParam[=].type = {type}
 * rest.resource[=].searchParam[=].extension[0].url = $cps-exp
 * rest.resource[=].searchParam[=].extension[0].valueCode = {expectation}
+
+RuleSet: Description(path, short, definition)
+* {path} ^short = "{short}"
+* {path} ^definition = "{definition}"
+
+RuleSet: DescriptionIntl(path, language, short, definition)
+* insert Translation({path} ^short, {language}, {short})
+* insert Translation({path} ^definition, {language}, {definition})
+
+RuleSet: CommentedDescription(path, short, definition, comment)
+* {path} ^short = "{short}"
+* {path} ^definition = "{definition}"
+* {path} ^comment = "{comment}"
+
+RuleSet: CommentedDescriptionIntl(path, language, short, definition, comment)
+* insert Translation({path} ^short, {language}, {short})
+* insert Translation({path} ^definition, {language}, {definition})
+* insert Translation({path} ^comment, {language}, {comment})
+
+RuleSet: Translation(path, language, translation)
+* {path}.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* {path}.extension[=].extension[0].url = "lang"
+* {path}.extension[=].extension[0].valueCode = #{language}
+* {path}.extension[=].extension[1].url = "content"
+* {path}.extension[=].extension[1].valueString = "{translation}"

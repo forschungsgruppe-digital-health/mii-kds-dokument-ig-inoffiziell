@@ -57,37 +57,279 @@
       {
         "id": "DocumentReference.masterIdentifier",
         "path": "DocumentReference.masterIdentifier",
-        "short": "Versionsspezifische Kennung",
-        "definition": "Versionsspezifische eindeutige Kennung, die dem Dokument durch die Dokumentenquelle zugewiesen wurde",
+        "short": "Versionsspezifische OID des Dokuments",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Specific Identifier for this version of the document"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Versionsspezifische OID des Dokuments. Die Angabe ist dringend empfohlen [SHALL].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Specific Identifier for this version of the document [SHALL]."
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.identifier",
         "path": "DocumentReference.identifier",
-        "short": "Versionsunabhängige Kennung",
-        "definition": "Andere versionsunabhängige Kennung, die dem Dokument (z.B. durch weitere dokumentenverarbeitende Systeme) zugewiesen wurde",
+        "short": "Weitere Dokumente assoziierte Identifikatoren",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Further document associated Identifiers"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Weitere Dokumente assoziierte Identifikatoren. Die Angabe ist optional [MAY].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Further document associated Identifiers [MAY]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Z.B. Hausinterne Dokumenten-ID",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "E.g. internal document ID"
+                }
+              ]
+            }
+          ]
+        },
         "max": "1",
         "mustSupport": true
       },
       {
         "id": "DocumentReference.status",
         "path": "DocumentReference.status",
-        "short": "Status der Dokumentenreferenz",
-        "definition": "Status dieser Dokumentenreferenz (aktuell, überholt oder irrtümlich eingegeben)",
+        "short": "Zustand des Dokumentenmetadatensatzes",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status about the condition of the document reference"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Zustand des Dokumentenmetadatensatzes. Die Angabe ist dringend empfohlen [SHALL].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status about the condition of the document reference [SHALL]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Typisch: `current`",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Typically: `current`"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.docStatus",
         "path": "DocumentReference.docStatus",
-        "short": "Status des Dokuments",
-        "definition": "Status des zugrunde liegenden Dokuments (vorläufig, final, geändert oder irrtümlich eingegeben)",
+        "short": "Bearbeitungsstatus des Dokumentes",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status about the referenced document itself"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Bearbeitungsstatus des Dokumentes. Die Angabe ist dringend empfohlen [SHALL].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Status about the referenced document itself [SHALL]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Typisch: `final`",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Typically: `final`"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.type",
         "path": "DocumentReference.type",
-        "short": "Art des Dokuments",
-        "definition": "Art des Dokuments auf das verwiesen wird (z.B. Anamnese und Untersuchung, Entlassungsbericht, Verlaufsbericht)",
+        "short": "Charakterisierung der Dokumentart im Detail",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Precise description of the document type"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Charakterisierung der Dokumentart im Detail. Die Angabe ist dringend empfohlen [SHALL].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Precise description of the document type [SHALL]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Empfohlen: KDL und aus KDL abgeleiteter XDS-Type-Code",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Recommended: KDL and from KDL derived XDS-Type-Code"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
@@ -180,8 +422,60 @@
       {
         "id": "DocumentReference.category",
         "path": "DocumentReference.category",
-        "short": "Kategorien des Dokuments",
-        "definition": "Übergeordnete Kategorie des Dokuments auf das verwiesen wird (z.B. Arztberichte oder Arztdokumentation)",
+        "short": "Charakterisierung der Dokumentenart in Übersicht",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "General description of the document type"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Charakterisierung der Dokumentenart in Übersicht. Die Angabe ist dringend empfohlen [SHALL].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "General description of the document type [SHALL]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Empfohlen: Aus KDL abgeleiteter XDS-Category-Code",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Recommended: From KDL derived XDS-Category-Code"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
@@ -256,8 +550,42 @@
       {
         "id": "DocumentReference.subject",
         "path": "DocumentReference.subject",
-        "short": "Verweis auf Patient",
-        "definition": "Patient auf den sich das verwiesene Dokument bezieht",
+        "short": "Referenz auf den Patient des Dokumentes",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Patient reference to the document"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Referenz auf den Patient des Dokumentes. Die Angabe ist verpflichtend [MUST].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Patient reference to the document [MUST]."
+                }
+              ]
+            }
+          ]
+        },
         "type": [
           {
             "code": "Reference",
@@ -274,89 +602,676 @@
         "id": "DocumentReference.relatesTo",
         "path": "DocumentReference.relatesTo",
         "short": "Beziehung des Dokuments",
-        "definition": "Beziehungen des verwiesenen Dokuments zu anderen Dokumenten",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Document relationships"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Beziehungen des verwiesenen Dokuments zu anderen Dokumenten.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Document relationships"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.relatesTo.code",
         "path": "DocumentReference.relatesTo.code",
-        "short": "Art der Beziehung",
-        "definition": "Beziehung zu anderen Dokumenten",
+        "short": "Beziehung zu anderem Dokument",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Relationship to other document"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Beziehung zu anderem Dokument. Die Angabe ist optional [MAY].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Relationship to other document [MAY]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Typisch: `appends`, z.B. ergänzende Annotation, oder `transforms`, z.B. Formatwandlung. CAVE: `transforms` meint Dokument wurde transformiert",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Typically: `appends`, e.g. additional annotation, or `transforms`, e.g. format conversion. CAVE: `transforms` means the document was transformed"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.relatesTo.target",
         "path": "DocumentReference.relatesTo.target",
-        "short": "Verweis auf Dokument",
-        "definition": "Ziel der Dokumentenbeziehung",
+        "short": "Referenz auf DocumentReference",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Target of document relations"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Referenz auf DocumentReference. Die Angabe ist verpflichtend [MUST], wenn Beziehungstyp angegeben.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Target of document relations [MUST], when relationship type is present."
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.description",
         "path": "DocumentReference.description",
-        "short": "Beschreibung des Dokuments",
-        "definition": "Menschenlesbare Beschreibung zum verwiesenen Dokuments",
+        "short": "Beschreibung des Inhalts des Dokumentes",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Description of the documents content"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Beschreibung des Inhalts des Dokumentes. Die Angabe ist optional [MAY].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Description of the documents content [MAY]."
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.securityLabel",
         "path": "DocumentReference.securityLabel",
-        "short": "Vertraulichkeit des Dokuments",
-        "definition": "Grad der Vertraulichkeit/Sicherheit des verwiesenen Dokuments (z. B. uneingeschränkt, gering, mittel, normal oder eingeschränkt)",
+        "short": "Status über den Sicherheitsbedarf des Dokuments",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Security level of the document"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Status über den Sicherheitsbedarf des Dokuments. Die Angabe wird dringend empfohlen [SHALL].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Security level of the document [SHALL]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Siehe IG Terminologien",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "See IG Terminology"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.content",
         "path": "DocumentReference.content",
         "short": "Inhalt des Dokuments",
-        "definition": "Dokument (Base64-kodierte Daten) oder Verweis (URL) mit relevanten Metadaten zum Anhang",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Document content"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Dokument, als Base64-kodierte Daten, oder Verweis, als URL, mit relevanten Metadaten zum Anhang.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Embedded Base64 encoded document content or URL reference to document."
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.content.attachment",
         "path": "DocumentReference.content.attachment",
+        "short": "Zugang zum Dokument",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Access to the document"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Zugang zum Dokument.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Access to the document"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.content.attachment.contentType",
         "path": "DocumentReference.content.attachment.contentType",
-        "short": "MIME-Typ zum Inhalt",
-        "definition": "MIME-Typ des Dokumenteninhalts",
+        "short": "MIME-Typ des Dokumenteninhalts",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "MIME type of the document content"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "MIME-Typ des Dokumenteninhalts. Die Angabe ist dringend empfohlen [SHALL].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "MIME type of the document content [SHALL]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Typisch: `text/plain`",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Typically: `text/plain`"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.content.attachment.language",
         "path": "DocumentReference.content.attachment.language",
-        "short": "Verfassungssprache des Inhalts",
-        "definition": "Verwendete Sprache in dem Dokument",
+        "short": "Verwendete Sprache in dem Dokument",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Used language in the document"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Verwendete Sprache in dem Dokument. Die Angabe ist dringend empfohlen [SHALL].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Used language in the document [SHALL]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Empfohlen: 5-stellige Angabe. Typisch: `de-DE`",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Recommended: 5-digit entry Typically: `de-DE`"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.content.attachment.data",
         "path": "DocumentReference.content.attachment.data",
-        "short": "Binärdaten zum Inhalt",
-        "definition": "Dokument als Binärdaten"
+        "short": "Dokument als Binärdaten",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Document as binary data [Base64]"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Dokument als Binärdaten [Base64]. Die Angabe ist verpflichtend [MUST] für Textausleitungen extern und falls URL nicht angegeben wurde; ansonsten optional [MAY].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Document as binary data [Base64] [MUST] for external transfer and when URL not present; otherwise optional [MAY]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Typisch: Nutzung bei Datentransfer",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Typically: Use for data transfer"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "id": "DocumentReference.content.attachment.url",
         "path": "DocumentReference.content.attachment.url",
-        "short": "URL zum Inhalt",
-        "definition": "Verweis auf den (lokalen) Ablageort des Dokuments",
+        "short": "Verweis auf den lokalen Ablageort des Dokumentes",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Link to the local location where the document is kept"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Verweis auf den lokalen Ablageort des Dokumentes. Die Angabe ist verpflichtend [MUST], wenn `data` nicht angegeben wurde; ansonsten optional [MAY].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Link to the local location where the document is kept [MUST], when `data` not present; otherwise optional [MAY]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Typisch: Lokal auflösbare URL",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Typically: Local resolvable URL"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.content.attachment.creation",
         "path": "DocumentReference.content.attachment.creation",
-        "short": "Erstellungsdatum des Inhalts",
-        "definition": "Datum der Erstellung des Dokumentes",
+        "short": "Datum der Erstellung des Dokumentes",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Date of the creation of the document"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Datum der Erstellung des Dokumentes. Die Angabe ist dringend empfohlen [SHALL].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Date of the creation of the document [SHALL]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Bezogen auf letzte Änderung gemäß MII_EX_Dokument_NLP_Processing_Status",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Related to the last change regarding MII_EX_Dokument_NLP_Processing_Status"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.content.format",
         "path": "DocumentReference.content.format",
         "short": "Komplexe Formatangabe",
-        "definition": "Formatangabe, die über den MIME-Typen hinausgehen",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Complex format specification"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Formatangabe, die über den MIME-Typ hinausgehen",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "More complex format specification than the MIME type"
+                }
+              ]
+            }
+          ]
+        },
         "comment": "Beinhaltet ValueSets von IHE Deutschland und International",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Contains ValueSets of IHE Germany and International"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true,
         "binding": {
           "strength": "preferred",
@@ -366,15 +1281,83 @@
       {
         "id": "DocumentReference.context",
         "path": "DocumentReference.context",
-        "short": "Erzeugungskontext des Dokuments",
+        "short": "Erzeugungskontext des Dokumentes",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Document creation context"
+                }
+              ]
+            }
+          ]
+        },
         "definition": "Klinischer Kontext, in welchem das Dokument erzeugt wurde",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Clinical context in which the document was created"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.context.encounter",
         "path": "DocumentReference.context.encounter",
-        "short": "Verweis auf Einrichtungskontakt",
-        "definition": "Kontakt zur Gesundheitseinrichtung oder die Art der Versorgung, die mit dem Dokumenteninhalt assoziiert ist",
+        "short": "Referenz zum FALL",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Reference to FALL"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Referenz zur semantisch geeignetsten Ebene des Moduls FALL. Die Angabe ist dringend empfohlen [SHALL].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Reference to the semantically most suitable level of the module FALL [SHALL]."
+                }
+              ]
+            }
+          ]
+        },
         "type": [
           {
             "code": "Reference",
@@ -389,8 +1372,42 @@
       {
         "id": "DocumentReference.context.event",
         "path": "DocumentReference.context.event",
-        "short": "Dokumentierter Vorgang",
-        "definition": "Handlungen oder Prozeduren, die im Kontext dokumentiert wurden",
+        "short": "Handlungen oder Prozeduren",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Acts or procedures"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Handlungen oder Prozeduren, die im Kontext dokumentiert wurden. Die Angabe ist optional [MAY].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Acts or procedures that were documented in context [MAY]."
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
@@ -423,15 +1440,101 @@
       {
         "id": "DocumentReference.context.period",
         "path": "DocumentReference.context.period",
-        "short": "Durchführungszeitraum zum Vorgang",
-        "definition": "Zeitraum, in dem die in dem Dokument beschriebene Handlung oder Prozedur durchgeführt wurde",
+        "short": "Durchführungszeitraum",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Performance period"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Zeitraum, in dem die in dem Dokument beschriebene Handlung oder Prozedur durchgeführt wurde. Die Angabe ist optional [MAY].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Period during which the act or procedure described in the document was performed [MAY]."
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.context.facilityType",
         "path": "DocumentReference.context.facilityType",
-        "short": "Art der Einrichtung zum Vorgang",
-        "definition": "Art der Einrichtung, in der die Handlung oder Prozedur am Patienten erfolgte",
+        "short": "Art der Einrichtung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Type of facility"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Art der Einrichtung, in der die Handlung oder Prozedur am Patienten erfolgte. Die Angabe ist optional [MAY].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Type of facility where the act or procedure was performed on the patient [MAY]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Typisch: `KHS` für Krankenhaus",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Typically: `KHS` for hospital"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
@@ -488,8 +1591,60 @@
       {
         "id": "DocumentReference.context.practiceSetting",
         "path": "DocumentReference.context.practiceSetting",
-        "short": "Klinisches Fachgebiet zum Vorgang",
-        "definition": "Klinisches Fachgebiet, in dem Dokumenteninhalt erstellt wurde",
+        "short": "Klinisches Fachgebiet",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Clinical specialty"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Klinisches Fachgebiet, in dem Dokumenteninhalt erstellt wurde. Die Angabe ist optional [MAY].",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Clinical specialty in which document content was created [MAY]."
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "CAVE: Diese Angabe entspricht nicht dem `serviceType` im Modul FALL",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en"
+                },
+                {
+                  "url": "content",
+                  "valueString": "CAVE: This specification does not correspond to the `serviceType` in the FALL module"
+                }
+              ]
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
