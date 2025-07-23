@@ -8,15 +8,15 @@ Description: "Status der NLP-Verarbeitung des referenzierten Dokuments"
 * ^language = #de
 
 // Codes
-* #unprocessed "Originaldokument" "Originales, unverarbeitetes Dokument"
+* #unprocessed "Original" "Dokument ohne Bearbeitung/ im Original"
 * #unprocessed ^designation.language = #en
-* #unprocessed ^designation.value = "Original document"
+* #unprocessed ^designation.value = "Original"
 
-* #preprocessed "Vorverarbeitetes Dokument" "Durch computerlinguistische Verfahren verarbeitetes Dokument"
+* #preprocessed "Vorverarbeitetes Dokument" "Dokument mit technischer Vorverarbeitung (z.B. CDA nach TXT, Entfernung Header/Footer)"
 * #preprocessed ^designation.language = #en
 * #preprocessed ^designation.value = "Preprocessed document"
 
-* #de-identified "De-identifiziertes Dokument" "Durch de-identifizierende Verfahren verarbeitetes Dokument"
+* #de-identified "De-identifiziertes Dokument" "Dokument ohne identifizierende Daten"
 * #de-identified ^designation.language = #en
 * #de-identified ^designation.value = "De-identified document"
 
@@ -24,10 +24,10 @@ Description: "Status der NLP-Verarbeitung des referenzierten Dokuments"
 * #annotated ^designation.language = #en
 * #annotated ^designation.value = "Annotated document"
 
-* #surrogated "Surrogatdokument" "Durch Annotatoren verarbeitetes Dokument mit Ersetzungen"
+* #surrogated "Surrogatdokument" "Dokument mit inhaltlichen Ersetzungen (z.B. Laborwerte, Namen)"
 * #surrogated ^designation.language = #en
 * #surrogated ^designation.value = "Surrogated document"
 
-* #curated "Kuratiertes Dokument" "Durch manuelles oder automatisches Verfahren geprüftes Dokument"
+* #curated "Kuratiertes Dokument" "Verarbeitung durch manuelles oder automatisches Verfahren"
 * #curated ^designation.language = #en
 * #curated ^designation.value = "Curated document"
