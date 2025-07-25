@@ -10,6 +10,7 @@ RuleSet: PR_Header
 RuleSet: EX_Header(url)
 * insert Header
 * insert EX_Meta({url})
+* insert Status
 
 RuleSet: CS_Header(url)
 * insert Header

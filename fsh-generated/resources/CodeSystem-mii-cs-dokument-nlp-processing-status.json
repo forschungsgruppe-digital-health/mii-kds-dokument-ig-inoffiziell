@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "active",
+  "status": "draft",
   "content": "complete",
   "name": "MII_CS_Dokument_NLP_Processing_Status",
   "id": "mii-cs-dokument-nlp-processing-status",

@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "MII_VS_Dokument_NLP_Processing_Status",
   "id": "mii-vs-dokument-nlp-processing-status",
   "title": "MII CS Dokument NLP Processing Status ValueSet",

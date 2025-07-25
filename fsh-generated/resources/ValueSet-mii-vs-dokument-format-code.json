@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "MII_VS_Dokument_Format_Code",
   "id": "mii-vs-dokument-format-code",
   "title": "MII CS Dokument Format Code",

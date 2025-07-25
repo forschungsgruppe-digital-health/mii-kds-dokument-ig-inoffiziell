@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "MII_VS_Dokument_SCT_Dokument_Einrichtung",
   "id": "mii-vs-dokument-sct-dokument-einrichtung",
   "title": "MII VS Dokument SCT Dokument Einrichtung",

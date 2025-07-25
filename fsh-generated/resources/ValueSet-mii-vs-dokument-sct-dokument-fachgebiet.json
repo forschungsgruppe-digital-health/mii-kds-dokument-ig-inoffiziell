@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "MII_VS_Dokument_SCT_Dokument_Fachgebiet",
   "id": "mii-vs-dokument-sct-dokument-fachgebiet",
   "title": "MII VS Dokument SCT Dokument Fachgebiet",
