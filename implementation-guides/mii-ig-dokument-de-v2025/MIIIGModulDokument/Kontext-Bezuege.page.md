@@ -30,4 +30,4 @@ Für den Fall, dass die spezifizierten Dokumentkategorien und -typen die Anforde
 |[Studie](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.studie)|Das MII KDS-Modul referenziert Studienunterlagen. Dokumente können auch ohne Patientenbezug vorliegen.|Nein|
 |[Bildgebung](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.bildgebung)|Das MII KDS-Modul referenziert Dokumente als Ersatz für strukturierte Diagnostische Berichte.|Nein|
 |[Molgen Befund](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.molgen)|Das MII KDS-Modul referenziert eine Reihe von Dokumenttypen, die jedoch an existierende Standards gebunden sind.|Nein|
-|[Meta](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.meta)|Das MII KDS-Modul erweitert zahlreiche Profile um Definitionen von Suchparametern - so auch zum MII KDS-Modul DOKUMENT.|Nein|
+|[Meta](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.meta)|Das MII KDS-Modul erweitert zahlreiche Profile um Definitionen von Suchparametern - so auch zum MII KDS-Modul Dokument.|Nein|
