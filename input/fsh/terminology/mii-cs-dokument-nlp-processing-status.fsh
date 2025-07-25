@@ -4,9 +4,6 @@ Title: "MII CS Dokument NLP Processing Status"
 Description: "Status der NLP-Verarbeitung des referenzierten Dokuments"
 * insert CS_Header($mii-cs-dokument-nlp-processing-status)
 
-// Meta information
-* ^language = #de
-
 // Codes
 * #unprocessed "Original" "Dokument ohne Bearbeitung/ im Original"
 * #unprocessed ^designation.language = #en

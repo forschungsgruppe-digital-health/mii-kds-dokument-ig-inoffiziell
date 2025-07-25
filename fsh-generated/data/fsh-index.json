@@ -13,7 +13,7 @@
     "fshType": "CodeSystem",
     "fshFile": "terminology/mii-cs-dokument-nlp-processing-status.fsh",
     "startLine": 1,
-    "endLine": 33
+    "endLine": 30
   },
   {
     "outputFile": "DocumentReference-AmandaAlzheimerAnnotiertesDokument.json",

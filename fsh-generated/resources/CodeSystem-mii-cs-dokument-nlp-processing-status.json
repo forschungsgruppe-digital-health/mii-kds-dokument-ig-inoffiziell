@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "draft",
+  "status": "active",
   "content": "complete",
   "name": "MII_CS_Dokument_NLP_Processing_Status",
   "id": "mii-cs-dokument-nlp-processing-status",
@@ -75,7 +75,7 @@
       ]
     }
   ],
-  "version": "2025.0.0-ballot",
+  "version": "2026.0.0-ballot",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -88,7 +88,7 @@
     }
   ],
   "experimental": false,
-  "language": "de",
+  "language": "de-DE",
   "caseSensitive": true,
   "count": 6
 }

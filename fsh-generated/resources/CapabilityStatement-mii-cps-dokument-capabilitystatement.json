@@ -342,7 +342,7 @@
       "mode": "server"
     }
   ],
-  "version": "2025.0.0-ballot",
+  "version": "2026.0.0-ballot",
   "publisher": "Medizininformatik Initiative",
   "name": "MII_CPS_Dokument_CapabilityStatement",
   "title": "MII CPS Dokument CapabilityStatement",
