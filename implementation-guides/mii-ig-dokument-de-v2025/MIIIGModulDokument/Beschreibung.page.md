@@ -4,16 +4,24 @@ topic: Beschreibung
 
 ## {{page-title}}
 
-Das KDS-Erweiterungsmodul Dokument ermöglicht eine strukturierte Erfassung von Referenzen und Metadaten zu Dokumenten jeglicher Art für beliebige Zwecke. Dokumente sind hier beliebige Binärobjekte – auch Bilder oder Videos.
+Mit dem MII KDS-Modul Dokument können Referenzen und Metadaten zu Dokumenten mit klinischer Relevanz jeglicher Art für beliebige Zwecke strukturiert erfasst werden. Dokumente sind in diesem Kontext beliebige Binärobjekte, also beispielsweise auch Bilder oder Videos.
 
-Die vorliegende Spezifikation des Informationsmodells ist an der FHIR-Kernspezifikation [R4-Document Reference](https://www.hl7.org/fhir/R4/documentreference.html#resource) orientiert. Darüber hinaus sind die bestehenden Profile der [KBV/MIO](https://simplifier.net/base1x0/kbv_pr_base_documentreference) und von [ISiK](https://simplifier.net/guide/isik-dokumentenaustausch-v3/ImplementationGuide-markdown-Datenobjekte-DocumentReference?version=current) bei der Modellierung, für eine vollumfängliche Kompatibilität, berücksichtigt worden. 
+Die vorliegende Spezifikation ist an der FHIR-Kernspezifikation zur [DocumentReference-Ressource](https://www.hl7.org/fhir/R4/documentreference.html#resource) orientiert. Darüber hinaus sind die bestehenden Profile der [KBV Basis-Profile](https://simplifier.net/base1x0), des [Gematik ISiK](https://simplifier.net/isik-dokumentenaustausch-v4) und von [IHE MHD](https://profiles.ihe.net/ITI/MHD) bei der Modellierung, für eine vollumfängliche Kompatibilität, berücksichtigt worden, wie folgendes Paketabhängigkeitsdiagramm veranschaulicht:
 
-Personenbezogene Dokumente werden immer einer Person (Modul Person) zugeordnet. De-Identifizierte Dokumente sind entsprechend markiert (Element Sicherheitsstufe). Die datenhaltende Stelle ist hier verantwortlich, nur auf entsprechende anonymisierte bzw. pseudonymisierte Varianten andere Module zu verweisen. Wo immer möglich wird ein Fallzusammenhang (Modul Fall) definiert – nach Möglichkeit auf die relevanteste Ebene des Fall Stufenmodells.   
+<div style="text-align: center; margin-top: 2em; margin-bottom: 2em">
+<a target="_blank" href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/raw/refs/heads/dev/input/plantuml/Paketabhaengigkeiten.svg">{{render:implementation-guides/images/Paketabhaengigkeiten.png}}
+</a>
+</div>
 
-Wir empfehlen den auch in ISIK verwendeten KDL-Standard für die präzise Typbeschreibung sowie die IHE XDS Category für die gröbere Dokumentkategorie zu verwenden. IHE XDS Typ und -Category können eindeutig aus der KDL hergeleitet werden. Weitere Codierungen wie Hauscodes, SNOMED oder LOINC sind optional möglich. 
+Dabei wurde ein Abgleich aller Datenelemente sowie der verwendeten Terminologie durchgeführt und im Dokument-Profil ({{pagelink:MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md}}) abgebildet. Die Kardinalitäten sind offen gestaltet, sodass in dieser Hinsicht keine (weiteren oder neuen) Einschränkungen eingeführt wurden. Die in den abgeglichenen Profilen verwendete Terminologie wurde im Dokument-Profil ({{pagelink:MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md}}) einbezogen und abgebildet.
 
-Im Hinblick auf Dokumentenverarbeitungsprozesse, z.B. Format-Wandlungen, Anonymisierung und NLP-Annotationen, bekommt die Relation zu anderen Dokumenten (Modul Dokument) eine besondere Bedeutung zu, um Verarbeitungsketten abzubilden. 
+Personenbezogene Dokumente werden immer einer Person (MII KDS-Modul Person) zugeordnet (`subject`). De-Identifizierte Dokumente sind über die Sicherheitsstufe (`securityLabel`) entsprechend markiert. Die datenhaltende Stelle ist hier verantwortlich, nur auf entsprechende anonymisierte bzw. pseudonymisierte Varianten anderer MII Module zu verweisen. Wo immer möglich wird ein Fallzusammenhang (MII KDS-Modul Fall) definiert – nach Möglichkeit auf die relevanteste Ebene des Fallstufenmodells (`context.encounter`). Im Paketabhängigkeitsdiagramm (oben) sind die Zusammenhänge zwischen den MII Modulen grün dargestellt.
 
-Das Informationsmodell trennt Angaben zu der Referenz selbst und den Metadaten der referenzierten Dokumente. Auf den Körper des Dokuments wird über eine lokal zu interpretierende URL verwiesen. Grundsätzlich kann der Dokumentkörper des referenzierten Dokuments jedoch auch als Attachment in der Referenz integriert werden. 
+Wir empfehlen den auch in ISIK verwendeten [DVMD KDL-Standard](https://simplifier.net/KDL/) für die präzise Typbeschreibung (`type`) sowie die [IHE XDS Class-Codes](https://art-decor.org/art-decor/decor-valuesets--ihede-?id=1.2.276.0.76.11.32&effectiveDate=2018-07-13T13:23:15&language=de-DE) für die gröbere Dokumentkategorie (`category`) zu verwenden. [IHE XDS Type- und Class-Codes können eindeutig aus KDL hergeleitet werden.](https://simplifier.net/kdl/~resources?category=ConceptMap) Weitere Kodierungen wie Hauscodes, SNOMED CT oder LOINC sind optional möglich. 
 
-# To do: Grafik evtl. einfügen Standardübersicht/Kompatibilität
+Im Hinblick auf Dokumentenverarbeitungsprozesse, z.B. Format-Wandlungen, Anonymisierung und NLP-Annotationen, bekommt der Relation zu anderen Dokumenten (MII KDS-Modul Dokument) eine besondere Bedeutung zu, um Verarbeitungsketten abzubilden (`relatesTo`). 
+
+Das Informationsmodell trennt Angaben zur Referenz selbst und den Metadaten der referenzierten Dokumente (`content`). Auf den Körper des Dokuments wird über eine lokal zu interpretierende URL (`content.attachment.url`) verwiesen. Grundsätzlich kann der Dokumentkörper des referenzierten Dokuments auch innerhalb der Referenz (`content.attachment.data`) eingebettet werden. 
+Das Modul gibt keine Vorgaben zur Semantik dieser Auflösung. 
+
+Der Textkörper kann vielfältige identifizierende Daten und/oder Metadaten (z.B. Namen, Patienten-ID) enthalten kann. Der Datenhalter kann eine erfolgte De-Identifizierung dieser Daten durch geeignete `securityLevel` und/oder Codes der Erweiterung NLP-Processing Status ({{pagelink:MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md}}) ausdrücken.

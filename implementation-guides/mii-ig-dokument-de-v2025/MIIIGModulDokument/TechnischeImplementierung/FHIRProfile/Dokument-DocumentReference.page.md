@@ -1,21 +1,19 @@
 ---
-topic: Dokument
+topic: DokumentProfil
 canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument
 capability: https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/metadata
 resType: DocumentReference
 expand: 1
 ---
 
+<style>
+.cool-tabs {
+    width: 800px;
+    overflow: y-scroll;
+}
+</style>
+
 ## {{page-title}}
-<!--
-* Beschreibung
-* Inhalt 
-* Hinweise FHIR-Element Erklärung
-* Mapping des Logical Models auf FHIR
-* Constraints Invarianten
-* Suchparameter
-* Beispielinstanzen
--->
 
 Diese Profil beschreibt die Metadaten zu einem klinischen Dokument.
 
@@ -27,10 +25,10 @@ from
 where
 	url = %canonical
 select
-	Canonical: url,
-  Status: status,
-  Version: version,
-  Basis: baseDefinition
+    Canonical: url,
+    Status: status,
+    Version: version,
+    Basis: baseDefinition
 </fql>
 
 ---
@@ -48,6 +46,19 @@ select
 
 **Mapping Datensatz zu FHIR**
 
+@```
+from StructureDefinition 
+where url.endsWith('mii-lm-dokument')
+    for
+        differential.element
+    where
+        mapping.identity = 'mii-map-dokument' and 
+        mapping.map.startsWith('DocumentReference.')
+    select 
+        Datensatz: short,
+        'Erklärung': definition, 
+        FHIR: mapping[0].map
+```
 
 ---
 
@@ -61,96 +72,234 @@ Folgende Suchparameter sind für diese Modul relevant, auch in Kombination:
 
     ```GET [base]/DocumentReference?_id=12345```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+2. Der Suchparameter "_profile" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "URI Search"](https://hl7.org/fhir/R4/search.html#uri).
+
+3. Der Suchparameter "identifier" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?identifier=urn:ietf:rfc:3986|urn:uuid:0c287d32-01e3-4d87-9953-9fcc9404eb21```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "identifier" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+4. Der Suchparameter "status" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?status=current```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+5. Der Suchparameter "doc-status" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?doc-status=final```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "doc-status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+6. Der Suchparameter "type" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?type=http://dvmd.de/fhir/CodeSystem/kdl|AD010110```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "type" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+7. Der Suchparameter "category" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?category=http://ihe-d.de/CodeSystems/IHEXDSclassCode|BRI```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+8. Der Suchparameter "patient" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?patient=Patient/AmandaAlzheimer```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "patient" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
+
+9. Der Suchparameter "relation" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?relation=http://hl7.org/fhir/document-relationship-type|transforms```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "relation" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+10. Der Suchparameter "relatesto" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?relatesto=DocumentReference/AmandaAlzheimerOriginalDokument```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "relatesto" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
+
+11. Der Suchparameter "relationship" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?relationship=http://hl7.org/fhir/document-relationship-type|transforms$DocumentReference/AmandaAlzheimerOriginalDokument```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "relationship" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Composite Search"](https://hl7.org/fhir/R4/search.html#composite).
+
+12. Der Suchparameter "description" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?description:contains=Bericht```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "description" finden sich in der [FHIR-Basisspezifikation - Abschnitt "String Search"](http://hl7.org/fhir/R4/search.html#string).
+
+13. Der Suchparameter "security-label" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?security-label=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|L```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "security-label" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+14. Der Suchparameter "contenttype" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?contenttype=urn:ietf:bcp:13|text/plain```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "contenttype" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+15. Der Suchparameter "language" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?language=urn:ietf:bcp:47|de-AT```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "language" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+16. Der Suchparameter "location" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?location=below:http://uk-musterstadt.de/document-management-system```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "location" finden sich in der [FHIR-Basisspezifikation - Abschnitt "URI Search"](https://hl7.org/fhir/R4/search.html#uri).
+
+17. Der Suchparameter "creation" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?creation=eq2025-06-23```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "creation" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date Search"](https://hl7.org/fhir/R4/search.html#date).
+
+18. Der Suchparameter "format" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?format=http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode|urn:ihe:iti:xds:2017:mimeTypeSufficient```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "format" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+19. Der Suchparameter "encounter" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?encounter=Encounter/AmandaAlzheimerEinrichtungskontakt```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
+
+20. Der Suchparameter "event" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?event=http://ihe-d.de/CodeSystems/FallkontextBeiDokumentenerstellung|E234```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "event" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+21. Der Suchparameter "period" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?period=ge2028-01-24&period=le2028-02-06```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "period" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date Search"](https://hl7.org/fhir/R4/search.html#date).
+
+22. Der Suchparameter "facility" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?facility=http://ihe-d.de/CodeSystems/PatientBezogenenGesundheitsversorgung|KHS```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "facility" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+23. Der Suchparameter "setting" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?setting=http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen|INTZ```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "setting" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+24. Der Suchparameter "nlp-processing-status" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/DocumentReference?nlp-processing-status=https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|unprocessed```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "nlp-processing-status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
 ---
 
 **Beispiele**
 
-Quelle: <a href="https://doi.org/10.5281/zenodo.6539130">GraSCCo Datensatz, DOI (Zenodo): 10.5281/zenodo.6539130</a>
+Das folgende Beispiel illustriert die Verarbeitung eines *ärztlichen Verlaufsberichts* der Patientin *Amanda Alzheimer* durch eine NLP-Pipeline (siehe Abbildung). Nach dem Laden (`Ingestion`) des Originaldokuments `Amanda_Alzheimer.txt` wird eine Dokumentreferenz mit dem NLP-Verarbeitungsstatus `unprocessed` angelegt. Anschließend wird eine De-Identifikation (`De-Identification`) der Inhalte durchgeführt, um das Ergebnisdokument `De-ID.txt` datenschutzkonform für Forschungszwecke weiterverwenden zu können. Eine zugehörige Dokumentreferenz kennzeichnet den NLP-Verarbeitungsstatus `de-identified, curated` und verweist auf Originaldokument mittels `transforms`. Abschließend werden die klinischen Inhalte annotiert, was unter Umständen mehrere Ergebnisdokumente produziert und sich als Archiv `Annotat.zip` zusammenfassen lassen. Die zugehörige Dokumentreferenz kennzeichnet den NLP-Verarbeitungsstatus als `de-identifier, curated, annotated` und erweitert `appends` die Dokumentreferenz des vorherigen NLP-Verarbeitungsschritts.
+
+<div style="text-align: center; margin-top: 2em; margin-bottom: 2em; width: 700px">
+<a target="_blank" href="https://github.com/medizininformatik-initiative/kerndatensatz-dokument/raw/refs/heads/dev/input/plantuml/NLP-Pipeline.svg">{{render:implementation-guides/images/NLP-Pipeline.png}}
+</a>
+</div>
+
+Die folgenden FHIR DocumentReference-Ressourcen verwendeten das Dokument-Profil ({{pagelink:MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md}}), um die Ergebnisdokumente und die zugehörigen Dokumentreferenzen jedes Verarbeitungsschrittes der NLP-Pipeline darzustellen.
 
 <tabs>
-    <tab title="FHIR JSON (Albers)"> 
-        {{json:UKX-1-E-1-DR-1}}
+    <tab title="Amanda_Alzheimer.txt"> 
+        {{json:AmandaAlzheimerOriginalDokument}}
     </tab>
-    <tab title="FHIR XML (Albers)"> 
-        {{xml:UKX-1-E-1-DR-1}}
+    <tab title="De-ID.txt"> 
+        {{json:AmandaAlzheimerDeIdentifiziertesDokument}}
     </tab>
-    <tab title="GraSCCo Standardbrief (Albers.txt)">
-<pre>
-Werte Frau Kollegin, werter geehrter Herr Kollege!
-
-Wir berichten über lhre Patientin Beate Albers (* 4.4.1997), die sich vom 19.3. bis zum 7.5.2029 in unserer stat. Behandlung befand.
- 
-Vorgeschichte Befund
- 
-•	Verbrennung 1. – 3. Grades, Kopf I Hals,5% v KOF
-•	Handamputation LI
-•	Akute Psychose aus dem schizophrenen Formenkreis
-•	Selbstschädigung
-•	Blutungsanamie
-•	Hypokaliämie
-•	Arterieller Hypertonus
-•	Symptomatisches Anfallsleiden seit 2007
-•	St.p.  Aneurysmablutung
-•	Passagerer Diabetes mellitus
-
-19.03.2029: Handreplantaticm
-25.03.2029:  Revision 
-27.03.2029: Nekrosektomie Kopf / Hals
-30.03.2029: Jet-Lavage, Debridement und VAG Wechsel linken Hand 
-01.04.2029: Jet-Lavage, Debridement und VAG-Wechsel linke Hand 
-6.04.2029: Nachdebridement am Kopf, VAG-Wechsel linke Hand
-07.04.2029: Weicliteildeckung mit Spalthautsheet und Keratinozytensprühsuspension
-15.04.2029: Debridement, Jet Lavage Lind VAC Wechsel linke Hand
-23.04.2029 Restdefektdeckung Kopf u. Hals (Sheets), Defektdeckung Handrücken
-06.05.2029 K-Draht-Entfernung Ii. Handgelenk
-
-Bei Frau Albers ist psychiatrischerseits eine Wahnvorstellung bekannt. Sie hatte sich zuhause die Ii. Hand selbst amputiert und sich das Haupthaar angezündet. Sie informierte telefonfach eine Freundin, die direkt den Rettungsdienst alarmierte. Lt. Protokoll öffnete die Patientin selbst die Tür und hielt die abgetrennte Hand. Sie wurde darauf umgehend in die Rettungsstelle unseres Zentrums verbracht. Bei Aufnahme zeigte sich klinisch und radiologisch eine komplette Amputation der linken Hand. Beide Ohren sowie insbesondere die re. Hals-/Nackenregion waren ll bis Ill gradig verbrannt. Das Kopf-CT zeigte keinen Nachweis frischer intrakranieller Traumafolgen bei Zustand nach osteoplastischer Trepanation der hinteren Schädelgrube links sowie rechts frontotemporal und nachweisbare  Gefa-Clips links infratentoriell im Bereich der linken A. vertebralis sowie im Bereich der A . cerebri media rechts.
-
-Verlauf
-Frau Albers wurde durch die Kollegen der Hand- u. Mikrochirurgischen Abteilung umgehend operativ versorgt. Die Hand konnte in einem die ganze Nacht dauerndem Eingriff replantiert werden. Ein streckseitiger WT-Defekt wurde temporär mit Vacuseal gedeckt. Die verbrannten Areale wurden zunächst antiseptisch mit Lavaseptgelverbänden versorgt. Anschließend wurde Frau Albers intuobiert und beatmet auf die lntensivstation des Brandverletztenzentrums aufgenommen.
-Am 25.03.2029 erfolgte eine Wundrevision mil Vacusealwechsel. Das Verbandsregime am Kopf wurde auf ein enzymatisches Debridement mit lruxolsalbe umgestellt. Ein erster debridierender Eingriff erfolgte am 27.03.2029.
-Ein erneutes Debridement  erfolgte bei weitgehend  sauberen Wunden am Kopf am 06.04.2029. Daraufhin konnte am 08.04.2029 die Defektdeckung am Kopf mit Keratinozytensprühsuspension und Spalthautsheets vorn linken Überschenkel erfolgen. Insgesamt sahen wir eine problemlose Einheilung der Transplantate. Lediglich am rechten retroauriculären Hals und an kleineren Arealen am Kopf musste im Verlauf am 23.04 2029 nochmals nachtransplantiert werden. Der Kopf mit Gesicht zeigt sich gegenwärtig bis auf kleinere Defekte abgeheilt. Die Entnahmestellen sind gänzlich reepithelisert. Im beharrten Teil des Kopfes sind multiple alopezische Areale verblieben, bei initial drittgradiger Verbrennungstiefe.
-
-Am 23.04.2029 erfolgte ebenfalls die Defektdeckung des mittlerweile sauber granulierenden Defektes am II. Handrücken mittels Spalthautsheet
-Die temporare Arthrodese im Handgelenk wurde am 06.05.2029 entfernt. Physio- bzw. ergotherapeutische Behandlung wurde begleitend durchgeführt.
-
-Intensivmedizinischer  Krankheitsverlauf:
-Die Patientin wurde vom  20.3.2029 bis zum 27.3.2029  zunächst  kontrolliert und  im weiteren Verlauf unter reduzierter Analgosedierung augmentiert maschinell beatmet. Bei FIüssigkeitseinlagerungen pulmonal und peripher unter der FIüssigkeitstherapie nach Baxter-Parkland Formel induzierten wir eine  forcierte Diurese mit Furosemid. Hierunter war die Oxygenierung im Verlauf suffizient. Die Entwöhnung vom  Respirator gelang problemlos. Frau Albers konnte am 27.3.2029 bei intakten Schutzreflexen extubiert werden . Seitdem  imponiert eine suffiziente Spontanatmung  mit einer peripheren Sauerstoffsättgung von 98%  unter Raumluft.
-Nach Beendigung der Analgosedierung imponierte ein mildes Entzugsdelir. das suffizient mit Clonidin behandlet werden konnte. Eine intermittierende psychotische Symptomatik therapierten wir zunächst mit Lorazepam (Tavor®) und Haloperidol (Haldol®). Im weiteren Verlauf wurde diese Medikation einschleichend durch Risperidon (Risperdal®) ersetzt. Die vorbestehende antiepileptische Medikation mit Levothiracetam (Keppra®) führten wir fort. Näheres bitten wir dem psychiatrischen Verlauf zu entnehmen.
-Nach Aufnahme strebten wir zunächst eine positive FIüssigkeitsbilanz an Die Diurese war unter FIüssigkeitstherapie unter Anlehnung an die Baxter-Parklandformel qualitativ und quantitativ suffizient. Im weiteren stationären Verlauf wurde eine antiödematöse Therapie mit Furosemid notwendig. Die Retentionsparameter lagen allzeit im Normbereich.
-Unter adäquater Volumentherapie zeigte sich die Patientin initial und im Weiteren hämodynamisch stabil. Nach Beendigung der Analgosedierung wurde bei arteriellem Hypertonus eine antihypertensive Therapie mit Metoprolol (Beloc zok mite®) und Ramipril (Delix®) begonnen. Hiermit gelang eine zufriedenstellende Blutdruckeinstellung.
-Unter Analgosedierung begannen wir die enterale Ernährung über die einliegende Magensonde. Nach Stimulation führte Frau Albers am 26.3.2029 zum ersten Mal ab. Nach Extubation gelang der orale Kostaufbau problemlos Die Patientin nimmt Wunschkost zu sich.
-
-Psychiatrischer Verlauf
-Fremdanamnestisch war von der Freundin und der ambulant behandelnden Ärztin für Psychiatrie und Psychotherapie zu erfahren, dass die Patientin bereits seit Anfang des Jahres akut psychotisch gewesen sei. Sie hatte die letzte antipsychotische Erhaltungsmedikation von 2 mg abgesetzt, die ambulant behandelnde Psychiaterin Frau Dr. Siewert wusste davon. Trotz häufiger telefonischer Kontakte mit der behandelnden Ärztin ließ sie sich nicht zu einer weiteren medikamentösen Therapie motivieren. Noch am Tag der Selbstverletzung war die besorgte Freundin mit ihr beim Sozialpsychiatrischen Dienst vorstellig gewesen. Da Frau Albers zu einer freiwilligen stationären Aufnahme nicht bereit war und keine Unterbringungsgründe vorlagen, war eine Vorstellung bei der ambulanten Psychiaterin vorgesehen. Auf dem Weg dorthin sei Frau Albers aus dem Taxi gesprungen und hatte sich zuhause o.g. Verletzungen zugefügt. Sie teilte dies telefonisch der Freundin mit, die daraufhin die Feuerwehr alarmierte.
-Initial fanden  sich erhebliche Denkstörungen. lnhaltlich klang Wahnerleben an, Gott zu sein. Sie erinnerte sich daran, sich die linke Hand mit dem Brotmesser abgeschnitten zu haben. Dies sei geschehen um das Böse in der Welt zu Sühnen. Sie war zunächst noch erheblich inadäquat, spuckte permanent, geordnete Gespräche mit ihr waren nur schwer möglich. Unter einer Sedierung mit Tavor und nach Umstellung auf Haloperidol sistierte diese Symptomatik zunehmend, so dass wir die antipsychotische Medikation in Absprache mit ihr auf eine Dosis von 6 mg Risperdal umstellten. Das Tavor bat sie auszuschleichen.
-Darunter war sie im Verlauf weitgehend distanziert von psychotischem Erleben, ruhig, gut im Kontakt und bedauerte, was sie sich da angetan hatte und nachdem sie zunächst eine stationäre psychiatrische Verlegung ablehnte, willigte sie nach einem motivierenden Gespräch schließlich ein, sich freiwillig in lhre Abteilung verlegen zu lassen. Sie war sehr interessiert an der Therapie, verfügte hier auch aus der Vorgeschichte über gute Kenntnisse z.B. über die Rezeptorwirkung der Medikamente. Im Affekt blieb sie insgesamt eher distanziert zur Dramatik ihrer Selbstverletzung.
-Ziel der Verlegung soll die weitere Belastungserprobung unter zunehmender Konfrontation milder Außenwelt im Anschluss an die stationäre intensivmedizinische Behandlung sein. Darüber hinaus ist eine sozialpsychiatrische Einbettung in ein ambulantes Setting nach dieser schweren Selbstverletzung angestrebt sowie die therapeutische Begleitung bei der Bewältigung der Folgeschaden im Alltag.
-Procedere: Wir verlegen Frau Albers, die in Ihrem Hause vorbekannt ist, am 14.05.2029 in lhre weitere stationäre fachpsychiatrische Behandlung.
-Durch die Orthopädiemechanik unseres Hauses wurde eine teils flexible Orthese angefertigt. Diese muss bis auf Weiteres getragen werden. Wir bitten bei per Patientin 1 x tgl. eine ergo- und physiotherapeutische Beübung der Iinken Hand durchzuführen. Hierbei sollten die Fingergelenke und das Handgelenk belastungsfrei in allen Ebenen therapiert werden. Die Übungen sollten aktiv und passiv aus der Orthese heraus erfolgen.  
-Die Transplantat· und Entnahmeareale sollten tgl. mehrfach mit fettenden Salben (z.B. Panthenol) gepflegt werden. Restdefekte, die ggf. etwas nässen können mit Betaisodona – Lsg. behandelt werden.  
-Aus plastisch- u. handchirurgischer Sicht werden mittel- bis langfristig noch mehrere korrigierende Eingriffe 1otwendig sein. Hierzu zählen beispielsweise operative Sehnen- und Gelenklösungen zur Verbesserung der Beweglichkeit der Hand sowie Korrektureingriffe im Bereich der Narben insbesondere im Kopf-/Halsbereich und der haarlosen Kopfareale. Wir werden Frau Albers hierzu in Kooperation mit den Handchirurgen an unsere Sprechstunde anbinden.
-Medikamente bei Entlassunq:
- Enoxaparin (Clexane®) 0,4 ml 
-Pantoprazol (Pantozol®) 40 mg 
-Ramipril (Detix®) 2.5 mg
-Metoprolol (Beloc zok mite®) 47,5 mg
-Levothir c.etarn (Keppra®) 1500mg 
-Risperidon {Risperdaf®) 2 mg
-Ibuprofen .600mg
-Thiamin (Vil. B1) 100 mg + Pyridoxin (Vit. 8) 100 mg (Neurorathiopharrn®) 
-Es konnen bioaquivalente Generika (weiter-) verordnet werden.
-
-Mit freundlichen kollegialen Grüßen
- 
-Dr.med. Bernwart Schulze
-</pre>
+    <tab title="Annotat.zip"> 
+        {{json:AmandaAlzheimerAnnotiertesDokument}}
     </tab>
 </tabs>
 
+Die folgenden FHIR-Ressourcen stellen die zum Beispiel zugehörigen FHIR Patienten- und Fall-Ressourcen dar. Diese FHIR-Ressourcen werden ausschließlich vom Originaldokument `Amanda_Alzheimer.txt` und der zugehörigen Dokumentreferenz verwendet.
 
+<tabs>
+    <tab title="Amanda Alzheimer"> 
+        {{json:AmandaAlzheimer}}
+    </tab>
+    <tab title="Einrichtungskontakt"> 
+        {{json:AmandaAlzheimerEinrichtungskontakt}}
+    </tab>
+    <tab title="Abteilungskontakt"> 
+        {{json:AmandaAlzheimerAbteilungskontakt}}
+    </tab>
+    <tab title="Versorgungsstellenkontakt"> 
+        {{json:AmandaAlzheimerVersorgungsstellenkontakt}}
+    </tab>
+</tabs>
 
+Quelle: <a href="https://doi.org/10.5281/zenodo.6539130">GraSCCo Datensatz, DOI (Zenodo): 10.5281/zenodo.6539130</a>
 
 ---

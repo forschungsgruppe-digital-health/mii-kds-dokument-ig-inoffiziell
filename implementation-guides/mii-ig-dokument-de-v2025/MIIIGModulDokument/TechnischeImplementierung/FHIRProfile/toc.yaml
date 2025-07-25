@@ -1,4 +1,6 @@
 - name: Index
   filename: Index.page.md
-- name: Dokument (DocumentReference)
+- name: 'Dokument: DocumentReference'
   filename: Dokument-DocumentReference.page.md
+- name: 'NLP Processing Status: Extension'
+  filename: NLP-Processing-Status-Extension.page.md

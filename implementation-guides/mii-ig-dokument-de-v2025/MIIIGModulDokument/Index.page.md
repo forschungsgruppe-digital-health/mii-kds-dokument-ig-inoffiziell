@@ -1,17 +1,18 @@
 ---
 parent: 
 ---
-# Kerndatensatz Modul 'Modul'
 
-Die vorliegende Spezifikation beschreibt die FHIR Repräsentation des Kerndatensatz Moduls 'Modul' der Medizinformatik Initiative.
-Im Folgenden werden die Use Case des Moduls, sowie die dazugehörigen FHIR Profile und Terminologie Ressourcen in ihrer verbindlichen Form beschrieben.
+# Kerndatensatz Modul Dokument
 
-| Veröffentlichung   |   |
+Die vorliegende Spezifikation beschreibt die FHIR Repräsentation des Kerndatensatz Moduls Dokument der Medizininformatik Initiative.
+Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR Profile und Terminologie Ressourcen in ihrer verbindlichen Form beschrieben.
+
+| Veröffentlichung | |
 |---------|---|
-| Datum der Veröffentlichung   | TBD |
-| Version | 2025.0.0-alpha|
-| Status  | Draft       |
-| Realm   | DE          | 
+| Datum   | 06.08.2025 |
+| Version | 2026.0.0-ballot |
+| Status  | ballot |
+| Realm   | DE | 
 <!-- | Reifegrad | MII Maturity Model (MM0\|MM1\|MM2\|MM3)| -->
 
 ## Inhaltsverzeichnis
@@ -23,7 +24,7 @@ Dieser Leitfaden ist im Rahmen der Medizininformatik Initative erstellt wurden u
 
 ## Ansprechpartner
 * Frank Meineke, SMITH
-* Jakob Faller, SMITH
+* Jakob Faller, MIRACUM
 
 Fragen zu der vorliegenden Publikation können jederzeit unter [chat.fhir.org](https://chat.fhir.org) im Stream 'german/mi-initiative' gestellt werden.
 
@@ -32,9 +33,9 @@ Anmerkungen und Kritik wird in Form von 'Issues' im GitHub Projekt stets gern en
 ## Autoren (in alphabetischer Reihenfolge)
 
 * Frank Meineke, SMITH, Informationsmodellierung/Fachvertretung
-* Jakob Faller, SMITH, Informationsmodellierung/Fachvertretung
-* Katja Hoffmann, DigiHub (MiHUBx), Technische Umsetzung
-* Marcel Susky, DigiHub (MiHUBx), Informationsmodellierung/Technische Umsetzung
+* Jakob Faller, MIRACUM, Informationsmodellierung/Fachvertretung
+* Katja Hoffmann, DigiHub MiHUBx, Technische Umsetzung
+* Marcel Susky, DigiHub MiHUBx, Informationsmodellierung/Technische Umsetzung
 * Martin Boeker, MIRACUM, Fachvertretung
 * Noemi Deppenwiese, MIRACUM, Technische Umsetzung
 * Thomas Ganslandt, MIRACUM, Fachvertretung

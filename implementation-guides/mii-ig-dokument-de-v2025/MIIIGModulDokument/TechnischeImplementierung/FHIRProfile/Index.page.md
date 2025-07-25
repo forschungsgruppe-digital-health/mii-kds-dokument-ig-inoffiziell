@@ -34,6 +34,7 @@ Für bestehende Module sind folgende Bezeichnungen abgestimmt:
 | Modul Molekulargenetischer Befund      | modul-molgen          | MolGen          |
 | Modul Bioprobendaten                   | modul-biobank         | Biobank         |
 | Modul Strukturdaten                    | modul-struktur        | Struktur        |
+| Modul Dokument                         | modul-dokument        | Dokument        |
 
 Für zukünftig neu hinzukommende Module wird eine deutschsprachige Benennung im Singular bevorzugt. 
 
