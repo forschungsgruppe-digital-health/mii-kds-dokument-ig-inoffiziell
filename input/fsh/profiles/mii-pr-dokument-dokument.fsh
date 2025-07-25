@@ -14,7 +14,7 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert DescriptionIntl(masterIdentifier, en, Specific Identifier for this version of the document, Specific Identifier for this version of the document [SHALL].)
 
 // ISiK 4.0.1: 0..*, MS | MIO 1.7.0: 0..* (R4 default) | IHE MHD 4.2.2: 0..*, MS, Slicing entryUUID
-* identifier 0..1 MS
+* identifier 0..* MS
 * insert CommentedDescription(identifier, Weitere Dokumente assoziierte Identifikatoren, Weitere Dokumente assoziierte Identifikatoren. Die Angabe ist optional [MAY]., Z.B. Hausinterne Dokumenten-ID)
 * insert CommentedDescriptionIntl(identifier, en, Further document associated Identifiers, Further document associated Identifiers [MAY]., E.g. internal document ID)
 
@@ -200,20 +200,20 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert CommentedDescription(context.facilityType, Art der Einrichtung, Art der Einrichtung\, in der die Handlung oder Prozedur am Patienten erfolgte. Die Angabe ist optional [MAY]., Typisch: `KHS` für Krankenhaus)
 * insert CommentedDescriptionIntl(context.facilityType, en, Type of facility, Type of facility where the act or procedure was performed on the patient [MAY]., Typically: `KHS` for hospital)
 
-* context.facilityType.coding ^slicing.discriminator.type = #value
-* context.facilityType.coding ^slicing.discriminator.path = "system"
+* context.facilityType.coding ^slicing.discriminator.type = #pattern
+* context.facilityType.coding ^slicing.discriminator.path = "$this"
 * context.facilityType.coding ^slicing.rules = #open
 * context.facilityType.coding ^slicing.description = "Slice für Einrichtungsart"
 * context.facilityType.coding ^slicing.ordered = false
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * context.facilityType.coding contains SCT 0..1 MS
-* context.facilityType.coding[SCT].system = $SCT
+//* context.facilityType.coding[SCT].system = $SCT
 * context.facilityType.coding[SCT] from $mii-vs-dokument-sct-dokument-einrichtung (required)
 
 // ISiK 4.0.1: 1..1, MS, IHEXDShealthcareFacilityTypeCode (required) | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * context.facilityType.coding contains XDS 0..1 MS
-* context.facilityType.coding[XDS].system = $ihe-xds-healthcare-facility-type-code
+//* context.facilityType.coding[XDS].system = $ihe-einrichtungsarten-patientenbezogen or $ihe-einrichtungsarten-nicht-patientenbezogen
 * context.facilityType.coding[XDS] from $ihe-xds-healthcare-facility-type-code-vs (required)
 
 // ISiK 4.0.1: 1..1, MS, IHEXDSpracticeSettingCode (required) | MIO 1.7.0: 0..1, PracticeSettingCodeValueSet (example) (R4 default) | IHE MHD 4.2.2: 1..1, MS, PracticeSettingCodeValueSet (example)
