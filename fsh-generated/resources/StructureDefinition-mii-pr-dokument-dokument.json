@@ -341,10 +341,23 @@
               "path": "system"
             }
           ],
-          "rules": "open",
+          "rules": "closed",
           "description": "Slice für Art des verwiesenen Dokument",
           "ordered": false
-        }
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.type.coding.system",
+        "path": "DocumentReference.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.type.coding.code",
+        "path": "DocumentReference.type.coding.code",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.type.coding:KDL",
@@ -361,8 +374,7 @@
       {
         "id": "DocumentReference.type.coding:KDL.system",
         "path": "DocumentReference.type.coding.system",
-        "min": 1,
-        "patternUri": "http://dvmd.de/fhir/CodeSystem/kdl"
+        "fixedUri": "http://dvmd.de/fhir/CodeSystem/kdl"
       },
       {
         "id": "DocumentReference.type.coding:LNC",
@@ -379,8 +391,7 @@
       {
         "id": "DocumentReference.type.coding:LNC.system",
         "path": "DocumentReference.type.coding.system",
-        "min": 1,
-        "patternUri": "http://loinc.org"
+        "fixedUri": "http://loinc.org"
       },
       {
         "id": "DocumentReference.type.coding:SCT",
@@ -397,8 +408,7 @@
       {
         "id": "DocumentReference.type.coding:SCT.system",
         "path": "DocumentReference.type.coding.system",
-        "min": 1,
-        "patternUri": "http://snomed.info/sct"
+        "fixedUri": "http://snomed.info/sct"
       },
       {
         "id": "DocumentReference.type.coding:XDS",
@@ -415,8 +425,7 @@
       {
         "id": "DocumentReference.type.coding:XDS.system",
         "path": "DocumentReference.type.coding.system",
-        "min": 1,
-        "patternUri": "http://ihe-d.de/CodeSystems/IHEXDStypeCode"
+        "fixedUri": "http://ihe-d.de/CodeSystems/IHEXDStypeCode"
       },
       {
         "id": "DocumentReference.category",
@@ -487,10 +496,23 @@
               "path": "system"
             }
           ],
-          "rules": "open",
+          "rules": "closed",
           "description": "Slice für Kategorie des verwiesenen Dokuments",
           "ordered": false
-        }
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.category.coding.system",
+        "path": "DocumentReference.category.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.category.coding.code",
+        "path": "DocumentReference.category.coding.code",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.category.coding:LNC",
@@ -507,8 +529,7 @@
       {
         "id": "DocumentReference.category.coding:LNC.system",
         "path": "DocumentReference.category.coding.system",
-        "min": 1,
-        "patternUri": "http://loinc.org"
+        "fixedUri": "http://loinc.org"
       },
       {
         "id": "DocumentReference.category.coding:SCT",
@@ -525,8 +546,7 @@
       {
         "id": "DocumentReference.category.coding:SCT.system",
         "path": "DocumentReference.category.coding.system",
-        "min": 1,
-        "patternUri": "http://snomed.info/sct"
+        "fixedUri": "http://snomed.info/sct"
       },
       {
         "id": "DocumentReference.category.coding:XDS",
@@ -543,8 +563,7 @@
       {
         "id": "DocumentReference.category.coding:XDS.system",
         "path": "DocumentReference.category.coding.system",
-        "min": 1,
-        "patternUri": "http://ihe-d.de/CodeSystems/IHEXDSclassCode"
+        "fixedUri": "http://ihe-d.de/CodeSystems/IHEXDSclassCode"
       },
       {
         "id": "DocumentReference.subject",
@@ -1419,10 +1438,23 @@
               "path": "$this"
             }
           ],
-          "rules": "open",
+          "rules": "closed",
           "description": "Slice für dokumentierten Vorgang",
           "ordered": false
-        }
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.context.event.coding.system",
+        "path": "DocumentReference.context.event.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.event.coding.code",
+        "path": "DocumentReference.context.event.coding.code",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.context.event.coding:XDS",
@@ -1546,10 +1578,23 @@
               "path": "$this"
             }
           ],
-          "rules": "open",
+          "rules": "closed",
           "description": "Slice für Einrichtungsart",
           "ordered": false
-        }
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.context.facilityType.coding.system",
+        "path": "DocumentReference.context.facilityType.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.facilityType.coding.code",
+        "path": "DocumentReference.context.facilityType.coding.code",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.context.facilityType.coding:SCT",
@@ -1644,10 +1689,23 @@
               "path": "$this"
             }
           ],
-          "rules": "open",
+          "rules": "closed",
           "description": "Slice für IHE XDS-basierte klinische Fachgebiete",
           "ordered": false
-        }
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.context.practiceSetting.coding.system",
+        "path": "DocumentReference.context.practiceSetting.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.practiceSetting.coding.code",
+        "path": "DocumentReference.context.practiceSetting.coding.code",
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.context.practiceSetting.coding:SCT",

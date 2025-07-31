@@ -33,30 +33,35 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert CommentedDescription(type, Charakterisierung der Dokumentart im Detail, Charakterisierung der Dokumentart im Detail. Die Angabe ist dringend empfohlen [SHALL]., Empfohlen: KDL und aus KDL abgeleiteter XDS-Type-Code)
 * insert CommentedDescriptionIntl(type, en, Precise description of the document type, Precise description of the document type [SHALL]., Recommended: KDL and from KDL derived XDS-Type-Code)
 
+// Require at least one coding as well as a specific system and code
+* type.coding 1..*
+* type.coding.system 1..1 MS
+* type.coding.code 1..1 MS
+
 * type.coding ^slicing.discriminator.type = #value
 * type.coding ^slicing.discriminator.path = "system"
-* type.coding ^slicing.rules = #open
+* type.coding ^slicing.rules = #closed
 * type.coding ^slicing.description = "Slice für Art des verwiesenen Dokument"
 * type.coding ^slicing.ordered = false
 
 // ISiK 4.0.1: 1..1, MS, DVMD KDL (required) | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * type.coding contains KDL 0..1 MS
-* type.coding[KDL].system = $dvmd-kdl
+* type.coding[KDL].system = $dvmd-kdl (exactly)
 * type.coding[KDL] from $dvmd-kdl-vs
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: DocumentTypeValueSet (preferred)
 * type.coding contains LNC 0..1 MS
-* type.coding[LNC].system = $LNC
+* type.coding[LNC].system = $LNC (exactly)
 * type.coding[LNC] from $lnc-doc-type-code-vs
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * type.coding contains SCT 0..1 MS
-* type.coding[SCT].system = $SCT
+* type.coding[SCT].system = $SCT (exactly)
 * type.coding[SCT] from $mii-vs-dokument-sct-dokument-typ
 
 // ISiK 4.0.1: 0..1, MS, IHEXDStypeCode (required) | MIO 1.7.0: 0..1, IHEXDStypeCode (required) | IHE MHD 4.2.2: n.v.
 * type.coding contains XDS 0..1 MS
-* type.coding[XDS].system = $ihe-xds-type-code
+* type.coding[XDS].system = $ihe-xds-type-code (exactly)
 * type.coding[XDS] from $ihe-xds-type-code-vs
 
 // ISiK 4.0.1: 0..1, MS, Slicing XDS | MIO 1.7.0: 0..* (R4 default), Slicing XDS | IHE MHD 4.2.2: 1..1, MS, DocumentClassValueSet (example)
@@ -64,25 +69,30 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert CommentedDescription(category, Charakterisierung der Dokumentenart in Übersicht, Charakterisierung der Dokumentenart in Übersicht. Die Angabe ist dringend empfohlen [SHALL]., Empfohlen: Aus KDL abgeleiteter XDS-Category-Code)
 * insert CommentedDescriptionIntl(category, en, General description of the document type, General description of the document type [SHALL]., Recommended: From KDL derived XDS-Category-Code)
 
+// Require at least one coding as well as a specific system and code
+* category.coding 1..*
+* category.coding.system 1..1 MS
+* category.coding.code 1..1 MS
+
 * category.coding ^slicing.discriminator.type = #value
 * category.coding ^slicing.discriminator.path = "system"
-* category.coding ^slicing.rules = #open
+* category.coding ^slicing.rules = #closed
 * category.coding ^slicing.description = "Slice für Kategorie des verwiesenen Dokuments"
 * category.coding ^slicing.ordered = false
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: DocumentClassValueSet (example)
 * category.coding contains LNC 0..1 MS
-* category.coding[LNC].system = $LNC
+* category.coding[LNC].system = $LNC (exactly)
 * category.coding[LNC] from $lnc-doc-class-code-vs
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * category.coding contains SCT 0..1 MS
-* category.coding[SCT].system = $SCT
+* category.coding[SCT].system = $SCT (exactly)
 * category.coding[SCT] from $mii-vs-dokument-sct-dokument-kategorie
 
 // ISiK 4.0.1: 1..1, MS, IHEXDSclassCode (required) | MIO 1.7.0: 0..1, IHEXDSclassCode (required) | IHE MHD 4.2.2: 
 * category.coding contains XDS 0..1 MS
-* category.coding[XDS].system = $ihe-xds-class-code
+* category.coding[XDS].system = $ihe-xds-class-code (exactly)
 * category.coding[XDS] from $ihe-xds-class-code-vs
 
 // ISiK 4.0.1: 1..1, MS | MIO 1.7.0: 0..1 (R4 default), Extended Custom Profiles | IHE MHD 4.2.2: 1..1, MS Restricted Patient
@@ -180,9 +190,14 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert Description(context.event, Handlungen oder Prozeduren, Handlungen oder Prozeduren\, die im Kontext dokumentiert wurden. Die Angabe ist optional [MAY].)
 * insert DescriptionIntl(context.event, en, Acts or procedures, Acts or procedures that were documented in context [MAY].)
 
+// Require at least one coding as well as a specific system and code
+* context.event.coding 1..*
+* context.event.coding.system 1..1 MS
+* context.event.coding.code 1..1 MS
+
 * context.event.coding ^slicing.discriminator.type = #pattern
 * context.event.coding ^slicing.discriminator.path = "$this"
-* context.event.coding ^slicing.rules = #open
+* context.event.coding ^slicing.rules = #closed
 * context.event.coding ^slicing.description = "Slice für dokumentierten Vorgang"
 * context.event.coding ^slicing.ordered = false
 
@@ -200,9 +215,14 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert CommentedDescription(context.facilityType, Art der Einrichtung, Art der Einrichtung\, in der die Handlung oder Prozedur am Patienten erfolgte. Die Angabe ist optional [MAY]., Typisch: `KHS` für Krankenhaus)
 * insert CommentedDescriptionIntl(context.facilityType, en, Type of facility, Type of facility where the act or procedure was performed on the patient [MAY]., Typically: `KHS` for hospital)
 
+// Require at least one coding as well as a specific system and code
+* context.facilityType.coding 1..*
+* context.facilityType.coding.system 1..1 MS
+* context.facilityType.coding.code 1..1 MS
+
 * context.facilityType.coding ^slicing.discriminator.type = #pattern
 * context.facilityType.coding ^slicing.discriminator.path = "$this"
-* context.facilityType.coding ^slicing.rules = #open
+* context.facilityType.coding ^slicing.rules = #closed
 * context.facilityType.coding ^slicing.description = "Slice für Einrichtungsart"
 * context.facilityType.coding ^slicing.ordered = false
 
@@ -221,9 +241,14 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert CommentedDescription(context.practiceSetting, Klinisches Fachgebiet, Klinisches Fachgebiet\, in dem Dokumenteninhalt erstellt wurde. Die Angabe ist optional [MAY]., CAVE: Diese Angabe entspricht nicht dem `serviceType` im Modul FALL)
 * insert CommentedDescriptionIntl(context.practiceSetting, en, Clinical specialty, Clinical specialty in which document content was created [MAY]., CAVE: This specification does not correspond to the `serviceType` in the FALL module)
 
+// Require at least one coding as well as a specific system and code
+* context.practiceSetting.coding 1..*
+* context.practiceSetting.coding.system 1..1 MS
+* context.practiceSetting.coding.code 1..1 MS
+
 * context.practiceSetting.coding ^slicing.discriminator.type = #pattern
 * context.practiceSetting.coding ^slicing.discriminator.path = "$this"
-* context.practiceSetting.coding ^slicing.rules = #open
+* context.practiceSetting.coding ^slicing.rules = #closed
 * context.practiceSetting.coding ^slicing.description = "Slice für IHE XDS-basierte klinische Fachgebiete"
 * context.practiceSetting.coding ^slicing.ordered = false
 
