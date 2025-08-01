@@ -1,6 +1,7 @@
 Instance: AmandaAlzheimerOriginalDokument
 InstanceOf: MII_PR_Dokument_Dokument
 Usage: #example
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
 * masterIdentifier.system = "urn:ietf:rfc:3986"
 * masterIdentifier.value = "urn:oid:1.2.840.113556.1.8000.2554.58783.21864.3474.19410.44358.58254.41281.46340"
 * identifier.system = "urn:ietf:rfc:3986"

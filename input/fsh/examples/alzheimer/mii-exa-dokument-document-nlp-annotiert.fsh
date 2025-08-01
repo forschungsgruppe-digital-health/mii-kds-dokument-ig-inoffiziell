@@ -1,6 +1,7 @@
 Instance: AmandaAlzheimerAnnotiertesDokument
 InstanceOf: MII_PR_Dokument_Dokument
 Usage: #example
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
 * status = #current
 * docStatus = #final
 * type.coding[+].version = "2025"
