@@ -334,7 +334,7 @@
             "key": "mii-iv-dokument-dokument-type",
             "severity": "warning",
             "human": "Empfehlung: Mindestens eine Kodierungen aus KDL oder XDS SOLLTE in `type` vorhanden sein",
-            "expression": "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl').exists() or type.coding.where(system = 'http://ihe-d.de/CodeSystems/IHEXDStypeCode').exists()",
+            "expression": "coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl').exists() or coding.where(system = 'http://ihe-d.de/CodeSystems/IHEXDStypeCode').exists()",
             "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
           }
         ],
@@ -498,7 +498,7 @@
             "key": "mii-iv-dokument-dokument-category",
             "severity": "warning",
             "human": "Empfehlung: Eine Kodierungen aus XDS SOLLTE in `category` vorhanden sein",
-            "expression": "category.coding.where(system = 'http://ihe-d.de/CodeSystems/IHEXDSclassCode').exists()",
+            "expression": "coding.where(system = 'http://ihe-d.de/CodeSystems/IHEXDSclassCode').exists()",
             "source": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
           }
         ],
