@@ -15,7 +15,7 @@ expand: 1
 
 ## {{page-title}}
 
-Diese Profil beschreibt die Metadaten zu einem klinischen Dokument.
+Diese Profil beschreibt die Metadaten zu einem klinischen Dokument. Eine ausführliche Beschreibung und Empfehlungen zur Verwendung des Profils befinden sich in der Beschreibung des Moduls ({{pagelink:MIIIGModulDokument/Beschreibung.page.md}}).
 
 ### Metadaten
 
@@ -62,7 +62,7 @@ where url.endsWith('mii-lm-dokument')
 
 ---
 
-**Suchparameter**
+**Suchparameter**<br/>
 
 Folgende Suchparameter sind für diese Modul relevant, auch in Kombination:
 
@@ -260,7 +260,7 @@ Folgende Suchparameter sind für diese Modul relevant, auch in Kombination:
 
 ---
 
-**Beispiele**
+**Beispiele**<br/>
 
 Das folgende Beispiel illustriert die Verarbeitung eines *ärztlichen Verlaufsberichts* der Patientin *Amanda Alzheimer* durch eine NLP-Pipeline (siehe Abbildung). Nach dem Laden (`Ingestion`) des Originaldokuments `Amanda_Alzheimer.txt` wird eine Dokumentreferenz mit dem NLP-Verarbeitungsstatus `unprocessed` angelegt. Anschließend wird eine De-Identifikation (`De-Identification`) der Inhalte durchgeführt, um das Ergebnisdokument `De-ID.txt` datenschutzkonform für Forschungszwecke weiterverwenden zu können. Eine zugehörige Dokumentreferenz kennzeichnet den NLP-Verarbeitungsstatus `de-identified, curated` und verweist auf Originaldokument mittels `transforms`. Abschließend werden die klinischen Inhalte annotiert, was unter Umständen mehrere Ergebnisdokumente produziert und sich als Archiv `Annotat.zip` zusammenfassen lassen. Die zugehörige Dokumentreferenz kennzeichnet den NLP-Verarbeitungsstatus als `de-identifier, curated, annotated` und erweitert `appends` die Dokumentreferenz des vorherigen NLP-Verarbeitungsschritts.
 
