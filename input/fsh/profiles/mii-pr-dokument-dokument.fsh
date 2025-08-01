@@ -33,6 +33,9 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert CommentedDescription(type, Charakterisierung der Dokumentart im Detail, Charakterisierung der Dokumentart im Detail. Die Angabe ist dringend empfohlen [SHALL]., Empfohlen: KDL und aus KDL abgeleiteter XDS-Type-Code)
 * insert CommentedDescriptionIntl(type, en, Precise description of the document type, Precise description of the document type [SHALL]., Recommended: KDL and from KDL derived XDS-Type-Code)
 
+// Invariante für Existenz eines KDS- oder XDS-Codes
+* type obeys mii-iv-dokument-dokument-type
+
 // Require at least one coding as well as a specific system and code
 * type.coding 1..*
 * type.coding.system 1..1 MS
@@ -40,7 +43,7 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 * type.coding ^slicing.discriminator.type = #value
 * type.coding ^slicing.discriminator.path = "system"
-* type.coding ^slicing.rules = #closed
+* type.coding ^slicing.rules = #open
 * type.coding ^slicing.description = "Slice für Art des verwiesenen Dokument"
 * type.coding ^slicing.ordered = false
 
@@ -69,6 +72,9 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert CommentedDescription(category, Charakterisierung der Dokumentenart in Übersicht, Charakterisierung der Dokumentenart in Übersicht. Die Angabe ist dringend empfohlen [SHALL]., Empfohlen: Aus KDL abgeleiteter XDS-Category-Code)
 * insert CommentedDescriptionIntl(category, en, General description of the document type, General description of the document type [SHALL]., Recommended: From KDL derived XDS-Category-Code)
 
+// Invariante für Existenz eines KDS- oder XDS-Codes
+* category obeys mii-iv-dokument-dokument-category
+
 // Require at least one coding as well as a specific system and code
 * category.coding 1..*
 * category.coding.system 1..1 MS
@@ -76,7 +82,7 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 * category.coding ^slicing.discriminator.type = #value
 * category.coding ^slicing.discriminator.path = "system"
-* category.coding ^slicing.rules = #closed
+* category.coding ^slicing.rules = #open
 * category.coding ^slicing.description = "Slice für Kategorie des verwiesenen Dokuments"
 * category.coding ^slicing.ordered = false
 
@@ -197,7 +203,7 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 * context.event.coding ^slicing.discriminator.type = #pattern
 * context.event.coding ^slicing.discriminator.path = "$this"
-* context.event.coding ^slicing.rules = #closed
+* context.event.coding ^slicing.rules = #open
 * context.event.coding ^slicing.description = "Slice für dokumentierten Vorgang"
 * context.event.coding ^slicing.ordered = false
 
@@ -222,7 +228,7 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 * context.facilityType.coding ^slicing.discriminator.type = #pattern
 * context.facilityType.coding ^slicing.discriminator.path = "$this"
-* context.facilityType.coding ^slicing.rules = #closed
+* context.facilityType.coding ^slicing.rules = #open
 * context.facilityType.coding ^slicing.description = "Slice für Einrichtungsart"
 * context.facilityType.coding ^slicing.ordered = false
 
@@ -248,7 +254,7 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 * context.practiceSetting.coding ^slicing.discriminator.type = #pattern
 * context.practiceSetting.coding ^slicing.discriminator.path = "$this"
-* context.practiceSetting.coding ^slicing.rules = #closed
+* context.practiceSetting.coding ^slicing.rules = #open
 * context.practiceSetting.coding ^slicing.description = "Slice für IHE XDS-basierte klinische Fachgebiete"
 * context.practiceSetting.coding ^slicing.ordered = false
 
