@@ -667,9 +667,9 @@
       "Hash": "C51E77DC9550949603FA48158C14E0F0"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/Kontext-Bezuege.page.md": {
-      "Length": 3869,
-      "LastWriteTime": "2025-07-25T09:14:30+00:00",
-      "Hash": "A7A17742865A8CA0F953EB043B25C4E6"
+      "Length": 3921,
+      "LastWriteTime": "2025-09-03T07:44:08+00:00",
+      "Hash": "240150C76A14A46F70DDC4B9273EE716"
     },
     "fsh-generated/resources/StructureDefinition-mii-ex-dokument-nlp-typ.json": {
       "Length": 2649,
@@ -690,6 +690,11 @@
       "Length": 1725,
       "LastWriteTime": "2025-07-24T09:26:36+00:00",
       "Hash": "8DD798D865C317FED8C778BD9780A726"
+    },
+    "package.bake.yaml": {
+      "Length": 960,
+      "LastWriteTime": "2025-09-04T05:53:06+00:00",
+      "Hash": "92098212D93B3DB7C266D2A309FD5E7C"
     }
   }
 }
