@@ -1,4 +1,4 @@
-@startuml "Informationsmodell Kerndatensatzmodul Dokument"
+@startuml "Informationsmodell"
 
 ' Canvas Parameters
 skinparam Linetype ortho
@@ -10,8 +10,9 @@ skinparam ClassBorderColor #Black
 skinparam ClassFontColor #Black
 skinparam ArrowColor #Black
 skinparam Shadowing false
+hide methods
 
-legend bottom right
+legend bottom
     = Legende
     |<#LightGray>      | Abgeleitet aus FHIR-Kernspezifikation |
     |<#LightGreen>     | MII KDS-Modul |
@@ -33,6 +34,7 @@ package Fall #LightGreen {
 
 ' Klassen
 class Dokument <<DocumentReference>> {
+    + {field} Erweiterung: Extension [0..*]
 '   + {field} Masteridentifikator: Identifier <back:#yellow>[0..1 / ISiK: 1..1]</back>
     + {field} Masteridentifikator: Identifier [0..1]
     + {field} Businessidentifikator: Identifier [0..1]
@@ -56,6 +58,10 @@ class Dokument <<DocumentReference>> {
     + {field} Kontext: BackboneElement [0..1]
 }
 
+class NlpProcessingStatus as "NLP Processing Status" <<Extension>> #LightYellow {
+    + {field} Status: CodeableConcept [1..1]
+}
+
 class Dokumentenbeziehungen {
     + {field} Beziehungstyp: code [1..1]
     + {field} Beziehungsreferenz: Identifier [1..1]
@@ -72,23 +78,34 @@ class Kontext {
     + {field} Einrichtungsart: code [0..1]
 }
 
-class Anhang {
+abstract class Anhang {
 '   + {field} Sprache: code <back:#yellow>[0..1 / ISiK: 1..1]</back>
     + {field} Sprache: code [0..1]
 '   + {field} <back:#yellow>ISiK: Erstellungsdatum: dateTime [1..1]</back>
     + {field} Erstellungsdatum: dateTime [0..1]
 '   + {field} <back:#yellow>ISiK: MimeTyp: code [1..1]</back>
-    + {field} Daten: base64Binary [0..1]
-    + {field} DokumentenUrl: string [0..1]
+'   + {field} Daten: base64Binary [0..1]
+'   + {field} DokumentenUrl: string [0..1]
 '   + {field} Dokumentenformat: Coding <back:#yellow>[0..1 / ISiK: 1..1]</back>
     + {field} Dokumentenformat: code [0..1]
 }
 
+class Binärdaten {
+    + {field} Daten: base64Binary [1..1]
+}
+
+class Verweis {
+    + {field} DokumentenUrl: string [1..1]
+}
+
 ' Beziehungen
-Dokument *- "1..*" Anhang: attachment >
+Dokument -d- "0..*" NlpProcessingStatus: nlp-processing-status >
+Dokument *-r- "1..*" Anhang: attachment >
 Dokument *-l- "0..1" Kontext: context >
-Dokument *-- "0..*" Dokumentenbeziehungen: relatesTo >
+Dokument *-d- "0..*" Dokumentenbeziehungen: relatesTo >
 Dokument o-u- "0..1" Person: subject >
+Anhang <|-u- Binärdaten
+Anhang <|-u- Verweis
 Dokumentenbeziehungen -- Dokument: target >
 Kontext o-d- "0..*" Fall: encounter >
 Einrichtungskontakt -- "0..*" Abteilungskontakt
