@@ -23,5 +23,5 @@ Usage: #example
 * content[Binärdaten].attachment.hash = "PO6tZryRCRFyjrsMcKnCFuqxX1s="
 * content[Binärdaten].attachment.title = "De-ID.txt"
 * content[Binärdaten].format = $ihe-formatcode#urn:ihe:iti:xds:2017:mimeTypeSufficient
-* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #de-identified
-* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #curated
+* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #deid
+* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #format-change

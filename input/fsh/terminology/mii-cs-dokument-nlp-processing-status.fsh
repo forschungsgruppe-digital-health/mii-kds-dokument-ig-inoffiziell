@@ -3,28 +3,36 @@ Id: mii-cs-dokument-nlp-processing-status
 Title: "MII CS Dokument NLP Processing Status"
 Description: "Status der NLP-Verarbeitung des referenzierten Dokuments"
 * insert CS_Header($mii-cs-dokument-nlp-processing-status)
+* ^content = #complete
+* ^hierarchyMeaning = #is-a
 
-// Codes
-* #unprocessed "Original" "Dokument ohne Bearbeitung/ im Original"
-* #unprocessed ^designation.language = #en
-* #unprocessed ^designation.value = "Original"
+* #unprocessed "Original" "Dokument im Original"
+  * ^designation.language = #en
+  * ^designation.value = "Original document"
 
-* #preprocessed "Vorverarbeitetes Dokument" "Dokument mit technischer Vorverarbeitung (z.B. CDA nach TXT, Entfernung Header/Footer)"
-* #preprocessed ^designation.language = #en
-* #preprocessed ^designation.value = "Preprocessed document"
+* #preprocessed "Vorverarbeitetes Dokument" "Aufbereitung und Bearbeitung von Textinformation zur weiteren Verarbeitung"
+  * ^designation.language = #en
+  * ^designation.value = "Preprocessed document"
+  * #format-change "Formatänderung" "Vorverarbeitung mit Transformation des Formats"
+    * ^designation.language = #en
+    * ^designation.value = "Format changed"
+  * #content-change "Inhaltsänderung" "Vorverarbeitung mit inhaltlicher Änderung, z.B. Headerentfernung"
+    * ^designation.language = #en
+    * ^designation.value = "Content changed"
 
-* #de-identified "De-identifiziertes Dokument" "Dokument ohne identifizierende Daten"
-* #de-identified ^designation.language = #en
-* #de-identified ^designation.value = "De-identified document"
+* #annotated "Annotiertes Dokument" "Dokument mit Annotationen in Bezug auf deidentifizierende oder semantische Inhalte oder automatisierte Verfahren"
+  * ^designation.language = #en
+  * ^designation.value = "Annotated document"
+  * #preanno "Vorannotiertes Dokument" "Maschinelle Vorannotation"
+    * ^designation.language = #en
+    * ^designation.value = "Pre-annotated document"
+  * #deid "Deidentifiziertes Dokument" "Annotationen zum Zwecke einer Deidentifizierung"
+    * ^designation.language = #en
+    * ^designation.value = "De-identified document"
+  * #semantic "Semantisch annotiertes Dokument" "Semantische Annotationen"
+    * ^designation.language = #en
+    * ^designation.value = "Semantically annotated document"
 
-* #annotated "Annotiertes Dokument" "Durch Annotatoren verarbeitetes Dokument ohne Ersetzungen"
-* #annotated ^designation.language = #en
-* #annotated ^designation.value = "Annotated document"
-
-* #surrogated "Surrogatdokument" "Dokument mit inhaltlichen Ersetzungen (z.B. Laborwerte, Namen)"
-* #surrogated ^designation.language = #en
-* #surrogated ^designation.value = "Surrogated document"
-
-* #curated "Kuratiertes Dokument" "Verarbeitung durch manuelles oder automatisches Verfahren"
-* #curated ^designation.language = #en
-* #curated ^designation.value = "Curated document"
+* #surrogated "Surrogiertes Dokument" "Dokument nach Ersetzung von bereits annotierten Konzepten. In aller Regel Surrogation von deidentifizierten Merkmalen zu einer Pseudonymisierung. Der Status surrogated setzt voraus, dass bereits die Status preprocessed und annotated erfolgt sind."
+  * ^designation.language = #en
+  * ^designation.value = "Surrogated document"

@@ -23,6 +23,6 @@ Usage: #example
 * content[Binärdaten].attachment.hash = "1ndGSSne1BKhYNkOdut2r5gQSuY="
 * content[Binärdaten].attachment.title = "Annotat.zip"
 * content[Binärdaten].format = $ihe-formatcode#urn:ihe:iti:xds:2017:mimeTypeSufficient
-* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #de-identified
-* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #annotated
-* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #curated
+* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #deid
+* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #semantic
+* extension[nlp-processing-status].valueCodeableConcept.coding[+] = #surrogated

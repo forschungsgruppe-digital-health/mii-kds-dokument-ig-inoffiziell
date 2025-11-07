@@ -78,11 +78,11 @@
         "coding": [
           {
             "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
-            "code": "de-identified"
+            "code": "deid"
           },
           {
             "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
-            "code": "curated"
+            "code": "format-change"
           }
         ]
       },

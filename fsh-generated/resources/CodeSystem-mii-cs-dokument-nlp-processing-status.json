@@ -11,18 +11,42 @@
     {
       "code": "unprocessed",
       "display": "Original",
-      "definition": "Dokument ohne Bearbeitung/ im Original",
+      "definition": "Dokument im Original",
       "designation": [
         {
           "language": "en",
-          "value": "Original"
+          "value": "Original document"
         }
       ]
     },
     {
       "code": "preprocessed",
       "display": "Vorverarbeitetes Dokument",
-      "definition": "Dokument mit technischer Vorverarbeitung (z.B. CDA nach TXT, Entfernung Header/Footer)",
+      "definition": "Aufbereitung und Bearbeitung von Textinformation zur weiteren Verarbeitung",
+      "concept": [
+        {
+          "code": "format-change",
+          "display": "Formatänderung",
+          "definition": "Vorverarbeitung mit Transformation des Formats",
+          "designation": [
+            {
+              "language": "en",
+              "value": "Format changed"
+            }
+          ]
+        },
+        {
+          "code": "content-change",
+          "display": "Inhaltsänderung",
+          "definition": "Vorverarbeitung mit inhaltlicher Änderung, z.B. Headerentfernung",
+          "designation": [
+            {
+              "language": "en",
+              "value": "Content changed"
+            }
+          ]
+        }
+      ],
       "designation": [
         {
           "language": "en",
@@ -31,20 +55,44 @@
       ]
     },
     {
-      "code": "de-identified",
-      "display": "De-identifiziertes Dokument",
-      "definition": "Dokument ohne identifizierende Daten",
-      "designation": [
-        {
-          "language": "en",
-          "value": "De-identified document"
-        }
-      ]
-    },
-    {
       "code": "annotated",
       "display": "Annotiertes Dokument",
-      "definition": "Durch Annotatoren verarbeitetes Dokument ohne Ersetzungen",
+      "definition": "Dokument mit Annotationen in Bezug auf deidentifizierende oder semantische Inhalte oder automatisierte Verfahren",
+      "concept": [
+        {
+          "code": "preanno",
+          "display": "Vorannotiertes Dokument",
+          "definition": "Maschinelle Vorannotation",
+          "designation": [
+            {
+              "language": "en",
+              "value": "Pre-annotated document"
+            }
+          ]
+        },
+        {
+          "code": "deid",
+          "display": "Deidentifiziertes Dokument",
+          "definition": "Annotationen zum Zwecke einer Deidentifizierung",
+          "designation": [
+            {
+              "language": "en",
+              "value": "De-identified document"
+            }
+          ]
+        },
+        {
+          "code": "semantic",
+          "display": "Semantisch annotiertes Dokument",
+          "definition": "Semantische Annotationen",
+          "designation": [
+            {
+              "language": "en",
+              "value": "Semantically annotated document"
+            }
+          ]
+        }
+      ],
       "designation": [
         {
           "language": "en",
@@ -54,23 +102,12 @@
     },
     {
       "code": "surrogated",
-      "display": "Surrogatdokument",
-      "definition": "Dokument mit inhaltlichen Ersetzungen (z.B. Laborwerte, Namen)",
+      "display": "Surrogiertes Dokument",
+      "definition": "Dokument nach Ersetzung von bereits annotierten Konzepten. In aller Regel Surrogation von deidentifizierten Merkmalen zu einer Pseudonymisierung. Der Status surrogated setzt voraus, dass bereits die Status preprocessed und annotated erfolgt sind.",
       "designation": [
         {
           "language": "en",
           "value": "Surrogated document"
-        }
-      ]
-    },
-    {
-      "code": "curated",
-      "display": "Kuratiertes Dokument",
-      "definition": "Verarbeitung durch manuelles oder automatisches Verfahren",
-      "designation": [
-        {
-          "language": "en",
-          "value": "Curated document"
         }
       ]
     }
@@ -90,5 +127,6 @@
   "experimental": false,
   "language": "de-DE",
   "caseSensitive": true,
-  "count": 6
+  "hierarchyMeaning": "is-a",
+  "count": 9
 }

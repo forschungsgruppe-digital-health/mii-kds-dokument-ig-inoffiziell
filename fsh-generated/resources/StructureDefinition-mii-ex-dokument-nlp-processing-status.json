@@ -75,7 +75,7 @@
         "id": "Extension.value[x].coding.system",
         "path": "Extension.value[x].coding.system",
         "min": 1,
-        "patternUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
+        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status",
         "mustSupport": true
       },
       {

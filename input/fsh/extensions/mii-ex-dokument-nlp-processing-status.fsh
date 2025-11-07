@@ -13,5 +13,5 @@ Description: "Status der NLP-Verarbeitung des referenzierten Dokuments"
 * valueCodeableConcept.coding 1..* MS
 * valueCodeableConcept.coding.system 1..1 MS
 * valueCodeableConcept.coding.code 1..1 MS
-* valueCodeableConcept.coding.system = $mii-cs-dokument-nlp-processing-status
+* valueCodeableConcept.coding.system = $mii-cs-dokument-nlp-processing-status (exactly)
 * valueCodeableConcept.coding from MII_VS_Dokument_NLP_Processing_Status
