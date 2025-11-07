@@ -36,8 +36,13 @@ dependencies:
   de.ihe-d.terminology: 3.0.1
   de.medizininformatikinitiative.kerndatensatz.fall: 2025.0.x
   de.medizininformatikinitiative.kerndatensatz.person: 2025.0.x
+  de.medizininformatikinitiative.kerndatensatz.meta: 2025.0.x
   dvmd.kdl.r4: 2025.0.1
   ihe.formatcode.fhir: 1.4.0
+  #ihe-de.iti.xds-vs.r4:
+  #  id: ihe-de.iti.xds-vs
+  #  uri: https://build.fhir.org/ig/IHE-Germany/ITI.XDS.VS/package.r4.tgz
+  #  version: 0.3.30
 
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
