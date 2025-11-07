@@ -96,18 +96,18 @@
     "endLine": 261
   },
   {
-    "outputFile": "ValueSet-mii-vs-dokument-dokument-einrichtungsart.json",
-    "fshName": "MII_VS_Dokument_Dokument_Einrichtungsart",
+    "outputFile": "ValueSet-mii-vs-dokument-einrichtungsart.json",
+    "fshName": "MII_VS_Dokument_Einrichtungsart",
     "fshType": "ValueSet",
-    "fshFile": "terminology/mii-vs-dokument-dokument-einrichtungsart.fsh",
+    "fshFile": "terminology/mii-vs-dokument-einrichtungsart.fsh",
     "startLine": 1,
     "endLine": 9
   },
   {
-    "outputFile": "ValueSet-mii-vs-dokument-dokument-fachgebiet.json",
-    "fshName": "MII_VS_Dokument_Dokument_Fachgebiet",
+    "outputFile": "ValueSet-mii-vs-dokument-fachgebiet.json",
+    "fshName": "MII_VS_Dokument_Fachgebiet",
     "fshType": "ValueSet",
-    "fshFile": "terminology/mii-vs-dokument-dokument-fachgebiet.fsh",
+    "fshFile": "terminology/mii-vs-dokument-fachgebiet.fsh",
     "startLine": 1,
     "endLine": 7
   },

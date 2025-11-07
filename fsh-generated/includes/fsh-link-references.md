@@ -12,7 +12,7 @@
 [MII_EX_Dokument_NLP_Processing_Status]: StructureDefinition-mii-ex-dokument-nlp-processing-status.html
 [MII_LM_Dokument]: StructureDefinition-mii-lm-dokument.html
 [MII_PR_Dokument_Dokument]: StructureDefinition-mii-pr-dokument-dokument.html
-[MII_VS_Dokument_Dokument_Einrichtungsart]: ValueSet-mii-vs-dokument-dokument-einrichtungsart.html
-[MII_VS_Dokument_Dokument_Fachgebiet]: ValueSet-mii-vs-dokument-dokument-fachgebiet.html
+[MII_VS_Dokument_Einrichtungsart]: ValueSet-mii-vs-dokument-einrichtungsart.html
+[MII_VS_Dokument_Fachgebiet]: ValueSet-mii-vs-dokument-fachgebiet.html
 [MII_VS_Dokument_SCT_Dokument_Kategorie]: ValueSet-mii-vs-dokument-sct-dokument-kategorie.html
 [MII_VS_Dokument_SCT_Dokument_Typ]: ValueSet-mii-vs-dokument-sct-dokument-typ.html

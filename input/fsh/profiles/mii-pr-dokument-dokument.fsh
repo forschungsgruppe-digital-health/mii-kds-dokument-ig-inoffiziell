@@ -242,7 +242,7 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * context.facilityType.coding 1..*
 * context.facilityType.coding.system 1..1 MS
 * context.facilityType.coding.code 1..1 MS
-* context.facilityType from $mii-vs-dokument-dokument-einrichtungsart (required)
+* context.facilityType from $mii-vs-dokument-einrichtungsart (required)
 
 // ISiK 4.0.1: 1..1, MS, IHEXDSpracticeSettingCode (required) | MIO 1.7.0: 0..1, PracticeSettingCodeValueSet (example) (R4 default) | IHE MHD 4.2.2: 1..1, MS, PracticeSettingCodeValueSet (example)
 * context.practiceSetting 0..1 MS
@@ -253,7 +253,7 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * context.practiceSetting.coding 1..*
 * context.practiceSetting.coding.system 1..1 MS
 * context.practiceSetting.coding.code 1..1 MS
-* context.practiceSetting from $mii-vs-dokument-dokument-fachgebiet (required)
+* context.practiceSetting from $mii-vs-dokument-fachgebiet (required)
 
 // Extension to classify a NLP processing status
 * extension contains MII_EX_Dokument_NLP_Processing_Status named nlp-processing-status 0..1 MS

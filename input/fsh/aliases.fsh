@@ -2,8 +2,8 @@
 Alias: $mii-lm-dokument = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-lm-dokument
 Alias: $mii-cps-dokument = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CapabilityStatement/mii-cps-dokument-capabilitystatement
 Alias: $mii-pr-dokument = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument
-Alias: $mii-vs-dokument-dokument-einrichtungsart = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-dokument-einrichtungsart
-Alias: $mii-vs-dokument-dokument-fachgebiet = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-dokument-fachgebiet
+Alias: $mii-vs-dokument-einrichtungsart = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart
+Alias: $mii-vs-dokument-fachgebiet = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-fachgebiet
 Alias: $mii-vs-dokument-sct-dokument-kategorie = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-kategorie
 Alias: $mii-vs-dokument-sct-dokument-typ = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-typ
 

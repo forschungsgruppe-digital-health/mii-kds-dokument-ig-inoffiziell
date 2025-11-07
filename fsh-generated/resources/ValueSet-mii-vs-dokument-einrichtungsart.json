@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "MII_VS_Dokument_Dokument_Einrichtungsart",
-  "id": "mii-vs-dokument-dokument-einrichtungsart",
-  "title": "MII VS Dokument Dokument Einrichtungart",
+  "name": "MII_VS_Dokument_Einrichtungsart",
+  "id": "mii-vs-dokument-einrichtungsart",
+  "title": "MII VS Dokument Einrichtungart",
   "description": "ValueSet zur Art der erzeugenden Einrichtung eines Dokuments",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-dokument-einrichtungsart",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-einrichtungsart",
   "version": "2026.0.0-ballot",
   "publisher": "Medizininformatik Initiative",
   "contact": [

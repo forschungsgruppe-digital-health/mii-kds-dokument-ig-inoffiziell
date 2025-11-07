@@ -59,6 +59,12 @@
       "id": "de_medizininformatikinitiative_kerndatensatz_person"
     },
     {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.meta",
+      "version": "2025.0.x",
+      "uri": "https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta",
+      "id": "de_medizininformatikinitiative_kerndatensatz_meta"
+    },
+    {
       "packageId": "dvmd.kdl.r4",
       "version": "2025.0.1",
       "uri": "http://fhir.org/packages/dvmd.kdl.r4/ImplementationGuide/dvmd.kdl.r4",
@@ -180,17 +186,17 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-dokument-dokument-einrichtungsart"
+          "reference": "ValueSet/mii-vs-dokument-einrichtungsart"
         },
-        "name": "MII VS Dokument Dokument Einrichtungart",
+        "name": "MII VS Dokument Einrichtungart",
         "description": "ValueSet zur Art der erzeugenden Einrichtung eines Dokuments",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-dokument-dokument-fachgebiet"
+          "reference": "ValueSet/mii-vs-dokument-fachgebiet"
         },
-        "name": "MII VS Dokument Dokument Fachgebiet",
+        "name": "MII VS Dokument Fachgebiet",
         "description": "ValueSet zum erzeugenden Fachgebiet eines Dokuments",
         "exampleBoolean": false
       },
