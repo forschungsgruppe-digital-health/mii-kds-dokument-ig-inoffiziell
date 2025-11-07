@@ -222,20 +222,11 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert Description(context.event, Handlungen oder Prozeduren, Handlungen oder Prozeduren\, die im Kontext dokumentiert wurden. Die Angabe ist optional [MAY].)
 * insert DescriptionIntl(context.event, en, Acts or procedures, Acts or procedures that were documented in context [MAY].)
 
-// Require at least one coding as well as a specific system and code
+// Binds to value set containing IHE codes
 * context.event.coding 1..*
 * context.event.coding.system 1..1 MS
 * context.event.coding.code 1..1 MS
-
-* context.event.coding ^slicing.discriminator.type = #pattern
-* context.event.coding ^slicing.discriminator.path = "$this"
-* context.event.coding ^slicing.rules = #open
-* context.event.coding ^slicing.description = "Slice für dokumentierten Vorgang"
-* context.event.coding ^slicing.ordered = false
-
-// ISiK 4.0.1: 0..*, MS, IHEXDSeventCodeList (required) | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
-* context.event.coding contains XDS 0..1 MS
-* context.event.coding[XDS] from $ihe-xds-event-code-vs (required)
+* context.event from $ihe-xds-event-code-vs (required)
 
 // ISiK 4.0.1: 0..1 (R4 default) | MIO 1.7.0: 0..1 (R4 default) | IHE MHD 4.2.2: 0..1, MS
 * context.period 0..1 MS
@@ -247,52 +238,22 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * insert CommentedDescription(context.facilityType, Art der Einrichtung, Art der Einrichtung\, in der die Handlung oder Prozedur am Patienten erfolgte. Die Angabe ist optional [MAY]., Typisch: `KHS` für Krankenhaus)
 * insert CommentedDescriptionIntl(context.facilityType, en, Type of facility, Type of facility where the act or procedure was performed on the patient [MAY]., Typically: `KHS` for hospital)
 
-// Require at least one coding as well as a specific system and code
+// Binds to value set containing SCT and IHE codes
 * context.facilityType.coding 1..*
 * context.facilityType.coding.system 1..1 MS
 * context.facilityType.coding.code 1..1 MS
-
-* context.facilityType.coding ^slicing.discriminator.type = #pattern
-* context.facilityType.coding ^slicing.discriminator.path = "$this"
-* context.facilityType.coding ^slicing.rules = #open
-* context.facilityType.coding ^slicing.description = "Slice für Einrichtungsart"
-* context.facilityType.coding ^slicing.ordered = false
-
-// ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
-* context.facilityType.coding contains SCT 0..1 MS
-//* context.facilityType.coding[SCT].system = $SCT
-* context.facilityType.coding[SCT] from $mii-vs-dokument-sct-dokument-einrichtung (required)
-
-// ISiK 4.0.1: 1..1, MS, IHEXDShealthcareFacilityTypeCode (required) | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
-* context.facilityType.coding contains XDS 0..1 MS
-//* context.facilityType.coding[XDS].system = $ihe-einrichtungsarten-patientenbezogen or $ihe-einrichtungsarten-nicht-patientenbezogen
-* context.facilityType.coding[XDS] from $ihe-xds-healthcare-facility-type-code-vs (required)
+* context.facilityType from $mii-vs-dokument-dokument-einrichtungsart (required)
 
 // ISiK 4.0.1: 1..1, MS, IHEXDSpracticeSettingCode (required) | MIO 1.7.0: 0..1, PracticeSettingCodeValueSet (example) (R4 default) | IHE MHD 4.2.2: 1..1, MS, PracticeSettingCodeValueSet (example)
 * context.practiceSetting 0..1 MS
 * insert CommentedDescription(context.practiceSetting, Klinisches Fachgebiet, Klinisches Fachgebiet\, in dem Dokumenteninhalt erstellt wurde. Die Angabe ist optional [MAY]., CAVE: Diese Angabe entspricht nicht dem `serviceType` im Modul FALL)
 * insert CommentedDescriptionIntl(context.practiceSetting, en, Clinical specialty, Clinical specialty in which document content was created [MAY]., CAVE: This specification does not correspond to the `serviceType` in the FALL module)
 
-// Require at least one coding as well as a specific system and code
+// Binds to value set containing SCT and IHE codes
 * context.practiceSetting.coding 1..*
 * context.practiceSetting.coding.system 1..1 MS
 * context.practiceSetting.coding.code 1..1 MS
-
-* context.practiceSetting.coding ^slicing.discriminator.type = #pattern
-* context.practiceSetting.coding ^slicing.discriminator.path = "$this"
-* context.practiceSetting.coding ^slicing.rules = #open
-* context.practiceSetting.coding ^slicing.description = "Slice für IHE XDS-basierte klinische Fachgebiete"
-* context.practiceSetting.coding ^slicing.ordered = false
-
-// ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
-* context.practiceSetting.coding contains SCT 0..1 MS
-//* context.practiceSetting.coding[SCT].system = $SCT
-* context.practiceSetting.coding[SCT] from $mii-vs-dokument-sct-dokument-fachgebiet (required)
-
-// ISiK 4.0.1: 1..1, MS, IHEXDSpracticeSettingCode (required) | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
-* context.practiceSetting.coding contains XDS 0..1 MS
-//* context.practiceSetting.coding[XDS].system from $ihe-aerztliche-fachrichtungen or $ihe-nicht-aerztliche-fachrichtungen
-* context.practiceSetting.coding[XDS] from $ihe-xds-practice-setting-code-vs (required)
+* context.practiceSetting from $mii-vs-dokument-dokument-fachgebiet (required)
 
 // Extension to classify a NLP processing status
 * extension contains MII_EX_Dokument_NLP_Processing_Status named nlp-processing-status 0..1 MS

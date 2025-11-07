@@ -1614,22 +1614,15 @@
             }
           ]
         },
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihe-d.de/ValueSets/IHEXDSeventCodeList"
+        }
       },
       {
         "id": "DocumentReference.context.event.coding",
         "path": "DocumentReference.context.event.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open",
-          "description": "Slice für dokumentierten Vorgang",
-          "ordered": false
-        },
         "min": 1
       },
       {
@@ -1643,18 +1636,6 @@
         "path": "DocumentReference.context.event.coding.code",
         "min": 1,
         "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.context.event.coding:XDS",
-        "path": "DocumentReference.context.event.coding",
-        "sliceName": "XDS",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://ihe-d.de/ValueSets/IHEXDSeventCodeList"
-        }
       },
       {
         "id": "DocumentReference.context.period",
@@ -1754,22 +1735,15 @@
             }
           ]
         },
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-dokument-einrichtungsart"
+        }
       },
       {
         "id": "DocumentReference.context.facilityType.coding",
         "path": "DocumentReference.context.facilityType.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open",
-          "description": "Slice für Einrichtungsart",
-          "ordered": false
-        },
         "min": 1
       },
       {
@@ -1783,30 +1757,6 @@
         "path": "DocumentReference.context.facilityType.coding.code",
         "min": 1,
         "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.context.facilityType.coding:SCT",
-        "path": "DocumentReference.context.facilityType.coding",
-        "sliceName": "SCT",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-einrichtung"
-        }
-      },
-      {
-        "id": "DocumentReference.context.facilityType.coding:XDS",
-        "path": "DocumentReference.context.facilityType.coding",
-        "sliceName": "XDS",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode"
-        }
       },
       {
         "id": "DocumentReference.context.practiceSetting",
@@ -1865,22 +1815,15 @@
             }
           ]
         },
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-dokument-fachgebiet"
+        }
       },
       {
         "id": "DocumentReference.context.practiceSetting.coding",
         "path": "DocumentReference.context.practiceSetting.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open",
-          "description": "Slice für IHE XDS-basierte klinische Fachgebiete",
-          "ordered": false
-        },
         "min": 1
       },
       {
@@ -1894,30 +1837,6 @@
         "path": "DocumentReference.context.practiceSetting.coding.code",
         "min": 1,
         "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.context.practiceSetting.coding:SCT",
-        "path": "DocumentReference.context.practiceSetting.coding",
-        "sliceName": "SCT",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-fachgebiet"
-        }
-      },
-      {
-        "id": "DocumentReference.context.practiceSetting.coding:XDS",
-        "path": "DocumentReference.context.practiceSetting.coding",
-        "sliceName": "XDS",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode"
-        }
       }
     ]
   }

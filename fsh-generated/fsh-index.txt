@@ -10,10 +10,10 @@ Encounter-AmandaAlzheimerVersorgungsstellenKontakt.json          AmandaAlzheimer
 Patient-AmandaAlzheimer.json                                     AmandaAlzheimer                           Instance    examples/alzheimer/mii-exa-dokument-patient-alzheimer.fsh                   1 - 11
 StructureDefinition-mii-ex-dokument-nlp-processing-status.json   MII_EX_Dokument_NLP_Processing_Status     Extension   extensions/mii-ex-dokument-nlp-processing-status.fsh                        1 - 17
 StructureDefinition-mii-lm-dokument.json                         MII_LM_Dokument                           Logical     logical-model/mii-lm-dokument.fsh                                           1 - 31
-StructureDefinition-mii-pr-dokument-dokument.json                MII_PR_Dokument_Dokument                  Profile     profiles/mii-pr-dokument-dokument.fsh                                       4 - 300
+StructureDefinition-mii-pr-dokument-dokument.json                MII_PR_Dokument_Dokument                  Profile     profiles/mii-pr-dokument-dokument.fsh                                       4 - 261
+ValueSet-mii-vs-dokument-dokument-einrichtungsart.json           MII_VS_Dokument_Dokument_Einrichtungsart  ValueSet    terminology/mii-vs-dokument-dokument-einrichtungsart.fsh                    1 - 9
+ValueSet-mii-vs-dokument-dokument-fachgebiet.json                MII_VS_Dokument_Dokument_Fachgebiet       ValueSet    terminology/mii-vs-dokument-dokument-fachgebiet.fsh                         1 - 7
 ValueSet-mii-vs-dokument-format-code.json                        MII_VS_Dokument_Format_Code               ValueSet    terminology/mii-vs-dokument-format-code.fsh                                 1 - 7
 ValueSet-mii-vs-dokument-nlp-processing-status.json              MII_VS_Dokument_NLP_Processing_Status     ValueSet    terminology/mii-vs-dokument-nlp-processing-status.fsh                       1 - 6
-ValueSet-mii-vs-dokument-sct-dokument-einrichtung.json           MII_VS_Dokument_SCT_Dokument_Einrichtung  ValueSet    terminology/mii-vs-dokument-sct-dokument-einrichtung.fsh                    1 - 8
-ValueSet-mii-vs-dokument-sct-dokument-fachgebiet.json            MII_VS_Dokument_SCT_Dokument_Fachgebiet   ValueSet    terminology/mii-vs-dokument-sct-dokument-fachgebiet.fsh                     1 - 6
 ValueSet-mii-vs-dokument-sct-dokument-kategorie.json             MII_VS_Dokument_SCT_Dokument_Kategorie    ValueSet    terminology/mii-vs-dokument-sct-dokument-kategorie.fsh                      1 - 6
 ValueSet-mii-vs-dokument-sct-dokument-typ.json                   MII_VS_Dokument_SCT_Dokument_Typ          ValueSet    terminology/mii-vs-dokument-sct-dokument-typ.fsh                            1 - 8

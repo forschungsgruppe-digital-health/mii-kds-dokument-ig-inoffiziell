@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "MII_VS_Dokument_SCT_Dokument_Einrichtung",
-  "id": "mii-vs-dokument-sct-dokument-einrichtung",
-  "title": "MII VS Dokument SCT Dokument Einrichtung",
-  "description": "SNOMED CT ValueSet zur erzeugenden Einrichtung eines Dokuments",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-sct-dokument-einrichtung",
+  "name": "MII_VS_Dokument_Dokument_Einrichtungsart",
+  "id": "mii-vs-dokument-dokument-einrichtungsart",
+  "title": "MII VS Dokument Dokument Einrichtungart",
+  "description": "ValueSet zur Art der erzeugenden Einrichtung eines Dokuments",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ValueSet/mii-vs-dokument-dokument-einrichtungsart",
   "version": "2026.0.0-ballot",
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -50,6 +50,11 @@
             "op": "descendent-of",
             "value": "43741000"
           }
+        ]
+      },
+      {
+        "valueSet": [
+          "http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode"
         ]
       }
     ]

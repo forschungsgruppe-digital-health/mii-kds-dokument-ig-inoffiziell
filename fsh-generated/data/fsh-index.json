@@ -93,7 +93,23 @@
     "fshType": "Profile",
     "fshFile": "profiles/mii-pr-dokument-dokument.fsh",
     "startLine": 4,
-    "endLine": 300
+    "endLine": 261
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-dokument-dokument-einrichtungsart.json",
+    "fshName": "MII_VS_Dokument_Dokument_Einrichtungsart",
+    "fshType": "ValueSet",
+    "fshFile": "terminology/mii-vs-dokument-dokument-einrichtungsart.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-dokument-dokument-fachgebiet.json",
+    "fshName": "MII_VS_Dokument_Dokument_Fachgebiet",
+    "fshType": "ValueSet",
+    "fshFile": "terminology/mii-vs-dokument-dokument-fachgebiet.fsh",
+    "startLine": 1,
+    "endLine": 7
   },
   {
     "outputFile": "ValueSet-mii-vs-dokument-format-code.json",
@@ -108,22 +124,6 @@
     "fshName": "MII_VS_Dokument_NLP_Processing_Status",
     "fshType": "ValueSet",
     "fshFile": "terminology/mii-vs-dokument-nlp-processing-status.fsh",
-    "startLine": 1,
-    "endLine": 6
-  },
-  {
-    "outputFile": "ValueSet-mii-vs-dokument-sct-dokument-einrichtung.json",
-    "fshName": "MII_VS_Dokument_SCT_Dokument_Einrichtung",
-    "fshType": "ValueSet",
-    "fshFile": "terminology/mii-vs-dokument-sct-dokument-einrichtung.fsh",
-    "startLine": 1,
-    "endLine": 8
-  },
-  {
-    "outputFile": "ValueSet-mii-vs-dokument-sct-dokument-fachgebiet.json",
-    "fshName": "MII_VS_Dokument_SCT_Dokument_Fachgebiet",
-    "fshType": "ValueSet",
-    "fshFile": "terminology/mii-vs-dokument-sct-dokument-fachgebiet.fsh",
     "startLine": 1,
     "endLine": 6
   },

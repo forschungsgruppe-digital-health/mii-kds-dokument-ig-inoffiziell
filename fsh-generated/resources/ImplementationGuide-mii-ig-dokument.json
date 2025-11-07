@@ -180,18 +180,18 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-dokument-sct-dokument-einrichtung"
+          "reference": "ValueSet/mii-vs-dokument-dokument-einrichtungsart"
         },
-        "name": "MII VS Dokument SCT Dokument Einrichtung",
-        "description": "SNOMED CT ValueSet zur erzeugenden Einrichtung eines Dokuments",
+        "name": "MII VS Dokument Dokument Einrichtungart",
+        "description": "ValueSet zur Art der erzeugenden Einrichtung eines Dokuments",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-dokument-sct-dokument-fachgebiet"
+          "reference": "ValueSet/mii-vs-dokument-dokument-fachgebiet"
         },
-        "name": "MII VS Dokument SCT Dokument Fachgebiet",
-        "description": "SNOMED CT ValueSet zum erzeugenden Fachgebiet eines Dokuments",
+        "name": "MII VS Dokument Dokument Fachgebiet",
+        "description": "ValueSet zum erzeugenden Fachgebiet eines Dokuments",
         "exampleBoolean": false
       },
       {
