@@ -50,22 +50,22 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 // ISiK 4.0.1: 1..1, MS, DVMD KDL (required) | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * type.coding contains KDL 0..1 MS
 * type.coding[KDL].system = $dvmd-kdl (exactly)
-* type.coding[KDL] from $dvmd-kdl-vs
+* type.coding[KDL] from $dvmd-kdl-vs (required)
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: DocumentTypeValueSet (preferred)
 * type.coding contains LNC 0..1 MS
 * type.coding[LNC].system = $LNC (exactly)
-* type.coding[LNC] from $lnc-doc-type-code-vs
+* type.coding[LNC] from $lnc-doc-type-code-vs (required)
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * type.coding contains SCT 0..1 MS
 * type.coding[SCT].system = $SCT (exactly)
-* type.coding[SCT] from $mii-vs-dokument-sct-dokument-typ
+* type.coding[SCT] from $mii-vs-dokument-sct-dokument-typ (required)
 
 // ISiK 4.0.1: 0..1, MS, IHEXDStypeCode (required) | MIO 1.7.0: 0..1, IHEXDStypeCode (required) | IHE MHD 4.2.2: n.v.
 * type.coding contains XDS 0..1 MS
 * type.coding[XDS].system = $ihe-xds-type-code (exactly)
-* type.coding[XDS] from $ihe-xds-type-code-vs
+* type.coding[XDS] from $ihe-xds-type-code-vs (required)
 
 // ISiK 4.0.1: 0..1, MS, Slicing XDS | MIO 1.7.0: 0..* (R4 default), Slicing XDS | IHE MHD 4.2.2: 1..1, MS, DocumentClassValueSet (example)
 * category 0..* MS
@@ -89,17 +89,17 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: DocumentClassValueSet (example)
 * category.coding contains LNC 0..1 MS
 * category.coding[LNC].system = $LNC (exactly)
-* category.coding[LNC] from $lnc-doc-class-code-vs
+* category.coding[LNC] from $lnc-doc-class-code-vs (required)
 
 // ISiK 4.0.1: n.v. | MIO 1.7.0: n.v. | IHE MHD 4.2.2: n.v.
 * category.coding contains SCT 0..1 MS
 * category.coding[SCT].system = $SCT (exactly)
-* category.coding[SCT] from $mii-vs-dokument-sct-dokument-kategorie
+* category.coding[SCT] from $mii-vs-dokument-sct-dokument-kategorie (required)
 
 // ISiK 4.0.1: 1..1, MS, IHEXDSclassCode (required) | MIO 1.7.0: 0..1, IHEXDSclassCode (required) | IHE MHD 4.2.2: 
 * category.coding contains XDS 0..1 MS
 * category.coding[XDS].system = $ihe-xds-class-code (exactly)
-* category.coding[XDS] from $ihe-xds-class-code-vs
+* category.coding[XDS] from $ihe-xds-class-code-vs (required)
 
 // ISiK 4.0.1: 1..1, MS | MIO 1.7.0: 0..1 (R4 default), Extended Custom Profiles | IHE MHD 4.2.2: 1..1, MS Restricted Patient
 * subject 0..1 MS
