@@ -93,7 +93,7 @@
     "fshType": "Profile",
     "fshFile": "profiles/mii-pr-dokument-dokument.fsh",
     "startLine": 4,
-    "endLine": 261
+    "endLine": 257
   },
   {
     "outputFile": "ValueSet-mii-vs-dokument-einrichtungsart.json",

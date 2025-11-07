@@ -1328,42 +1328,6 @@
         "id": "DocumentReference.content:Binärdaten",
         "path": "DocumentReference.content",
         "sliceName": "Binärdaten",
-        "short": "Dokument als Binärdaten",
-        "_short": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "en"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Document as binary data"
-                }
-              ]
-            }
-          ]
-        },
-        "definition": "Dokument als eingebettete Base64-kodierte Binärdaten",
-        "_definition": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "en"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Document as embedded Base64-encoded binary data"
-                }
-              ]
-            }
-          ]
-        },
         "min": 0,
         "max": "*",
         "mustSupport": true
@@ -1386,8 +1350,7 @@
       {
         "id": "DocumentReference.content:Binärdaten.attachment.data",
         "path": "DocumentReference.content.attachment.data",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "DocumentReference.content:Binärdaten.attachment.url",
@@ -1408,42 +1371,6 @@
         "id": "DocumentReference.content:Verweis",
         "path": "DocumentReference.content",
         "sliceName": "Verweis",
-        "short": "Dokument als Verweis",
-        "_short": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "en"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Document as link"
-                }
-              ]
-            }
-          ]
-        },
-        "definition": "Verlinkung zur Lokalisation des Dokuments",
-        "_definition": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "en"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Link to the location of the document"
-                }
-              ]
-            }
-          ]
-        },
         "min": 0,
         "max": "*",
         "mustSupport": true
@@ -1471,8 +1398,7 @@
       {
         "id": "DocumentReference.content:Verweis.attachment.url",
         "path": "DocumentReference.content.attachment.url",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "DocumentReference.content:Verweis.attachment.creation",

@@ -149,10 +149,13 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * content ^slicing.ordered = false
 
 * content contains Binärdaten 0..* MS
-* content[Binärdaten].attachment.data 1..1 MS
+* content[Binärdaten].attachment.data 1..1
 * content[Binärdaten].attachment.url 0..0
-* insert Description(content[Binärdaten], Dokument als Binärdaten, Dokument als eingebettete Base64-kodierte Binärdaten)
-* insert DescriptionIntl(content[Binärdaten], en, Document as binary data, Document as embedded Base64-encoded binary data)
+
+// ISiK 4.0.1: 0..1, MS | MIO 1.7.0 Verweis: 0..1 (R4 default) | MIO 1.7.0 Anhang: 1..1 | IHE MHD 4.2.2: 0..0
+//* content.attachment.data 0..1
+* insert CommentedDescription(content.attachment.data, Dokument als Binärdaten, Dokument als Binärdaten [Base64]. Die Angabe ist verpflichtend [MUST] für Textausleitungen extern und falls URL nicht angegeben wurde; ansonsten optional [MAY]., Typisch: Nutzung bei Datentransfer)
+* insert CommentedDescriptionIntl(content.attachment.data, en, Document as binary data [Base64], Document as binary data [Base64] [MUST] for external transfer and when URL not present; otherwise optional [MAY]., Typically: Use for data transfer)
 
 // Slices for documents, referenced by document location
 * content ^slicing.discriminator.type = #exists
@@ -163,9 +166,12 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 
 * content contains Verweis 0..* MS
 * content[Verweis].attachment.data 0..0
-* content[Verweis].attachment.url 1..1 MS
-* insert Description(content[Verweis], Dokument als Verweis, Verlinkung zur Lokalisation des Dokuments)
-* insert DescriptionIntl(content[Verweis], en, Document as link, Link to the location of the document)
+* content[Verweis].attachment.url 1..1
+
+// ISiK 4.0.1: 0..1, MS | MIO 1.7.0 Verweis: 1..1 | MIO 1.7.0 Anhang: 0..0 | IHE MHD 4.2.2: 1..1
+//* content.attachment.url 0..1 MS
+* insert CommentedDescription(content.attachment.url, Verweis auf den lokalen Ablageort des Dokumentes, Verweis auf den lokalen Ablageort des Dokumentes. Die Angabe ist verpflichtend [MUST]\, wenn `data` nicht angegeben wurde; ansonsten optional [MAY]., Typisch: Lokal auflösbare URL)
+* insert CommentedDescriptionIntl(content.attachment.url, en, Link to the local location where the document is kept, Link to the local location where the document is kept [MUST]\\, when `data` not present; otherwise optional [MAY]., Typically: Local resolvable URL)
 
 // ISiK 4.0.1: 1..1, MS | MIO 1.7.0: 1..1 (R4 default) | IHE MHD 4.2.2: 1..1 (R4 default)
 * content.attachment 1..1 MS
@@ -181,16 +187,6 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * content.attachment.language 0..1 MS
 * insert CommentedDescription(content.attachment.language, Verwendete Sprache in dem Dokument, Verwendete Sprache in dem Dokument. Die Angabe ist dringend empfohlen [SHALL]., Empfohlen: 5-stellige Angabe. Typisch: `de-DE`)
 * insert CommentedDescriptionIntl(content.attachment.language, en, Used language in the document, Used language in the document [SHALL]., Recommended: 5-digit entry Typically: `de-DE`)
-
-// ISiK 4.0.1: 0..1, MS | MIO 1.7.0 Verweis: 0..1 (R4 default) | MIO 1.7.0 Anhang: 1..1 | IHE MHD 4.2.2: 0..0
-//* content.attachment.data 0..1
-* insert CommentedDescription(content.attachment.data, Dokument als Binärdaten, Dokument als Binärdaten [Base64]. Die Angabe ist verpflichtend [MUST] für Textausleitungen extern und falls URL nicht angegeben wurde; ansonsten optional [MAY]., Typisch: Nutzung bei Datentransfer)
-* insert CommentedDescriptionIntl(content.attachment.data, en, Document as binary data [Base64], Document as binary data [Base64] [MUST] for external transfer and when URL not present; otherwise optional [MAY]., Typically: Use for data transfer)
-
-// ISiK 4.0.1: 0..1, MS | MIO 1.7.0 Verweis: 1..1 | MIO 1.7.0 Anhang: 0..0 | IHE MHD 4.2.2: 1..1
-//* content.attachment.url 0..1 MS
-* insert CommentedDescription(content.attachment.url, Verweis auf den lokalen Ablageort des Dokumentes, Verweis auf den lokalen Ablageort des Dokumentes. Die Angabe ist verpflichtend [MUST]\, wenn `data` nicht angegeben wurde; ansonsten optional [MAY]., Typisch: Lokal auflösbare URL)
-* insert CommentedDescriptionIntl(content.attachment.url, en, Link to the local location where the document is kept, Link to the local location where the document is kept [MUST]\\, when `data` not present; otherwise optional [MAY]., Typically: Local resolvable URL)
 
 // ISiK 4.0.1: 0..1 (R4 default) | MIO 1.7.0: 1..1 | IHE MHD 4.2.2: 0..1 (R4 default)
 // * content.attachment.title 0..1
