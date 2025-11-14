@@ -1,23 +1,16 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "90fa56c7-1b6b-4dad-a4da-70c5badd3fc6-2",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/90fa56c7-1b6b-4dad-a4da-70c5badd3fc6-2",
-  "name" : "UnionMII_PR_Dokument_DokumentAndUnContainedComprehensiveDocumentReference",
-  "title" : "Union of MII PR Dokument Dokument And MHD DocumentReference Comprehensive UnContained References Option",
+  "id" : "30a8b7b4-1046-4e59-b19f-1852085e4b2e-2",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/30a8b7b4-1046-4e59-b19f-1852085e4b2e-2",
+  "name" : "UnionMII_PR_Dokument_DokumentAndKBV_PR_Base_DocumentReference",
+  "title" : "Union of MII PR Dokument Dokument And null",
   "status" : "draft",
-  "date" : "2025-11-14T13:16:56+00:00",
-  "jurisdiction" : [{
-    "coding" : [{
-      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-      "code" : "001",
-      "display" : "World"
-    }]
-  }],
+  "date" : "2025-11-14T13:16:32+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "DocumentReference",
       "short" : "A reference to a document",
-      "definition" : "A reference to a document of any kind for any purpose. Provides metadata about the document so that the document can be discovered and managed. The scope of a document is any seralized object with a mime-type, so includes formal patient centric documents (CDA), cliical notes, scanned paper, and non-patient specific documents like policy text.",
+      "definition" : "left: A reference to a document of any kind for any purpose. Provides metadata about the document so that the document can be discovered and managed. The scope of a document is any seralized object with a mime-type, so includes formal patient centric documents (CDA), cliical notes, scanned paper, and non-patient specific documents like policy text.; right: Hier wird auf ein externes Dokument verwiesen und/oder ein Dokument angehängt.",
       "comment" : "Usually, this is used for documents other than those defined by FHIR.",
       "min" : 0,
       "max" : "*",
@@ -106,10 +99,6 @@
       {
         "identity" : "cda",
         "map" : "when describing a CDA"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "XDS DocumentEntry: Used in the context of the IHE MHD ImplementationGuide"
       }]
     },
     {
@@ -155,12 +144,18 @@
       "isSummary" : true
     },
     {
+      "id" : "DocumentReference.meta.id",
       "path" : "DocumentReference.meta.id",
       "representation" : ["xmlAttr"],
       "short" : "Unique id for inter-element referencing",
       "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Element.id",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
@@ -168,7 +163,6 @@
         }],
         "code" : "http://hl7.org/fhirpath/System.String"
       }],
-      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -177,7 +171,16 @@
       }]
     },
     {
+      "id" : "DocumentReference.meta.extension",
       "path" : "DocumentReference.meta.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "description" : "Extensions are always sliced by (at least) url",
+        "rules" : "open"
+      },
       "short" : "Additional content defined by implementations",
       "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
       "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -185,6 +188,11 @@
       "user content"],
       "min" : 0,
       "max" : "*",
+      "base" : {
+        "path" : "Element.extension",
+        "min" : 0,
+        "max" : "*"
+      },
       "type" : [{
         "code" : "Extension"
       }],
@@ -210,7 +218,6 @@
         "expression" : "extension.exists() != value.exists()",
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
-      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -219,12 +226,18 @@
       }]
     },
     {
+      "id" : "DocumentReference.meta.versionId",
       "path" : "DocumentReference.meta.versionId",
       "short" : "Version specific identifier",
       "definition" : "The version specific identifier, as it appears in the version portion of the URL. This value changes when the resource is created, updated, or deleted.",
       "comment" : "The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Meta.versionId",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "id"
       }],
@@ -239,17 +252,22 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true
     },
     {
+      "id" : "DocumentReference.meta.lastUpdated",
       "path" : "DocumentReference.meta.lastUpdated",
       "short" : "When the resource version last changed",
       "definition" : "When the resource last changed - e.g. when the version changed.",
-      "comment" : "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant. This is equivalent to the HTTP Last-Modified and SHOULD have the same value on a [read] interaction.",
+      "comment" : "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant. This is equivalent to the HTTP Last-Modified and SHOULD have the same value on a [read](http://hl7.org/fhir/R4/http.html#read) interaction.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Meta.lastUpdated",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "instant"
       }],
@@ -264,17 +282,22 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true
     },
     {
+      "id" : "DocumentReference.meta.source",
       "path" : "DocumentReference.meta.source",
       "short" : "Identifies where the resource comes from",
-      "definition" : "A uri that identifies the source system of the resource. This provides a minimal amount of [Provenance] information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.",
+      "definition" : "A uri that identifies the source system of the resource. This provides a minimal amount of [Provenance](http://hl7.org/fhir/R4/provenance.html#) information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.",
       "comment" : "In the provenance resource, this corresponds to Provenance.entity.what[x]. The exact use of the source (and the implied Provenance.entity.role) is left to implementer discretion. Only one nominated source is allowed; for additional provenance details, a full Provenance resource should be used. \n\nThis element can be used to indicate where the current master source of a resource that has a canonical URL if the resource is no longer hosted at the canonical URL.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Meta.source",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "uri"
       }],
@@ -289,17 +312,22 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true
     },
     {
+      "id" : "DocumentReference.meta.profile",
       "path" : "DocumentReference.meta.profile",
       "short" : "Profiles this resource claims to conform to",
-      "definition" : "A list of profiles (references to [StructureDefinition] resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url].",
+      "definition" : "A list of profiles (references to [StructureDefinition](http://hl7.org/fhir/R4/structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](http://hl7.org/fhir/R4/structuredefinition-definitions.html#StructureDefinition.url).",
       "comment" : "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.",
       "min" : 0,
       "max" : "*",
+      "base" : {
+        "path" : "Meta.profile",
+        "min" : 0,
+        "max" : "*"
+      },
       "type" : [{
         "code" : "canonical",
         "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1"]
@@ -317,19 +345,21 @@
       }],
       "mustSupport" : true,
       "isModifier" : false,
-      "isSummary" : true,
-      "mapping" : [{
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.limitedMetadata"
-      }]
+      "isSummary" : true
     },
     {
+      "id" : "DocumentReference.meta.security",
       "path" : "DocumentReference.meta.security",
       "short" : "Security Labels applied to this resource",
       "definition" : "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
       "comment" : "The security labels can be updated without changing the stated version of the resource. The list of security labels is a set. Uniqueness is based the system/code, and version and display are ignored.",
       "min" : 0,
       "max" : "*",
+      "base" : {
+        "path" : "Meta.security",
+        "min" : 0,
+        "max" : "*"
+      },
       "type" : [{
         "code" : "Coding"
       }],
@@ -344,22 +374,31 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "SecurityLabels"
+        }],
         "strength" : "extensible",
         "description" : "Security Labels from the Healthcare Privacy and Security Classification System.",
         "valueSet" : "http://hl7.org/fhir/ValueSet/security-labels|4.0.1"
       }
     },
     {
+      "id" : "DocumentReference.meta.tag",
       "path" : "DocumentReference.meta.tag",
       "short" : "Tags applied to this resource",
       "definition" : "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
       "comment" : "The tags can be updated without changing the stated version of the resource. The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored.",
       "min" : 0,
       "max" : "*",
+      "base" : {
+        "path" : "Meta.tag",
+        "min" : 0,
+        "max" : "*"
+      },
       "type" : [{
         "code" : "Coding"
       }],
@@ -374,10 +413,13 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "Tags"
+        }],
         "strength" : "example",
         "description" : "Codes that represent various types of tags, commonly workflow-related; e.g. \"Needs review by Dr. Jones\".",
         "valueSet" : "http://hl7.org/fhir/ValueSet/common-tags|4.0.1"
@@ -536,10 +578,10 @@
     },
     {
       "path" : "DocumentReference.modifierExtension",
-      "short" : "left: Extensions that cannot be ignored; right: Extension",
-      "definition" : "left: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).; right: An Extension",
+      "short" : "Extensions that cannot be ignored",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
       "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-      "requirements" : "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
+      "requirements" : "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions].",
       "alias" : ["extensions",
       "user content"],
       "min" : 0,
@@ -629,10 +671,6 @@
       {
         "identity" : "cda",
         "map" : "ClinicalDocument/id"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.uniqueId"
       }]
     },
     {
@@ -678,16 +716,12 @@
       {
         "identity" : "xds",
         "map" : "DocumentEntry.entryUUID"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.entryUUID"
       }]
     },
     {
       "path" : "DocumentReference.status",
       "short" : "left: Zustand des Dokumentenmetadatensatzes; right: current | superseded | entered-in-error",
-      "definition" : "left: Zustand des Dokumentenmetadatensatzes. Die Angabe ist dringend empfohlen [SHALL].; right: The status of this document reference.",
+      "definition" : "left: Zustand des Dokumentenmetadatensatzes. Die Angabe ist dringend empfohlen [SHALL].; right: Hier wird der Status des Dokumentenverweises bzw. Anhanges angegeben.",
       "comment" : "left: Typisch: `current`; right: This is the status of the DocumentReference object, which might be independent from the docStatus element.\n\nThis element is labeled as a modifier because the status contains the codes that mark the document or reference as not currently valid.",
       "min" : 1,
       "max" : "1",
@@ -711,7 +745,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "The status of the document reference.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/90fa56c7-1b6b-4dad-a4da-70c5badd3fc6-5"
+        "valueSet" : "http://hl7.org/fhir/ValueSet/document-reference-status|4.0.1"
       },
       "mapping" : [{
         "identity" : "workflow",
@@ -731,10 +765,6 @@
       },
       {
         "identity" : "xds",
-        "map" : "DocumentEntry.availabilityStatus"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
         "map" : "DocumentEntry.availabilityStatus"
       }]
     },
@@ -787,7 +817,7 @@
     {
       "path" : "DocumentReference.type",
       "short" : "left: Charakterisierung der Dokumentart im Detail; right: Kind of document (LOINC if possible)",
-      "definition" : "left: Charakterisierung der Dokumentart im Detail. Die Angabe ist dringend empfohlen [SHALL].; right: Specifies the particular kind of document referenced  (e.g. History and Physical, Discharge Summary, Progress Note). This usually equates to the purpose of making the document referenced.",
+      "definition" : "left: Charakterisierung der Dokumentart im Detail. Die Angabe ist dringend empfohlen [SHALL].; right: In diesem Element werden Angaben zum Typ des Dokuments gemacht. Diese werden als codierte Information und/oder als Freitext angegeben.",
       "comment" : "left: Empfohlen: KDL und aus KDL abgeleiteter XDS-Type-Code; right: Key metadata element describing the document that describes he exact type of document. Helps humans to assess whether the document is of interest when viewing a list of documents.",
       "min" : 0,
       "max" : "1",
@@ -847,15 +877,113 @@
       {
         "identity" : "cda",
         "map" : "ClinicalDocument/code/@code \n\nThe typeCode should be mapped from the ClinicalDocument/code element to a set of document type codes configured in the affinity domain. One suggested coding system to use for typeCode is LOINC, in which case the mapping step can be omitted."
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.typeCode"
       }]
     },
     {
-      "id" : "DocumentReference.type.id",
       "path" : "DocumentReference.type.id",
+      "representation" : ["xmlAttr"],
+      "short" : "Unique id for inter-element referencing",
+      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "string"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "DocumentReference.type.extension",
+      "short" : "Additional content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])"
+        }],
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "DocumentReference.type.coding",
+      "short" : "Code defined by a terminology system",
+      "definition" : "left: A reference to a code defined by a terminology system.; right: Hier wird ein Code aus einem geeigneten Code-System angegeben.",
+      "comment" : "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
+      "requirements" : "Allows for alternative encodings within a code system, and translations to other code systems.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "C*E.1-8, C*E.10-22"
+      },
+      {
+        "identity" : "rim",
+        "map" : "union(., ./translation)"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
+      }]
+    },
+    {
+      "id" : "DocumentReference.type.coding.id",
+      "path" : "DocumentReference.type.coding.id",
       "representation" : ["xmlAttr"],
       "short" : "Unique id for inter-element referencing",
       "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
@@ -881,8 +1009,8 @@
       }]
     },
     {
-      "id" : "DocumentReference.type.extension",
-      "path" : "DocumentReference.type.extension",
+      "id" : "DocumentReference.type.coding.extension",
+      "path" : "DocumentReference.type.coding.extension",
       "slicing" : {
         "discriminator" : [{
           "type" : "value",
@@ -936,30 +1064,21 @@
       }]
     },
     {
-      "id" : "DocumentReference.type.coding",
-      "path" : "DocumentReference.type.coding",
-      "slicing" : {
-        "discriminator" : [{
-          "type" : "value",
-          "path" : "system"
-        }],
-        "description" : "Slice für Art des verwiesenen Dokument",
-        "ordered" : false,
-        "rules" : "open"
-      },
-      "short" : "Code defined by a terminology system",
-      "definition" : "A reference to a code defined by a terminology system.",
-      "comment" : "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-      "requirements" : "Allows for alternative encodings within a code system, and translations to other code systems.",
+      "id" : "DocumentReference.type.coding.system",
+      "path" : "DocumentReference.type.coding.system",
+      "short" : "Identity of the terminology system",
+      "definition" : "The identification of the code system that defines the meaning of the symbol in the code.",
+      "comment" : "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.",
+      "requirements" : "Need to be unambiguous about the source of the definition of the symbol.",
       "min" : 1,
-      "max" : "*",
+      "max" : "1",
       "base" : {
-        "path" : "CodeableConcept.coding",
+        "path" : "Coding.system",
         "min" : 0,
-        "max" : "*"
+        "max" : "1"
       },
       "type" : [{
-        "code" : "Coding"
+        "code" : "uri"
       }],
       "constraint" : [{
         "extension" : [{
@@ -972,36 +1091,32 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
         "identity" : "v2",
-        "map" : "C*E.1-8, C*E.10-22"
+        "map" : "C*E.3"
       },
       {
         "identity" : "rim",
-        "map" : "union(., ./translation)"
+        "map" : "./codeSystem"
       },
       {
         "identity" : "orim",
-        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
+        "map" : "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
       }]
     },
     {
-      "id" : "DocumentReference.type.text",
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-        "valueBoolean" : true
-      }],
-      "path" : "DocumentReference.type.text",
-      "short" : "Plain text representation of the concept",
-      "definition" : "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-      "comment" : "Very often the text is the same as a displayName of one of the codings.",
-      "requirements" : "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
+      "id" : "DocumentReference.type.coding.version",
+      "path" : "DocumentReference.type.coding.version",
+      "short" : "Version of the system - if relevant",
+      "definition" : "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
+      "comment" : "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
       "min" : 0,
       "max" : "1",
       "base" : {
-        "path" : "CodeableConcept.text",
+        "path" : "Coding.version",
         "min" : 0,
         "max" : "1"
       },
@@ -1023,6 +1138,176 @@
       "isSummary" : true,
       "mapping" : [{
         "identity" : "v2",
+        "map" : "C*E.7"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./codeSystemVersion"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
+      }]
+    },
+    {
+      "id" : "DocumentReference.type.coding.code",
+      "path" : "DocumentReference.type.coding.code",
+      "short" : "Symbol in syntax defined by the system",
+      "definition" : "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
+      "requirements" : "Need to refer to a particular code in the system.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "Coding.code",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "code"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "C*E.1"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./code"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
+      }]
+    },
+    {
+      "id" : "DocumentReference.type.coding.display",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+        "valueBoolean" : true
+      }],
+      "path" : "DocumentReference.type.coding.display",
+      "short" : "Representation defined by the system",
+      "definition" : "A representation of the meaning of the code in the system, following the rules of the system.",
+      "requirements" : "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Coding.display",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "C*E.2 - but note this is not well followed"
+      },
+      {
+        "identity" : "rim",
+        "map" : "CV.displayName"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
+      }]
+    },
+    {
+      "id" : "DocumentReference.type.coding.userSelected",
+      "path" : "DocumentReference.type.coding.userSelected",
+      "short" : "If this coding was chosen directly by the user",
+      "definition" : "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
+      "comment" : "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
+      "requirements" : "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Coding.userSelected",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "boolean"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "Sometimes implied by being first"
+      },
+      {
+        "identity" : "rim",
+        "map" : "CD.codingRationale"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
+      }]
+    },
+    {
+      "path" : "DocumentReference.type.text",
+      "short" : "Plain text representation of the concept",
+      "definition" : "left: A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.; right: Hier wird ein Freitext eingetragen.",
+      "comment" : "Very often the text is the same as a displayName of one of the codings.",
+      "requirements" : "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
         "map" : "C*E.9. But note many systems use C*E.2 for this"
       },
       {
@@ -1037,7 +1322,7 @@
     {
       "path" : "DocumentReference.category",
       "short" : "left: Charakterisierung der Dokumentenart in Übersicht; right: Categorization of document",
-      "definition" : "left: Charakterisierung der Dokumentenart in Übersicht. Die Angabe ist dringend empfohlen [SHALL].; right: A categorization for the type of document referenced - helps for indexing and searching. This may be implied by or derived from the code specified in the DocumentReference.type.",
+      "definition" : "left: Charakterisierung der Dokumentenart in Übersicht. Die Angabe ist dringend empfohlen [SHALL].; right: In diesem Element werden Angaben zur Kategorie des Dokuments gemacht. Diese werden als codierte Information und/oder als Freitext angegeben.",
       "comment" : "left: Empfohlen: Aus KDL abgeleiteter XDS-Category-Code; right: Key metadata element describing the the category or classification of the document. This is a broader perspective that groups similar documents based on how they would be used. This is a primary key used in searching.",
       "alias" : ["claxs"],
       "min" : 0,
@@ -1090,15 +1375,113 @@
       {
         "identity" : "cda",
         "map" : "Derived from a mapping of /ClinicalDocument/code/@code to an Affinity Domain specified coded value to use and coding system. Affinity Domains are encouraged to use the appropriate value for Type of Service, based on the LOINC Type of Service (see Page 53 of the LOINC User's Manual). Must be consistent with /ClinicalDocument/code/@code"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.classCode"
       }]
     },
     {
-      "id" : "DocumentReference.category.id",
       "path" : "DocumentReference.category.id",
+      "representation" : ["xmlAttr"],
+      "short" : "Unique id for inter-element referencing",
+      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "string"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "DocumentReference.category.extension",
+      "short" : "Additional content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])"
+        }],
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "DocumentReference.category.coding",
+      "short" : "Code defined by a terminology system",
+      "definition" : "left: A reference to a code defined by a terminology system.; right: Hier wird ein Code aus einem geeigneten Code-System angegeben.",
+      "comment" : "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
+      "requirements" : "Allows for alternative encodings within a code system, and translations to other code systems.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "C*E.1-8, C*E.10-22"
+      },
+      {
+        "identity" : "rim",
+        "map" : "union(., ./translation)"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
+      }]
+    },
+    {
+      "id" : "DocumentReference.category.coding.id",
+      "path" : "DocumentReference.category.coding.id",
       "representation" : ["xmlAttr"],
       "short" : "Unique id for inter-element referencing",
       "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
@@ -1124,8 +1507,8 @@
       }]
     },
     {
-      "id" : "DocumentReference.category.extension",
-      "path" : "DocumentReference.category.extension",
+      "id" : "DocumentReference.category.coding.extension",
+      "path" : "DocumentReference.category.coding.extension",
       "slicing" : {
         "discriminator" : [{
           "type" : "value",
@@ -1179,30 +1562,21 @@
       }]
     },
     {
-      "id" : "DocumentReference.category.coding",
-      "path" : "DocumentReference.category.coding",
-      "slicing" : {
-        "discriminator" : [{
-          "type" : "value",
-          "path" : "system"
-        }],
-        "description" : "Slice für Kategorie des verwiesenen Dokuments",
-        "ordered" : false,
-        "rules" : "open"
-      },
-      "short" : "Code defined by a terminology system",
-      "definition" : "A reference to a code defined by a terminology system.",
-      "comment" : "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-      "requirements" : "Allows for alternative encodings within a code system, and translations to other code systems.",
+      "id" : "DocumentReference.category.coding.system",
+      "path" : "DocumentReference.category.coding.system",
+      "short" : "Identity of the terminology system",
+      "definition" : "The identification of the code system that defines the meaning of the symbol in the code.",
+      "comment" : "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.",
+      "requirements" : "Need to be unambiguous about the source of the definition of the symbol.",
       "min" : 1,
-      "max" : "*",
+      "max" : "1",
       "base" : {
-        "path" : "CodeableConcept.coding",
+        "path" : "Coding.system",
         "min" : 0,
-        "max" : "*"
+        "max" : "1"
       },
       "type" : [{
-        "code" : "Coding"
+        "code" : "uri"
       }],
       "constraint" : [{
         "extension" : [{
@@ -1215,36 +1589,32 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
         "identity" : "v2",
-        "map" : "C*E.1-8, C*E.10-22"
+        "map" : "C*E.3"
       },
       {
         "identity" : "rim",
-        "map" : "union(., ./translation)"
+        "map" : "./codeSystem"
       },
       {
         "identity" : "orim",
-        "map" : "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
+        "map" : "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
       }]
     },
     {
-      "id" : "DocumentReference.category.text",
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-        "valueBoolean" : true
-      }],
-      "path" : "DocumentReference.category.text",
-      "short" : "Plain text representation of the concept",
-      "definition" : "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-      "comment" : "Very often the text is the same as a displayName of one of the codings.",
-      "requirements" : "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
+      "id" : "DocumentReference.category.coding.version",
+      "path" : "DocumentReference.category.coding.version",
+      "short" : "Version of the system - if relevant",
+      "definition" : "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
+      "comment" : "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
       "min" : 0,
       "max" : "1",
       "base" : {
-        "path" : "CodeableConcept.text",
+        "path" : "Coding.version",
         "min" : 0,
         "max" : "1"
       },
@@ -1262,6 +1632,176 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "C*E.7"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./codeSystemVersion"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
+      }]
+    },
+    {
+      "id" : "DocumentReference.category.coding.code",
+      "path" : "DocumentReference.category.coding.code",
+      "short" : "Symbol in syntax defined by the system",
+      "definition" : "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
+      "requirements" : "Need to refer to a particular code in the system.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "Coding.code",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "code"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : true,
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "C*E.1"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./code"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
+      }]
+    },
+    {
+      "id" : "DocumentReference.category.coding.display",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+        "valueBoolean" : true
+      }],
+      "path" : "DocumentReference.category.coding.display",
+      "short" : "Representation defined by the system",
+      "definition" : "A representation of the meaning of the code in the system, following the rules of the system.",
+      "requirements" : "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Coding.display",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "C*E.2 - but note this is not well followed"
+      },
+      {
+        "identity" : "rim",
+        "map" : "CV.displayName"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
+      }]
+    },
+    {
+      "id" : "DocumentReference.category.coding.userSelected",
+      "path" : "DocumentReference.category.coding.userSelected",
+      "short" : "If this coding was chosen directly by the user",
+      "definition" : "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
+      "comment" : "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
+      "requirements" : "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Coding.userSelected",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "boolean"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "Sometimes implied by being first"
+      },
+      {
+        "identity" : "rim",
+        "map" : "CD.codingRationale"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
+      }]
+    },
+    {
+      "path" : "DocumentReference.category.text",
+      "short" : "Plain text representation of the concept",
+      "definition" : "left: A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.; right: Hier wird ein Freitext eingetragen.",
+      "comment" : "Very often the text is the same as a displayName of one of the codings.",
+      "requirements" : "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "constraint" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
+          "valueString" : "@value|f:*|h:div"
+        }],
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1334,10 +1874,6 @@
       {
         "identity" : "w5",
         "map" : "FiveWs.subject"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.patientId"
       }]
     },
     {
@@ -1362,7 +1898,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : true,
+      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1385,7 +1921,7 @@
     {
       "path" : "DocumentReference.author",
       "short" : "Who and/or what authored the document",
-      "definition" : "Identifies who is responsible for adding the information to the document.",
+      "definition" : "left: Identifies who is responsible for adding the information to the document.; right: Hier werden Personen, Einrichtungen oder Geräte, die das Dokument erzeugt haben, referenziert.",
       "comment" : "Not necessarily who did the actual data entry (i.e. typist) or who was the source (informant).",
       "min" : 0,
       "max" : "*",
@@ -1409,7 +1945,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : true,
+      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1435,10 +1971,6 @@
       {
         "identity" : "cda",
         "map" : "ClinicalDocument/author"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.author"
       }]
     },
     {
@@ -1495,10 +2027,6 @@
       {
         "identity" : "cda",
         "map" : "ClinicalDocument/legalAuthenticator"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.legalAuthenticator"
       }]
     },
     {
@@ -1537,10 +2065,6 @@
       {
         "identity" : "rim",
         "map" : ".participation[typeCode=\"RCV\"].role[classCode=\"CUST\"].scoper[classCode=\"ORG\" and determinerCode=\"INST\"]"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "not mapped"
       }]
     },
     {
@@ -1577,10 +2101,6 @@
       },
       {
         "identity" : "xds",
-        "map" : "DocumentEntry Associations"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
         "map" : "DocumentEntry Associations"
       }]
     },
@@ -1732,10 +2252,6 @@
       {
         "identity" : "xds",
         "map" : "DocumentEntry Associations type"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry Associations.type"
       }]
     },
     {
@@ -1773,16 +2289,12 @@
       {
         "identity" : "xds",
         "map" : "DocumentEntry Associations reference"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry Associations.reference"
       }]
     },
     {
       "path" : "DocumentReference.description",
       "short" : "left: Beschreibung des Inhalts des Dokumentes; right: Human-readable description",
-      "definition" : "left: Beschreibung des Inhalts des Dokumentes. Die Angabe ist optional [MAY].; right: Human-readable description of the source document.",
+      "definition" : "left: Beschreibung des Inhalts des Dokumentes. Die Angabe ist optional [MAY].; right: Hier wird der Dokumentenverweis als Freitext erfasst, z. B. \"Arztbrief vom 28.04.2020\".",
       "comment" : "What the document is about,  a terse summary of the document.",
       "requirements" : "Helps humans to assess whether the document is of interest.",
       "min" : 0,
@@ -1814,10 +2326,6 @@
       },
       {
         "identity" : "xds",
-        "map" : "DocumentEntry.comments"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
         "map" : "DocumentEntry.comments"
       }]
     },
@@ -1870,16 +2378,12 @@
       {
         "identity" : "cda",
         "map" : "ClinicalDocument/confidentialityCode/@code"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.confidentialityCode"
       }]
     },
     {
       "path" : "DocumentReference.content",
       "short" : "left: Inhalt des Dokuments; right: Document referenced",
-      "definition" : "left: Dokument, als Base64-kodierte Daten, oder Verweis, als URL, mit relevanten Metadaten zum Anhang.; right: The document and format referenced.",
+      "definition" : "left: Dokument, als Base64-kodierte Daten, oder Verweis, als URL, mit relevanten Metadaten zum Anhang.; right: In diesem Element wird eine strukturierte Referenz auf andere Inhalte gemacht, dies kann z. B. ein anderes Dokument in der ePA sein\r\n\r\noder\r\n\r\nHier wird das Dokument in Form eines formatierten Anhangs abgebildet.",
       "min" : 1,
       "max" : "*",
       "type" : [{
@@ -2061,12 +2565,18 @@
       }]
     },
     {
+      "id" : "DocumentReference.content.attachment.id",
       "path" : "DocumentReference.content.attachment.id",
       "representation" : ["xmlAttr"],
       "short" : "Unique id for inter-element referencing",
       "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Element.id",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
@@ -2074,7 +2584,6 @@
         }],
         "code" : "http://hl7.org/fhirpath/System.String"
       }],
-      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -2083,7 +2592,16 @@
       }]
     },
     {
+      "id" : "DocumentReference.content.attachment.extension",
       "path" : "DocumentReference.content.attachment.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "description" : "Extensions are always sliced by (at least) url",
+        "rules" : "open"
+      },
       "short" : "Additional content defined by implementations",
       "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
       "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -2091,6 +2609,11 @@
       "user content"],
       "min" : 0,
       "max" : "*",
+      "base" : {
+        "path" : "Element.extension",
+        "min" : 0,
+        "max" : "*"
+      },
       "type" : [{
         "code" : "Extension"
       }],
@@ -2116,7 +2639,6 @@
         "expression" : "extension.exists() != value.exists()",
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
-      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -2125,13 +2647,58 @@
       }]
     },
     {
+      "id" : "DocumentReference.content.attachment.contentType",
       "path" : "DocumentReference.content.attachment.contentType",
-      "short" : "left: MIME-Typ des Dokumenteninhalts; right: Mime type of the content, with charset etc.",
-      "definition" : "left: MIME-Typ des Dokumenteninhalts. Die Angabe ist dringend empfohlen [SHALL].; right: Identifies the type of the data in the attachment and allows a method to be chosen to interpret or render the data. Includes mime type parameters such as charset where appropriate.",
+      "short" : "MIME-Typ des Dokumenteninhalts",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "MIME type of the document content"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "MIME-Typ des Dokumenteninhalts. Die Angabe ist dringend empfohlen [SHALL].",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "MIME type of the document content [SHALL]."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "comment" : "Typisch: `text/plain`",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Typically: `text/plain`"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "requirements" : "Processors of the data need to be able to know how to interpret the data.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Attachment.contentType",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "code"
       }],
@@ -2154,6 +2721,10 @@
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "MimeType"
+        }],
         "strength" : "required",
         "description" : "The mime type of an attachment. Any valid mime type is allowed.",
         "valueSet" : "http://hl7.org/fhir/ValueSet/mimetypes|4.0.1"
@@ -2165,20 +2736,61 @@
       {
         "identity" : "rim",
         "map" : "./mediaType, ./charset"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.mimeType"
       }]
     },
     {
+      "id" : "DocumentReference.content.attachment.language",
       "path" : "DocumentReference.content.attachment.language",
-      "short" : "left: Verwendete Sprache in dem Dokument; right: Human language of the content (BCP-47)",
-      "definition" : "left: Verwendete Sprache in dem Dokument. Die Angabe ist dringend empfohlen [SHALL].; right: The human language of the content. The value can be any valid value according to BCP 47.",
+      "short" : "Verwendete Sprache in dem Dokument",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Used language in the document"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Verwendete Sprache in dem Dokument. Die Angabe ist dringend empfohlen [SHALL].",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Used language in the document [SHALL]."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "comment" : "Empfohlen: 5-stellige Angabe. Typisch: `de-DE`",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Recommended: 5-digit entry Typically: `de-DE`"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "requirements" : "Users need to be able to choose between the languages in a set of attachments.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Attachment.language",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "code"
       }],
@@ -2201,6 +2813,14 @@
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+          "valueCanonical" : "http://hl7.org/fhir/ValueSet/all-languages"
+        },
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "Language"
+        }],
         "strength" : "preferred",
         "description" : "A human language.",
         "valueSet" : "http://hl7.org/fhir/ValueSet/languages|4.0.1"
@@ -2208,20 +2828,61 @@
       "mapping" : [{
         "identity" : "rim",
         "map" : "./language"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.languageCode"
       }]
     },
     {
+      "id" : "DocumentReference.content.attachment.data",
       "path" : "DocumentReference.content.attachment.data",
-      "short" : "left: Dokument als Binärdaten; right: Data inline, base64ed",
-      "definition" : "left: Dokument als Binärdaten [Base64]. Die Angabe ist verpflichtend [MUST] für Textausleitungen extern und falls URL nicht angegeben wurde; ansonsten optional [MAY].; right: The actual data of the attachment - a sequence of bytes, base64 encoded.",
-      "comment" : "left: Typisch: Nutzung bei Datentransfer; right: The base64-encoded data SHALL be expressed in the same character set as the base resource XML or JSON.",
+      "short" : "Dokument als Binärdaten",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Document as binary data [Base64]"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Dokument als Binärdaten [Base64]. Die Angabe ist verpflichtend [MUST] für Textausleitungen extern und falls URL nicht angegeben wurde; ansonsten optional [MAY].",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Document as binary data [Base64] [MUST] for external transfer and when URL not present; otherwise optional [MAY]."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "comment" : "Typisch: Nutzung bei Datentransfer",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Typically: Use for data transfer"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "requirements" : "The data needs to able to be transmitted inline.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Attachment.data",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "base64Binary"
       }],
@@ -2236,7 +2897,6 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -2249,13 +2909,58 @@
       }]
     },
     {
+      "id" : "DocumentReference.content.attachment.url",
       "path" : "DocumentReference.content.attachment.url",
-      "short" : "left: Verweis auf den lokalen Ablageort des Dokumentes; right: Uri where the data can be found",
-      "definition" : "left: Verweis auf den lokalen Ablageort des Dokumentes. Die Angabe ist verpflichtend [MUST], wenn `data` nicht angegeben wurde; ansonsten optional [MAY].; right: A location where the data can be accessed.",
-      "comment" : "left: Typisch: Lokal auflösbare URL; right: If both data and url are provided, the url SHALL point to the same content as the data contains. Urls may be relative references or may reference transient locations such as a wrapping envelope using cid: though this has ramifications for using signatures. Relative URLs are interpreted relative to the service url, like a resource reference, rather than relative to the resource itself. If a URL is provided, it SHALL resolve to actual data.",
+      "short" : "Verweis auf den lokalen Ablageort des Dokumentes",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Link to the local location where the document is kept"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Verweis auf den lokalen Ablageort des Dokumentes. Die Angabe ist verpflichtend [MUST], wenn `data` nicht angegeben wurde; ansonsten optional [MAY].",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Link to the local location where the document is kept [MUST], when `data` not present; otherwise optional [MAY]."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "comment" : "Typisch: Lokal auflösbare URL",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Typically: Local resolvable URL"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "requirements" : "The data needs to be transmitted by reference.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Attachment.url",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "url"
       }],
@@ -2274,7 +2979,6 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -2284,13 +2988,10 @@
       {
         "identity" : "rim",
         "map" : "./reference/literal"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.repositoryUniqueId+DocumentEntry.uniqueId or DocumentEntry.URI"
       }]
     },
     {
+      "id" : "DocumentReference.content.attachment.size",
       "path" : "DocumentReference.content.attachment.size",
       "short" : "Number of bytes of content (if url provided)",
       "definition" : "The number of bytes of data that make up this attachment (before base64 encoding, if that is done).",
@@ -2298,6 +2999,11 @@
       "requirements" : "Representing the size allows applications to determine whether they should fetch the content automatically in advance, or refuse to fetch it at all.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Attachment.size",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "unsignedInt"
       }],
@@ -2312,26 +3018,27 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
         "identity" : "rim",
         "map" : "N/A (needs data type R3 proposal)"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.size"
       }]
     },
     {
+      "id" : "DocumentReference.content.attachment.hash",
       "path" : "DocumentReference.content.attachment.hash",
       "short" : "Hash of the data (sha-1, base64ed)",
       "definition" : "The calculated hash of the data using SHA-1. Represented using base64.",
-      "comment" : "The hash is calculated on the data prior to base64 encoding, if the data is based64 encoded. The hash is not intended to support digital signatures. Where protection against malicious threats a digital signature should be considered, see [Provenance.signature] for mechanism to protect a resource with a digital signature.",
+      "comment" : "The hash is calculated on the data prior to base64 encoding, if the data is based64 encoded. The hash is not intended to support digital signatures. Where protection against malicious threats a digital signature should be considered, see [Provenance.signature](http://hl7.org/fhir/R4/provenance-definitions.html#Provenance.signature) for mechanism to protect a resource with a digital signature.",
       "requirements" : "Included so that applications can verify that the contents of a location have not changed due to technical failures (e.g., storage rot, transport glitch, incorrect version).",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Attachment.hash",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "base64Binary"
       }],
@@ -2346,25 +3053,30 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
         "identity" : "rim",
         "map" : ".integrityCheck[parent::ED/integrityCheckAlgorithm=\"SHA-1\"]"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.hash"
       }]
     },
     {
+      "id" : "DocumentReference.content.attachment.title",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+        "valueBoolean" : true
+      }],
       "path" : "DocumentReference.content.attachment.title",
       "short" : "Label to display in place of the data",
       "definition" : "A label or set of text to display in place of the data.",
       "requirements" : "Applications need a label to display to a human user in place of the actual data if the data cannot be rendered or perceived by the viewer.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Attachment.title",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "string"
       }],
@@ -2383,26 +3095,66 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
         "identity" : "rim",
         "map" : "./title/data"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.title"
       }]
     },
     {
+      "id" : "DocumentReference.content.attachment.creation",
       "path" : "DocumentReference.content.attachment.creation",
-      "short" : "left: Datum der Erstellung des Dokumentes; right: Date attachment was first created",
-      "definition" : "left: Datum der Erstellung des Dokumentes. Die Angabe ist dringend empfohlen [SHALL].; right: The date that the attachment was first created.",
+      "short" : "Datum der Erstellung des Dokumentes",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Date of the creation of the document"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Datum der Erstellung des Dokumentes. Die Angabe ist dringend empfohlen [SHALL].",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Date of the creation of the document [SHALL]."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "comment" : "Bezogen auf letzte Änderung gemäß MII_EX_Dokument_NLP_Processing_Status",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Related to the last change regarding MII_EX_Dokument_NLP_Processing_Status"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "requirements" : "This is often tracked as an integrity issue for use of the attachment.",
       "min" : 0,
       "max" : "1",
+      "base" : {
+        "path" : "Attachment.creation",
+        "min" : 0,
+        "max" : "1"
+      },
       "type" : [{
         "code" : "dateTime"
       }],
@@ -2423,10 +3175,6 @@
       "mapping" : [{
         "identity" : "rim",
         "map" : "N/A (needs data type R3 proposal)"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.creationTime"
       }]
     },
     {
@@ -2455,7 +3203,8 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "preferred",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/90fa56c7-1b6b-4dad-a4da-70c5badd3fc6-8"
+        "description" : "Document Format Codes.",
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/30a8b7b4-1046-4e59-b19f-1852085e4b2e-5"
       },
       "mapping" : [{
         "identity" : "fhircomposition",
@@ -2472,10 +3221,6 @@
       {
         "identity" : "cda",
         "map" : "derived from the IHE Profile or Implementation Guide templateID"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.formatCode"
       }]
     },
     {
@@ -2655,10 +3400,6 @@
       {
         "identity" : "rim",
         "map" : "unique(highest(./outboundRelationship[typeCode=\"SUBJ\" and isNormalActRelationship()], priorityNumber)/target[moodCode=\"EVN\" and classCode=(\"ENC\", \"PCPR\") and isNormalAct])"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.referenceIdList with CXi encoding for urn:ihe:iti:xds:2015:encounterId"
       }]
     },
     {
@@ -2700,10 +3441,6 @@
       },
       {
         "identity" : "xds",
-        "map" : "DocumentEntry.eventCodeList"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
         "map" : "DocumentEntry.eventCodeList"
       }]
     },
@@ -2920,175 +3657,6 @@
       }]
     },
     {
-      "id" : "DocumentReference.context.period.id",
-      "path" : "DocumentReference.context.period.id",
-      "representation" : ["xmlAttr"],
-      "short" : "Unique id for inter-element referencing",
-      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "Element.id",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-          "valueUrl" : "string"
-        }],
-        "code" : "http://hl7.org/fhirpath/System.String"
-      }],
-      "isModifier" : false,
-      "isSummary" : false,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      }]
-    },
-    {
-      "id" : "DocumentReference.context.period.extension",
-      "path" : "DocumentReference.context.period.extension",
-      "slicing" : {
-        "discriminator" : [{
-          "type" : "value",
-          "path" : "url"
-        }],
-        "description" : "Extensions are always sliced by (at least) url",
-        "rules" : "open"
-      },
-      "short" : "Additional content defined by implementations",
-      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-      "alias" : ["extensions",
-      "user content"],
-      "min" : 0,
-      "max" : "*",
-      "base" : {
-        "path" : "Element.extension",
-        "min" : 0,
-        "max" : "*"
-      },
-      "type" : [{
-        "code" : "Extension"
-      }],
-      "constraint" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
-          "valueString" : "@value|f:*|h:div"
-        }],
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() or (children().count() > id.count())",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
-          "valueString" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])"
-        }],
-        "key" : "ext-1",
-        "severity" : "error",
-        "human" : "Must have either extensions or value[x], not both",
-        "expression" : "extension.exists() != value.exists()",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
-      }],
-      "isModifier" : false,
-      "isSummary" : false,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      }]
-    },
-    {
-      "id" : "DocumentReference.context.period.start",
-      "path" : "DocumentReference.context.period.start",
-      "short" : "Starting time with inclusive boundary",
-      "definition" : "The start of the period. The boundary is inclusive.",
-      "comment" : "If the low element is missing, the meaning is that the low boundary is not known.",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "Period.start",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "code" : "dateTime"
-      }],
-      "condition" : ["per-1"],
-      "constraint" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
-          "valueString" : "@value|f:*|h:div"
-        }],
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() or (children().count() > id.count())",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "isModifier" : false,
-      "isSummary" : true,
-      "mapping" : [{
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.serviceStartTime"
-      },
-      {
-        "identity" : "v2",
-        "map" : "DR.1"
-      },
-      {
-        "identity" : "rim",
-        "map" : "./low"
-      }]
-    },
-    {
-      "id" : "DocumentReference.context.period.end",
-      "path" : "DocumentReference.context.period.end",
-      "short" : "End time with inclusive boundary, if not ongoing",
-      "definition" : "The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.",
-      "comment" : "The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03.",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "Period.end",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "code" : "dateTime"
-      }],
-      "meaningWhenMissing" : "If the end of the period is missing, it means that the period is ongoing",
-      "condition" : ["per-1"],
-      "constraint" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
-          "valueString" : "@value|f:*|h:div"
-        }],
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() or (children().count() > id.count())",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "isModifier" : false,
-      "isSummary" : true,
-      "mapping" : [{
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.serviceStopTime"
-      },
-      {
-        "identity" : "v2",
-        "map" : "DR.2"
-      },
-      {
-        "identity" : "rim",
-        "map" : "./high"
-      }]
-    },
-    {
       "path" : "DocumentReference.context.facilityType",
       "short" : "left: Art der Einrichtung; right: Kind of facility where patient was seen",
       "definition" : "left: Art der Einrichtung, in der die Handlung oder Prozedur am Patienten erfolgte. Die Angabe ist optional [MAY].; right: The kind of facility where the patient was seen.",
@@ -3115,7 +3683,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "XDS Facility Type.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/90fa56c7-1b6b-4dad-a4da-70c5badd3fc6-11"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/30a8b7b4-1046-4e59-b19f-1852085e4b2e-8"
       },
       "mapping" : [{
         "identity" : "fhircomposition",
@@ -3132,10 +3700,6 @@
       {
         "identity" : "cda",
         "map" : "usually a mapping to a local ValueSet. Must be consistent with /clinicalDocument/code"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.healthcareFacilityTypeCode"
       }]
     },
     {
@@ -3338,7 +3902,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "Additional details about where the content was created (e.g. clinical specialty).",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/90fa56c7-1b6b-4dad-a4da-70c5badd3fc6-14"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/30a8b7b4-1046-4e59-b19f-1852085e4b2e-11"
       },
       "mapping" : [{
         "identity" : "fhircomposition",
@@ -3355,10 +3919,6 @@
       {
         "identity" : "cda",
         "map" : "usually from a mapping to a local ValueSet"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.practiceSettingCode"
       }]
     },
     {
@@ -3554,7 +4114,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : true,
+      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -3572,246 +4132,6 @@
       {
         "identity" : "cda",
         "map" : "ClinicalDocument/recordTarget/"
-      }]
-    },
-    {
-      "id" : "DocumentReference.context.sourcePatientInfo.id",
-      "path" : "DocumentReference.context.sourcePatientInfo.id",
-      "representation" : ["xmlAttr"],
-      "short" : "Unique id for inter-element referencing",
-      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "Element.id",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-          "valueUrl" : "string"
-        }],
-        "code" : "http://hl7.org/fhirpath/System.String"
-      }],
-      "isModifier" : false,
-      "isSummary" : false,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      }]
-    },
-    {
-      "id" : "DocumentReference.context.sourcePatientInfo.extension",
-      "path" : "DocumentReference.context.sourcePatientInfo.extension",
-      "slicing" : {
-        "discriminator" : [{
-          "type" : "value",
-          "path" : "url"
-        }],
-        "description" : "Extensions are always sliced by (at least) url",
-        "rules" : "open"
-      },
-      "short" : "Additional content defined by implementations",
-      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-      "alias" : ["extensions",
-      "user content"],
-      "min" : 0,
-      "max" : "*",
-      "base" : {
-        "path" : "Element.extension",
-        "min" : 0,
-        "max" : "*"
-      },
-      "type" : [{
-        "code" : "Extension"
-      }],
-      "constraint" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
-          "valueString" : "@value|f:*|h:div"
-        }],
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() or (children().count() > id.count())",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
-          "valueString" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])"
-        }],
-        "key" : "ext-1",
-        "severity" : "error",
-        "human" : "Must have either extensions or value[x], not both",
-        "expression" : "extension.exists() != value.exists()",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
-      }],
-      "isModifier" : false,
-      "isSummary" : false,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "n/a"
-      }]
-    },
-    {
-      "id" : "DocumentReference.context.sourcePatientInfo.reference",
-      "path" : "DocumentReference.context.sourcePatientInfo.reference",
-      "short" : "Literal reference, Relative, internal or absolute URL",
-      "definition" : "A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources.",
-      "comment" : "Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure \"/[type]/[id]\" then it should be assumed that the reference is to a FHIR RESTful server.",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "Reference.reference",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "code" : "string"
-      }],
-      "condition" : ["ref-1"],
-      "constraint" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
-          "valueString" : "@value|f:*|h:div"
-        }],
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() or (children().count() > id.count())",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "isModifier" : false,
-      "isSummary" : true,
-      "mapping" : [{
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.sourcePatientInfo"
-      },
-      {
-        "identity" : "rim",
-        "map" : "N/A"
-      }]
-    },
-    {
-      "id" : "DocumentReference.context.sourcePatientInfo.type",
-      "path" : "DocumentReference.context.sourcePatientInfo.type",
-      "short" : "Type the reference refers to (e.g. \"Patient\")",
-      "definition" : "The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.\n\nThe type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. \"Patient\" is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources).",
-      "comment" : "This element is used to indicate the type of  the target of the reference. This may be used which ever of the other elements are populated (or not). In some cases, the type of the target may be determined by inspection of the reference (e.g. a RESTful URL) or by resolving the target of the reference; if both the type and a reference is provided, the reference SHALL resolve to a resource of the same type as that specified.",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "Reference.type",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "code" : "uri"
-      }],
-      "constraint" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
-          "valueString" : "@value|f:*|h:div"
-        }],
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() or (children().count() > id.count())",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "isModifier" : false,
-      "isSummary" : true,
-      "binding" : {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-          "valueString" : "FHIRResourceTypeExt"
-        }],
-        "strength" : "extensible",
-        "description" : "Aa resource (or, for logical models, the URI of the logical model).",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/resource-types|4.0.1"
-      },
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "N/A"
-      }]
-    },
-    {
-      "id" : "DocumentReference.context.sourcePatientInfo.identifier",
-      "path" : "DocumentReference.context.sourcePatientInfo.identifier",
-      "short" : "Logical reference, when literal reference is not known",
-      "definition" : "An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference.",
-      "comment" : "When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. \n\nWhen both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference\n\nApplications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.\n\nReference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any).",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "Reference.identifier",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "code" : "Identifier"
-      }],
-      "constraint" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
-          "valueString" : "@value|f:*|h:div"
-        }],
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() or (children().count() > id.count())",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "isModifier" : false,
-      "isSummary" : true,
-      "mapping" : [{
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.sourcePatientId"
-      },
-      {
-        "identity" : "rim",
-        "map" : ".identifier"
-      }]
-    },
-    {
-      "id" : "DocumentReference.context.sourcePatientInfo.display",
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-        "valueBoolean" : true
-      }],
-      "path" : "DocumentReference.context.sourcePatientInfo.display",
-      "short" : "Text alternative for the resource",
-      "definition" : "Plain text narrative that identifies the resource in addition to the resource reference.",
-      "comment" : "This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.",
-      "min" : 0,
-      "max" : "1",
-      "base" : {
-        "path" : "Reference.display",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "code" : "string"
-      }],
-      "constraint" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/4.0/StructureDefinition/extension-ElementDefinition.constraint.xpath",
-          "valueString" : "@value|f:*|h:div"
-        }],
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() or (children().count() > id.count())",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "isModifier" : false,
-      "isSummary" : true,
-      "mapping" : [{
-        "identity" : "rim",
-        "map" : "N/A"
       }]
     },
     {
@@ -3854,10 +4174,6 @@
       {
         "identity" : "cda",
         "map" : "ClinicalDocument/relatedDocument"
-      },
-      {
-        "identity" : "DocumentEntry-Mapping",
-        "map" : "DocumentEntry.referenceIdList using CXi encoding for type when possible"
       }]
     }]
   }
