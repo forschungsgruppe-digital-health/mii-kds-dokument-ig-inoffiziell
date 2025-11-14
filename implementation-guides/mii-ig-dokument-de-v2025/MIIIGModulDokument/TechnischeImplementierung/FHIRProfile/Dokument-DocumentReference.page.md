@@ -13,11 +13,24 @@ expand: 1
 }
 </style>
 
-## {{page-title}}
+# {{page-title}}
+
+## Übersicht
+
+- [Beschreibung]
+- [Metadaten]
+- [Inhalt]
+  - [Mapping Datensatz zu FHIR]
+  - [Suchparameter]
+- [Beispiele]
+
+---
+
+## Beschreibung
 
 Diese Profil beschreibt die Metadaten zu einem klinischen Dokument. Eine ausführliche Beschreibung und Empfehlungen zur Verwendung des Profils befinden sich in der Beschreibung des Moduls ({{pagelink:MIIIGModulDokument/Beschreibung.page.md}}).
 
-### Metadaten
+## Metadaten
 
 <fql output="table" headers="true">
 from
@@ -33,7 +46,7 @@ select
 
 ---
 
-### Inhalt
+## Inhalt
 
 <tabs>
   <tab title="Darstellung">{{tree, buttons}}</tab>
@@ -44,7 +57,7 @@ select
 
 ---
 
-**Mapping Datensatz zu FHIR**
+### Mapping Datensatz zu FHIR
 
 @```
 from StructureDefinition 
@@ -62,7 +75,7 @@ where url.endsWith('mii-lm-dokument')
 
 ---
 
-**Suchparameter**<br/>
+### Suchparameter
 
 Folgende Suchparameter sind für diese Modul relevant, auch in Kombination:
 
@@ -260,8 +273,11 @@ Folgende Suchparameter sind für diese Modul relevant, auch in Kombination:
 
 ---
 
-**Beispiele**<br/>
+## Beispiele
 
+Umfangreiche Beispiele, die das Profil und die Erweiterung gemeinsam veranschaulichen, sind auf Seite der Erweiterung zu finden ({{pagelink:MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md}}).
+
+<!--
 Das folgende Beispiel illustriert die Verarbeitung eines *ärztlichen Verlaufsberichts* der Patientin *Amanda Alzheimer* durch eine NLP-Pipeline (siehe Abbildung). Nach dem Laden (`Ingestion`) des Originaldokuments `Amanda_Alzheimer.txt` wird eine Dokumentreferenz mit dem NLP-Verarbeitungsstatus `unprocessed` angelegt. Anschließend wird eine De-Identifikation (`De-Identification`) der Inhalte durchgeführt, um das Ergebnisdokument `De-ID.txt` datenschutzkonform für Forschungszwecke weiterverwenden zu können. Eine zugehörige Dokumentreferenz kennzeichnet den NLP-Verarbeitungsstatus `de-identified, curated` und verweist auf Originaldokument mittels `transforms`. Abschließend werden die klinischen Inhalte annotiert, was unter Umständen mehrere Ergebnisdokumente produziert und sich als Archiv `Annotat.zip` zusammenfassen lassen. Die zugehörige Dokumentreferenz kennzeichnet den NLP-Verarbeitungsstatus als `de-identifier, curated, annotated` und erweitert `appends` die Dokumentreferenz des vorherigen NLP-Verarbeitungsschritts.
 
 <div style="text-align: center; margin-top: 2em; margin-bottom: 2em; width: 700px">
@@ -301,5 +317,6 @@ Die folgenden FHIR-Ressourcen stellen die zum Beispiel zugehörigen FHIR Patient
 </tabs>
 
 Quelle: <a href="https://doi.org/10.5281/zenodo.6539130">GraSCCo Datensatz, DOI (Zenodo): 10.5281/zenodo.6539130</a>
+-->
 
 ---
