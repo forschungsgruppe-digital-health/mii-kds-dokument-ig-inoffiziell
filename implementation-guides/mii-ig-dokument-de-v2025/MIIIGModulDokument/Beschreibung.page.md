@@ -29,10 +29,4 @@ Im Hinblick auf Dokumentenverarbeitungsprozesse, z.B. Format-Wandlungen, Anonymi
 Das Informationsmodell trennt Angaben zur Referenz selbst und den Metadaten der referenzierten Dokumente (`content`). Auf den Körper des Dokuments wird über eine lokal zu interpretierende URL (`content.attachment.url`) verwiesen. Grundsätzlich kann der Dokumentkörper des referenzierten Dokuments auch innerhalb der Referenz (`content.attachment.data`) eingebettet werden. 
 Das Modul gibt keine Vorgaben zur Semantik dieser Auflösung. 
 
-Der Textkörper kann vielfältige identifizierende Daten und/oder Metadaten (z.B. Namen, Patienten-ID) enthalten kann. Der Datenhalter kann eine erfolgte De-Identifizierung dieser Daten durch geeignete `securityLevel` und/oder Codes der Erweiterung NLP-Processing Status ({{pagelink:MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md}}) ausdrücken.<div style="display: flex; justify-content: center; align-items: center; height: 100vh">
-  <img src="https://web.archive.org/web/20250806152348im_/https://www.medizininformatik-initiative.de/sites/default/files/2025-06/2025-06-12_de_KDS-Abb_1.png" alt="MII-Kerndatensatz Module" title="MII-Kerndatensatz Module">
-</div><div style="display: flex; justify-content: center; align-items: center; height: 100vh">
-  <img src="https://web.archive.org/web/20250806152348im_/https://www.medizininformatik-initiative.de/sites/default/files/2025-06/2025-06-12_de_KDS-Abb_1.png" alt="MII-Kerndatensatz Module" title="MII-Kerndatensatz Module">
-</div><div style="display: flex; justify-content: center; align-items: center; height: 100vh">
-  <img src="https://web.archive.org/web/20250806152348im_/https://www.medizininformatik-initiative.de/sites/default/files/2025-06/2025-06-12_de_KDS-Abb_1.png" alt="MII-Kerndatensatz Module" title="MII-Kerndatensatz Module">
-</div>
+Der Textkörper kann vielfältige identifizierende Daten und/oder Metadaten (z.B. Namen, Patienten-ID) enthalten kann. Der Datenhalter kann eine erfolgte De-Identifizierung dieser Daten durch geeignete `securityLevel` und/oder Codes der Erweiterung NLP-Processing Status ({{pagelink:MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md}}) ausdrücken.
