@@ -1,11 +1,11 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "4e02b11c-9969-40e7-8c47-d9dbda6d036b-8",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/4e02b11c-9969-40e7-8c47-d9dbda6d036b-8",
+  "id" : "b834bced-c2dc-4c55-8502-c1a91a9fb42e-8",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/b834bced-c2dc-4c55-8502-c1a91a9fb42e-8",
   "name" : "UnionIHEXDSformatCodeDEAndMII_VS_Dokument_Format_Code",
   "title" : "Union of IHE XDS formatCode And MII CS Dokument Format Code",
   "status" : "active",
-  "date" : "2025-11-17T09:17:02+00:00",
+  "date" : "2025-11-17T10:04:55+00:00",
   "compose" : {
     "include" : [{
       "system" : "http://ihe-d.de/CodeSystems/DeutscheDokumentenformate",
