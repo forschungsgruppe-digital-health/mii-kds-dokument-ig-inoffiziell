@@ -35,7 +35,7 @@ java -jar ${WORKSPACE}/validator_cli.jar \
      -compare \
      -ig ${WORKSPACE}/fsh-generated/resources \
      -ig de.gematik.isik#${ISIK_VERSION} \
-     -dest ${WORKSPACE}/docs/mii-kds-dokument_mhd \
+     -dest ${WORKSPACE}/docs/mii-kds-dokument_isik \
      -right ${MII_CDS_DOKUMENT} \
      -left ${ISIK_DOCUMENT_PROFILE}
 
@@ -44,7 +44,7 @@ java -jar ${WORKSPACE}/validator_cli.jar \
      -compare \
      -ig ${WORKSPACE}/fsh-generated/resources \
      -ig kbv.basis#${MIO_VERSION} \
-     -dest ${WORKSPACE}/docs/mii-kds-dokument_mhd \
+     -dest ${WORKSPACE}/docs/mii-kds-dokument_mio \
      -right ${MII_CDS_DOKUMENT} \
      -left ${MIO_DOCUMENT_PROFILE}
 
