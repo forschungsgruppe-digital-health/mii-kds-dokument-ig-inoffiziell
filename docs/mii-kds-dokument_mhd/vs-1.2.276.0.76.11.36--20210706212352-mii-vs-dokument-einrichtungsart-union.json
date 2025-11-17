@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "4e02b11c-9969-40e7-8c47-d9dbda6d036b-11",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/4e02b11c-9969-40e7-8c47-d9dbda6d036b-11",
+  "name" : "UnionIHEXDShealthcareFacilityTypeCodeAndMII_VS_Dokument_Einrichtungsart",
+  "title" : "Union of IHE XDS healthcareFacilityTypeCode And MII VS Dokument Einrichtungart",
+  "status" : "active",
+  "date" : "2025-11-17T09:17:02+00:00",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCodePatientRelatedHealthcare"]
+    },
+    {
+      "valueSet" : ["http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCodeOutsidePatientRelatedHealthcare"]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "440654001"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "440655000"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "43741000"
+      }]
+    },
+    {
+      "valueSet" : ["http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCode"]
+    }]
+  }
+}

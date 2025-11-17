@@ -1,0 +1,9 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "4e02b11c-9969-40e7-8c47-d9dbda6d036b-9",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/4e02b11c-9969-40e7-8c47-d9dbda6d036b-9",
+  "name" : "IntersectionIHEXDSformatCodeDEAndMII_VS_Dokument_Format_Code",
+  "title" : "Intersection of IHE XDS formatCode And MII CS Dokument Format Code",
+  "status" : "active",
+  "date" : "2025-11-17T09:17:02+00:00"
+}
