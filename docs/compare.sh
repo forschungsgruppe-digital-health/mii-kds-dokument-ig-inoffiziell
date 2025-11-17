@@ -16,7 +16,10 @@ MHD_DOCUMENT_PROFILE="https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.M
      
 MII_CDS_DOKUMENT="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
 
-sed -i "s/{{DATETIME}}/$(date +'%Y-%m-%d %H:%M:%S')/" ${WORKSPACE}/docs/index.html
+sed -i "s/{{DATETIME}}/$(date +'%Y-%m-%d %H:%M:%S')/g" "${WORKSPACE}/docs/index.html"
+sed -i "s/{{ISIK_VERSION}}/${ISIK_VERSION}/g" "${WORKSPACE}/docs/index.html"
+sed -i "s/{{MIO_VERSION}}/${MIO_VERSION}/g" "${WORKSPACE}/docs/index.html"
+sed -i "s/{{MHD_VERSION}}/${MHD_VERSION}/g" "${WORKSPACE}/docs/index.html"
 
 mkdir mii-kds-dokument_isik \
       mii-kds-dokument_mio \
