@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "e69d2154-1e41-4416-9985-fa6375197439-2",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/e69d2154-1e41-4416-9985-fa6375197439-2",
+  "id" : "5d8dc463-32b6-4e9b-b944-aaebefdd1916-2",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/5d8dc463-32b6-4e9b-b944-aaebefdd1916-2",
   "name" : "UnionKBV_PR_Base_DocumentReferenceAndMII_PR_Dokument_Dokument",
   "title" : "Union of null And MII PR Dokument Dokument",
   "status" : "active",
-  "date" : "2025-11-17T10:32:57+00:00",
+  "date" : "2025-11-17T14:01:09+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "DocumentReference",
@@ -3200,7 +3200,7 @@
       "binding" : {
         "strength" : "preferred",
         "description" : "Document Format Codes.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/e69d2154-1e41-4416-9985-fa6375197439-5"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/5d8dc463-32b6-4e9b-b944-aaebefdd1916-5"
       },
       "mapping" : [{
         "identity" : "fhircomposition",
@@ -3679,7 +3679,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "XDS Facility Type.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/e69d2154-1e41-4416-9985-fa6375197439-8"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/5d8dc463-32b6-4e9b-b944-aaebefdd1916-8"
       },
       "mapping" : [{
         "identity" : "fhircomposition",
@@ -3898,7 +3898,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "Additional details about where the content was created (e.g. clinical specialty).",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/e69d2154-1e41-4416-9985-fa6375197439-11"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/5d8dc463-32b6-4e9b-b944-aaebefdd1916-11"
       },
       "mapping" : [{
         "identity" : "fhircomposition",
