@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "8cb0acbb-fb24-444a-bd24-166690a84f3a-2",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/8cb0acbb-fb24-444a-bd24-166690a84f3a-2",
+  "id" : "f8f352be-7e54-493c-b3b6-6eabd3b8c43a-2",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/f8f352be-7e54-493c-b3b6-6eabd3b8c43a-2",
   "name" : "UnionISiKDokumentenMetadatenAndMII_PR_Dokument_Dokument",
   "title" : "Union of Erforderliche Metadaten für Dokumentenaustausch in ISiK And MII PR Dokument Dokument",
   "status" : "active",
-  "date" : "2025-11-17T10:11:25+00:00",
+  "date" : "2025-11-17T10:21:57+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "DocumentReference",
@@ -3146,7 +3146,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "Security Labels from the Healthcare Privacy and Security Classification System.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/8cb0acbb-fb24-444a-bd24-166690a84f3a-5"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/f8f352be-7e54-493c-b3b6-6eabd3b8c43a-5"
       },
       "mapping" : [{
         "identity" : "fhircomposition",
@@ -3742,7 +3742,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/8cb0acbb-fb24-444a-bd24-166690a84f3a-8"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/f8f352be-7e54-493c-b3b6-6eabd3b8c43a-8"
       },
       "mapping" : [{
         "identity" : "CompositionDocumentReferenceMapping",
@@ -4681,7 +4681,7 @@
       "isSummary" : false,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/8cb0acbb-fb24-444a-bd24-166690a84f3a-11"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/f8f352be-7e54-493c-b3b6-6eabd3b8c43a-11"
       },
       "mapping" : [{
         "identity" : "CompositionDocumentReferenceMapping",
@@ -4903,7 +4903,7 @@
       "isSummary" : false,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/8cb0acbb-fb24-444a-bd24-166690a84f3a-14"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/f8f352be-7e54-493c-b3b6-6eabd3b8c43a-14"
       },
       "mapping" : [{
         "identity" : "CompositionDocumentReferenceMapping",

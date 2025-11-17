@@ -1,9 +1,0 @@
-{
-  "resourceType" : "ValueSet",
-  "id" : "90fa56c7-1b6b-4dad-a4da-70c5badd3fc6-6",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/90fa56c7-1b6b-4dad-a4da-70c5badd3fc6-6",
-  "name" : "IntersectionDocumentReferenceStatusAndDocumentReferenceStats",
-  "title" : "Intersection of DocumentReferenceStatus And MHD DocumentReference status codes",
-  "status" : "draft",
-  "date" : "2025-11-14T13:16:56+00:00"
-}
