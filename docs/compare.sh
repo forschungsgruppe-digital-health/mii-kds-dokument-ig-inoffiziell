@@ -1,5 +1,7 @@
 #/usr/bin/env sh
 
+set -e
+
 FHIR_VERSION="4.0.1"
 WORKSPACE=${1:-"$(pwd)"}
 
@@ -11,6 +13,10 @@ MIO_DOCUMENT_PROFILE="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Docume
 
 MHD_VERSION=${4:-"4.2.3"}
 MHD_DOCUMENT_PROFILE="https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UnContained.Comprehensive.DocumentReference"
+     
+MII_CDS_DOKUMENT="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
+
+sed -i "s/{{DATETIME}}/$(date +'%Y-%m-%d %H:%M:%S')/" ${WORKSPACE}/docs/index.html
 
 mkdir mii-kds-dokument_isik \
       mii-kds-dokument_mio \
@@ -22,8 +28,8 @@ java -jar ${WORKSPACE}/validator_cli.jar \
      -ig ${WORKSPACE}/fsh-generated/resources \
      -ig de.gematik.isik#${ISIK_VERSION} \
      -dest ${WORKSPACE}/docs/mii-kds-dokument_mhd \
-     -left https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument \
-     -right ${ISIK_DOCUMENT_PROFILE}
+     -right ${MII_CDS_DOKUMENT} \
+     -left ${ISIK_DOCUMENT_PROFILE}
 
 java -jar ${WORKSPACE}/validator_cli.jar \
      -version ${FHIR_VERSION} \
@@ -31,8 +37,8 @@ java -jar ${WORKSPACE}/validator_cli.jar \
      -ig ${WORKSPACE}/fsh-generated/resources \
      -ig kbv.basis#${MIO_VERSION} \
      -dest ${WORKSPACE}/docs/mii-kds-dokument_mhd \
-     -left https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument \
-     -right ${MIO_DOCUMENT_PROFILE}
+     -right ${MII_CDS_DOKUMENT} \
+     -left ${MIO_DOCUMENT_PROFILE}
 
 java -jar ${WORKSPACE}/validator_cli.jar \
      -version ${FHIR_VERSION} \
@@ -40,5 +46,5 @@ java -jar ${WORKSPACE}/validator_cli.jar \
      -ig ${WORKSPACE}/fsh-generated/resources \
      -ig ihe.iti.mhd#${MHD_VERSION} \
      -dest ${WORKSPACE}/docs/mii-kds-dokument_mhd \
-     -left https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument \
-     -right ${MHD_DOCUMENT_PROFILE}
+     -right ${MII_CDS_DOKUMENT} \
+     -left ${MHD_DOCUMENT_PROFILE}
