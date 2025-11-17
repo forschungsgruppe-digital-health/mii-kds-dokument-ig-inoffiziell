@@ -1,9 +1,9 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "a038c468-9afe-4f2e-8172-90f5552228c4-6",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/a038c468-9afe-4f2e-8172-90f5552228c4-6",
+  "id" : "9b34e3cd-e838-4d1c-a8c9-5edf965502f2-6",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/9b34e3cd-e838-4d1c-a8c9-5edf965502f2-6",
   "name" : "IntersectionDocumentReferenceStatsAndDocumentReferenceStatus",
   "title" : "Intersection of MHD DocumentReference status codes And DocumentReferenceStatus",
   "status" : "active",
-  "date" : "2025-11-17T10:05:40+00:00"
+  "date" : "2025-11-17T10:12:10+00:00"
 }
