@@ -16,14 +16,19 @@ MHD_DOCUMENT_PROFILE="https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.M
      
 MII_CDS_DOKUMENT="https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
 
+cp "${WORKSPACE}/docs/index.template.html" "${WORKSPACE}/docs/index.html"
 sed -i "s/{{DATETIME}}/$(date +'%Y-%m-%d %H:%M:%S %Z')/g" "${WORKSPACE}/docs/index.html"
 sed -i "s/{{ISIK_VERSION}}/${ISIK_VERSION}/g" "${WORKSPACE}/docs/index.html"
 sed -i "s/{{MIO_VERSION}}/${MIO_VERSION}/g" "${WORKSPACE}/docs/index.html"
 sed -i "s/{{MHD_VERSION}}/${MHD_VERSION}/g" "${WORKSPACE}/docs/index.html"
 
-mkdir mii-kds-dokument_isik \
-      mii-kds-dokument_mio \
-      mii-kds-dokument_mhd
+rm -rf ${WORKSPACE}/docs/mii-kds-dokument_isik \
+       ${WORKSPACE}/docs/mii-kds-dokument_mio \
+       ${WORKSPACE}/docs/mii-kds-dokument_mhd
+
+mkdir ${WORKSPACE}/docs/mii-kds-dokument_isik \
+      ${WORKSPACE}/docs/mii-kds-dokument_mio \
+      ${WORKSPACE}/docs/mii-kds-dokument_mhd
 
 java -jar ${WORKSPACE}/validator_cli.jar \
      -version ${FHIR_VERSION} \
