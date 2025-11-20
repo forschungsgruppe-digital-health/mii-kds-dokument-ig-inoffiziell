@@ -15,6 +15,7 @@ Beschreibung von eigenen ValueSets, Verwendung internationaler Terminologien, Li
 
 #### Klassifikation von NLP-Verarbeitungsergebnissen
 
+<!--
 <fql output="table">
 from 
     CodeSystem
@@ -27,6 +28,8 @@ select
     Display: display,
     Definition: definition
 </fql>
+-->
+[siehe Concepts im FHIR Profile/NLP Processing Status: Extension](https://simplifier.net/guide/medizininformatikinitiative-dokument/miiigmoduldokument/technischeimplementierung/fhirprofile/nlp-processing-status-extension.page.md?version=current#inhalt)
 
 ---
 
