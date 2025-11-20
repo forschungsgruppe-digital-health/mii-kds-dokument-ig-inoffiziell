@@ -1,11 +1,11 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "5d8dc463-32b6-4e9b-b944-aaebefdd1916-5",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/5d8dc463-32b6-4e9b-b944-aaebefdd1916-5",
+  "id" : "6fea8e1d-1338-4a97-97ee-3b4b69549ba6-5",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/6fea8e1d-1338-4a97-97ee-3b4b69549ba6-5",
   "name" : "UnionDocumentReferenceFormatCodeSetAndMII_VS_Dokument_Format_Code",
   "title" : "Union of DocumentReference Format Code Set And MII CS Dokument Format Code",
   "status" : "active",
-  "date" : "2025-11-17T14:01:09+00:00",
+  "date" : "2025-11-20T17:58:46+00:00",
   "compose" : {
     "include" : [{
       "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"

@@ -1,9 +1,9 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "6a409496-9bfe-49bc-8935-f2e36b2068c7-6",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/6a409496-9bfe-49bc-8935-f2e36b2068c7-6",
+  "id" : "4d53ed45-a561-4f32-b0b2-a0b04a85786b-6",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/4d53ed45-a561-4f32-b0b2-a0b04a85786b-6",
   "name" : "IntersectionISiKConfidentialityCodesAndAll Security Labels",
   "title" : "Intersection of ISiKConfidentialityCodes And SecurityLabels",
   "status" : "active",
-  "date" : "2025-11-17T14:00:44+00:00"
+  "date" : "2025-11-20T17:58:21+00:00"
 }

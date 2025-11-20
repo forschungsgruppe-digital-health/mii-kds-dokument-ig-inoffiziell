@@ -1,11 +1,11 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "5d8dc463-32b6-4e9b-b944-aaebefdd1916-11",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/5d8dc463-32b6-4e9b-b944-aaebefdd1916-11",
+  "id" : "6fea8e1d-1338-4a97-97ee-3b4b69549ba6-11",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/6fea8e1d-1338-4a97-97ee-3b4b69549ba6-11",
   "name" : "UnionPracticeSettingCodeValueSetAndMII_VS_Dokument_Fachgebiet",
   "title" : "Union of Practice Setting Code Value Set And MII VS Dokument Fachgebiet",
   "status" : "active",
-  "date" : "2025-11-17T14:01:09+00:00",
+  "date" : "2025-11-20T17:58:46+00:00",
   "compose" : {
     "include" : [{
       "concept" : [{
