@@ -28,27 +28,7 @@
           {
             "property": "concept",
             "op": "descendent-of",
-            "value": "404684003"
-          }
-        ]
-      },
-      {
-        "system": "http://snomed.info/sct",
-        "filter": [
-          {
-            "property": "concept",
-            "op": "descendent-of",
-            "value": "71388002"
-          }
-        ]
-      },
-      {
-        "system": "http://snomed.info/sct",
-        "filter": [
-          {
-            "property": "concept",
-            "op": "descendent-of",
-            "value": "362981000"
+            "value": "229059009"
           }
         ]
       }
