@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "f7dea05e-b510-4b56-917d-f72a774cacab-3",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/f7dea05e-b510-4b56-917d-f72a774cacab-3",
+  "id" : "cb563eee-ad16-4424-9974-625f3a9a5961-3",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/cb563eee-ad16-4424-9974-625f3a9a5961-3",
   "name" : "IntersectionUnContainedComprehensiveDocumentReferenceAndMII_PR_Dokument_Dokument",
   "title" : "Intersection of MHD DocumentReference Comprehensive UnContained References Option And MII PR Dokument Dokument",
   "status" : "active",
-  "date" : "2025-12-05T14:34:00+00:00",
+  "date" : "2025-12-05T17:42:13+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "DocumentReference",
@@ -717,7 +717,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "The status of the document reference.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/f7dea05e-b510-4b56-917d-f72a774cacab-6"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/cb563eee-ad16-4424-9974-625f3a9a5961-6"
       },
       "mapping" : [{
         "identity" : "DocumentEntry-Mapping",
