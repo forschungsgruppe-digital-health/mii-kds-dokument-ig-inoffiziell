@@ -662,9 +662,9 @@
       "Hash": "7F85A57B8D0F84745C009A82B7E31864"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/Beschreibung.page.md": {
-      "Length": 2050,
-      "LastWriteTime": "2025-11-18T15:49:16+00:00",
-      "Hash": "3617B14C22EAE2A63852E350C6886DCE"
+      "Length": 2223,
+      "LastWriteTime": "2025-12-05T08:09:30+00:00",
+      "Hash": "0BC8B9FC8DA672A068B16EE6C959754E"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/Kontext-Bezuege.page.md": {
       "Length": 3921,
@@ -687,9 +687,9 @@
       "Hash": "1A2255BF33D2A1B2DB191533D6E66A8B"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md": {
-      "Length": 5481,
-      "LastWriteTime": "2025-11-18T11:23:46+00:00",
-      "Hash": "6EC246BD1C298E7023E819EC055DE4AA"
+      "Length": 5853,
+      "LastWriteTime": "2025-12-05T07:55:32+00:00",
+      "Hash": "82D13459745FAC0A6DBBD84B21054305"
     },
     "package.bake.yaml": {
       "Length": 960,
@@ -697,9 +697,9 @@
       "Hash": "92098212D93B3DB7C266D2A309FD5E7C"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/TechnischeImplementierung/Kompatibilitaet.page.md": {
-      "Length": 6495,
-      "LastWriteTime": "2025-11-20T16:05:18+00:00",
-      "Hash": "35609D727194C4CEDECEA743A65EFEE9"
+      "Length": 16652,
+      "LastWriteTime": "2025-12-05T11:06:14+00:00",
+      "Hash": "9A09E9669509C12AF7C160DDD2A23F0D"
     }
   }
 }

@@ -25,7 +25,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/Str
 ## Beschreibung
 
 Diese Erweiterung ermöglicht die Beschreibung von dem Bearbeitungsstatus eines Dokuments während eines NLP-Projektes. Die Prozessierung eine Dokumentes mit unstrukturierter Information erfolgt in einer Vielzahl von Einzelschritten. Durch diese Prozessketten entstehen Transformationen und Relationen von und zu dem Originaldokument. Die NLP Extension nutzt ein Codesystem um die vielfältigen Zwischenprodukte einer NLP-Bearbeitung koordiniert zu beschreiben und zu archivieren. 
-
+Das Codesystem der NLP-Extension besitzt zwei Hierarchien, welche in Level 1 und Level 2 zum Ausdruck kommen. Das Level 1 bezeichnet hierbei die übergeordneten Prozessstatus wie zum Beispiel "annotated". Das Level 2 dient dann zur Spezifikation von Level 1, beispielsweise Lvl1 "annotated" Lv2 "deid", dieses Dokument wurde mit deidentifizierenden Annotationen versehen. 
 ## Metadaten
 
 @```
