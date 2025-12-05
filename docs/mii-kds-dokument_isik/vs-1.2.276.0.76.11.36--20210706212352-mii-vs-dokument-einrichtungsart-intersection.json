@@ -1,9 +1,9 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "4d53ed45-a561-4f32-b0b2-a0b04a85786b-12",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/4d53ed45-a561-4f32-b0b2-a0b04a85786b-12",
+  "id" : "b99730cd-1e20-421d-b500-28ec98521872-12",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/b99730cd-1e20-421d-b500-28ec98521872-12",
   "name" : "IntersectionIHEXDShealthcareFacilityTypeCodeAndMII_VS_Dokument_Einrichtungsart",
   "title" : "Intersection of IHE XDS healthcareFacilityTypeCode And MII VS Dokument Einrichtungart",
   "status" : "active",
-  "date" : "2025-11-20T17:58:21+00:00"
+  "date" : "2025-12-05T14:14:17+00:00"
 }
