@@ -1,11 +1,11 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "1bf20a66-d2b4-46c9-8171-3b8c83c15e34-5",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/1bf20a66-d2b4-46c9-8171-3b8c83c15e34-5",
+  "id" : "72ab0115-0108-4620-a845-7e1d15c18f9f-5",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/72ab0115-0108-4620-a845-7e1d15c18f9f-5",
   "name" : "UnionISiKConfidentialityCodesAndAll Security Labels",
   "title" : "Union of ISiKConfidentialityCodes And SecurityLabels",
   "status" : "active",
-  "date" : "2025-12-05T19:28:27+00:00",
+  "date" : "2025-12-05T19:50:59+00:00",
   "compose" : {
     "include" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",

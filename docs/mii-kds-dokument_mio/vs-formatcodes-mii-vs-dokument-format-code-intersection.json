@@ -1,9 +1,9 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "17c842a5-b205-4558-9e7b-e00eb0547e68-6",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/17c842a5-b205-4558-9e7b-e00eb0547e68-6",
+  "id" : "59d3b070-9ffa-4ccb-bd3f-90ae67979cd8-6",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/59d3b070-9ffa-4ccb-bd3f-90ae67979cd8-6",
   "name" : "IntersectionDocumentReferenceFormatCodeSetAndMII_VS_Dokument_Format_Code",
   "title" : "Intersection of DocumentReference Format Code Set And MII CS Dokument Format Code",
   "status" : "active",
-  "date" : "2025-12-05T19:28:51+00:00"
+  "date" : "2025-12-05T19:51:22+00:00"
 }
