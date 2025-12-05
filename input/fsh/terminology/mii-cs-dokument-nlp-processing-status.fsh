@@ -33,6 +33,6 @@ Description: "Status der NLP-Verarbeitung des referenzierten Dokuments"
     * ^designation.language = #en
     * ^designation.value = "Semantically annotated document"
 
-* #surrogated "Surrogiertes Dokument" "Dokument nach Ersetzung von bereits annotierten Konzepten. In aller Regel Surrogation von deidentifizierten Merkmalen zu einer Pseudonymisierung. Der Status surrogated setzt voraus, dass bereits die Status preprocessed und annotated erfolgt sind."
+* #surrogated "Surrogiertes Dokument" "Ausgewählte Informationen des Dokuments wurden mit neuen Informationen ersetzt. In aller Regel im Zuge einer Pseudonymisierung. Zuvor annotierte Personal Identifier Konzepte wurden durch fiktive Konzepte irreversibel ersetzt. Das Dokument lässt keinen Rückschluss mehr auf die ersetzten Informationen zu."
   * ^designation.language = #en
   * ^designation.value = "Surrogated document"
