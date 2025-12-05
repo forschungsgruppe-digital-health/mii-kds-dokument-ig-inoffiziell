@@ -9,9 +9,9 @@ Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR Prof
 
 | Veröffentlichung | |
 |---------|---|
-| Datum   | 06.08.2025 |
-| Version | 2026.0.0-ballot |
-| Status  | ballot |
+| Datum   | 10.12.2025 |
+| Version | 2026.0.0 |
+| Status  | Active |
 | Realm   | DE | 
 <!-- | Reifegrad | MII Maturity Model (MM0\|MM1\|MM2\|MM3)| -->
 
@@ -34,8 +34,8 @@ Anmerkungen und Kritik wird in Form von 'Issues' im GitHub Projekt stets gern en
 
 * Frank Meineke, SMITH, Informationsmodellierung/Fachvertretung
 * Jakob Faller, MIRACUM, Informationsmodellierung/Fachvertretung
-* Katja Hoffmann, DigiHub MiHUBx, Technische Umsetzung
-* Marcel Susky, DigiHub MiHUBx, Informationsmodellierung/Technische Umsetzung
+* Katja Hoffmann, MIRACUM/DigiHub MiHUBx, Technische Umsetzung
+* Marcel Susky, MIRACUM/DigiHub MiHUBx, Informationsmodellierung/Fachvertretung/Technische Umsetzung
 * Martin Boeker, MIRACUM, Fachvertretung
 * Noemi Deppenwiese, MIRACUM, Technische Umsetzung
 * Thomas Ganslandt, MIRACUM, Fachvertretung

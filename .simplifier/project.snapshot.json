@@ -172,9 +172,9 @@
       "Hash": "5721E47887AC9DDA468D89766CD0CBD5"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/toc.yaml": {
-      "Length": 424,
-      "LastWriteTime": "2025-06-17T07:00:26+00:00",
-      "Hash": "BD0B3D2ABD6753567104E821D16C6F69"
+      "Length": 482,
+      "LastWriteTime": "2025-12-05T18:44:46+00:00",
+      "Hash": "E7F8F42E4681E300DED842143AB37B3B"
     },
     "implementation-guides/mii-ig-dokument-de-v2025/toc.yaml": {
       "Length": 75,
@@ -705,6 +705,11 @@
       "Length": 4306,
       "LastWriteTime": "2025-12-05T13:07:58+00:00",
       "Hash": "BA9B456972AEB88C9391109A4FA8D74A"
+    },
+    "implementation-guides/mii-ig-dokument-de-v2025/MIIIGModulDokument/Release-Notes.page.md": {
+      "Length": 210,
+      "LastWriteTime": "2025-12-05T18:44:58+00:00",
+      "Hash": "4731BFC5150B347FC556D9E8C0A21B58"
     }
   }
 }

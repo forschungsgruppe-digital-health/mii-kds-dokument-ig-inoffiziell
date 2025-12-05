@@ -1,6 +1,6 @@
 title: MII IG Dokument DE v2026
 description: '[DE] Modul Dokument - Version 2026 - IG'
-version: 2026.0.0-ballot
+version: 2026.0.0
 style-root: styles
 style-name: MIICustomIGStyle
 numbered-headings: false
