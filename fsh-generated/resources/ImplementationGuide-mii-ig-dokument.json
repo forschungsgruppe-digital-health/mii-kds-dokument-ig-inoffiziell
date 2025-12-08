@@ -23,7 +23,7 @@
       ]
     }
   ],
-  "description": "Medizininformatik Initiative - Erweiterungsmodul Dokument",
+  "description": "Medizininformatik Initiative - KDS-Modul Dokument",
   "jurisdiction": [
     {
       "coding": [
@@ -149,7 +149,7 @@
           "reference": "StructureDefinition/mii-lm-dokument"
         },
         "name": "MII LM Dokument",
-        "description": "MII Logical Model Erweiterungsmodul Dokument",
+        "description": "MII Logical Model KDS-Modul Dokument",
         "exampleBoolean": false
       },
       {

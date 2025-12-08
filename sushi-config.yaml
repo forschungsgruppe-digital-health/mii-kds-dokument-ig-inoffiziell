@@ -7,7 +7,7 @@ id: mii-ig-dokument
 canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument
 name: MII_IG_Dokument
 title: "MII IG Dokument"
-description: "Medizininformatik Initiative - Erweiterungsmodul Dokument"
+description: "Medizininformatik Initiative - KDS-Modul Dokument"
 status: draft # draft | active | retired | unknown
 version: 2026.0.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html

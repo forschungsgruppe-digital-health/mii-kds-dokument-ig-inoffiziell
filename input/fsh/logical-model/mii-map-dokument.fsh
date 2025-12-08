@@ -2,7 +2,7 @@ Mapping: MII_MAP_Dokument
 Source: MII_LM_Dokument
 Id: mii-map-dokument
 Title: "MII MAP Dokument"
-Description: "MII Mappings Erweiterungsmodul Dokument"
+Description: "MII Mappings KDS-Modul Dokument"
 * Dokument                              ->  "DocumentReference"
   * Masteridentifikator                 ->  "DocumentReference.masterIdentifier"
   * Businessidentifikator               ->  "DocumentReference.identifier"

@@ -17,13 +17,13 @@
       ]
     }
   ],
-  "description": "MII Logical Model Erweiterungsmodul Dokument",
+  "description": "MII Logical Model KDS-Modul Dokument",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
       "identity": "mii-map-dokument",
       "name": "MII MAP Dokument",
-      "comment": "MII Mappings Erweiterungsmodul Dokument"
+      "comment": "MII Mappings KDS-Modul Dokument"
     }
   ],
   "kind": "logical",
@@ -37,7 +37,7 @@
         "id": "mii-lm-dokument",
         "path": "mii-lm-dokument",
         "short": "MII LM Dokument",
-        "definition": "MII Logical Model Erweiterungsmodul Dokument"
+        "definition": "MII Logical Model KDS-Modul Dokument"
       },
       {
         "id": "mii-lm-dokument.Dokument",

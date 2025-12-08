@@ -6,5 +6,5 @@ Diese Seite enthält einen Changelog mit Beschreibung der Änderungen zwischen V
 
 Datum 10.12.2025
 
-- Initiales Release des MII KDS Erweiterungsmoduls Dokument
+- Initiales Release des MII KDS-Moduls Dokument
 

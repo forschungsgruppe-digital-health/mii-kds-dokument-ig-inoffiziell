@@ -1,4 +1,4 @@
-# Medizininformatik-Initiative Erweiterungsmodul Dokument
+# Medizininformatik-Initiative KDS-Modul Dokument
 
 ## Development Environment
 
