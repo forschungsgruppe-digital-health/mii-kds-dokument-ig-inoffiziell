@@ -1,11 +1,11 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "54f4fcb6-5c1f-4949-b390-0e23566ec033-11",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/54f4fcb6-5c1f-4949-b390-0e23566ec033-11",
+  "id" : "b0cb0ae3-da39-46f5-ab18-729f9f0f1040-11",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/b0cb0ae3-da39-46f5-ab18-729f9f0f1040-11",
   "name" : "UnionIHEXDShealthcareFacilityTypeCodeAndMII_VS_Dokument_Einrichtungsart",
   "title" : "Union of IHE XDS healthcareFacilityTypeCode And MII VS Dokument Einrichtungart",
   "status" : "active",
-  "date" : "2025-12-08T11:10:22+00:00",
+  "date" : "2025-12-08T11:25:23+00:00",
   "compose" : {
     "include" : [{
       "valueSet" : ["http://ihe-d.de/ValueSets/IHEXDShealthcareFacilityTypeCodePatientRelatedHealthcare"]
