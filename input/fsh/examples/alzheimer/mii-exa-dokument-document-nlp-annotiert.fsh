@@ -4,15 +4,11 @@ Usage: #example
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument"
 * status = #current
 * docStatus = #final
-* type.coding[+].version = "2025"
-* type.coding[=] = $dvmd-kdl#AD010110 "Ärztlicher Verlaufsbericht"
-* type.coding[+].version = "3.0.1"
-* type.coding[=] = $ihe-xds-type-code#BERI "Arztberichte"
+* type.coding[+] = $dvmd-kdl#AD010110 "Ärztlicher Verlaufsbericht"
+* type.coding[+] = $ihe-xds-type-code#BERI "Arztberichte"
 * type.text = "Durchgangsarztbericht"
-* category.coding.version = "3.0.1"
 * category.coding = $ihe-xds-class-code#BRI "Brief"
 * category.text = "Brief"
-* securityLabel.coding.version = "4.0.1"
 * securityLabel.coding = $v3-confidentiality#L "low"
 * relatesTo.code = #appends
 * relatesTo.target = Reference(DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument)

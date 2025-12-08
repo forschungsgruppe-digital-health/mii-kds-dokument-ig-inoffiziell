@@ -9,16 +9,12 @@ Usage: #example
 * identifier.use = #official
 * status = #current
 * docStatus = #final
-* type.coding[+].version = "2025"
-* type.coding[=] = $dvmd-kdl#AD010110 "Ärztlicher Verlaufsbericht"
-* type.coding[+].version = "3.0.1"
-* type.coding[=] = $ihe-xds-type-code#BERI "Arztberichte"
+* type.coding[+] = $dvmd-kdl#AD010110 "Ärztlicher Verlaufsbericht"
+* type.coding[+] = $ihe-xds-type-code#BERI "Arztberichte"
 * type.text = "Durchgangsarztbericht"
-* category.coding.version = "3.0.1"
 * category.coding = $ihe-xds-class-code#BRI "Brief"
 * category.text = "Brief"
 * subject = Reference(Patient/AmandaAlzheimer)
-* securityLabel.coding.version = "4.0.1"
 * securityLabel.coding = $v3-confidentiality#N "normal"
 * content[Binaerdaten].attachment.contentType = #text/plain
 * content[Binaerdaten].attachment.language = #de-AT
