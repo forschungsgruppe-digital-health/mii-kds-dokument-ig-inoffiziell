@@ -12,9 +12,11 @@ RuleSet: CS_Meta(url)
 * insert CS_VS_Meta({url})
 * ^caseSensitive = true
 * ^content = #complete
+* ^meta.profile = $shared-cs
 
 RuleSet: VS_Meta(url)
 * insert CS_VS_Meta({url})
+* ^meta.profile = $shared-vs
 
 RuleSet: EX_Meta(url)
 * ^url = {url}

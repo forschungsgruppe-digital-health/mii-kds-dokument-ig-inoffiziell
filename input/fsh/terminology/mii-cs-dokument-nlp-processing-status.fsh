@@ -3,7 +3,6 @@ Id: mii-cs-dokument-nlp-processing-status
 Title: "MII CS Dokument NLP Processing Status"
 Description: "Status der NLP-Verarbeitung des referenzierten Dokuments"
 * insert CS_Header($mii-cs-dokument-nlp-processing-status)
-* ^content = #complete
 * ^hierarchyMeaning = #is-a
 
 * #unprocessed "Original" "Dokument im Original"

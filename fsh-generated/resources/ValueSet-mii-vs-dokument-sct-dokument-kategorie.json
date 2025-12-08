@@ -20,6 +20,11 @@
   ],
   "experimental": false,
   "language": "de-DE",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
   "compose": {
     "include": [
       {

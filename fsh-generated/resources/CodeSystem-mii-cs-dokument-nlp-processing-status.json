@@ -127,6 +127,11 @@
   "experimental": false,
   "language": "de-DE",
   "caseSensitive": true,
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
   "hierarchyMeaning": "is-a",
   "count": 9
 }

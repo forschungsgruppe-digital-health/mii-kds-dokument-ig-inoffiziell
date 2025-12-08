@@ -17,6 +17,8 @@ Alias: $mii-vs-dokument-format-code = https://www.medizininformatik-initiative.d
 
 // Aliases für HL7 FHIR Definitionen
 Alias: $cps-exp = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
+Alias: $shared-cs = http://hl7.org/fhir/StructureDefinition/shareablecodesystem
+Alias: $shared-vs = http://hl7.org/fhir/StructureDefinition/shareablevalueset
 
 // DKGEV
 Alias: $dkgev-fachabteilungsschluessel = http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel
