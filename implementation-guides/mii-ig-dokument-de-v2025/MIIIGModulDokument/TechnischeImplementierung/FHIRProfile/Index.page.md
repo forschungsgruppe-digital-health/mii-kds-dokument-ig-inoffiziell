@@ -7,6 +7,8 @@ Einleitung FHIR Profile
 
 ## Namenskonventionen für die Erstellung von FHIR-Ressourcen in der Medizininformatik-Initiative
 
+Bitte die [Seite der Namenskonventionen](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII) im Kerndatensatz Wiki auf aktuellere Versionen prüfen.
+
 ### Allgemeines
 * Möglichst eindeutige und prägnante Beschreibung des Inhalts 
 * Für CodeSystems und ValueSets: Konformität mit http://hl7.org/fhir/shareablecodesystem bzw. http://hl7.org/fhir/shareablevalueset wird empfohlen 
@@ -16,7 +18,7 @@ Für bestehende Module sind folgende Bezeichnungen abgestimmt:
 
 | Vollständiger Modulname                | Technischer Modulname | Abkürzung       |
 | -------------------------------------- | --------------------- | --------------- |
-|                                        | **url**               | **title, name, id** |
+|                                        | **url**               | **title/ name/ id** |
 | Modul Diagnose                         | modul-diagnose        | Diagnose        |
 | Modul Laborbefund                      | modul-labor           | Labor           |
 | Modul Prozedur                         | modul-prozedur        | Prozedur        |
@@ -34,6 +36,11 @@ Für bestehende Module sind folgende Bezeichnungen abgestimmt:
 | Modul Molekulargenetischer Befund      | modul-molgen          | MolGen          |
 | Modul Bioprobendaten                   | modul-biobank         | Biobank         |
 | Modul Strukturdaten                    | modul-struktur        | Struktur        |
+| Modul Seltene Erkrankungen             | modul-seltene         | Seltene         |
+| Modul Patient-reported Outcomes        | modul-pros            | PROs            | 
+| Modul Molekulares Tumorboard           | modul-mtb             | MTB             |
+| Modul Lungenfunktion                   | modul-lufu            | LuFu            |
+| Modul Schlafmedizinischer Befund       | *folgt*               | *folgt*         |
 | Modul Dokument                         | modul-dokument        | Dokument        |
 
 Für zukünftig neu hinzukommende Module wird eine deutschsprachige Benennung im Singular bevorzugt. 
@@ -51,6 +58,9 @@ Für zukünftig neu hinzukommende Module wird eine deutschsprachige Benennung im
 * CPS: CapabilityStatement 
 * OD: OperationDefinition 
 * IG: ImplementationGuide 
+* QST: Questionnaire
+* OBSDEF: ObservationDefinition 
+* MSR: Measure
 * EXA: Example 
 
 ### Sprache
@@ -83,13 +93,13 @@ Hinweis: Der FHIR-Standard ist CamelCase2, aber wegen besserer Menschenlesbarkei
 
 ### Element **url** 
 (kanonische URL der Ressource) 
-* Struktur: `https://www.medizininformatik-initiative.de/fhir/core/<technischer Modulname>/<Ressourcentyp>/<id der Ressource>` für Ressourcen der Basismodule und `https://www.medizininformatik-initiative.de/fhir/ext/<technischer Modulname>/<Ressourcentyp>/<id der Ressource>` für Ressourcen innerhalb der Erweiterungsmodule.
+* Struktur: `https://www.medizininformatik-initiative.de/fhir/<technischer Modulname>/<Ressourcentyp>/<id der Ressource>`
 * `<technischer Modulname>`: Technischer Name des Moduls laut obiger Tabelle 
 * `<id-…>`: wie oben spezifiziert 
-* Regeln für die canonical url sollen zunächst nur bei Neuerstellung angewendet werden 
-* Beispiel: `https://www.medizininformatik-initiative.de/fhir/ext/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikrobiologische-erreger-snomedct` 
+* Regeln für die Canonical URL sollen zunächst nur bei Neuerstellung von Ressourcen angewendet werden. Etablierte URLs von veröffentlichten Artefakten sollen nachträglich nicht geändert werden.
+* Beispiel: `https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikrobiologische-erreger-snomedct` 
 
-### Referenzen
+### Referenzen: 
 * HL7 International: Guide to Designing (FHIR) Resources: https://confluence.hl7.org/pages/viewpage.action?pageId=35718826 
-* HL7 International: Naming Rules & Guidelines: https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-NamingRules&Guidelines 
-* HL7 International: Multi-Language support in FHIR (Localization/Internationalization): http://hl7.org/fhir/languages.html 
+* HL7 International: Naming Rules & Guidelines: [https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-NamingRules&Guidelines](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826%22%20l%20%22GuidetoDesigningResources-NamingRules&Guidelines) 
+* HL7 International: Multi-Language support in FHIR (Localization/Internationalization): http://hl7.org/fhir/languages.html
