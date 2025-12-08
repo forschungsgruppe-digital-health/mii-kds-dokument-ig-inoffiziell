@@ -4,9 +4,11 @@ topic: Beschreibung
 
 ## {{page-title}}
 
+<!--
 <div style="display: flex; justify-content: center; align-items: center; padding: 2em">
   {{render:implementation-guides/images/Blockdiagramm.png}}
 </div>
+-->
 
 Mit dem MII KDS-Modul Dokument können Metadaten zu Dokumenten jeglicher Art mit klinischer Relevanz für beliebige Zwecke strukturiert erfasst werden. Dokumente sind in diesem Kontext beliebige Binärobjekte, also beispielsweise auch Bilder oder Videos. 
 
