@@ -20,7 +20,7 @@ Im Folgenden werden die Use Cases des Moduls, sowie die dazugehörigen FHIR Prof
 {{index:root}}
 
 ## Impressum
-Dieser Leitfaden ist im Rahmen der Medizininformatik Initative erstellt wurden und unterliegt per Governance Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V..
+Dieser Leitfaden ist im Rahmen der Medizininformatik Initiative erstellt wurden und unterliegt per Governance Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V..
 
 ## Ansprechpartner
 * Frank Meineke, SMITH
