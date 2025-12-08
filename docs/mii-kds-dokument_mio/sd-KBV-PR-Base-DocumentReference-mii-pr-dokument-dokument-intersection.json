@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "a16597c7-2084-46be-bf97-0b99e19de31d-3",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/a16597c7-2084-46be-bf97-0b99e19de31d-3",
+  "id" : "c0b8c6d0-1076-47f7-8ef2-4953d7a27133-3",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/c0b8c6d0-1076-47f7-8ef2-4953d7a27133-3",
   "name" : "IntersectionKBV_PR_Base_DocumentReferenceAndMII_PR_Dokument_Dokument",
   "title" : "Intersection of null And MII PR Dokument Dokument",
   "status" : "active",
-  "date" : "2025-12-08T09:40:37+00:00",
+  "date" : "2025-12-08T11:10:45+00:00",
   "snapshot" : {
     "element" : [{
       "path" : "DocumentReference",
