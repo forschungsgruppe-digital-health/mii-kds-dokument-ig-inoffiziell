@@ -138,30 +138,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-dokument-format-code"
-        },
-        "name": "MII CS Dokument Format Code",
-        "description": "ValueSet zum (komplexen) Format Code eines Dokuments",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/mii-cs-dokument-nlp-processing-status"
-        },
-        "name": "MII CS Dokument NLP Processing Status",
-        "description": "Status der NLP-Verarbeitung des referenzierten Dokuments",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-dokument-nlp-processing-status"
-        },
-        "name": "MII CS Dokument NLP Processing Status ValueSet",
-        "description": "ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/mii-ex-dokument-nlp-processing-status"
         },
         "name": "MII EX Dokument NLP Processing Status",
@@ -198,6 +174,30 @@
         },
         "name": "MII VS Dokument Fachgebiet",
         "description": "ValueSet zum erzeugenden Fachgebiet eines Dokuments",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-dokument-format-code"
+        },
+        "name": "MII VS Dokument Format Code",
+        "description": "ValueSet zum (komplexen) Format Code eines Dokuments",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-dokument-nlp-processing-status"
+        },
+        "name": "MII VS Dokument NLP Processing Status",
+        "description": "ValueSet zum Status der NLP-Verarbeitung des referenzierten Dokuments",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/mii-cs-dokument-nlp-processing-status"
+        },
+        "name": "MII VS Dokument NLP Processing Status",
+        "description": "Status der NLP-Verarbeitung des referenzierten Dokuments",
         "exampleBoolean": false
       },
       {
