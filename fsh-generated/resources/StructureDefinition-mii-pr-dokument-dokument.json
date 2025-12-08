@@ -1325,45 +1325,45 @@
         }
       },
       {
-        "id": "DocumentReference.content:Binärdaten",
+        "id": "DocumentReference.content:Binaerdaten",
         "path": "DocumentReference.content",
-        "sliceName": "Binärdaten",
+        "sliceName": "Binaerdaten",
         "min": 0,
         "max": "*",
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.content:Binärdaten.attachment",
+        "id": "DocumentReference.content:Binaerdaten.attachment",
         "path": "DocumentReference.content.attachment",
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.content:Binärdaten.attachment.contentType",
+        "id": "DocumentReference.content:Binaerdaten.attachment.contentType",
         "path": "DocumentReference.content.attachment.contentType",
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.content:Binärdaten.attachment.language",
+        "id": "DocumentReference.content:Binaerdaten.attachment.language",
         "path": "DocumentReference.content.attachment.language",
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.content:Binärdaten.attachment.data",
+        "id": "DocumentReference.content:Binaerdaten.attachment.data",
         "path": "DocumentReference.content.attachment.data",
         "min": 1
       },
       {
-        "id": "DocumentReference.content:Binärdaten.attachment.url",
+        "id": "DocumentReference.content:Binaerdaten.attachment.url",
         "path": "DocumentReference.content.attachment.url",
         "max": "0"
       },
       {
-        "id": "DocumentReference.content:Binärdaten.attachment.creation",
+        "id": "DocumentReference.content:Binaerdaten.attachment.creation",
         "path": "DocumentReference.content.attachment.creation",
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.content:Binärdaten.format",
+        "id": "DocumentReference.content:Binaerdaten.format",
         "path": "DocumentReference.content.format",
         "mustSupport": true
       },

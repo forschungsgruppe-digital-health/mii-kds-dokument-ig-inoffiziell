@@ -149,9 +149,9 @@ Description: "Klinisches Dokument mit zugehörigen Metadaten"
 * content ^slicing.description = "Slice für ein Dokument, das als Binärdaten eingebettet ist"
 * content ^slicing.ordered = false
 
-* content contains Binärdaten 0..* MS
-* content[Binärdaten].attachment.data 1..1
-* content[Binärdaten].attachment.url 0..0
+* content contains Binaerdaten 0..* MS
+* content[Binaerdaten].attachment.data 1..1
+* content[Binaerdaten].attachment.url 0..0
 
 // ISiK: 0..1, MS | MIO 1.7.0 Verweis: 0..1 (R4 default) | MIO 1.7.0 Anhang: 1..1 | IHE MHD: 0..0
 //* content.attachment.data 0..1
