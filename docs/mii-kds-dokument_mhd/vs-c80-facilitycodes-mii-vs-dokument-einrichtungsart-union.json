@@ -1,11 +1,11 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "fa1a76bd-11ff-4f47-aced-610c2f947de9-11",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/fa1a76bd-11ff-4f47-aced-610c2f947de9-11",
+  "id" : "b2b24b07-fac9-4b41-a4f8-ae7faafc2e78-11",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/b2b24b07-fac9-4b41-a4f8-ae7faafc2e78-11",
   "name" : "UnionFacilityTypeCodeValueSetAndMII_VS_Dokument_Einrichtungsart",
   "title" : "Union of Facility Type Code Value Set And MII VS Dokument Einrichtungart",
   "status" : "active",
-  "date" : "2025-12-08T11:26:10+00:00",
+  "date" : "2025-12-08T11:30:01+00:00",
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
