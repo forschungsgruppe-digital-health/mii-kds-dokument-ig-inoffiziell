@@ -9,10 +9,10 @@ name: MII_IG_Dokument
 title: "MII IG Dokument"
 description: "Medizininformatik Initiative - KDS-Modul Dokument"
 status: draft # draft | active | retired | unknown
-version: 2026.0.0
+version: 2026.0.1
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 packageId: de.medizininformatikinitiative.kerndatensatz.dokument
-copyrightYear: 2025+
+copyrightYear: 2026+
 releaseLabel: ci-build
 license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#276
@@ -34,9 +34,8 @@ language: de-DE
 #     version: 1.0.0
 dependencies:
   de.ihe-d.terminology: 3.0.1
-  de.medizininformatikinitiative.kerndatensatz.fall: 2025.0.x
-  de.medizininformatikinitiative.kerndatensatz.person: 2025.0.x
-  de.medizininformatikinitiative.kerndatensatz.meta: 2025.0.x
+  de.medizininformatikinitiative.kerndatensatz.base: 2026.0.0
+  de.medizininformatikinitiative.kerndatensatz.meta: 2026.0.0
   dvmd.kdl.r4: 2025.0.1
   ihe.formatcode.fhir: 1.4.0
   #ihe-de.iti.xds-vs.r4:

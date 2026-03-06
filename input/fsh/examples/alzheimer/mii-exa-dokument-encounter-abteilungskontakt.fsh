@@ -5,7 +5,7 @@ Usage: #example
 * identifier.type = $v2-0203#VN
 * identifier.value = "123456"
 * status = #finished
-* class = $v3-act-code#IMP "stationär"
+* class = $v3-act-code#IMP "inpatient encounter"
 * type = #abteilungskontakt "Abteilungskontakt"
 * serviceType = $dkgev-fachabteilungsschluessel#0900 "Rheumatologie"
 * subject = Reference(Patient/AmandaAlzheimer)
