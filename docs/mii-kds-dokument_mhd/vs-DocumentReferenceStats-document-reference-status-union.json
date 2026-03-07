@@ -1,11 +1,11 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "b2b24b07-fac9-4b41-a4f8-ae7faafc2e78-5",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/b2b24b07-fac9-4b41-a4f8-ae7faafc2e78-5",
+  "id" : "0dcbc3aa-0d6e-4586-a57c-53ccc78ab35a-5",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/0dcbc3aa-0d6e-4586-a57c-53ccc78ab35a-5",
   "name" : "UnionDocumentReferenceStatsAndDocumentReferenceStatus",
   "title" : "Union of MHD DocumentReference status codes And DocumentReferenceStatus",
   "status" : "active",
-  "date" : "2025-12-08T11:30:01+00:00",
+  "date" : "2026-03-07T09:52:36+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
