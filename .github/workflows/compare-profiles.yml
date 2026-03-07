@@ -18,11 +18,13 @@ on:
   push:
     branches: 
       - main
+      - master
       - balloting/**
 
   pull_request:
     branches: 
       - main
+      - master
 
 jobs:
   validate:
