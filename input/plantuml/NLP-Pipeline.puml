@@ -67,6 +67,7 @@ digraph pipeline {
 
     s1 -> r1 [label="unprocessed"]
     s3 -> r3 [label="deid\nformat-change"]
-    s4 -> r4 [label="deid\nsemantic\nsurrogated"]
+    s3 -> r3 [label="preprocessed\nsurrogated"]
+    s4 -> r4 [label="preprocessed\nsurrogated\nsemantic"]
 }
 @enddot
