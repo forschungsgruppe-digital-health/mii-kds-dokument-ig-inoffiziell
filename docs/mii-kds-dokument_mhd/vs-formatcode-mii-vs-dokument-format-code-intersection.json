@@ -1,9 +1,0 @@
-{
-  "resourceType" : "ValueSet",
-  "id" : "0dcbc3aa-0d6e-4586-a57c-53ccc78ab35a-9",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/0dcbc3aa-0d6e-4586-a57c-53ccc78ab35a-9",
-  "name" : "IntersectionIHE_FormatCode_vsAndMII_VS_Dokument_Format_Code",
-  "title" : "Intersection of IHE ValueSet of Format Codes for use with Document Sharing And MII VS Dokument Format Code",
-  "status" : "active",
-  "date" : "2026-03-07T09:52:36+00:00"
-}

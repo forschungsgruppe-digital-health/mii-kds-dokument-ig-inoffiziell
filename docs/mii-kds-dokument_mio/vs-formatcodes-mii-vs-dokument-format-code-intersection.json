@@ -1,9 +1,0 @@
-{
-  "resourceType" : "ValueSet",
-  "id" : "757e3dc5-2a7b-41bc-b9b5-e4dc85183e8f-6",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/757e3dc5-2a7b-41bc-b9b5-e4dc85183e8f-6",
-  "name" : "IntersectionDocumentReferenceFormatCodeSetAndMII_VS_Dokument_Format_Code",
-  "title" : "Intersection of DocumentReference Format Code Set And MII VS Dokument Format Code",
-  "status" : "active",
-  "date" : "2026-03-07T09:52:15+00:00"
-}
