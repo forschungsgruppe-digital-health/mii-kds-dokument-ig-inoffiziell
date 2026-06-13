@@ -7,3 +7,9 @@ Thumbs.db
 /temp
 /template
 validator_cli.jar
+
+# Migrations-Arbeitsartefakte (KI-gestützte IG-Publisher-Migration)
+/.ai-log
+
+# IG-Publisher Build-Artefakt (mehrsprachiges Arbeitsverzeichnis)
+/translations

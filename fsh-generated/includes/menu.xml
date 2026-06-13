@@ -11,9 +11,62 @@
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
-    <a href="index.html">Home</a>
+    <a href="index.html">Start</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="use-cases.html">Szenarien</a>
+      </li>
+      <li>
+        <a href="data-sets.html">Datensätze</a>
+      </li>
+      <li>
+        <a href="uml.html">Informationsmodell (UML)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technische Implementierung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="conformance.html">Konformität</a>
+      </li>
+      <li>
+        <a href="compatibility.html">Kompatibilität</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminologien</a>
+      </li>
+      <li>
+        <a href="naming-conventions.html">Namenskonventionen</a>
+      </li>
+      <li>
+        <a href="security-privacy.html">Sicherheit &amp; Datenschutz</a>
+      </li>
+    </ul>
   </li>
   <li>
-    <a href="artifacts.html">Artifacts</a>
+    <a href="context.html">Bezüge zu anderen Modulen</a>
+  </li>
+  <li>
+    <a href="references.html">Referenzen</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefakte</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Release Notes</a>
+  </li>
+  <li>
+    <a href="translationinfo.html">Mehrsprachigkeit</a>
   </li>
 </ul>

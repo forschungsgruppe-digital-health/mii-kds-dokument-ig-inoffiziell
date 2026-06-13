@@ -75,3 +75,17 @@ WARNING: Encounter/UKX-6-E-1-A-1-V-1: Encounter.type[0].coding[0]: Coding has no
 WARNING: Encounter/UKX-7-E-1: Encounter.type[0].coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
 WARNING: Encounter/UKX-7-E-1-A-1: Encounter.type[0].coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
 WARNING: Encounter/UKX-7-E-1-A-1-V-1: Encounter.type[0].coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+
+# --- i18n-bedingte, kosmetische Sprach-Mismatch-Warnung (Migration nach IG-Publisher) ---
+# Setzt eine Ressource explizit ^language = #de-DE, meldet der Publisher unter
+# i18n-default-lang: de eine Mismatch-Warnung (Ressource de-DE vs. XHTML de).
+# BCP 47: de-DE ist Subtag von de -> kosmetisch. Glob-Matching (kein Regex),
+# locale-stabiles Token:
+%(de-DE)%
+
+# --- Vorbestehende, dependency-inhärente Meldung (Bestandsschutz: Dependencies unverändert) ---
+# SUSHI generiert dependsOn-Einträge aus dem unveränderten dependencies-Block. Die
+# Canonical-URLs der MII-/IHE-D-Pakete (meta, terminology) sind keine direkten
+# ImplementationGuide-Resource-URLs (kein '/ImplementationGuide/'). Bekanntes MII-Paket-
+# Verhalten, nicht durch die Migration verursacht; FSH/Dependencies bleiben unverändert.
+%The URL should refer directly to the ImplementationGuide resource%

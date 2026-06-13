@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "mii-ig-dokument",
-  "language": "de-DE",
+  "language": "de",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument",
   "version": "2026.0.1",
   "name": "MII_IG_Dokument",
@@ -218,7 +218,72 @@
       "page": [
         {
           "nameUrl": "index.html",
-          "title": "Home",
+          "title": "Start",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "use-cases.html",
+          "title": "Anwendungsfälle / Szenarien",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "data-sets.html",
+          "title": "Datensätze und Beschreibungen",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "uml.html",
+          "title": "Informationsmodell (UML)",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "conformance.html",
+          "title": "Konformität",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "compatibility.html",
+          "title": "Kompatibilität",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "terminology.html",
+          "title": "Terminologien",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "naming-conventions.html",
+          "title": "Namenskonventionen (FHIR-Profile)",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "context.html",
+          "title": "Kontext / Bezüge zu anderen Modulen",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "references.html",
+          "title": "Referenzen",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "security-privacy.html",
+          "title": "Sicherheit und Datenschutz",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "changes.html",
+          "title": "Release Notes / Änderungen",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "translationinfo.html",
+          "title": "Hinweise zur Mehrsprachigkeit",
           "generation": "markdown"
         }
       ]
@@ -231,6 +296,42 @@
       {
         "code": "releaselabel",
         "value": "ci-build"
+      },
+      {
+        "code": "i18n-default-lang",
+        "value": "de"
+      },
+      {
+        "code": "i18n-lang",
+        "value": "en"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/en"
+      },
+      {
+        "code": "path-history",
+        "value": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/history.html"
+      },
+      {
+        "code": "apply-contact",
+        "value": "true"
+      },
+      {
+        "code": "apply-jurisdiction",
+        "value": "true"
+      },
+      {
+        "code": "apply-publisher",
+        "value": "true"
+      },
+      {
+        "code": "autoload-resources",
+        "value": "true"
+      },
+      {
+        "code": "shownav",
+        "value": "true"
       }
     ]
   }
