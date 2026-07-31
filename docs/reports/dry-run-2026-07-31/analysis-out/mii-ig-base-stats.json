@@ -1,0 +1,1710 @@
+{
+  "schemaVersion": "1.3",
+  "tool": "ig-stats.py",
+  "mode": "static",
+  "analyzed": {
+    "path": "/private/tmp/kds-dryrun/work/analysis-out/_sources/kerndatensatz-basis",
+    "label": "basis",
+    "git_commit": "f6c6878",
+    "timestamp": "2026-07-31T19:53:12Z",
+    "input": "https://github.com/medizininformatik-initiative/kerndatensatz-basis.git",
+    "resolved_from": "Git-Clone (default)"
+  },
+  "identity": {
+    "id": "mii-ig-base",
+    "canonical": "https://www.medizininformatik-initiative.de/fhir/modul-base",
+    "packageId": "de.medizininformatikinitiative.kerndatensatz.base",
+    "name": "MII_IG_Base",
+    "title": "MII Implementation Guide Core Dataset Base",
+    "version": "2026.0.1",
+    "calver": true,
+    "status": "active",
+    "fhirVersion": "4.0.1",
+    "license": "CC-BY-4.0",
+    "publisher": "Medical Informatics Initiative (MII)"
+  },
+  "artifacts": {
+    "profiles": 7,
+    "extensions": 1,
+    "valuesets": 14,
+    "codesystems": 4,
+    "logicals": 4,
+    "capabilitystatements": 4,
+    "questionnaires": 0,
+    "searchparameters": 0,
+    "operations": 0,
+    "examples": 28,
+    "rulesets": 56,
+    "invariants": 18,
+    "mappings": 5,
+    "total": 62,
+    "_source": "input/fsh (FSH-Deklarationen)"
+  },
+  "artifacts_detail": [
+    {
+      "type": "Instance",
+      "name": "mii-cps-person-capabilitystatement",
+      "instanceOf": "CapabilityStatement",
+      "category": "capabilitystatements",
+      "path": "input/fsh/capabilitystatements/MII_CPS_Person_CapabilityStatement.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-cps-prozedur-capabilitystatement",
+      "instanceOf": "CapabilityStatement",
+      "category": "capabilitystatements",
+      "path": "input/fsh/capabilitystatements/cps-mii-prozedur-capabilitystatement.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-cps-diagnose-capabilitystatement",
+      "instanceOf": "CapabilityStatement",
+      "category": "capabilitystatements",
+      "path": "input/fsh/capabilitystatements/mii-cps-diagnose-capabilitystatement.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-cps-fall-capabilitystatement",
+      "instanceOf": "CapabilityStatement",
+      "category": "capabilitystatements",
+      "path": "input/fsh/capabilitystatements/mii-cps-fall-capabilitystatement.fsh",
+      "line": 1
+    },
+    {
+      "type": "CodeSystem",
+      "name": "MII_CS_Fall_SupplementActEncounterCode",
+      "instanceOf": null,
+      "category": "codesystems",
+      "path": "input/fsh/codesystems/MII_CS_Fall_SupplementActEncounterCode.fsh",
+      "line": 1
+    },
+    {
+      "type": "CodeSystem",
+      "name": "MII_CS_Fall_SupplementPatientClass",
+      "instanceOf": null,
+      "category": "codesystems",
+      "path": "input/fsh/codesystems/MII_CS_Fall_SupplementPatientClass.fsh",
+      "line": 1
+    },
+    {
+      "type": "CodeSystem",
+      "name": "MII_CS_Person_Vitalstatus",
+      "instanceOf": null,
+      "category": "codesystems",
+      "path": "input/fsh/codesystems/MII_CS_Person_Vitalstatus.fsh",
+      "line": 1
+    },
+    {
+      "type": "CodeSystem",
+      "name": "MII_CS_Diagnose_Lebensphase_Supplement_SNOMED",
+      "instanceOf": null,
+      "category": "codesystems",
+      "path": "input/fsh/codesystems/mii-cs-diagnose-lebensphase-supplement-snomed.fsh",
+      "line": 1
+    },
+    {
+      "type": "Extension",
+      "name": "MII_EX_Prozedur_Durchfuehrungsabsicht",
+      "instanceOf": null,
+      "category": "extensions",
+      "path": "input/fsh/extensions/MII_EX_Prozedur_Durchfuehrungsabsicht.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-person-condition-todesursache",
+      "instanceOf": "MII_PR_Person_Todesursache",
+      "category": "examples",
+      "path": "input/fsh/instances/MII_EXA_Person_Condition_Todesursache.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-person-patient-pseudonymisiert",
+      "instanceOf": "MII_PR_Person_PatientPseudonymisiert",
+      "category": "examples",
+      "path": "input/fsh/instances/MII_EXA_Person_Patient_Pseudonymisiert.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-person-patient-1",
+      "instanceOf": "MII_PR_Person_Patient",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 4
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-fall-kontakt-gesundheitseinrichtung-8",
+      "instanceOf": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 64
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-diagnose-mehrfachcodierung-primaercode",
+      "instanceOf": "MII_PR_Diagnose_Condition",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 86
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-diagnose-mehrfachcodierung-sekundaercode",
+      "instanceOf": "MII_PR_Diagnose_Condition",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 113
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-fall-kontakt-gesundheitseinrichtung-1",
+      "instanceOf": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 143
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-fall-kontakt-gesundheitseinrichtung-9",
+      "instanceOf": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 170
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-fall-kontakt-gesundheitseinrichtung-11",
+      "instanceOf": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 197
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-person-observation-vitalstatus",
+      "instanceOf": "MII_PR_Person_Vitalstatus",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 225
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-fall-kontakt-gesundheitseinrichtung-2",
+      "instanceOf": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 242
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-diagnose-appendicitis",
+      "instanceOf": "MII_PR_Diagnose_Condition",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 274
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-diagnose-condition-elbow-contusion",
+      "instanceOf": "MII_PR_Diagnose_Condition",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 295
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-fall-kontakt-gesundheitseinrichtung-4",
+      "instanceOf": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 315
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-prozedur-imaging",
+      "instanceOf": "MII_PR_Prozedur_Procedure",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 343
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-fall-kontakt-gesundheitseinrichtung-5",
+      "instanceOf": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 366
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-prozedur-procedure",
+      "instanceOf": "MII_PR_Prozedur_Procedure",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 395
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-fall-kontakt-gesundheitseinrichtung-6",
+      "instanceOf": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 419
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-fall-kontakt-gesundheitseinrichtung-10",
+      "instanceOf": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 447
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-fall-kontakt-gesundheitseinrichtung-7",
+      "instanceOf": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 475
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-diagnose-condition-multiple-codings",
+      "instanceOf": "MII_PR_Diagnose_Condition",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 507
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-prozedur-procedure-2",
+      "instanceOf": "MII_PR_Prozedur_Procedure",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 532
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-person-observation-vitalstatus-discharge",
+      "instanceOf": "MII_PR_Person_Vitalstatus",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 554
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-fall-kontakt-gesundheitseinrichtung-3",
+      "instanceOf": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/instances/example-scenario.fsh",
+      "line": 580
+    },
+    {
+      "type": "RuleSet",
+      "name": "AddBundleEntry",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/instances/mii-exa-base-test-data-bundle-1.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-base-test-data-bundle-1",
+      "instanceOf": "Bundle",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-base-test-data-bundle-1.fsh",
+      "line": 10
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-fall-kontakt-in-progress-status",
+      "instanceOf": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-fall-kontakt-in-progress-status.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-fall-kontakt-onleave-status",
+      "instanceOf": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-fall-kontakt-onleave-status.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-fall-kontakt-unknown-status",
+      "instanceOf": "mii-pr-fall-kontakt-gesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-fall-kontakt-unknown-status.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "GeburtsdatumRundenAufQuartal",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/GeburtsdatumRundenAufQuartal.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "PostleitzahlEinschraenkung",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/PostleitzahlEinschraenkung.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "TodesdatumKeineZeitangabe",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/TodesdatumKeineZeitangabe.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "ide-masked-1",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/ide-masked-1.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "mii-enc-1",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/mii-enc-1.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "mii-enc-2",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/mii-enc-2.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "mii-enc-3",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/mii-enc-3.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "mii-enc-4",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/mii-enc-4.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "mii-enc-5",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/mii-enc-5.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "mii-enc-6",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/mii-enc-6.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "mii-enc-7",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/mii-enc-7.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "mii-pat-1",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/mii-pat-1.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "mii-pat-2",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/mii-pat-2.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "pat-cnt-2or3-char",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/pat-cnt-2or3-char.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "pat-pseuded-1",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/pat-pseuded-1.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "pat-pseuded-2",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/pat-pseuded-2.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "proc-mii-1",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/proc-mii-1.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "sct-ops-1",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/invariants/sct-ops-1.fsh",
+      "line": 1
+    },
+    {
+      "type": "Logical",
+      "name": "MII_LM_Diagnose",
+      "instanceOf": null,
+      "category": "logicals",
+      "path": "input/fsh/logicals/MII_LM_Diagnose.fsh",
+      "line": 1
+    },
+    {
+      "type": "Mapping",
+      "name": "Diagnose-LogicalModel",
+      "instanceOf": null,
+      "category": "mappings",
+      "path": "input/fsh/logicals/MII_LM_Diagnose.fsh",
+      "line": 52
+    },
+    {
+      "type": "Logical",
+      "name": "MII_LM_Fall",
+      "instanceOf": null,
+      "category": "logicals",
+      "path": "input/fsh/logicals/MII_LM_Fall.fsh",
+      "line": 1
+    },
+    {
+      "type": "Mapping",
+      "name": "Fall-LogicalModel",
+      "instanceOf": null,
+      "category": "mappings",
+      "path": "input/fsh/logicals/MII_LM_Fall.fsh",
+      "line": 50
+    },
+    {
+      "type": "Logical",
+      "name": "MII_LM_Person",
+      "instanceOf": null,
+      "category": "logicals",
+      "path": "input/fsh/logicals/MII_LM_Person_LogicalModel.fsh",
+      "line": 1
+    },
+    {
+      "type": "Mapping",
+      "name": "Person-LogicalModel",
+      "instanceOf": null,
+      "category": "mappings",
+      "path": "input/fsh/logicals/MII_LM_Person_LogicalModel.fsh",
+      "line": 132
+    },
+    {
+      "type": "Logical",
+      "name": "MII_LM_Prozedur",
+      "instanceOf": null,
+      "category": "logicals",
+      "path": "input/fsh/logicals/MII_LM_Prozedur.fsh",
+      "line": 1
+    },
+    {
+      "type": "Mapping",
+      "name": "Prozedur-LogicalModel",
+      "instanceOf": null,
+      "category": "mappings",
+      "path": "input/fsh/logicals/MII_LM_Prozedur.fsh",
+      "line": 36
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Diagnose_Condition",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Diagnose_Condition.fsh",
+      "line": 1
+    },
+    {
+      "type": "Mapping",
+      "name": "FHIR-LogicalModel",
+      "instanceOf": null,
+      "category": "mappings",
+      "path": "input/fsh/profiles/MII_PR_Diagnose_Condition.fsh",
+      "line": 216
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Fall_KontaktGesundheitseinrichtung",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Fall_KontaktGesundheitseinrichtung.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Person_Patient",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Person_Patient.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Person_PatientPseudonymisiert",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Person_PatientPseudonymisiert.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Person_Todesursache",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Person_Todesursache.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Person_Vitalstatus",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Person_Vitalstatus.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Prozedur_Procedure",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Prozedur_Procedure.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "SupportResource",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/cps-rules.fsh",
+      "line": 3
+    },
+    {
+      "type": "RuleSet",
+      "name": "Profile",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/cps-rules.fsh",
+      "line": 14
+    },
+    {
+      "type": "RuleSet",
+      "name": "SupportProfile",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/cps-rules.fsh",
+      "line": 19
+    },
+    {
+      "type": "RuleSet",
+      "name": "SupportInteraction",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/cps-rules.fsh",
+      "line": 25
+    },
+    {
+      "type": "RuleSet",
+      "name": "SupportSearchParam",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/cps-rules.fsh",
+      "line": 31
+    },
+    {
+      "type": "RuleSet",
+      "name": "SupportSpecialSearchParam",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/cps-rules.fsh",
+      "line": 39
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIVersionPolicyStrict",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 11
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIVersionPolicyStrictInstance",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 15
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMICopyrightLabel",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 21
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMICopyrightLabelInstance",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 25
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIApprovalDate",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 30
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIApprovalDateInstance",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 34
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactTopic",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 39
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactTopicInstance",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 43
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactContributors",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 48
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactContributorsInstance",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 71
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIShareableStructureDefinition",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 96
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIPublishableStructureDefinition",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 99
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIKnowledgeCapabilitiesStructureDefinition",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 102
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactUsageLogicalModel",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 108
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactUsageProfile",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 112
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactUsageExtension",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 116
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIShareableCapabilityStatement",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 122
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIPublishableCapabilityStatement",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 125
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIKnowledgeCapabilitiesCapabilityStatement",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 128
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactUsageCapabilityStatement",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 134
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIShareableCodeSystem",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 140
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIPublishableCodeSystem",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 143
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIKnowledgeCapabilitiesCodeSystem",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 146
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIKnowledgeCapabilitiesCodeSystemPublishable",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 152
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIShareableValueSet",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 158
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIPublishableValueSet",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 161
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIComputableValueSet",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 164
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIKnowledgeCapabilitiesValueSet",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 167
+    },
+    {
+      "type": "RuleSet",
+      "name": "ExtensionContext",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/extension-context.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "LicenseCodeableCCBY40",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/license-terms.fsh",
+      "line": 3
+    },
+    {
+      "type": "RuleSet",
+      "name": "LicenseCodeableCCBY40Instance",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/license-terms.fsh",
+      "line": 7
+    },
+    {
+      "type": "RuleSet",
+      "name": "LicenseCodeableCC0",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/license-terms.fsh",
+      "line": 11
+    },
+    {
+      "type": "RuleSet",
+      "name": "SnomedLicense",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/license.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "MetaProfile",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/meta-profile.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "Publisher",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/publisher.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "SP_Publisher",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/publisher.fsh",
+      "line": 6
+    },
+    {
+      "type": "RuleSet",
+      "name": "TestDataLabel",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/test-data-label.fsh",
+      "line": 3
+    },
+    {
+      "type": "RuleSet",
+      "name": "Translation",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/translation.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "AddSnomedCodingTranslation",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/translation.fsh",
+      "line": 8
+    },
+    {
+      "type": "RuleSet",
+      "name": "AddIcd10CodingTranslation",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/translation.fsh",
+      "line": 16
+    },
+    {
+      "type": "RuleSet",
+      "name": "AddAlphaIdCodingTranslation",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/translation.fsh",
+      "line": 24
+    },
+    {
+      "type": "RuleSet",
+      "name": "AddOrphaCodingTranslation",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/translation.fsh",
+      "line": 32
+    },
+    {
+      "type": "RuleSet",
+      "name": "AddOpsCodingTranslation",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/translation.fsh",
+      "line": 40
+    },
+    {
+      "type": "RuleSet",
+      "name": "Version",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/version.fsh",
+      "line": 2
+    },
+    {
+      "type": "RuleSet",
+      "name": "PR_CS_VS_Version",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/version.fsh",
+      "line": 7
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIPackageSource",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/version.fsh",
+      "line": 16
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIPackageSourceDefinitionalResource",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/version.fsh",
+      "line": 25
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIResourceEffectivePeriod",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/version.fsh",
+      "line": 36
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIResourceEffectivePeriodInstance",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/version.fsh",
+      "line": 40
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Diagnose_DiagnoseCodes_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Diagnose_DiagnoseCodes_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Fall_Diagnosis_Use",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Fall_DiagnosisUse.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Fall_IdentifierTypeCodes",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Fall_IdentifierTypeCodes.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Fall_LocationPhysicalType",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Fall_LocationPhysicalType.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Person_ICD10WHO",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Person_ICD10WHO.fsh",
+      "line": 22
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Person_Vitalstatus",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Person_Vitalstatus.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Prozedur_Durchfuehrungsabsicht_SNOMEDCT",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Prozedur_Durchfuehrungsabsicht_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Prozedur_OpsKategorien_SNOMEDCT",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Prozedur_OpsKategorien_SNOMEDCT.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Prozedur_Prozeduren_SNOMEDCT",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Prozedur_Prozeduren_SNOMEDCT.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Diagnose_AlphaID",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/mii-vs-diagnose-alphaid.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Diagnose_BodyStructure_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/mii-vs-diagnose-bodysite-snomed.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Diagnose_ICD10GM",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/mii-vs-diagnose-icd-10-gm.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Diagnose_Orphanet",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/mii-vs-diagnose-orphanet.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Prozedur_OPS",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/mii-vs-prozedur-ops.fsh",
+      "line": 1
+    }
+  ],
+  "dependencies": {
+    "count": 4,
+    "pinned": 4,
+    "floating": 0,
+    "items": {
+      "de.basisprofil.r4": "1.5.4",
+      "de.medizininformatikinitiative.kerndatensatz.meta": "2026.0.0",
+      "hl7.fhir.uv.xver-r5.r4": "0.1.0",
+      "hl7.fhir.uv.crmi": "2.0.0"
+    },
+    "floating_items": [],
+    "_source": "sushi-config.yaml: dependencies"
+  },
+  "narrative": {
+    "format": "target",
+    "pages": 22,
+    "pages_all": 22,
+    "words": 13655,
+    "words_all_incl_stubs": 13655,
+    "images": 4,
+    "mandatory_present": [
+      "index",
+      "guidance",
+      "datasets-and-descriptions",
+      "uml-diagrams",
+      "conformance",
+      "implementer-guidance",
+      "researcher-guidance",
+      "changes",
+      "downloads",
+      "translationinfo"
+    ],
+    "mandatory_missing_in_target": [
+      "security-and-privacy"
+    ],
+    "files": [
+      {
+        "path": "input/pagecontent/ImplementationGuide-mii-ig-base.md",
+        "words": 110,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/capability-statements.md",
+        "words": 163,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/changes.md",
+        "words": 2255,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/conformance.md",
+        "words": 126,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/datasets-and-descriptions.md",
+        "words": 144,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/downloads.md",
+        "words": 273,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/examples.md",
+        "words": 43,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/general-requirements.md",
+        "words": 1645,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/guidance.md",
+        "words": 101,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/implementer-guidance.md",
+        "words": 297,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/index.md",
+        "words": 482,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/logical-models.md",
+        "words": 121,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/metadata.md",
+        "words": 4099,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/missing-data.md",
+        "words": 631,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/must-support.md",
+        "words": 1205,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/profiles-and-extensions.md",
+        "words": 202,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/researcher-guidance.md",
+        "words": 216,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/search-parameters-and-operations.md",
+        "words": 174,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/terminology.md",
+        "words": 862,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/translationinfo.md",
+        "words": 109,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/uml-diagrams.md",
+        "words": 187,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/version-history.md",
+        "words": 210,
+        "kind": "target",
+        "stub": false
+      }
+    ]
+  },
+  "linguistics": {
+    "content_pages": 22,
+    "words_total": 13655,
+    "words_avg": 620.7,
+    "words_median": 206,
+    "words_min": 43,
+    "words_max": 4099,
+    "longest_page": "input/pagecontent/metadata.md",
+    "shortest_page": "input/pagecontent/examples.md",
+    "per_page": [
+      {
+        "path": "input/pagecontent/metadata.md",
+        "words": 4099
+      },
+      {
+        "path": "input/pagecontent/changes.md",
+        "words": 2255
+      },
+      {
+        "path": "input/pagecontent/general-requirements.md",
+        "words": 1645
+      },
+      {
+        "path": "input/pagecontent/must-support.md",
+        "words": 1205
+      },
+      {
+        "path": "input/pagecontent/terminology.md",
+        "words": 862
+      },
+      {
+        "path": "input/pagecontent/missing-data.md",
+        "words": 631
+      },
+      {
+        "path": "input/pagecontent/index.md",
+        "words": 482
+      },
+      {
+        "path": "input/pagecontent/implementer-guidance.md",
+        "words": 297
+      },
+      {
+        "path": "input/pagecontent/downloads.md",
+        "words": 273
+      },
+      {
+        "path": "input/pagecontent/researcher-guidance.md",
+        "words": 216
+      },
+      {
+        "path": "input/pagecontent/version-history.md",
+        "words": 210
+      },
+      {
+        "path": "input/pagecontent/profiles-and-extensions.md",
+        "words": 202
+      },
+      {
+        "path": "input/pagecontent/uml-diagrams.md",
+        "words": 187
+      },
+      {
+        "path": "input/pagecontent/search-parameters-and-operations.md",
+        "words": 174
+      },
+      {
+        "path": "input/pagecontent/capability-statements.md",
+        "words": 163
+      },
+      {
+        "path": "input/pagecontent/datasets-and-descriptions.md",
+        "words": 144
+      },
+      {
+        "path": "input/pagecontent/conformance.md",
+        "words": 126
+      },
+      {
+        "path": "input/pagecontent/logical-models.md",
+        "words": 121
+      },
+      {
+        "path": "input/pagecontent/ImplementationGuide-mii-ig-base.md",
+        "words": 110
+      },
+      {
+        "path": "input/pagecontent/translationinfo.md",
+        "words": 109
+      },
+      {
+        "path": "input/pagecontent/guidance.md",
+        "words": 101
+      },
+      {
+        "path": "input/pagecontent/examples.md",
+        "words": 43
+      }
+    ]
+  },
+  "duplication": {
+    "duplicate_block_count": 7,
+    "duplicate_blocks": [
+      {
+        "snippet": ".uml diagram container svg { max width: 100%; height: auto !important; width: auto !import",
+        "locations": [
+          "input/pagecontent/uml-diagrams.md",
+          "input/pagecontent/uml-diagrams.md",
+          "input/pagecontent/uml-diagrams.md",
+          "input/pagecontent/uml-diagrams.md"
+        ]
+      },
+      {
+        "snippet": "the following logical models are defined for the mii core dataset base modules:",
+        "locations": [
+          "input/pagecontent/datasets-and-descriptions.md",
+          "input/pagecontent/logical-models.md"
+        ]
+      },
+      {
+        "snippet": "person module [person logical model](structuredefinition mii lm person.html) conceptual mo",
+        "locations": [
+          "input/pagecontent/datasets-and-descriptions.md",
+          "input/pagecontent/logical-models.md"
+        ]
+      },
+      {
+        "snippet": "treatment case module [treatment case logical model](structuredefinition mii lm fall.html)",
+        "locations": [
+          "input/pagecontent/datasets-and-descriptions.md",
+          "input/pagecontent/logical-models.md"
+        ]
+      },
+      {
+        "snippet": "diagnosis module [diagnosis logical model](structuredefinition mii lm diagnose.html) conce",
+        "locations": [
+          "input/pagecontent/datasets-and-descriptions.md",
+          "input/pagecontent/logical-models.md"
+        ]
+      },
+      {
+        "snippet": "procedure module [procedure logical model](structuredefinition mii lm prozedur.html) conce",
+        "locations": [
+          "input/pagecontent/datasets-and-descriptions.md",
+          "input/pagecontent/logical-models.md"
+        ]
+      },
+      {
+        "snippet": "for the corresponding fhir resource profiles that implement these logical models, see [pro",
+        "locations": [
+          "input/pagecontent/datasets-and-descriptions.md",
+          "input/pagecontent/logical-models.md"
+        ]
+      }
+    ],
+    "duplicate_file_groups": []
+  },
+  "hygiene": {
+    "images_total": 8,
+    "unreferenced_images": [
+      "input/images-source/diagnose-uml.plantuml",
+      "input/images-source/fall-uml.plantuml",
+      "input/images-source/person-uml.plantuml",
+      "input/images-source/prozedur-uml.plantuml",
+      "input/images/2025-06-12_de_KDS-Abb_1.png",
+      "input/images/MII_Logo_engl_rgb.jpg",
+      "input/images/MII_Logo_rgb.jpg"
+    ],
+    "examples_total": 28,
+    "examples_not_in_narrative": [
+      "mii-exa-person-condition-todesursache",
+      "mii-exa-person-patient-pseudonymisiert",
+      "mii-exa-person-patient-1",
+      "mii-exa-fall-kontakt-gesundheitseinrichtung-8",
+      "mii-exa-diagnose-mehrfachcodierung-primaercode",
+      "mii-exa-diagnose-mehrfachcodierung-sekundaercode",
+      "mii-exa-fall-kontakt-gesundheitseinrichtung-1",
+      "mii-exa-fall-kontakt-gesundheitseinrichtung-9",
+      "mii-exa-fall-kontakt-gesundheitseinrichtung-11",
+      "mii-exa-person-observation-vitalstatus",
+      "mii-exa-fall-kontakt-gesundheitseinrichtung-2",
+      "mii-exa-diagnose-appendicitis",
+      "mii-exa-diagnose-condition-elbow-contusion",
+      "mii-exa-fall-kontakt-gesundheitseinrichtung-4",
+      "mii-exa-prozedur-imaging",
+      "mii-exa-fall-kontakt-gesundheitseinrichtung-5",
+      "mii-exa-prozedur-procedure",
+      "mii-exa-fall-kontakt-gesundheitseinrichtung-6",
+      "mii-exa-fall-kontakt-gesundheitseinrichtung-10",
+      "mii-exa-fall-kontakt-gesundheitseinrichtung-7",
+      "mii-exa-diagnose-condition-multiple-codings",
+      "mii-exa-prozedur-procedure-2",
+      "mii-exa-person-observation-vitalstatus-discharge",
+      "mii-exa-fall-kontakt-gesundheitseinrichtung-3",
+      "mii-exa-base-test-data-bundle-1",
+      "mii-exa-fall-kontakt-in-progress-status",
+      "mii-exa-fall-kontakt-onleave-status",
+      "mii-exa-fall-kontakt-unknown-status"
+    ],
+    "note": "Heuristik: 'nicht referenziert' = Dateiname/Artefaktname kommt in keiner Erklärseite vor. Kein Beweis für Ungenutztheit (Referenz kann über Konfiguration/Build erfolgen)."
+  },
+  "i18n": {
+    "default_lang": null,
+    "default_lang_source": null,
+    "languages": [
+      "init",
+      "progress",
+      "context",
+      "html",
+      "tx"
+    ],
+    "translation_supplements": 0,
+    "supplement_files": [],
+    "translated_pages": 0,
+    "fsh_translation_ext": true,
+    "fsh_translation_files": [
+      "input/fsh/rulesets/translation.fsh",
+      "input/fsh/profiles/MII_PR_Person_Vitalstatus.fsh",
+      "input/fsh/profiles/MII_PR_Person_Patient.fsh",
+      "input/fsh/profiles/MII_PR_Person_Todesursache.fsh",
+      "input/fsh/profiles/MII_PR_Prozedur_Procedure.fsh",
+      "input/fsh/profiles/MII_PR_Diagnose_Condition.fsh",
+      "input/fsh/profiles/MII_PR_Fall_KontaktGesundheitseinrichtung.fsh",
+      "input/fsh/profiles/MII_PR_Person_PatientPseudonymisiert.fsh",
+      "input/fsh/logicals/MII_LM_Person_LogicalModel.fsh"
+    ]
+  },
+  "directives": {
+    "total": 4,
+    "by_label": {
+      "tabs": 2,
+      "render-image": 2
+    },
+    "unknown": 0,
+    "occurrences": [
+      {
+        "file": "input/pagecontent/general-requirements.md",
+        "line": 27,
+        "label": "tabs",
+        "text": "<table style=\"border-collapse: collapse; width: 100%;\">"
+      },
+      {
+        "file": "input/pagecontent/general-requirements.md",
+        "line": 72,
+        "label": "tabs",
+        "text": "</table>"
+      },
+      {
+        "file": "input/pagecontent/index.md",
+        "line": 31,
+        "label": "render-image",
+        "text": "<img src=\"2025-06-12_en_KDS-Abb_1.png\" alt=\"MII Core Dataset Overview\" style=\"di"
+      },
+      {
+        "file": "input/pagecontent/index.md",
+        "line": 75,
+        "label": "render-image",
+        "text": "<img src=\"https://licensebuttons.net/l/by/4.0/88x31.png\" alt=\"CC BY 4.0 Logo\" st"
+      }
+    ],
+    "unknown_occurrences": []
+  },
+  "quality": {
+    "qc_rules_defined": null,
+    "qc_rules": [],
+    "qc_source": null,
+    "qc_violations": null,
+    "suppressed_messages": 8,
+    "qa_errors": null,
+    "qa_warnings": null,
+    "qa_hints": null,
+    "broken_links": null,
+    "qa_categories": null
+  },
+  "maturity": {
+    "score": 86,
+    "band": "reif",
+    "components": {
+      "Status": 85,
+      "Doku-Vollständigkeit": 100,
+      "Beispiel-Abdeckung": 86,
+      "Governance": 75
+    },
+    "example_coverage": {
+      "profiles_total": 7,
+      "covered": 6,
+      "uncovered": [
+        "MII_PR_Fall_KontaktGesundheitseinrichtung"
+      ],
+      "coverage_pct": 86
+    },
+    "governance": {
+      "ci_workflows": 6,
+      "publication_request": true,
+      "ig_ini": true,
+      "devcontainer": false,
+      "governance_score": 75
+    },
+    "doc_health_pct": 100
+  },
+  "portfolio": {
+    "vendor_lockin_score": 2,
+    "vendor_lockin_band": "gering",
+    "directives_per_page": 0.18,
+    "terminology_standard_systems": [
+      "SNOMED CT",
+      "LOINC",
+      "ICD-10",
+      "UCUM"
+    ],
+    "terminology_standard_refs": 483,
+    "local_codesystems": 4,
+    "terminology_standard_share_pct": 99,
+    "canonical_reuse_ratio_pct": 100,
+    "external_parents": 7,
+    "local_parents": 0,
+    "fhir_version_label": "R4",
+    "fhir_version_note": "aktuell verbreitet",
+    "dependency_stale_count": 0,
+    "dependency_stale": [],
+    "dependency_staleness_note": "Heuristik aus CalVer-Jahr; exakt nur via Package-Registry (extern).",
+    "release_cadence_per_year": 10.0,
+    "days_since_last_commit": 9,
+    "tags": 0
+  },
+  "risk": {
+    "terminology_license_flags": [
+      {
+        "system": "SNOMED CT",
+        "license": "lizenzpflichtig (Affiliate/Land)"
+      },
+      {
+        "system": "LOINC",
+        "license": "frei (Registrierung)"
+      },
+      {
+        "system": "ICD-10",
+        "license": "frei"
+      },
+      {
+        "system": "UCUM",
+        "license": "frei"
+      }
+    ],
+    "terminology_license_risk": true,
+    "suppressed_total": 8,
+    "suppressed_broad": 0,
+    "suppressed_warning_risk": "gering",
+    "privacy_page_words": 0,
+    "privacy_page_substantial": false,
+    "examples_contain_pii_like": true,
+    "bus_factor_top_author_pct": 100,
+    "bus_factor_authors": 1,
+    "bus_factor_risk": "hoch",
+    "breaking_change_risk": null,
+    "breaking_change_note": "Erfordert Diff gegen die publizierte Vorversion (Build/extern) — statisch nicht erhoben."
+  },
+  "git": {
+    "commits": 1,
+    "authors": 1,
+    "top_author_share": 100,
+    "days_since_last": 9,
+    "commits_per_year": 10.0,
+    "tags": 0,
+    "first": "2026-07-22",
+    "last": "2026-07-22"
+  }
+}

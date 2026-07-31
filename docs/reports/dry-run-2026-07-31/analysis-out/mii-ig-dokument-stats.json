@@ -1,0 +1,1636 @@
+{
+  "schemaVersion": "1.3",
+  "tool": "ig-stats.py",
+  "mode": "static",
+  "analyzed": {
+    "path": "/tmp/kds-dryrun/source-readonly",
+    "label": "dokument",
+    "git_commit": "9f76fed",
+    "timestamp": "2026-07-31T19:53:02Z",
+    "input": "/tmp/kds-dryrun/source-readonly",
+    "resolved_from": "lokaler Pfad"
+  },
+  "identity": {
+    "id": "mii-ig-dokument",
+    "canonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument",
+    "packageId": "de.medizininformatikinitiative.kerndatensatz.dokument",
+    "name": "MII_IG_Dokument",
+    "title": "MII IG Dokument",
+    "version": "2026.0.1",
+    "calver": true,
+    "status": "draft",
+    "fhirVersion": "4.0.1",
+    "license": "CC0-1.0",
+    "publisher": "Medizininformatik-Initiative"
+  },
+  "artifacts": {
+    "profiles": 1,
+    "extensions": 1,
+    "valuesets": 6,
+    "codesystems": 1,
+    "logicals": 1,
+    "capabilitystatements": 1,
+    "questionnaires": 0,
+    "searchparameters": 0,
+    "operations": 0,
+    "examples": 7,
+    "rulesets": 27,
+    "invariants": 2,
+    "mappings": 1,
+    "total": 18,
+    "_source": "input/fsh (FSH-Deklarationen)"
+  },
+  "artifacts_detail": [
+    {
+      "type": "RuleSet",
+      "name": "Header",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Header.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "PR_Header",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Header.fsh",
+      "line": 5
+    },
+    {
+      "type": "RuleSet",
+      "name": "EX_Header",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Header.fsh",
+      "line": 10
+    },
+    {
+      "type": "RuleSet",
+      "name": "CS_Header",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Header.fsh",
+      "line": 15
+    },
+    {
+      "type": "RuleSet",
+      "name": "VS_Header",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Header.fsh",
+      "line": 19
+    },
+    {
+      "type": "RuleSet",
+      "name": "LM_Header",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Header.fsh",
+      "line": 23
+    },
+    {
+      "type": "RuleSet",
+      "name": "Meta",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Meta.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "CS_VS_Meta",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Meta.fsh",
+      "line": 5
+    },
+    {
+      "type": "RuleSet",
+      "name": "CS_Meta",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Meta.fsh",
+      "line": 11
+    },
+    {
+      "type": "RuleSet",
+      "name": "VS_Meta",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Meta.fsh",
+      "line": 17
+    },
+    {
+      "type": "RuleSet",
+      "name": "EX_Meta",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Meta.fsh",
+      "line": 21
+    },
+    {
+      "type": "RuleSet",
+      "name": "LM_Meta",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Meta.fsh",
+      "line": 24
+    },
+    {
+      "type": "RuleSet",
+      "name": "Publisher",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Publisher.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "SP_Publisher",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Publisher.fsh",
+      "line": 6
+    },
+    {
+      "type": "RuleSet",
+      "name": "Status",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Status.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "Version",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Version.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "PR_CS_VS_Version",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/Version.fsh",
+      "line": 4
+    },
+    {
+      "type": "RuleSet",
+      "name": "SupportResource",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/rulesets.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "Profile",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/rulesets.fsh",
+      "line": 6
+    },
+    {
+      "type": "RuleSet",
+      "name": "SupportProfile",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/rulesets.fsh",
+      "line": 11
+    },
+    {
+      "type": "RuleSet",
+      "name": "SupportInteraction",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/rulesets.fsh",
+      "line": 16
+    },
+    {
+      "type": "RuleSet",
+      "name": "SupportSearchParam",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/rulesets.fsh",
+      "line": 21
+    },
+    {
+      "type": "RuleSet",
+      "name": "Description",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/rulesets.fsh",
+      "line": 28
+    },
+    {
+      "type": "RuleSet",
+      "name": "DescriptionIntl",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/rulesets.fsh",
+      "line": 32
+    },
+    {
+      "type": "RuleSet",
+      "name": "CommentedDescription",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/rulesets.fsh",
+      "line": 36
+    },
+    {
+      "type": "RuleSet",
+      "name": "CommentedDescriptionIntl",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/rulesets.fsh",
+      "line": 41
+    },
+    {
+      "type": "RuleSet",
+      "name": "Translation",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/common/rulesets.fsh",
+      "line": 46
+    },
+    {
+      "type": "Instance",
+      "name": "mii-cps-dokument-capabilitystatement",
+      "instanceOf": "CapabilityStatement",
+      "category": "capabilitystatements",
+      "path": "input/fsh/definitions/mii-cps-dokument-capabilitystatement.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "AmandaAlzheimerAnnotiertesDokument",
+      "instanceOf": "MII_PR_Dokument_Dokument",
+      "category": "examples",
+      "path": "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-annotiert.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "AmandaAlzheimerDeIdentifiziertesDokument",
+      "instanceOf": "MII_PR_Dokument_Dokument",
+      "category": "examples",
+      "path": "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-de-identifiziert.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "AmandaAlzheimerOriginalDokument",
+      "instanceOf": "MII_PR_Dokument_Dokument",
+      "category": "examples",
+      "path": "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-original.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "AmandaAlzheimerAbteilungskontakt",
+      "instanceOf": "MII_PR_Fall_KontaktGesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/examples/alzheimer/mii-exa-dokument-encounter-abteilungskontakt.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "AmandaAlzheimerEinrichtungskontakt",
+      "instanceOf": "MII_PR_Fall_KontaktGesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/examples/alzheimer/mii-exa-dokument-encounter-einrichtungskontakt.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "AmandaAlzheimerVersorgungsstellenKontakt",
+      "instanceOf": "MII_PR_Fall_KontaktGesundheitseinrichtung",
+      "category": "examples",
+      "path": "input/fsh/examples/alzheimer/mii-exa-dokument-encounter-versorgungstellenkontakt.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "AmandaAlzheimer",
+      "instanceOf": "MII_PR_Person_Patient",
+      "category": "examples",
+      "path": "input/fsh/examples/alzheimer/mii-exa-dokument-patient-alzheimer.fsh",
+      "line": 1
+    },
+    {
+      "type": "Extension",
+      "name": "MII_EX_Dokument_NLP_Processing_Status",
+      "instanceOf": null,
+      "category": "extensions",
+      "path": "input/fsh/extensions/mii-ex-dokument-nlp-processing-status.fsh",
+      "line": 1
+    },
+    {
+      "type": "Logical",
+      "name": "MII_LM_Dokument",
+      "instanceOf": null,
+      "category": "logicals",
+      "path": "input/fsh/logical-model/mii-lm-dokument.fsh",
+      "line": 1
+    },
+    {
+      "type": "Mapping",
+      "name": "MII_MAP_Dokument",
+      "instanceOf": null,
+      "category": "mappings",
+      "path": "input/fsh/logical-model/mii-map-dokument.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "mii-iv-dokument-dokument-category",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/profiles/mii-iv-dokument-dokument-category.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "mii-iv-dokument-dokument-type",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/profiles/mii-iv-dokument-dokument-type.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Dokument_Dokument",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/mii-pr-dokument-dokument.fsh",
+      "line": 5
+    },
+    {
+      "type": "CodeSystem",
+      "name": "MII_CS_Dokument_NLP_Processing_Status",
+      "instanceOf": null,
+      "category": "codesystems",
+      "path": "input/fsh/terminology/mii-cs-dokument-nlp-processing-status.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Dokument_Einrichtungsart",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/terminology/mii-vs-dokument-einrichtungsart.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Dokument_Fachgebiet",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/terminology/mii-vs-dokument-fachgebiet.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Dokument_Format_Code",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/terminology/mii-vs-dokument-format-code.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Dokument_NLP_Processing_Status",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/terminology/mii-vs-dokument-nlp-processing-status.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Dokument_SCT_Dokument_Kategorie",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/terminology/mii-vs-dokument-sct-dokument-kategorie.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Dokument_SCT_Dokument_Typ",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/terminology/mii-vs-dokument-sct-dokument-typ.fsh",
+      "line": 1
+    }
+  ],
+  "dependencies": {
+    "count": 5,
+    "pinned": 5,
+    "floating": 0,
+    "items": {
+      "de.ihe-d.terminology": "3.0.1",
+      "de.medizininformatikinitiative.kerndatensatz.base": "2026.0.0",
+      "de.medizininformatikinitiative.kerndatensatz.meta": "2026.0.0",
+      "dvmd.kdl.r4": "2025.0.1",
+      "ihe.formatcode.fhir": "1.4.0"
+    },
+    "floating_items": [],
+    "_source": "sushi-config.yaml: dependencies"
+  },
+  "narrative": {
+    "format": "source",
+    "pages": 15,
+    "pages_all": 19,
+    "words": 7382,
+    "words_all_incl_stubs": 7425,
+    "images": 6,
+    "mandatory_present": [
+      "index"
+    ],
+    "mandatory_missing_in_target": [],
+    "files": [
+      {
+        "path": "input/pagecontent/index.md",
+        "words": 14,
+        "kind": "target",
+        "stub": true
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md",
+        "words": 152,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Index.page.md",
+        "words": 13,
+        "kind": "source",
+        "stub": true
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md",
+        "words": 562,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/UML.page.md",
+        "words": 162,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Beschreibung.page.md",
+        "words": 239,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/HinweisTemplate.page.md",
+        "words": 4,
+        "kind": "source",
+        "stub": true
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Index.page.md",
+        "words": 288,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Kontext-Bezuege.page.md",
+        "words": 391,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Referenzen.page.md",
+        "words": 377,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Release-Notes.page.md",
+        "words": 59,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/CapabilityStatement.page.md",
+        "words": 92,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Conformance.page.md",
+        "words": 491,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "words": 993,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Index.page.md",
+        "words": 672,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "words": 487,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Index.page.md",
+        "words": 12,
+        "kind": "source",
+        "stub": true
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Kompatibilitaet.page.md",
+        "words": 1845,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+        "words": 572,
+        "kind": "source",
+        "stub": false
+      }
+    ]
+  },
+  "linguistics": {
+    "content_pages": 15,
+    "words_total": 7382,
+    "words_avg": 492.1,
+    "words_median": 391,
+    "words_min": 59,
+    "words_max": 1845,
+    "longest_page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Kompatibilitaet.page.md",
+    "shortest_page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Release-Notes.page.md",
+    "per_page": [
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Kompatibilitaet.page.md",
+        "words": 1845
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "words": 993
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Index.page.md",
+        "words": 672
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+        "words": 572
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md",
+        "words": 562
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Conformance.page.md",
+        "words": 491
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "words": 487
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Kontext-Bezuege.page.md",
+        "words": 391
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Referenzen.page.md",
+        "words": 377
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Index.page.md",
+        "words": 288
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Beschreibung.page.md",
+        "words": 239
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/UML.page.md",
+        "words": 162
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md",
+        "words": 152
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/CapabilityStatement.page.md",
+        "words": 92
+      },
+      {
+        "path": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Release-Notes.page.md",
+        "words": 59
+      }
+    ]
+  },
+  "duplication": {
+    "duplicate_block_count": 3,
+    "duplicate_blocks": [
+      {
+        "snippet": "das für dieses mii kds modul erstellte valueset beinhaltet ausschließlich diese codes.",
+        "locations": [
+          "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+          "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+          "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+          "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md"
+        ]
+      },
+      {
+        "snippet": "die folgenden fhir documentreference ressourcen verwendeten das dokument profil ( ), um di",
+        "locations": [
+          "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+          "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md"
+        ]
+      },
+      {
+        "snippet": "die folgenden fhir ressourcen stellen die zum beispiel zugehörigen fhir patienten und fall",
+        "locations": [
+          "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+          "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md"
+        ]
+      }
+    ],
+    "duplicate_file_groups": []
+  },
+  "hygiene": {
+    "images_total": 6,
+    "unreferenced_images": [
+      "implementation-guides/images/Warning.jpg"
+    ],
+    "examples_total": 7,
+    "examples_not_in_narrative": [],
+    "note": "Heuristik: 'nicht referenziert' = Dateiname/Artefaktname kommt in keiner Erklärseite vor. Kein Beweis für Ungenutztheit (Referenz kann über Konfiguration/Build erfolgen)."
+  },
+  "i18n": {
+    "default_lang": "de-DE",
+    "default_lang_source": "language",
+    "languages": [],
+    "translation_supplements": 0,
+    "supplement_files": [],
+    "translated_pages": 0,
+    "fsh_translation_ext": true,
+    "fsh_translation_files": [
+      "input/fsh/common/rulesets.fsh"
+    ]
+  },
+  "directives": {
+    "total": 130,
+    "by_label": {
+      "page-title": 13,
+      "tree": 3,
+      "fql-tag": 9,
+      "pagelink": 12,
+      "render-image": 8,
+      "render-resource": 9,
+      "index-root": 1,
+      "link": 3,
+      "tabs": 50,
+      "xml": 2,
+      "json": 16,
+      "fql-at": 4
+    },
+    "unknown": 0,
+    "occurrences": [
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md",
+        "line": 5,
+        "label": "page-title",
+        "text": "# {{page-title}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md",
+        "line": 9,
+        "label": "tree",
+        "text": "{{tree, expand}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md",
+        "line": 14,
+        "label": "fql-tag",
+        "text": "<fql headers=\"true\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md",
+        "line": 27,
+        "label": "fql-tag",
+        "text": "<fql headers=\"true\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md",
+        "line": 39,
+        "label": "fql-tag",
+        "text": "<fql headers=\"true\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md",
+        "line": 5,
+        "label": "page-title",
+        "text": "# {{page-title}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md",
+        "line": 7,
+        "label": "pagelink",
+        "text": "Grundsätzlich soll mit dem Dokument-Profil ({{pagelink:MIIIGModulDokument/Techni"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md",
+        "line": 12,
+        "label": "render-image",
+        "text": "<a target=\"_blank\" href=\"https://raw.githubusercontent.com/medizininformatik-ini"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md",
+        "line": 18,
+        "label": "pagelink",
+        "text": "Datenintegrationszentren sollen in der Lage sein, klinische Dokumente zusammen m"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md",
+        "line": 30,
+        "label": "pagelink",
+        "text": "Ein weiterer wichtiger Aspekt der *Internen Dokumentennutzung* ist die Konvertie"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md",
+        "line": 34,
+        "label": "pagelink",
+        "text": "Neben den vorher beschriebenen Zwecken spielt die *Interne Dokumentennutzung* eb"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md",
+        "line": 39,
+        "label": "render-image",
+        "text": "<a target=\"_blank\" href=\"https://raw.githubusercontent.com/medizininformatik-ini"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md",
+        "line": 43,
+        "label": "pagelink",
+        "text": "Wissenschaftler:innen (`Wissenschaftler:in`) können auf einen mit Metadaten ange"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md",
+        "line": 45,
+        "label": "pagelink",
+        "text": "Ein zentraler Bestandteil für Forschenden ist der Zugang zu Daten und Metadaten "
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/UML.page.md",
+        "line": 5,
+        "label": "page-title",
+        "text": "## {{page-title}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/UML.page.md",
+        "line": 14,
+        "label": "render-image",
+        "text": "<a target=\"_blank\" href=\"https://raw.githubusercontent.com/medizininformatik-ini"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Beschreibung.page.md",
+        "line": 5,
+        "label": "page-title",
+        "text": "## {{page-title}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Beschreibung.page.md",
+        "line": 9,
+        "label": "render-image",
+        "text": "{{render:implementation-guides/images/Blockdiagramm.png}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Beschreibung.page.md",
+        "line": 24,
+        "label": "pagelink",
+        "text": "Der Textkörper kann vielfältige identifizierende Daten und/oder Metadaten (z.B. "
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/HinweisTemplate.page.md",
+        "line": 4,
+        "label": "render-resource",
+        "text": "{{render:HereBeDragons}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Index.page.md",
+        "line": 20,
+        "label": "index-root",
+        "text": "{{index:root}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Index.page.md",
+        "line": 50,
+        "label": "render-image",
+        "text": "<img src=\"https://licensebuttons.net/l/by/4.0/88x31.png\" alt=\"CC BY 4.0 Logo\" st"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Kontext-Bezuege.page.md",
+        "line": 5,
+        "label": "page-title",
+        "text": "# {{page-title}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Referenzen.page.md",
+        "line": 5,
+        "label": "page-title",
+        "text": "## {{page-title}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Referenzen.page.md",
+        "line": 14,
+        "label": "render-image",
+        "text": "<a target=\"_blank\" href=\"https://github.com/medizininformatik-initiative/kerndat"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Referenzen.page.md",
+        "line": 23,
+        "label": "pagelink",
+        "text": "Dabei wurde ein Abgleich aller Datenelemente sowie der verwendeten Terminologie "
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Release-Notes.page.md",
+        "line": 1,
+        "label": "page-title",
+        "text": "# {{page-title}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/CapabilityStatement.page.md",
+        "line": 8,
+        "label": "page-title",
+        "text": "# {{page-title}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/CapabilityStatement.page.md",
+        "line": 16,
+        "label": "link",
+        "text": "Link zur Simplifier-Übersicht: {{link:mii-cps-dokument-capabilitystatement}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/CapabilityStatement.page.md",
+        "line": 18,
+        "label": "render-resource",
+        "text": "{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/Cap"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Conformance.page.md",
+        "line": 1,
+        "label": "page-title",
+        "text": "# {{page-title}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 16,
+        "label": "page-title",
+        "text": "# {{page-title}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 31,
+        "label": "pagelink",
+        "text": "Diese Profil beschreibt die Metadaten zu einem klinischen Dokument. Eine ausführ"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 35,
+        "label": "fql-tag",
+        "text": "<fql output=\"table\" headers=\"true\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 51,
+        "label": "tabs",
+        "text": "<tabs>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 52,
+        "label": "tree",
+        "text": "<tab title=\"Darstellung\">{{tree, buttons}}</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 52,
+        "label": "tabs",
+        "text": "<tab title=\"Darstellung\">{{tree, buttons}}</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 53,
+        "label": "xml",
+        "text": "<tab title=\"XML\">{{xml}}</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 53,
+        "label": "tabs",
+        "text": "<tab title=\"XML\">{{xml}}</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 54,
+        "label": "json",
+        "text": "<tab title=\"JSON\">{{json}}</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 54,
+        "label": "tabs",
+        "text": "<tab title=\"JSON\">{{json}}</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 55,
+        "label": "link",
+        "text": "<tab title=\"Link\">{{link}}</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 55,
+        "label": "tabs",
+        "text": "<tab title=\"Link\">{{link}}</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 56,
+        "label": "tabs",
+        "text": "</tabs>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 62,
+        "label": "fql-at",
+        "text": "@```"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 278,
+        "label": "pagelink",
+        "text": "Umfangreiche Beispiele, die das Profil und die Erweiterung gemeinsam veranschaul"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 284,
+        "label": "render-image",
+        "text": "<a target=\"_blank\" href=\"https://github.com/medizininformatik-initiative/kerndat"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 288,
+        "label": "pagelink",
+        "text": "Die folgenden FHIR DocumentReference-Ressourcen verwendeten das Dokument-Profil "
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 290,
+        "label": "tabs",
+        "text": "<tabs>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 291,
+        "label": "tabs",
+        "text": "<tab title=\"Amanda_Alzheimer.txt\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 292,
+        "label": "json",
+        "text": "{{json:AmandaAlzheimerOriginalDokument}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 293,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 294,
+        "label": "tabs",
+        "text": "<tab title=\"De-ID.txt\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 295,
+        "label": "json",
+        "text": "{{json:AmandaAlzheimerDeIdentifiziertesDokument}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 296,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 297,
+        "label": "tabs",
+        "text": "<tab title=\"Annotat.zip\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 298,
+        "label": "json",
+        "text": "{{json:AmandaAlzheimerAnnotiertesDokument}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 299,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 300,
+        "label": "tabs",
+        "text": "</tabs>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 304,
+        "label": "tabs",
+        "text": "<tabs>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 305,
+        "label": "tabs",
+        "text": "<tab title=\"Amanda Alzheimer\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 306,
+        "label": "json",
+        "text": "{{json:AmandaAlzheimer}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 307,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 308,
+        "label": "tabs",
+        "text": "<tab title=\"Einrichtungskontakt\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 309,
+        "label": "json",
+        "text": "{{json:AmandaAlzheimerEinrichtungskontakt}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 310,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 311,
+        "label": "tabs",
+        "text": "<tab title=\"Abteilungskontakt\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 312,
+        "label": "json",
+        "text": "{{json:AmandaAlzheimerAbteilungskontakt}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 313,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 314,
+        "label": "tabs",
+        "text": "<tab title=\"Versorgungsstellenkontakt\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 315,
+        "label": "json",
+        "text": "{{json:AmandaAlzheimerVersorgungsstellenkontakt}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 316,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+        "line": 317,
+        "label": "tabs",
+        "text": "</tabs>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 14,
+        "label": "page-title",
+        "text": "# {{page-title}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 31,
+        "label": "fql-at",
+        "text": "@```"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 46,
+        "label": "tabs",
+        "text": "<tabs>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 47,
+        "label": "tree",
+        "text": "<tab title=\"Darstellung\">{{tree:https://www.medizininformatik-initiative.de/fhir"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 47,
+        "label": "tabs",
+        "text": "<tab title=\"Darstellung\">{{tree:https://www.medizininformatik-initiative.de/fhir"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 48,
+        "label": "tabs",
+        "text": "<tab title=\"Beschreibung\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 49,
+        "label": "fql-at",
+        "text": "@```"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 59,
+        "label": "fql-at",
+        "text": "@```"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 73,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 74,
+        "label": "xml",
+        "text": "<tab title=\"XML\">{{xml}}</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 74,
+        "label": "tabs",
+        "text": "<tab title=\"XML\">{{xml}}</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 75,
+        "label": "json",
+        "text": "<tab title=\"JSON\">{{json}}</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 75,
+        "label": "tabs",
+        "text": "<tab title=\"JSON\">{{json}}</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 76,
+        "label": "link",
+        "text": "<tab title=\"Link\">{{link}}</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 76,
+        "label": "tabs",
+        "text": "<tab title=\"Link\">{{link}}</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 77,
+        "label": "tabs",
+        "text": "</tabs>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 81,
+        "label": "render-resource",
+        "text": "{{render:mii-cs-dokument-nlp-processing-status}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 90,
+        "label": "render-image",
+        "text": "<a target=\"_blank\" href=\"https://github.com/medizininformatik-initiative/kerndat"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 100,
+        "label": "pagelink",
+        "text": "Die folgenden FHIR DocumentReference-Ressourcen verwendeten das Dokument-Profil "
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 102,
+        "label": "tabs",
+        "text": "<tabs>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 103,
+        "label": "tabs",
+        "text": "<tab title=\"Amanda_Alzheimer.txt\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 104,
+        "label": "json",
+        "text": "{{json:AmandaAlzheimerOriginalDokument}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 105,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 106,
+        "label": "tabs",
+        "text": "<tab title=\"De-ID.txt\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 107,
+        "label": "json",
+        "text": "{{json:AmandaAlzheimerDeIdentifiziertesDokument}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 108,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 109,
+        "label": "tabs",
+        "text": "<tab title=\"Annotat.zip\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 110,
+        "label": "json",
+        "text": "{{json:AmandaAlzheimerAnnotiertesDokument}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 111,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 112,
+        "label": "tabs",
+        "text": "</tabs>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 116,
+        "label": "tabs",
+        "text": "<tabs>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 117,
+        "label": "tabs",
+        "text": "<tab title=\"Amanda Alzheimer\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 118,
+        "label": "json",
+        "text": "{{json:AmandaAlzheimer}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 119,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 120,
+        "label": "tabs",
+        "text": "<tab title=\"Einrichtungskontakt\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 121,
+        "label": "json",
+        "text": "{{json:AmandaAlzheimerEinrichtungskontakt}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 122,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 123,
+        "label": "tabs",
+        "text": "<tab title=\"Abteilungskontakt\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 124,
+        "label": "json",
+        "text": "{{json:AmandaAlzheimerAbteilungskontakt}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 125,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 126,
+        "label": "tabs",
+        "text": "<tab title=\"Versorgungsstellenkontakt\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 127,
+        "label": "json",
+        "text": "{{json:AmandaAlzheimerVersorgungsstellenkontakt}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 128,
+        "label": "tabs",
+        "text": "</tab>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+        "line": 129,
+        "label": "tabs",
+        "text": "</tabs>"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Kompatibilitaet.page.md",
+        "line": 5,
+        "label": "page-title",
+        "text": "# {{page-title}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+        "line": 5,
+        "label": "page-title",
+        "text": "# {{page-title}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+        "line": 27,
+        "label": "render-resource",
+        "text": "{{render:mii-cs-dokument-nlp-processing-status}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+        "line": 40,
+        "label": "fql-tag",
+        "text": "<fql output=\"table\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+        "line": 60,
+        "label": "render-resource",
+        "text": "{{render:mii-vs-dokument-sct-dokument-typ}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+        "line": 65,
+        "label": "fql-tag",
+        "text": "<fql output=\"table\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+        "line": 85,
+        "label": "render-resource",
+        "text": "{{render:mii-vs-dokument-sct-dokument-kategorie}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+        "line": 90,
+        "label": "fql-tag",
+        "text": "<fql output=\"table\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+        "line": 107,
+        "label": "render-resource",
+        "text": "{{render:mii-vs-dokument-format-code}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+        "line": 112,
+        "label": "fql-tag",
+        "text": "<fql output=\"table\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+        "line": 135,
+        "label": "render-resource",
+        "text": "{{render:mii-vs-dokument-einrichtungsart}}"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+        "line": 140,
+        "label": "fql-tag",
+        "text": "<fql output=\"table\">"
+      },
+      {
+        "file": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+        "line": 161,
+        "label": "render-resource",
+        "text": "{{render:mii-vs-dokument-fachgebiet}}"
+      }
+    ],
+    "unknown_occurrences": []
+  },
+  "quality": {
+    "qc_rules_defined": 8,
+    "qc_rules": [
+      {
+        "name": "parse-fhir-resources",
+        "action": "parse",
+        "status": "Checking if all FHIR Resource files can be parsed",
+        "category": null
+      },
+      {
+        "name": "resource-validation",
+        "action": "validate",
+        "status": "Validating resources against the FHIR standard and their profiles",
+        "category": "Resource"
+      },
+      {
+        "name": "version-filled",
+        "action": null,
+        "status": "Checking if all resources have version filled",
+        "category": null
+      },
+      {
+        "name": null,
+        "action": "Check for valid ids",
+        "status": null,
+        "category": null
+      },
+      {
+        "name": "naming-convention-id",
+        "action": null,
+        "status": "Checking if all resource ids follow the naming convention",
+        "category": null
+      },
+      {
+        "name": "naming-convention-name",
+        "action": null,
+        "status": "Checking if all resource names follow the naming convention",
+        "category": null
+      },
+      {
+        "name": "naming-convention-title",
+        "action": null,
+        "status": "Checking if all resource titles follow the naming convention",
+        "category": null
+      },
+      {
+        "name": "naming-convention-url",
+        "action": null,
+        "status": "Checking if all resource urls follow the naming convention",
+        "category": null
+      }
+    ],
+    "qc_source": "qc/custom.rules.yaml",
+    "qc_violations": null,
+    "suppressed_messages": 66,
+    "qa_errors": null,
+    "qa_warnings": null,
+    "qa_hints": null,
+    "broken_links": null,
+    "qa_categories": null
+  },
+  "maturity": {
+    "score": 75,
+    "band": "technisch reif, Status Entwurf",
+    "components": {
+      "Status": 45,
+      "Doku-Vollständigkeit": 79,
+      "Beispiel-Abdeckung": 100,
+      "Governance": 75
+    },
+    "example_coverage": {
+      "profiles_total": 1,
+      "covered": 1,
+      "uncovered": [],
+      "coverage_pct": 100
+    },
+    "governance": {
+      "ci_workflows": 4,
+      "publication_request": false,
+      "ig_ini": true,
+      "devcontainer": true,
+      "governance_score": 75
+    },
+    "doc_health_pct": 79
+  },
+  "portfolio": {
+    "vendor_lockin_score": 100,
+    "vendor_lockin_band": "hoch",
+    "directives_per_page": 8.67,
+    "terminology_standard_systems": [
+      "SNOMED CT",
+      "LOINC"
+    ],
+    "terminology_standard_refs": 36,
+    "local_codesystems": 1,
+    "terminology_standard_share_pct": 97,
+    "canonical_reuse_ratio_pct": 100,
+    "external_parents": 1,
+    "local_parents": 0,
+    "fhir_version_label": "R4",
+    "fhir_version_note": "aktuell verbreitet",
+    "dependency_stale_count": 0,
+    "dependency_stale": [],
+    "dependency_staleness_note": "Heuristik aus CalVer-Jahr; exakt nur via Package-Registry (extern).",
+    "release_cadence_per_year": 10.0,
+    "days_since_last_commit": 109,
+    "tags": 0
+  },
+  "risk": {
+    "terminology_license_flags": [
+      {
+        "system": "SNOMED CT",
+        "license": "lizenzpflichtig (Affiliate/Land)"
+      },
+      {
+        "system": "LOINC",
+        "license": "frei (Registrierung)"
+      }
+    ],
+    "terminology_license_risk": true,
+    "suppressed_total": 66,
+    "suppressed_broad": 0,
+    "suppressed_warning_risk": "gering",
+    "privacy_page_words": 0,
+    "privacy_page_substantial": false,
+    "examples_contain_pii_like": false,
+    "bus_factor_top_author_pct": 100,
+    "bus_factor_authors": 1,
+    "bus_factor_risk": "hoch",
+    "breaking_change_risk": null,
+    "breaking_change_note": "Erfordert Diff gegen die publizierte Vorversion (Build/extern) — statisch nicht erhoben."
+  },
+  "git": {
+    "commits": 1,
+    "authors": 1,
+    "top_author_share": 100,
+    "days_since_last": 109,
+    "commits_per_year": 10.0,
+    "tags": 0,
+    "first": "2026-04-13",
+    "last": "2026-04-13"
+  }
+}

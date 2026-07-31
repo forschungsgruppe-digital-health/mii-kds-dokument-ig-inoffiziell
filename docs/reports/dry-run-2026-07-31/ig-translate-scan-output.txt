@@ -1,0 +1,35 @@
+$ ig-translate.sh --scan de /tmp/kds-dryrun/sandbox   (dry-run 2026-07-31, unmigrated module)
+== ig-translate --scan de ==
+-- Narrative pages --
+   input/pagecontent/index.md -> input/translations/de/pagecontent/index.md [missing]
+-- Resource supplements (render: only SD/CS/Questionnaire) --
+   CapabilityStatement/mii-cps-dokument-capabilitystatement -> (no supplement support; skipped)
+   CodeSystem/mii-cs-dokument-nlp-processing-status -> input/translations/de/CodeSystem-mii-cs-dokument-nlp-processing-status.po [missing]
+   DocumentReference/AmandaAlzheimerAnnotiertesDokument -> (no supplement support; skipped)
+   DocumentReference/AmandaAlzheimerDeIdentifiziertesDokument -> (no supplement support; skipped)
+   DocumentReference/AmandaAlzheimerOriginalDokument -> (no supplement support; skipped)
+   Encounter/AmandaAlzheimerAbteilungskontakt -> (no supplement support; skipped)
+   Encounter/AmandaAlzheimerEinrichtungskontakt -> (no supplement support; skipped)
+   Encounter/AmandaAlzheimerVersorgungsstellenKontakt -> (no supplement support; skipped)
+   ImplementationGuide/mii-ig-dokument -> (no supplement support; skipped)
+   Patient/AmandaAlzheimer -> (no supplement support; skipped)
+   StructureDefinition/mii-ex-dokument-nlp-processing-status -> input/translations/de/StructureDefinition-mii-ex-dokument-nlp-processing-status.po [missing]
+   StructureDefinition/mii-lm-dokument -> input/translations/de/StructureDefinition-mii-lm-dokument.po [missing]
+   StructureDefinition/mii-pr-dokument-dokument -> input/translations/de/StructureDefinition-mii-pr-dokument-dokument.po [missing]
+   ValueSet/mii-vs-dokument-einrichtungsart -> (no supplement support; skipped)
+   ValueSet/mii-vs-dokument-fachgebiet -> (no supplement support; skipped)
+   ValueSet/mii-vs-dokument-format-code -> (no supplement support; skipped)
+   ValueSet/mii-vs-dokument-nlp-processing-status -> (no supplement support; skipped)
+   ValueSet/mii-vs-dokument-sct-dokument-kategorie -> (no supplement support; skipped)
+   ValueSet/mii-vs-dokument-sct-dokument-typ -> (no supplement support; skipped)
+
+Note: a supplement's msgid = the exact DEFAULT-LANGUAGE source text from fsh-generated/resources/<Type>-<id>.json.
+
+$ ig-translate.sh --validate de /tmp/kds-dryrun/sandbox
+== ig-translate --validate de ==
+-- checking existing supplements (input/translations/de) --
+   (no directory input/translations/de)
+-- checking existing page translations (input/translations/de/pagecontent) --
+   (no directory input/translations/de/pagecontent)
+
+Validation: no findings.
