@@ -1,0 +1,579 @@
+{
+  "run": "migration 2026-08-02, skill mii-ig-migration @ agent-skills v0.6.0, branch migration/mii-kds-module-template",
+  "source_repo": "https://github.com/medizininformatik-initiative/kerndatensatz-dokument (read via the bit-identical sandbox mirror master@9f76fed8; MII org repos untouched)",
+  "rendered_ig": {
+    "project_page": "https://simplifier.net/mii-erweiterungsmodul-dokument",
+    "extraction": "TODO:REVIEW — project page and guide listing are client-rendered; not mechanically extractable. Inventory derived from the repository per spec §5.1 fallback; Gate B verifies against the rendering by hand.",
+    "guide_slug_in_repo": "mii-ig-dokument-de (implementation-guides/mii-ig-dokument-de/guide.yaml)"
+  },
+  "artifacts": [
+    {
+      "kind": "Alias",
+      "name": "$mii-lm-dokument",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-cps-dokument",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-pr-dokument",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-vs-dokument-einrichtungsart",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-vs-dokument-fachgebiet",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-vs-dokument-sct-dokument-kategorie",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-vs-dokument-sct-dokument-typ",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-ex-dokument-nlp-processing-status",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-cs-dokument-nlp-processing-status",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-vs-dokument-nlp-processing-status",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-vs-dokument-format-code",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$cps-exp",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$shared-cs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$shared-vs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$dkgev-fachabteilungsschluessel",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$dvmd-kdl",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$dvmd-kdl-vs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-class-code",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-class-code-vs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-type-code",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-type-code-vs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-event-code-vs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-formatcode",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-formatcode-vs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-format-code-vs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-format-code-intl-vs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-healthcare-facility-type-code-vs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-healthcare-facility-type-code-patient-bezogen-vs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-healthcare-facility-type-code-nicht-patient-bezogen-vs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-patient-bezogene-gesundheitsversorgung",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-practice-setting-code",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-practice-setting-code-vs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-aerztliche-fachrichtungen",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-nicht-aerztliche-fachrichtungen",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-fallkontext-bei-dokumentenerstellung",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$v2-0203",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$v3-act-code",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$v3-act-reason",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$v3-confidentiality",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$LNC",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$lnc-doc-type-code-vs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$lnc-doc-class-code-vs",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$SCT",
+      "source_path": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Header",
+      "source_path": "input/fsh/common/Header.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "PR_Header",
+      "source_path": "input/fsh/common/Header.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "EX_Header(url)",
+      "source_path": "input/fsh/common/Header.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "CS_Header(url)",
+      "source_path": "input/fsh/common/Header.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "VS_Header(url)",
+      "source_path": "input/fsh/common/Header.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "LM_Header(url)",
+      "source_path": "input/fsh/common/Header.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Meta",
+      "source_path": "input/fsh/common/Meta.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "CS_VS_Meta(url)",
+      "source_path": "input/fsh/common/Meta.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "CS_Meta(url)",
+      "source_path": "input/fsh/common/Meta.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "VS_Meta(url)",
+      "source_path": "input/fsh/common/Meta.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "EX_Meta(url)",
+      "source_path": "input/fsh/common/Meta.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "LM_Meta(url)",
+      "source_path": "input/fsh/common/Meta.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Publisher",
+      "source_path": "input/fsh/common/Publisher.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "SP_Publisher",
+      "source_path": "input/fsh/common/Publisher.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Status",
+      "source_path": "input/fsh/common/Status.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Version",
+      "source_path": "input/fsh/common/Version.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "PR_CS_VS_Version",
+      "source_path": "input/fsh/common/Version.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "SupportResource(resource,",
+      "source_path": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Profile(profile,",
+      "source_path": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "SupportProfile(profile,",
+      "source_path": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "SupportInteraction(interaction,",
+      "source_path": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "SupportSearchParam(name,",
+      "source_path": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Description(path,",
+      "source_path": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "DescriptionIntl(path,",
+      "source_path": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "CommentedDescription(path,",
+      "source_path": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "CommentedDescriptionIntl(path,",
+      "source_path": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Translation(path,",
+      "source_path": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "mii-cps-dokument-capabilitystatement",
+      "source_path": "input/fsh/definitions/mii-cps-dokument-capabilitystatement.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "AmandaAlzheimerAnnotiertesDokument",
+      "source_path": "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-annotiert.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "AmandaAlzheimerDeIdentifiziertesDokument",
+      "source_path": "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-de-identifiziert.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "AmandaAlzheimerOriginalDokument",
+      "source_path": "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-original.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "AmandaAlzheimerAbteilungskontakt",
+      "source_path": "input/fsh/examples/alzheimer/mii-exa-dokument-encounter-abteilungskontakt.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "AmandaAlzheimerEinrichtungskontakt",
+      "source_path": "input/fsh/examples/alzheimer/mii-exa-dokument-encounter-einrichtungskontakt.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "AmandaAlzheimerVersorgungsstellenKontakt",
+      "source_path": "input/fsh/examples/alzheimer/mii-exa-dokument-encounter-versorgungstellenkontakt.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "AmandaAlzheimer",
+      "source_path": "input/fsh/examples/alzheimer/mii-exa-dokument-patient-alzheimer.fsh"
+    },
+    {
+      "kind": "Extension",
+      "name": "MII_EX_Dokument_NLP_Processing_Status",
+      "source_path": "input/fsh/extensions/mii-ex-dokument-nlp-processing-status.fsh"
+    },
+    {
+      "kind": "Logical",
+      "name": "MII_LM_Dokument",
+      "source_path": "input/fsh/logical-model/mii-lm-dokument.fsh"
+    },
+    {
+      "kind": "Invariant",
+      "name": "mii-iv-dokument-dokument-category",
+      "source_path": "input/fsh/profiles/mii-iv-dokument-dokument-category.fsh"
+    },
+    {
+      "kind": "Invariant",
+      "name": "mii-iv-dokument-dokument-type",
+      "source_path": "input/fsh/profiles/mii-iv-dokument-dokument-type.fsh"
+    },
+    {
+      "kind": "Profile",
+      "name": "MII_PR_Dokument_Dokument",
+      "source_path": "input/fsh/profiles/mii-pr-dokument-dokument.fsh"
+    },
+    {
+      "kind": "CodeSystem",
+      "name": "MII_CS_Dokument_NLP_Processing_Status",
+      "source_path": "input/fsh/terminology/mii-cs-dokument-nlp-processing-status.fsh"
+    },
+    {
+      "kind": "ValueSet",
+      "name": "MII_VS_Dokument_Einrichtungsart",
+      "source_path": "input/fsh/terminology/mii-vs-dokument-einrichtungsart.fsh"
+    },
+    {
+      "kind": "ValueSet",
+      "name": "MII_VS_Dokument_Fachgebiet",
+      "source_path": "input/fsh/terminology/mii-vs-dokument-fachgebiet.fsh"
+    },
+    {
+      "kind": "ValueSet",
+      "name": "MII_VS_Dokument_Format_Code",
+      "source_path": "input/fsh/terminology/mii-vs-dokument-format-code.fsh"
+    },
+    {
+      "kind": "ValueSet",
+      "name": "MII_VS_Dokument_NLP_Processing_Status",
+      "source_path": "input/fsh/terminology/mii-vs-dokument-nlp-processing-status.fsh"
+    },
+    {
+      "kind": "ValueSet",
+      "name": "MII_VS_Dokument_SCT_Dokument_Kategorie",
+      "source_path": "input/fsh/terminology/mii-vs-dokument-sct-dokument-kategorie.fsh"
+    },
+    {
+      "kind": "ValueSet",
+      "name": "MII_VS_Dokument_SCT_Dokument_Typ",
+      "source_path": "input/fsh/terminology/mii-vs-dokument-sct-dokument-typ.fsh"
+    }
+  ],
+  "narrative": [
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Index.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/UML.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Beschreibung.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/HinweisTemplate.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Index.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Kontext-Bezuege.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Referenzen.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Release-Notes.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/CapabilityStatement.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Conformance.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Index.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Index.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Kompatibilitaet.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+      "format": "simplifier",
+      "language": "de"
+    },
+    {
+      "page": "input/pagecontent/index.md",
+      "format": "ig-publisher",
+      "language": "en (SUSHI boilerplate, no content)"
+    }
+  ],
+  "generated_resources": [
+    "CapabilityStatement-mii-cps-dokument-capabilitystatement.json",
+    "CodeSystem-mii-cs-dokument-nlp-processing-status.json",
+    "DocumentReference-AmandaAlzheimerAnnotiertesDokument.json",
+    "DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.json",
+    "DocumentReference-AmandaAlzheimerOriginalDokument.json",
+    "Encounter-AmandaAlzheimerAbteilungskontakt.json",
+    "Encounter-AmandaAlzheimerEinrichtungskontakt.json",
+    "Encounter-AmandaAlzheimerVersorgungsstellenKontakt.json",
+    "ImplementationGuide-mii-ig-dokument.json",
+    "Patient-AmandaAlzheimer.json",
+    "StructureDefinition-mii-ex-dokument-nlp-processing-status.json",
+    "StructureDefinition-mii-lm-dokument.json",
+    "StructureDefinition-mii-pr-dokument-dokument.json",
+    "ValueSet-mii-vs-dokument-einrichtungsart.json",
+    "ValueSet-mii-vs-dokument-fachgebiet.json",
+    "ValueSet-mii-vs-dokument-format-code.json",
+    "ValueSet-mii-vs-dokument-nlp-processing-status.json",
+    "ValueSet-mii-vs-dokument-sct-dokument-kategorie.json",
+    "ValueSet-mii-vs-dokument-sct-dokument-typ.json"
+  ]
+}
