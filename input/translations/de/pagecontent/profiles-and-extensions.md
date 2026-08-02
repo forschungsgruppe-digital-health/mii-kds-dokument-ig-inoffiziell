@@ -7,9 +7,6 @@ Diese Seite führt die FHIR-Profile und Extensions des Moduls **Dokument** auf.
 
 ### DocumentReference: MII PR Dokument Dokument
 
-#### Übersicht
-
-
 #### Beschreibung
 
 Diese Profil beschreibt die Metadaten zu einem klinischen Dokument. Eine ausführliche Beschreibung und Empfehlungen zur Verwendung des Profils befinden sich in der Beschreibung des Moduls ([Beschreibung](guidance.html)).
@@ -26,219 +23,48 @@ Die Metadaten des Profils (Canonical, Status, Version, Basisdefinition) sind auf
 
 {% include StructureDefinition-mii-pr-dokument-dokument-snapshot.xhtml %}
 
-##### XML
+##### Weitere Ansichten
 
-{% include StructureDefinition-mii-pr-dokument-dokument-xml-html.xhtml %}
-
-##### JSON
-
-{% include StructureDefinition-mii-pr-dokument-dokument-json-html.xhtml %}
-
-##### Link
-
-[MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html)
+Differential- und Snapshot-Tabellen, XML/JSON/TTL-Serialisierungen, Mappings und alle Beispiele stehen auf der Artefaktseite [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html) (mit Tabs, analog zu den offiziellen FHIR-Spezifikationsseiten).
 
 ##### Mapping Datensatz zu FHIR
 
-Das Mapping der Datensatzelemente auf FHIR (Mapping `mii-map-dokument`, Zielelemente `DocumentReference.*`) ist im logischen Modell [MII LM Dokument](StructureDefinition-mii-lm-dokument.html) hinterlegt; siehe auch die Seite [Datensätze](datasets-and-descriptions.html).
+<!-- GENERATED TABLE - mechanically extracted from fsh-generated/resources/StructureDefinition-mii-lm-dokument.json (differential.element.mapping, identity mii-map-dokument). Not hand-authored: regenerate after any change to the logical model. Source rendered the same data as a live FQL query. -->
 
-<!-- TODO:REVIEW: the source rendered a live FQL query here (differential elements of the logical model mii-lm-dokument carrying mapping mii-map-dokument onto DocumentReference: short, definition, map); content replaced by a static pointer -->
+Die folgende Tabelle bildet jedes Element des logischen Datensatzes auf seine FHIR-Repräsentation in diesem Profil ab (Mapping `mii-map-dokument`). Elementnamen und Beschreibungen stammen aus dem logischen Modell.
+
+| Datensatz-Element | Beschreibung | FHIR-Mapping |
+|---|---|---|
+| Dokument | Klinisches Dokument inkl. Metadaten, Inhalt, Erzeugungskontext und Beziehungen | DocumentReference |
+| Versionsspezifische Kennung | Versionsspezifische eindeutige Kennung, die dem Dokument durch die Dokumentenquelle zugewiesen wurde | DocumentReference.masterIdentifier |
+| Versionsunabhängige Kennung | Andere versionsunabhängige Kennung, die dem Dokument (z.B. durch weitere dokumentenverarbeitende Systeme) zugewiesen wurde | DocumentReference.identifier |
+| Status der Dokumentenreferenz | Status dieser Dokumentenreferenz (aktuell, überholt oder irrtümlich eingegeben) | DocumentReference.status |
+| Status des Dokuments | Status des zugrunde liegenden Dokuments (vorläufig, final, geändert oder irrtümlich eingegeben) | DocumentReference.docStatus |
+| Art des Dokuments | Art des Dokuments auf das verwiesen wird (z.B. Anamnese und Untersuchung, Entlassungsbericht, Verlaufsbericht) | DocumentReference.type |
+| Kategorien des Dokuments | Übergeordnete Kategorie des Dokuments auf das verwiesen wird (z.B. Arztberichte oder Arztdokumentation) | DocumentReference.category |
+| Verweis auf Patient | Patient auf den sich das verwiesene Dokument bezieht | DocumentReference.subject |
+| Beschreibung des Dokuments | Menschenlesbare Beschreibung zum verwiesenen Dokuments | DocumentReference.description |
+| Vertraulichkeit des Dokuments | Grad der Vertraulichkeit/Sicherheit des verwiesenen Dokuments (z. B. uneingeschränkt, gering, mittel, normal oder eingeschränkt) | DocumentReference.securityLabel |
+| Beziehung des Dokuments | Beziehungen des verwiesenen Dokuments zu anderen Dokumenten | DocumentReference.relatesTo |
+| Art der Beziehung | Beziehung zu anderen Dokumenten | DocumentReference.relatesTo.code |
+| Verweis auf Dokument | Ziel der Dokumentenbeziehung | DocumentReference.relatesTo.target |
+| Inhalt des Dokuments | Dokument (Base64-kodierte Daten) oder Verweis (URL) mit relevanten Metadaten zum Anhang | DocumentReference.content |
+| Verfassungssprache des Inhalts | Verwendete Sprache in dem Dokument | DocumentReference.attachment.language |
+| Erstellungsdatum des Inhalts | Datum der Erstellung des Dokumentes | DocumentReference.attachment.creation |
+| Binärdaten zum Inhalt | Dokument als Binärdaten | DocumentReference.attachment.data |
+| URL zum Inhalt | Verweis auf den (lokalen) Ablageort des Dokuments | DocumentReference.attachment.url |
+| MIME-Typ zum Inhalt | MIME-Typ des Dokumenteninhalts | DocumentReference.attachment.contentType |
+| Erzeugungskontext des Dokuments | Klinischer Kontext, in welchem das Dokument erzeugt wurde | DocumentReference.context |
+| Verweis auf Einrichtungskontakt | Kontakt zur Gesundheitseinrichtung oder die Art der Versorgung, die mit dem Dokumenteninhalt assoziiert ist | DocumentReference.context.encounter |
+| Dokumentierter Vorgang | Handlungen oder Prozeduren, die im Kontext dokumentiert wurden | DocumentReference.context.event |
+| Klinisches Fachgebiet zum Vorgang | Klinisches Fachgebiet, in dem Dokumenteninhalt erstellt wurde | DocumentReference.context.practiceSetting |
+| Durchführungszeitraum zum Vorgang | Zeitraum, in dem die in dem Dokument beschriebene Handlung oder Prozedur durchgeführt wurde | DocumentReference.context.period |
+| Art der Einrichtung zum Vorgang | Art der Einrichtung, in der die Handlung oder Prozedur am Patienten erfolgte | DocumentReference.context.facilityType |
+
 
 ##### Suchparameter
 
-Folgende Suchparameter sind für diese Modul relevant, auch in Kombination:
-
-1. Der Suchparameter "_id" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?_id=12345```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-2. Der Suchparameter "_profile" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/StructureDefinition/mii-pr-dokument-dokument```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "_profile" finden sich in der [FHIR-Basisspezifikation - Abschnitt "URI Search"](https://hl7.org/fhir/R4/search.html#uri).
-
-3. Der Suchparameter "identifier" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?identifier=urn:ietf:rfc:3986|urn:uuid:0c287d32-01e3-4d87-9953-9fcc9404eb21```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "identifier" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-4. Der Suchparameter "status" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?status=current```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-5. Der Suchparameter "doc-status" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?doc-status=final```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "doc-status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-6. Der Suchparameter "type" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?type=http://dvmd.de/fhir/CodeSystem/kdl|AD010110```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "type" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-7. Der Suchparameter "category" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?category=http://ihe-d.de/CodeSystems/IHEXDSclassCode|BRI```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "category" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-8. Der Suchparameter "patient" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?patient=Patient/AmandaAlzheimer```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "patient" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
-
-9. Der Suchparameter "relation" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?relation=http://hl7.org/fhir/document-relationship-type|transforms```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "relation" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-10. Der Suchparameter "relatesto" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?relatesto=DocumentReference/AmandaAlzheimerOriginalDokument```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "relatesto" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
-
-11. Der Suchparameter "relationship" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?relationship=http://hl7.org/fhir/document-relationship-type|transforms$DocumentReference/AmandaAlzheimerOriginalDokument```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "relationship" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Composite Search"](https://hl7.org/fhir/R4/search.html#composite).
-
-12. Der Suchparameter "description" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?description:contains=Bericht```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "description" finden sich in der [FHIR-Basisspezifikation - Abschnitt "String Search"](http://hl7.org/fhir/R4/search.html#string).
-
-13. Der Suchparameter "security-label" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?security-label=http://terminology.hl7.org/CodeSystem/v3-Confidentiality|L```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "security-label" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-14. Der Suchparameter "contenttype" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?contenttype=urn:ietf:bcp:13|text/plain```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "contenttype" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-15. Der Suchparameter "language" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?language=urn:ietf:bcp:47|de-AT```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "language" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-16. Der Suchparameter "location" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?location=below:http://uk-musterstadt.de/document-management-system```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "location" finden sich in der [FHIR-Basisspezifikation - Abschnitt "URI Search"](https://hl7.org/fhir/R4/search.html#uri).
-
-17. Der Suchparameter "creation" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?creation=eq2025-06-23```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "creation" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date Search"](https://hl7.org/fhir/R4/search.html#date).
-
-18. Der Suchparameter "format" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?format=http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode|urn:ihe:iti:xds:2017:mimeTypeSufficient```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "format" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-19. Der Suchparameter "encounter" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?encounter=Encounter/AmandaAlzheimerEinrichtungskontakt```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "encounter" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://hl7.org/fhir/R4/search.html#reference).
-
-20. Der Suchparameter "event" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?event=http://ihe-d.de/CodeSystems/FallkontextBeiDokumentenerstellung|E234```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "event" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-21. Der Suchparameter "period" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?period=ge2028-01-24&period=le2028-02-06```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "period" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date Search"](https://hl7.org/fhir/R4/search.html#date).
-
-22. Der Suchparameter "facility" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?facility=http://ihe-d.de/CodeSystems/PatientBezogenenGesundheitsversorgung|KHS```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "facility" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-23. Der Suchparameter "setting" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?setting=http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen|INTZ```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "setting" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-24. Der Suchparameter "nlp-processing-status" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/DocumentReference?nlp-processing-status=https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/CodeSystem/mii-cs-dokument-nlp-processing-status|unprocessed```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach "nlp-processing-status" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+Die Suchparameter dieses Moduls sind auf der Seite [Suchparameter und Operationen](search-parameters-and-operations.html) dokumentiert.
 
 #### Beispiele
 
@@ -248,9 +74,6 @@ Umfangreiche Beispiele, die das Profil und die Erweiterung gemeinsam veranschaul
 <!-- TODO:REVIEW: the source additionally contained a commented-out (never rendered) example block (NLP-pipeline narrative, image and example serializations, largely duplicating the extension section below, incl. 11 directives); it was NOT migrated -->
 
 ### Extension: NLP Processing Status
-
-#### Übersicht
-
 
 #### Beschreibung
 
@@ -275,17 +98,9 @@ Die Beschreibung der Extension sowie die Übersicht ihrer Must-Support-Elemente 
 
 <!-- TODO:REVIEW: the source rendered two live FQL queries here (the StructureDefinition description and a Must-Support element table: id, short, comment); content replaced by a static pointer -->
 
-##### XML
+##### Weitere Ansichten
 
-{% include StructureDefinition-mii-ex-dokument-nlp-processing-status-xml-html.xhtml %}
-
-##### JSON
-
-{% include StructureDefinition-mii-ex-dokument-nlp-processing-status-json-html.xhtml %}
-
-##### Link
-
-[MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.html)
+Differential- und Snapshot-Tabellen, XML/JSON/TTL-Serialisierungen und alle Beispiele stehen auf der Artefaktseite [MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.html).
 
 Das von der Extension genutzte CodeSystem ist auf der Artefaktseite [MII VS Dokument NLP Processing Status](CodeSystem-mii-cs-dokument-nlp-processing-status.html) dargestellt.
 
@@ -295,7 +110,7 @@ Das von der Extension genutzte CodeSystem ist auf der Artefaktseite [MII VS Doku
 
 Das folgende Beispiel illustriert die Verarbeitung eines *ärztlichen Entlassbriefes* der Patientin *Amanda Alzheimer* durch eine NLP-Pipeline (siehe Abbildung). Nach der Erschließung (`Ingestion`) des Originaldokuments `Amanda_Alzheimer.txt` wird eine Dokumentreferenz mit dem NLP-Verarbeitungsstatus `unprocessed` angelegt. Anschließend wird eine De-Identifikation (`De-Identification`) der Inhalte durchgeführt, um das Ergebnisdokument `De-ID.txt` datenschutzkonform für Forschungszwecke weiterverwenden zu können. Eine zugehörige Dokumentreferenz kennzeichnet den NLP-Verarbeitungsstatus `de-identified` und verweist auf Originaldokument mittels `transforms`. Abschließend werden die klinischen Inhalte annotiert, was unter Umständen mehrere Ergebnisdokumente produziert und sich als Archiv `Annotat.zip` zusammenfassen lassen. Die zugehörige Dokumentreferenz kennzeichnet den NLP-Verarbeitungsstatus als `de-identifier, curated, annotated` und erweitert `appends` die Dokumentreferenz des vorherigen NLP-Verarbeitungsschritts.
 
-![NLP-Pipeline](NLP-Pipeline.png)
+<div style="text-align: center;"><img src="NLP-Pipeline.png" alt="NLP-Pipeline" style="max-width: 100%;"/></div>
 
 <!-- TODO:REVIEW: the source wrapped this image in an external link to the raw SVG at https://github.com/medizininformatik-initiative/kerndatensatz-dokument/raw/refs/heads/dev/input/plantuml/NLP-Pipeline.svg; replaced by the local image per the migration rule -->
 
@@ -307,35 +122,18 @@ appends: diese Dokument basiert auf dem relationierte Dokument, enthält aber zu
 
 Die folgenden FHIR DocumentReference-Ressourcen verwendeten das Dokument-Profil ([MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.html)), um die Ergebnisdokumente und die zugehörigen Dokumentreferenzen jedes Verarbeitungsschrittes der NLP-Pipeline darzustellen.
 
-##### Amanda_Alzheimer.txt
+- `Amanda_Alzheimer.txt` — [DocumentReference: Originaldokument](DocumentReference-AmandaAlzheimerOriginalDokument.html)
+- `De-ID.txt` — [DocumentReference: de-identifiziertes Dokument](DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.html)
+- `Annotat.zip` — [DocumentReference: annotiertes Dokument](DocumentReference-AmandaAlzheimerAnnotiertesDokument.html)
 
-{% include DocumentReference-AmandaAlzheimerOriginalDokument-json-html.xhtml %}
-
-##### De-ID.txt
-
-{% include DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument-json-html.xhtml %}
-
-##### Annotat.zip
-
-{% include DocumentReference-AmandaAlzheimerAnnotiertesDokument-json-html.xhtml %}
+(Jede Artefaktseite zeigt die JSON/XML-Serialisierungen mit Tabs.)
 
 Die folgenden FHIR-Ressourcen stellen die zum Beispiel zugehörigen FHIR Patienten- und Fall-Ressourcen dar. Diese FHIR-Ressourcen werden ausschließlich vom Originaldokument `Amanda_Alzheimer.txt` und der zugehörigen Dokumentreferenz verwendet.
 
-##### Amanda Alzheimer
-
-{% include Patient-AmandaAlzheimer-json-html.xhtml %}
-
-##### Einrichtungskontakt
-
-{% include Encounter-AmandaAlzheimerEinrichtungskontakt-json-html.xhtml %}
-
-##### Abteilungskontakt
-
-{% include Encounter-AmandaAlzheimerAbteilungskontakt-json-html.xhtml %}
-
-##### Versorgungsstellenkontakt
-
-{% include Encounter-AmandaAlzheimerVersorgungsstellenKontakt-json-html.xhtml %}
+- [Patient: Amanda Alzheimer](Patient-AmandaAlzheimer.html)
+- [Encounter: Einrichtungskontakt](Encounter-AmandaAlzheimerEinrichtungskontakt.html)
+- [Encounter: Abteilungskontakt](Encounter-AmandaAlzheimerAbteilungskontakt.html)
+- [Encounter: Versorgungsstellenkontakt](Encounter-AmandaAlzheimerVersorgungsstellenKontakt.html)
 
 <!-- TODO:REVIEW: the source referenced this example as AmandaAlzheimerVersorgungsstellenkontakt (lowercase k); the artifact id per the artifact table is AmandaAlzheimerVersorgungsstellenKontakt (capital K) - the include follows the artifact table -->
 

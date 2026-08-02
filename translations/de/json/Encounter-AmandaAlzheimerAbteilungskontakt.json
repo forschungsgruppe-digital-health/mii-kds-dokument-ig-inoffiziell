@@ -1,0 +1,25 @@
+{
+  "id" : "Encounter-AmandaAlzheimerAbteilungskontakt",
+  "baseLang" : "en",
+  "languages" : [{
+    "targetLang" : "de",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "inpatient encounter",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Abteilungskontakt",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Rheumatologie",
+      "target" : null
+    }]
+  }]
+}

@@ -12,7 +12,7 @@ Grundsätzlich soll mit dem Dokument-Profil ([MII PR Dokument Dokument](Structur
 <!-- TODO:REVIEW: die Quelle verlinkte dieses Bild auf die externe SVG-Datei unter
      https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-dokument/refs/heads/dev/input/plantuml/Anwendungsszenarien/InterneDokumentennutzung.svg
      (Raw-URL des Produktions-Repos); gemäß Migrationsregel durch das lokale Bild ersetzt -->
-![InterneDokumentennutzung](InterneDokumentennutzung.png)
+<div style="text-align: center;"><img src="InterneDokumentennutzung.png" alt="InterneDokumentennutzung" style="max-width: 100%;"/></div>
 
 Die *Interne Dokumentennutzung* umfasst die Archivierung, Verwaltung und Nutzung klinischer Dokumente innerhalb eines Krankenhauses oder einer klinischen Einrichtung. Dabei stehen die Datenintegrationszentren (`Standort`) als zentrale Instanzen für die Datenverwaltung im Fokus.
 
@@ -41,7 +41,7 @@ Neben den vorher beschriebenen Zwecken spielt die *Interne Dokumentennutzung* eb
 <!-- TODO:REVIEW: die Quelle verlinkte dieses Bild auf die externe SVG-Datei unter
      https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-dokument/refs/heads/dev/input/plantuml/Anwendungsszenarien/ExterneDokumentennutzung.svg
      (Raw-URL des Produktions-Repos); gemäß Migrationsregel durch das lokale Bild ersetzt -->
-![ExterneDokumentennutzung](ExterneDokumentennutzung.png)
+<div style="text-align: center;"><img src="ExterneDokumentennutzung.png" alt="ExterneDokumentennutzung" style="max-width: 100%;"/></div>
 
 Die *Externe Dokumentennutzung* zielt auf die Bereitstellung von klinischen Dokumenten und deren Metadaten für Forschungszwecke ab. Hierbei steht die Nutzung durch Wissenschaftler:innen im Vordergrund, die auf Basis der archivierten Daten neue Erkenntnisse gewinnen möchten.
 

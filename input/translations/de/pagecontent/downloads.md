@@ -89,7 +89,7 @@ Dokument zu den weiteren Paketen; die Zusammenhänge zwischen den MII Modulen
 sind grün dargestellt (siehe auch den Abschnitt
 [Bezüge zu anderen Modulen](index.html) auf der Startseite).
 
-![Paketabhaengigkeiten](Paketabhaengigkeiten.png)
+<div style="text-align: center;"><img src="Paketabhaengigkeiten.png" alt="Paketabhaengigkeiten" style="max-width: 100%;"/></div>
 
 <!-- TODO:REVIEW: Die Simplifier-Quelle (Referenzen.page.md) verlinkte an dieser
      Stelle das extern gerenderte SVG

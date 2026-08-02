@@ -7,4 +7,4 @@ Ein *Dokument* kann in Abhängigkeit vom Szenario einen Patientenbezug (`subject
 
 <!-- PlantUML-Quelle: input/plantuml/Informationsmodell.puml (gerendertes Bild: input/images/Informationsmodell.png) -->
 <!-- TODO:REVIEW Die Simplifier-Quellseite verlinkte das Bild auf die externe SVG-Datei im Produktions-Repository: https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-dokument/refs/heads/dev/input/plantuml/Informationsmodell.svg — gemäß Migrationsregel durch das lokale Bild ersetzt. -->
-![Informationsmodell](Informationsmodell.png)
+<div style="text-align: center;"><img src="Informationsmodell.png" alt="Informationsmodell" style="max-width: 100%;"/></div>

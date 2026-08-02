@@ -86,7 +86,7 @@ module Dokument to the other packages; the relationships between the MII modules
 are shown in green (see also the section [Related guides](index.html) on the
 home page).
 
-![Paketabhaengigkeiten](Paketabhaengigkeiten.png)
+<div style="text-align: center;"><img src="Paketabhaengigkeiten.png" alt="Paketabhaengigkeiten" style="max-width: 100%;"/></div>
 
 <!-- TODO:REVIEW: the Simplifier source (Referenzen.page.md) linked the
      externally rendered SVG

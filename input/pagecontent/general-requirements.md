@@ -13,7 +13,7 @@ Fundamentally, the Dokument profile ([MII PR Dokument Dokument](StructureDefinit
 <!-- TODO:REVIEW: the source wrapped this image in a link to the external SVG at
      https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-dokument/refs/heads/dev/input/plantuml/Anwendungsszenarien/InterneDokumentennutzung.svg
      (production repo raw URL); replaced with the local image per the migration rules. The diagram labels are German. -->
-![InterneDokumentennutzung](InterneDokumentennutzung.png)
+<div style="text-align: center;"><img src="InterneDokumentennutzung.png" alt="InterneDokumentennutzung" style="max-width: 100%;"/></div>
 
 *Internal document use* comprises the archiving, management, and use of clinical documents within a hospital or a clinical institution. The focus here is on the data integration centers (`Standort`) as the central instances for data management.
 
@@ -42,7 +42,7 @@ Beyond the purposes described above, *internal document use* also plays a role i
 <!-- TODO:REVIEW: the source wrapped this image in a link to the external SVG at
      https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-dokument/refs/heads/dev/input/plantuml/Anwendungsszenarien/ExterneDokumentennutzung.svg
      (production repo raw URL); replaced with the local image per the migration rules. The diagram labels are German. -->
-![ExterneDokumentennutzung](ExterneDokumentennutzung.png)
+<div style="text-align: center;"><img src="ExterneDokumentennutzung.png" alt="ExterneDokumentennutzung" style="max-width: 100%;"/></div>
 
 *External document use* is aimed at making clinical documents and their metadata available for research purposes. The focus here is on use by researchers who want to gain new insights on the basis of the archived data.
 

@@ -8,4 +8,4 @@ Depending on the scenario, a *Dokument* can have a patient reference (`subject`)
 
 <!-- PlantUML source: input/plantuml/Informationsmodell.puml (rendered image: input/images/Informationsmodell.png) -->
 <!-- TODO:REVIEW The Simplifier source page linked the image to the external SVG in the production repository: https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-dokument/refs/heads/dev/input/plantuml/Informationsmodell.svg — replaced with the local image per the migration rule. -->
-![Informationsmodell](Informationsmodell.png)
+<div style="text-align: center;"><img src="Informationsmodell.png" alt="Informationsmodell" style="max-width: 100%;"/></div>
