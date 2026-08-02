@@ -1,0 +1,17 @@
+{
+   "package-id" : "de.medizininformatikinitiative.kerndatensatz.dokument",
+   "version" : "2026.0.1",
+   "path" : "https://forschungsgruppe-digital-health.github.io/mii-kds-dokument-ig-inoffiziell/2026.0.1",
+   "mode" : "milestone",
+   "status" : "release",
+   "sequence" : "2026",
+   "desc" : "TODO:REVIEW (Gate D) - migration of the MII KDS Modul Dokument onto the MII KDS module template; not yet a release",
+   "first" : true,
+   "title" : "MII Implementation Guide Dokument",
+   "ci-build" : "https://forschungsgruppe-digital-health.github.io/mii-kds-dokument-ig-inoffiziell/branches/dev/",
+   "category" : "Research",
+   "introduction" : "Medizininformatik Initiative - KDS-Modul Dokument",
+   "registry-description" : "TODO:REVIEW (Gate D) - Medizininformatik Initiative - KDS-Modul Dokument",
+   "registry-country" : "de",
+   "registry-authority" : "Medical Informatics Initiative (MII)"
+}
