@@ -41,7 +41,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-dokument.c
   "name" : "MII_LM_Dokument",
   "title" : "MII LM Dokument",
   "status" : "draft",
-  "date" : "2026-08-05T14:56:04+00:00",
+  "date" : "2026-08-05T19:12:56+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "contact" : [{
     "name" : "Medizininformatik-Initiative",

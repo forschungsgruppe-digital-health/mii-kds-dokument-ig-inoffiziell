@@ -48,7 +48,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Dokument Fachgebiet",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-05T14:56:04+00:00",
+  "date" : "2026-08-05T19:12:56+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "contact" : [{
     "name" : "Medizininformatik-Initiative",
