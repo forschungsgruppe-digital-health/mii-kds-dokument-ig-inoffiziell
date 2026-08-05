@@ -48,7 +48,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Dokument Einrichtungart",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-08-05T19:59:45+00:00",
+  "date" : "2026-08-05T20:43:58+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "contact" : [{
     "name" : "Medizininformatik-Initiative",
