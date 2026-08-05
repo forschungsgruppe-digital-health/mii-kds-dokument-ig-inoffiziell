@@ -1,10 +1,10 @@
-# Guidance for Researchers - MII IG Dokument v2026.0.1
+# Anleitung für Forschende - MII IG Dokument v2026.0.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Anleitung**](guidance.md)
 * **Anleitung für Forschende**
 
-## Guidance for Researchers
+## Anleitung für Forschende
 
  Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde. Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie [hier](translationinfo.md). 
 

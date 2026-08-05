@@ -1,9 +1,9 @@
-# Guidance - MII IG Dokument v2026.0.1
+# Anleitung - MII IG Dokument v2026.0.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Anleitung**
 
-## Guidance
+## Anleitung
 
 Dieser Abschnitt bündelt die fachlichen Hinweise zur Umsetzung und Nutzung des Moduls **Dokument**.
 

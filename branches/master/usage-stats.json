@@ -96,6 +96,9 @@
       "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/StructureDefinition/translation": [
+      "ImplementationGuide.definition.page.page.page.title",
+      "ImplementationGuide.definition.page.page.title",
+      "ImplementationGuide.definition.page.title",
       "StructureDefinition.differential.element.comment",
       "StructureDefinition.differential.element.definition",
       "StructureDefinition.differential.element.short",

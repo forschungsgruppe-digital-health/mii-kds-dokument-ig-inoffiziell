@@ -1,9 +1,9 @@
-# Terminology - MII IG Dokument v2026.0.1
+# Terminologie - MII IG Dokument v2026.0.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Terminologie**
 
-## Terminology
+## Terminologie
 
 Beschreibung von eigenen ValueSets, Verwendung internationaler Terminologien, Lizenzen:
 

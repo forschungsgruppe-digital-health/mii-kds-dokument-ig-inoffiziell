@@ -1,10 +1,10 @@
-# UML Diagrams - MII IG Dokument v2026.0.1
+# UML-Diagramme - MII IG Dokument v2026.0.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Anleitung**](guidance.md)
 * **UML-Diagramme**
 
-## UML Diagrams
+## UML-Diagramme
 
  Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde. Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie [hier](translationinfo.md). 
 

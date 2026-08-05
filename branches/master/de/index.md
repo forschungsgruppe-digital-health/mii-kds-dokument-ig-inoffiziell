@@ -1,9 +1,9 @@
-# Home - MII IG Dokument v2026.0.1
+# Startseite - MII IG Dokument v2026.0.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Startseite**
 
-## Home
+## Startseite
 
 | | |
 | :--- | :--- |

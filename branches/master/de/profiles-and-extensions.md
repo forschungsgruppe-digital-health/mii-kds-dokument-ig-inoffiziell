@@ -1,9 +1,9 @@
-# Profiles and Extensions - MII IG Dokument v2026.0.1
+# Profile und Extensions - MII IG Dokument v2026.0.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Profile und Extensions**
 
-## Profiles and Extensions
+## Profile und Extensions
 
 Diese Seite führt die FHIR-Profile und Extensions des Moduls **Dokument** auf: das Profil [MII PR Dokument Dokument](StructureDefinition-mii-pr-dokument-dokument.md) und die Extension [MII EX Dokument NLP Processing Status](StructureDefinition-mii-ex-dokument-nlp-processing-status.md).
 

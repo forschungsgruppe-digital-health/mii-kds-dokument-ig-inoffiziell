@@ -3,7 +3,7 @@ MII_IG_Dokument : Validation Results
 
 err = 7, warn = 112, info = 397
 IG Publisher Version: 2.2.11 Out of date - current version is 2.3.0
-Generated Wed Aug 05 19:15:52 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.dokument#2026.0.1 (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument)
+Generated Wed Aug 05 20:54:00 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.dokument#2026.0.1 (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument)
  Build Errors : 0 / 17 / 0
  /home/runner/work/mii-kds-dokument-ig-inoffiziell/mii-kds-dokument-ig-inoffiziell/fsh-generated/resources/CapabilityStatement-mii-cps-dokument-capabilitystatement : 0 / 4 / 23
  /home/runner/work/mii-kds-dokument-ig-inoffiziell/mii-kds-dokument-ig-inoffiziell/fsh-generated/resources/CodeSystem-mii-cs-dokument-nlp-processing-status : 0 / 2 / 3

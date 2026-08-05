@@ -1,9 +1,9 @@
-# Conformance - MII IG Dokument v2026.0.1
+# Konformität - MII IG Dokument v2026.0.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Konformität**
 
-## Conformance
+## Konformität
 
 ### Konformität
 

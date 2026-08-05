@@ -1,10 +1,10 @@
-# Changelog - MII IG Dokument v2026.0.1
+# Änderungshistorie - MII IG Dokument v2026.0.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Versionierung**](version-history.md)
 * **Änderungshistorie**
 
-## Changelog
+## Änderungshistorie
 
 Diese Seite enthält einen Changelog mit Beschreibung der Änderungen zwischen Versionen.
 

@@ -1,10 +1,10 @@
-# Guidance for Implementers - MII IG Dokument v2026.0.1
+# Anleitung für Implementierende - MII IG Dokument v2026.0.1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Anleitung**](guidance.md)
 * **Anleitung für Implementierende**
 
-## Guidance for Implementers
+## Anleitung für Implementierende
 
 ### Anleitung für Implementierende
 
