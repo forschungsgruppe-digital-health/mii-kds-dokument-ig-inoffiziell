@@ -1,11 +1,11 @@
-# Recipe: extend the translations of your module IG (menu, footer, content, resources)
+# Recipe: extend the translations of your module IG (menu, footer, content, resources, page titles)
 
 **Goal.** Add or extend a translation for any part of your module IG — the
 navigation **menu**, the **footer / base UI chrome**, the **narrative content**,
-and the **conformance resources**.
+the **conformance resources**, and the **page titles**.
 
 **Prerequisites.** A module that builds ([create a new module](create-a-new-module.md)).
-The four layers are independent — translate only the ones you need.
+The five layers are independent — translate only the ones you need.
 
 **Language policy.** This module is **English-default with a German translation**,
 the same model as kerndatensatz-basis: English is the default rendering
@@ -21,16 +21,17 @@ the recommended second rendering (`i18n-lang: [de]`, sources under
 
 ---
 
-## The four layers at a glance
+## The five layers at a glance
 
-Your IG's visible text comes from four places, each with its **own** mechanism:
+Your IG's visible text comes from five places, each with its **own** mechanism:
 
 | # | Layer | Example text | Where the translation goes | You maintain it? |
 |---|---|---|---|---|
 | 1 | **Narrative content** | your page prose | `input/translations/<lang>/pagecontent/<same-filename>.md` | **yes** |
 | 2 | **Menu** | `Startseite`, `Anleitung` | `input/translations/<lang>/includes/menu.xml` | **yes** |
-| 3 | **Base UI chrome** (footer, buttons, boilerplate) | `Erstellt <date>`, `Inhaltsverzeichnis` | the **IG template**'s `translations/` | **no — inherited** |
+| 3 | **Base UI chrome** (footer, buttons, boilerplate) | `Erstellt <date>` | the **IG template**'s `translations/` | **no — inherited** |
 | 4 | **Conformance resources** | a profile's `description` | `input/translations/<lang>/<ResourceType>-<id>.po` | **yes** |
+| 5 | **Page titles** (breadcrumbs, table of contents, browser title) | `Anleitung`, `Inhaltsverzeichnis` | `input/translations/<lang>/ImplementationGuide-<ig-id>.po` | **yes** |
 
 ---
 
@@ -135,15 +136,70 @@ msgstr "Minimales Beispielprofil …"
 | Resource-level `description` (StructureDefinition, CodeSystem, Questionnaire), and a StructureDefinition's element `definition` / `comment` / `requirements` | **Yes** |
 | `CodeSystem.concept.display` / `concept.definition` | **No** — localize with a language-tagged `designation` in the resource |
 | Resource `title` | **No** — it stays in the source language (English) in every rendering |
-| ValueSet texts, ImplementationGuide title/description | **No** — a supplement is silently ignored |
+| ValueSet texts | **No** — a supplement is silently ignored |
+| The IG's own `title` / `description` / `publisher` / `name` | **Not verified** on 2.2.11 — a unit in `ImplementationGuide-<ig-id>.po` may or may not reach them |
 
-> **Do not "simulate" the unsupported cases.** A `ValueSet-*.po` or
-> `ImplementationGuide-*.po` is ignored — worse than an error, because it gives a
-> false sense of coverage.
+> **Do not "simulate" the unsupported cases.** A `ValueSet-*.po` is ignored —
+> worse than an error, because it gives a false sense of coverage.
+>
+> `ImplementationGuide-<ig-id>.po` is the **exception**: it is not a resource
+> supplement but the page-title catalogue, and it does render. See §5.
 
 ---
 
-### 5. Build and check
+### 5. Page titles (breadcrumbs, table of contents, browser title)
+
+The `pages:` tree in `sushi-config.yaml` carries **one** `title` per page, in the
+default language. Their translations live in a gettext catalogue named after the
+IG resource:
+
+```text
+input/translations/de/ImplementationGuide-mii-ig-dokument.po
+```
+
+One unit per page title, keyed by the English title:
+
+```po
+# A short title used to represent this page in navigational structures such
+# as table of contents, bread crumbs, etc.
+#: ImplementationGuide.definition.page.title
+msgid "Guidance"
+msgstr "Anleitung"
+```
+
+- The authoritative set of titles is the **`pages:` tree of the generated IG
+  resource** (`fsh-generated/resources/ImplementationGuide-<ig-id>.json` after
+  `sushi .`), walked recursively **including the root page** — whose title is
+  `Table of Contents`. It contains pages that are not menu entries (Table of
+  Contents, Downloads, Translation Information, Metadata Overview), so the menu
+  alone is not a complete list.
+- An **empty `msgstr` means untranslated**: that one entry falls back to the
+  default language. Nothing breaks; the breadcrumb just stays English.
+- Regenerate the catalogue after every change to the `pages:` tree. The
+  `mii-ig-migration` skill ships `scripts/gen-page-title-po.py`, which
+  regenerates non-destructively — an existing non-empty `msgstr` survives:
+
+  ```sh
+  gen-page-title-po.py \
+    fsh-generated/resources/ImplementationGuide-mii-ig-dokument.json \
+    - de input/translations/de/ImplementationGuide-mii-ig-dokument.po
+  ```
+
+  Exit code `1` means "written, but some titles are still untranslated" — a
+  review queue, not a build failure.
+- The language must appear in **both** `i18n-lang` **and** `translation-sources`
+  in `sushi-config.yaml`. A language missing from `translation-sources` has its
+  `.po` files **silently ignored**.
+
+**Verified on IG Publisher 2.2.11:** with this catalogue in place the `/de/`
+breadcrumbs render German down to the root label `Inhaltsverzeichnis`, the table
+of contents page body renders German, and the browser `<title>` renders German.
+**Not** known to be driven by it: the left-hand navigation menu — that has its
+own per-language file (§2).
+
+---
+
+### 6. Build and check
 
 ```sh
 sushi .
@@ -158,8 +214,12 @@ sushi .
 3. A translated page renders in German on `/de/`; an untranslated one falls back
    to the English source.
 4. A translated resource's `description` is German on that resource's own `/de/`
-   page, English on `/en/`. The artifacts index and the table of contents keep
-   the default-language (English) title and description in **both** trees.
+   page, English on `/en/`. The artifacts index keeps the default-language
+   (English) resource title and description in **both** trees.
+5. On a `/de/` page the breadcrumb reads `Inhaltsverzeichnis / <deutscher
+   Seitentitel>` — not `Table of Contents / <English title>`. If it is still
+   English, check §5 (missing unit, empty `msgstr`, or `de` missing from
+   `translation-sources`).
 
 The build must stay green (QA errors = 0).
 
@@ -181,6 +241,7 @@ moves between them.
 | Base/footer labels blank in some language | The template lacks that language's UI-string catalog | Fix in the template repo (§3); make sure your `ig-template/` mirror is current |
 | A translated page does not appear on `/de/` | It is a `<name>-de.md` sibling, or the file name differs from the English source page | Move it to `input/translations/de/pagecontent/<same-filename>` (§1) |
 | A resource supplement does nothing | `msgid` mismatch, wrong file name, or an untranslatable field | Copy the `msgid` from `fsh-generated/resources/…`; check §4 |
+| Breadcrumb/page title stays English on `/de/` | No unit for that title, an empty `msgstr`, or `de` is missing from `translation-sources` | Regenerate `ImplementationGuide-<ig-id>.po` and fill the `msgstr` (§5) |
 
 ---
 
@@ -193,24 +254,15 @@ moves between them.
 3. Ask the template repo to vendor that language's base UI-string catalogs (§3),
    otherwise the footer/base labels render blank in the new language.
 
-## Known limitation: breadcrumbs and page titles of `pages:`-tree pages
+## Breadcrumbs and page titles of `pages:`-tree pages
 
-The IG Publisher (verified with 2.2.11) localizes the breadcrumbs of the pages
-it generates itself (e.g. `artifacts.html` → "Artefaktübersicht") but renders
-the pages defined in `sushi-config.yaml`'s `pages:` tree with their single
-(English) `title` in **every** language variant — the generated page data
-carries `titlelang: {en: "Guidance", de: "Guidance"}` — and even its localized
-breadcrumb rows keep the English "Table of Contents" label. Translation
-supplements do not reach these fields on this toolchain (see the rendering
-table in the translation skill).
+Page titles are **layer 5** — translate them in
+`input/translations/<lang>/ImplementationGuide-<ig-id>.po`, see [§5](#5-page-titles-breadcrumbs-table-of-contents-browser-title).
 
-This template therefore **remaps the breadcrumb itself** (an override of the
-base `fragment-pagebegin.html`): on `/de/` pages it renders
-"Inhaltsverzeichnis" for the toc label and applies the optional module file
-`input/includes/breadcrumb-titles-de.txt` — one `English Title => Deutscher
-Titel` line per page, best generated mechanically from your two `menu.xml`
-files (pair the `<a>` labels by `href`; the migration skill does exactly
-this). Without that file, page titles in `/de/` breadcrumbs stay English —
-cosmetic, and still not a defect of your module. Do not try sibling pages or
-menu tricks (both break the i18n model); the underlying publisher behavior
-needs an upstream change and should be re-verified per publisher bump.
+Historical note: an earlier revision of this template rewrote the rendered
+breadcrumb HTML in an override of the base `fragment-pagebegin.html`, driven by
+a mapping file `input/includes/breadcrumb-titles-de.txt`. That workaround rested
+on a misdiagnosis — the publisher **does** localize `pages:`-tree titles, through
+the catalogue above — and has been retired. Neither file exists any more; do not
+reintroduce them. Do not try sibling pages or menu tricks for page titles either
+(both break the i18n model).

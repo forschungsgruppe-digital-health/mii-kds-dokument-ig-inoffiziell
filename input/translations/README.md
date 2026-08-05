@@ -25,6 +25,10 @@ input/
         │                            #   names as input/pagecontent/)
         ├── includes/                # Translated fragments (e.g. menu.xml)
         ├── intro-notes/             # Translated per-artifact intro/notes
+        ├── ImplementationGuide-<ig-id>.po
+        │                            # Page titles of the sushi-config `pages:`
+        │                            #   tree — breadcrumbs, table of contents,
+        │                            #   browser <title>
         └── *.po                     # Resource translations (PO format), e.g.
                                      #   StructureDefinition-<id>.po
 ```
@@ -46,6 +50,12 @@ input/
    matches it to the English source by file name.
 4. **Menu:** maintain the translated `menu.xml` under
    `input/translations/de/includes/`.
+5. **Page titles:** keep `ImplementationGuide-<ig-id>.po` in step with the
+   `pages:` tree of `sushi-config.yaml` — one unit per page title, tagged
+   `#: ImplementationGuide.definition.page.title`. It drives the breadcrumbs,
+   the table of contents and the browser title on `/de/`; an empty `msgstr`
+   falls back to English. See
+   [`docs/recipes/add-translation.md`](../../docs/recipes/add-translation.md) §5.
 
 Translations placed under `input/translations/de/` are preserved across
 rebuilds; everything under the repo-root `translations/` directory is
