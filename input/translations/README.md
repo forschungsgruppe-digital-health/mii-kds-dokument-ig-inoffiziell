@@ -27,8 +27,9 @@ input/
         ├── intro-notes/             # Translated per-artifact intro/notes
         ├── ImplementationGuide-<ig-id>.po
         │                            # Page titles of the sushi-config `pages:`
-        │                            #   tree — breadcrumbs, table of contents,
-        │                            #   browser <title>
+        │                            #   tree — breadcrumbs and the browser
+        │                            #   <title>. NOT the toc.html body, NOT
+        │                            #   the menu (that is includes/menu.xml)
         └── *.po                     # Resource translations (PO format), e.g.
                                      #   StructureDefinition-<id>.po
 ```
@@ -51,11 +52,30 @@ input/
 4. **Menu:** maintain the translated `menu.xml` under
    `input/translations/de/includes/`.
 5. **Page titles:** keep `ImplementationGuide-<ig-id>.po` in step with the
-   `pages:` tree of `sushi-config.yaml` — one unit per page title, tagged
-   `#: ImplementationGuide.definition.page.title`. It drives the breadcrumbs,
-   the table of contents and the browser title on `/de/`; an empty `msgstr`
-   falls back to English. See
+   `pages:` tree of `sushi-config.yaml` — one unit per distinct page title,
+   tagged `#: ImplementationGuide.definition.page.title`, **including the root
+   page** (title `Table of Contents`). Verified on IG Publisher 2.2.11, it
+   drives the **breadcrumbs** (down to the root label `Inhaltsverzeichnis`) and
+   the browser **`<title>` tag** on `/de/`; an empty `msgstr` falls back to
+   English. See
    [`docs/recipes/add-translation.md`](../../docs/recipes/add-translation.md) §5.
+
+   Two limits, so nobody hunts a phantom bug:
+
+   - The **body of `toc.html`** — the generated hierarchy table — is **not**
+     localized: `/de/toc.html` renders `2.1 Guidance for Researchers` in English
+     even though the catalogue supplies `Anleitung für Forschende` and the
+     breadcrumb on that page is German. That is a **publisher limitation, not a
+     missing unit**; no catalogue change fixes it.
+   - The **navigation menu** is German because of
+     `input/translations/de/includes/menu.xml` (step 4), **not** because of this
+     catalogue.
+
+   To update the catalogue, follow §5a (by hand) or §5b (with
+   `gen-page-title-po.py`, which is published in the
+   [`agent-skills`](https://github.com/forschungsgruppe-digital-health/agent-skills)
+   catalog under `skills/mii-ig-migration/scripts/` — it is not part of this
+   repository) of the recipe.
 
 Translations placed under `input/translations/de/` are preserved across
 rebuilds; everything under the repo-root `translations/` directory is

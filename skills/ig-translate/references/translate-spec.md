@@ -23,9 +23,18 @@ Examples (for a "Dokument" module):
 - `input/translations/de/StructureDefinition-mii-lm-dokument.po`  (Logical Model = StructureDefinition)
 - `input/translations/de/CodeSystem-mii-cs-dokument-nlp-processing-status.po`
 
-> A wrong name (for example `ImplementationGuide-…po`, `menu.po`, or any
-> non-`{type}-{id}` name) is **ignored** by the Publisher (log: "name is not
-> {type}-{id}.xxx" / "resource type … is not supported").
+> A wrong name (for example `menu.po` or any non-`{type}-{id}` name) is
+> **ignored** by the Publisher (log: "name is not {type}-{id}.xxx" / "resource
+> type … is not supported"). The same applies to a *resource-text* supplement
+> for an unsupported type — a `ValueSet-….po` does nothing.
+>
+> **Exception — `ImplementationGuide-<ig-id>.po`.** As a *resource-text*
+> supplement it is indeed unsupported (the IG's own `title` / `description` are
+> not verified to render). But the same file is also the **page-title
+> catalogue**: its `#: ImplementationGuide.definition.page.title` units do
+> render — in the breadcrumbs and the browser `<title>` of the translated
+> rendering (verified on IG Publisher 2.2.11). Not in the `toc.html` body and
+> not in the menu. See `docs/recipes/add-translation.md` §5.
 
 **`.po` format** (preferred; case-insensitive matching, plural forms):
 
