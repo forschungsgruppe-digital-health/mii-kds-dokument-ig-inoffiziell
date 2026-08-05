@@ -1,0 +1,76 @@
+# de.medizininformatikinitiative.kerndatensatz.dokument#2026.0.1: MII IG Dokument(en)
+
+## Pages
+
+* [Home](en/index.md)
+* [Translation Information](en/translationinfo.md)
+* [Logical Models](en/logical-models.md)
+* [Security and Privacy](en/security-and-privacy.md)
+* [UML Diagrams](en/uml-diagrams.md)
+* [General Requirements](en/general-requirements.md)
+* [Conformance](en/conformance.md)
+* [Changelog](en/changes.md)
+* [Versioning](en/version-history.md)
+* [Profiles and Extensions](en/profiles-and-extensions.md)
+* [Downloads](en/downloads.md)
+* [Artifacts Summary](en/artifacts.md)
+* [Guidance for Implementers](en/implementer-guidance.md)
+* [Capability Statements](en/capability-statements.md)
+* [Search Parameters and Operations](en/search-parameters-and-operations.md)
+* [Examples](en/examples.md)
+* [Handling Missing Data](en/missing-data.md)
+* [Must Support](en/must-support.md)
+* [Metadata Overview](en/metadata.md)
+* [Datasets and Descriptions](en/datasets-and-descriptions.md)
+* [Guidance](en/guidance.md)
+* [Guidance for Researchers](en/researcher-guidance.md)
+* [Terminology](en/terminology.md)
+
+## Resources
+
+### CodeSystems
+
+* [MII VS Dokument NLP Processing Status](en/CodeSystem-mii-cs-dokument-nlp-processing-status.md)
+
+### ValueSets
+
+* [MII VS Dokument Einrichtungart](en/ValueSet-mii-vs-dokument-einrichtungsart.md)
+* [MII VS Dokument Fachgebiet](en/ValueSet-mii-vs-dokument-fachgebiet.md)
+* [MII VS Dokument Format Code](en/ValueSet-mii-vs-dokument-format-code.md)
+* [MII VS Dokument NLP Processing Status](en/ValueSet-mii-vs-dokument-nlp-processing-status.md)
+* [MII VS Dokument SCT Dokument Kategorie](en/ValueSet-mii-vs-dokument-sct-dokument-kategorie.md)
+* [MII VS Dokument SCT Dokument Typ](en/ValueSet-mii-vs-dokument-sct-dokument-typ.md)
+
+### Logicals
+
+* [MII LM Dokument](en/StructureDefinition-mii-lm-dokument.md)
+
+### Resource Profiles
+
+* [MII PR Dokument Dokument](en/StructureDefinition-mii-pr-dokument-dokument.md)
+
+### Extensions
+
+* [MII EX Dokument NLP Processing Status](en/StructureDefinition-mii-ex-dokument-nlp-processing-status.md)
+
+### CapabilityStatements
+
+* [MII CPS Dokument CapabilityStatement](en/CapabilityStatement-mii-cps-dokument-capabilitystatement.md)
+
+### ImplementationGuides
+
+* [MII IG Dokument](en/ImplementationGuide-mii-ig-dokument.md)
+
+### Parameters
+
+* [mii-param-dokument-manifest](en/Parameters-mii-param-dokument-manifest.md)
+
+### Examples
+
+* [AmandaAlzheimerAnnotiertesDokument (DocumentReference)](en/DocumentReference-AmandaAlzheimerAnnotiertesDokument.md)
+* [AmandaAlzheimerDeIdentifiziertesDokument (DocumentReference)](en/DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.md)
+* [AmandaAlzheimerOriginalDokument (DocumentReference)](en/DocumentReference-AmandaAlzheimerOriginalDokument.md)
+* [AmandaAlzheimerAbteilungskontakt (Encounter)](en/Encounter-AmandaAlzheimerAbteilungskontakt.md)
+* [AmandaAlzheimerEinrichtungskontakt (Encounter)](en/Encounter-AmandaAlzheimerEinrichtungskontakt.md)
+* [AmandaAlzheimerVersorgungsstellenKontakt (Encounter)](en/Encounter-AmandaAlzheimerVersorgungsstellenKontakt.md)
+* [AmandaAlzheimer (Patient)](en/Patient-AmandaAlzheimer.md)
