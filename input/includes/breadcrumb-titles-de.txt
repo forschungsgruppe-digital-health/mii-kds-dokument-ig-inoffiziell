@@ -1,0 +1,23 @@
+# GENERATED (mii-ig-migration @ v0.7.0) from input/includes/menu.xml + input/translations/de/includes/menu.xml
+# — pairs by href; regenerate after menu changes. Applied by the template (>v0.4.0) to /de/ breadcrumbs.
+Home => Startseite
+Guidance => Anleitung
+Guidance for Researchers => Anleitung für Forschende
+Guidance for Implementers => Anleitung für Implementierende
+Datasets and Descriptions => Datensätze und Beschreibungen
+UML Diagrams => UML-Diagramme
+Conformance => Konformität
+General Requirements => Allgemeine Anforderungen
+Must Support => Must-Support
+Handling Missing Data => Umgang mit fehlenden Daten
+Security and Privacy => Sicherheit und Datenschutz
+Artifacts Summary => Artefakt-Übersicht
+Profiles and Extensions => Profile und Extensions
+Terminology => Terminologie
+Capability Statements => CapabilityStatements
+Search Parameters and Operations => Suchparameter und Operationen
+Logical Models => Logische Modelle
+Examples => Beispiele
+Versioning => Versionierung
+Changelog => Änderungshistorie
+Metadata => Metadaten
