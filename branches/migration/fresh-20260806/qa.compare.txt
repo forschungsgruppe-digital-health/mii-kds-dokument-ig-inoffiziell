@@ -5,26 +5,26 @@ err = 7, warn = 112, info = 390
 $--
 Generated $--. FHIR version $-- for de.medizininformatikinitiative.kerndatensatz.dokument#$-- (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument)
  Build Errors : 0 / 17 / 0
- /ws/fsh-generated/resources/CapabilityStatement-mii-cps-dokument-capabilitystatement : 0 / 4 / 23
- /ws/fsh-generated/resources/CodeSystem-mii-cs-dokument-nlp-processing-status : 0 / 2 / 2
- /ws/fsh-generated/resources/DocumentReference-AmandaAlzheimerAnnotiertesDokument : 0 / 0 / 2
- /ws/fsh-generated/resources/DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument : 0 / 0 / 2
- /ws/fsh-generated/resources/DocumentReference-AmandaAlzheimerOriginalDokument : 0 / 0 / 2
- /ws/fsh-generated/resources/Encounter-AmandaAlzheimerAbteilungskontakt : 0 / 2 / 3
- /ws/fsh-generated/resources/Encounter-AmandaAlzheimerEinrichtungskontakt : 0 / 2 / 3
- /ws/fsh-generated/resources/Encounter-AmandaAlzheimerVersorgungsstellenKontakt : 0 / 2 / 3
- /ws/fsh-generated/resources/ImplementationGuide-mii-ig-dokument : 1 / 6 / 42
- /ws/fsh-generated/resources/Patient-AmandaAlzheimer : 0 / 1 / 1
- /ws/fsh-generated/resources/StructureDefinition-mii-ex-dokument-nlp-processing-status : 0 / 0 / 21
- /ws/fsh-generated/resources/StructureDefinition-mii-lm-dokument : 0 / 66 / 26
- /ws/fsh-generated/resources/StructureDefinition-mii-pr-dokument-dokument : 0 / 0 / 265
- /ws/fsh-generated/resources/ValueSet-mii-vs-dokument-einrichtungsart : 3 / 5 / 3
- /ws/fsh-generated/resources/ValueSet-mii-vs-dokument-fachgebiet : 1 / 5 / 3
- /ws/fsh-generated/resources/ValueSet-mii-vs-dokument-format-code : 0 / 5 / 4
- /ws/fsh-generated/resources/ValueSet-mii-vs-dokument-nlp-processing-status : 0 / 2 / 4
- /ws/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-kategorie : 1 / 5 / 2
- /ws/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-typ : 1 / 5 / 2
- /ws/input/resources/Parameters-expansion-manifest : 0 / 0 / 1
+ /w/fsh-generated/resources/CapabilityStatement-mii-cps-dokument-capabilitystatement : 0 / 4 / 23
+ /w/fsh-generated/resources/CodeSystem-mii-cs-dokument-nlp-processing-status : 0 / 2 / 2
+ /w/fsh-generated/resources/DocumentReference-AmandaAlzheimerAnnotiertesDokument : 0 / 0 / 2
+ /w/fsh-generated/resources/DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument : 0 / 0 / 2
+ /w/fsh-generated/resources/DocumentReference-AmandaAlzheimerOriginalDokument : 0 / 0 / 2
+ /w/fsh-generated/resources/Encounter-AmandaAlzheimerAbteilungskontakt : 0 / 2 / 3
+ /w/fsh-generated/resources/Encounter-AmandaAlzheimerEinrichtungskontakt : 0 / 2 / 3
+ /w/fsh-generated/resources/Encounter-AmandaAlzheimerVersorgungsstellenKontakt : 0 / 2 / 3
+ /w/fsh-generated/resources/ImplementationGuide-mii-ig-dokument : 1 / 6 / 42
+ /w/fsh-generated/resources/Patient-AmandaAlzheimer : 0 / 1 / 1
+ /w/fsh-generated/resources/StructureDefinition-mii-ex-dokument-nlp-processing-status : 0 / 0 / 21
+ /w/fsh-generated/resources/StructureDefinition-mii-lm-dokument : 0 / 66 / 26
+ /w/fsh-generated/resources/StructureDefinition-mii-pr-dokument-dokument : 0 / 0 / 265
+ /w/fsh-generated/resources/ValueSet-mii-vs-dokument-einrichtungsart : 3 / 5 / 3
+ /w/fsh-generated/resources/ValueSet-mii-vs-dokument-fachgebiet : 1 / 5 / 3
+ /w/fsh-generated/resources/ValueSet-mii-vs-dokument-format-code : 0 / 5 / 4
+ /w/fsh-generated/resources/ValueSet-mii-vs-dokument-nlp-processing-status : 0 / 2 / 4
+ /w/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-kategorie : 1 / 5 / 2
+ /w/fsh-generated/resources/ValueSet-mii-vs-dokument-sct-dokument-typ : 1 / 5 / 2
+ /w/input/resources/Parameters-expansion-manifest : 0 / 0 / 1
 </table>
 == n/a ==
 WARNING: ImplementationGuide.dependency[2].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
@@ -37,8 +37,8 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource DocumentReference/AmandaAlzheimerOriginalDokument.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Encounter/AmandaAlzheimerVersorgungsstellenKontakt.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Parameters/mii-param-dokument-manifest.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: /ws/output/de/profiles-and-extensions.html: The html source has duplicate anchor Ids: end-xhtml
-WARNING: /ws/output/en/profiles-and-extensions.html: The html source has duplicate anchor Ids: dokument-documentreference,end-xhtml
+WARNING: /w/output/de/profiles-and-extensions.html: The html source has duplicate anchor Ids: end-xhtml
+WARNING: /w/output/en/profiles-and-extensions.html: The html source has duplicate anchor Ids: dokument-documentreference,end-xhtml
 WARNING: 1: An HTML fragment from the set [ip-statements.xhtml, ip-statements.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml, cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml, dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
