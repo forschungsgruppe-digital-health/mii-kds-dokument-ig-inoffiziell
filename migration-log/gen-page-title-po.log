@@ -1,0 +1,15 @@
+2026-08-06T15:53:55Z  INFO   5.5  gen-page-title-po  params  ig=fsh-generated/resources/ImplementationGuide-mii-ig-dokument.json seed=migration-log/menu-titles-de.txt lang=de out=input/translations/de/ImplementationGuide-mii-ig-dokument.po
+2026-08-06T15:53:55Z  INFO   5.5  gen-page-title-po  seed  path=migration-log/menu-titles-de.txt  lines=34 entries=33 matched=23 applied=0 unused=10
+2026-08-06T15:53:55Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Artifacts'
+2026-08-06T15:53:55Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Artifacts Summary'
+2026-08-06T15:53:55Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Changelog'
+2026-08-06T15:53:55Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Guidance for Implementers'
+2026-08-06T15:53:55Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Guidance for Researchers'
+2026-08-06T15:53:55Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Handling Missing Data'
+2026-08-06T15:53:55Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Rendering Artifacts'
+2026-08-06T15:53:55Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Rendering Artifacts (demo — delete me)'
+2026-08-06T15:53:55Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='UML Diagrams'
+2026-08-06T15:53:55Z  WARN   5.5  gen-page-title-po  seed entry unused (no such page title)  title='Versioning'
+2026-08-06T15:53:55Z  INFO   5.5  gen-page-title-po  written  out=input/translations/de/ImplementationGuide-mii-ig-dokument.po pages=23 units=23 translated=23 untranslated=0 carried_over=23 preserved_foreign=2 header_preserved=False
+2026-08-06T15:53:55Z  WARN   5.5  gen-page-title-po  unit dropped (no longer in the pages: tree)  title='Rendering Artifacts'
+2026-08-06T15:53:55Z  INFO   5.5  gen-page-title-po  result  exit=0  every page title translated

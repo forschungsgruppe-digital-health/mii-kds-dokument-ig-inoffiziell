@@ -1,0 +1,3 @@
+• Quelle (unmigriert 9f76fed)  [lokaler Pfad, static] -> mii-ig-dokument-report.md + mii-ig-dokument-stats.json
+• Migriert (fresh-20260806)    [lokaler Pfad, static] -> mii-ig-dokument-migriert-fresh-20260806-report.md + mii-ig-dokument-migriert-fresh-20260806-stats.json
+• Vergleichsreport (2 IGs) -> compare-report.md

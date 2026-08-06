@@ -1,0 +1,4 @@
+2026-08-06T16:08:37Z  INFO   5.4  fql-scan  params  rules=/tmp/kds-dokument-run-20260806/agent-skills-v0130/skills/mii-ig-migration/references/fql-rules.tsv  targets= input/pagecontent input/translations  defaulted=0
+2026-08-06T16:08:37Z  INFO   5.4  fql-scan  target  path=input/pagecontent  kind=dir  files=22
+2026-08-06T16:08:37Z  INFO   5.4  fql-scan  target  path=input/translations  kind=dir  files=22
+2026-08-06T16:08:39Z  INFO   5.4  fql-scan  result  mapped=0 unknown=0 files=44  exit=0  no directives found
