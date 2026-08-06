@@ -212,3 +212,64 @@ page; the cause, the fix and the residue are the `template-demo-page-removed` WA
 * **CalVer `YYYY.n.n`** — the MII's version scheme; not SemVer.
 * **Gate A/B/C/D** — the four mandatory human reviews: identity, narrative, language, release.
 * **`TODO:REVIEW`** — a marker meaning *a human must look*; never a guess left in place.
+
+## Post-run verification (independent re-measurement, 2026-08-06)
+
+Everything below was re-run *after* the migration commit, against the same pinned skill
+(`mii-ig-migration` @ `v0.13.0`, clone at `eb854b5`) and the same artefacts, to check the claims above
+rather than trust them. Nothing here changed a migration input; the two file changes this section
+brought are the run logs (below) and this text.
+
+| Claim above | How it was re-checked | Result |
+|---|---|---|
+| master was reset to the pristine upstream mirror | compared commit **and tree** sha of `master` in this sandbox against `medizininformatik-initiative/kerndatensatz-dokument@master` (GET only) | `9f76fed8…` / tree `66ebc189…` **on both sides** — bit-identical, not merely same-message |
+| the Simplifier guide cannot be pinned (D13) | re-ran `simplifier-discover.sh --org koordinationsstellemii --module dokument` from the pinned skill | reproduced hop-for-hop: hop1 200/142233 B/23 packages → hop2 project `mii-erweiterungsmodul-dokument` → hop3 200/1647 B/1 key `medizininformatikinitiative-dokument` → hop4 `no-published-version:` **preview only**, script exit 1. The block is real; **0 narrative pages harvested from the rendered guide** |
+| IG Publisher 7 errors / 112 warnings / 390 info | read `output/qa.txt` of the migrated build | `err = 7, warn = 112, info = 390`, `0 broken links` |
+| baseline (unmigrated source, same toolchain) 1 error | read `output/qa.txt` of the baseline build | `err = 1, warn = 103, info = 24`, `0 broken links` |
+| 1 of the 7 is pre-existing, 6 are configuration-induced | diffed the `ERROR:` lines of both qa.txt files | the baseline's **only** error is `ImplementationGuide.dependsOn[2]: The URL should refer directly to the ImplementationGuide resource` — **the same line, verbatim**, in the migrated build. The other 6 are all `ValueSet.compose.include[n].filter[0]` on `mii-vs-dokument-{einrichtungsart×3, fachgebiet, sct-dokument-kategorie, sct-dokument-typ}`, each naming SNOMED version `…/900000000000207008/version/20250701` as not found and listing `20240201` / `20250201` among the valid ones. Configuration, as reported — D12 |
+| run log integrity | `grep` over `migration-log/run.log` | 756 lines; `silent-partial-success:` **0 hits**; `WARN`/`ERROR` **48 lines**; exactly **1** `ERROR` (the first IG Publisher run, the template demo page — the `template-demo-page-removed` WARN and D14) |
+| German breadcrumb renders in German | parsed the built `output/de/index.html` and `output/en/index.html` | DE `<title>` *Startseite - MII IG Dokument v2026.0.1*, breadcrumb *Inhaltsverzeichnis / Startseite*; EN *Home …*, *Table of Contents / Home*; `/index.html` is the `langs=["en","de"]` redirect shim |
+| page set | counted the working tree | 18 authored `*.page.md` in `implementation-guides/`, **22** `input/pagecontent/*.md`, **22** `input/translations/de/pagecontent/*.md`, **0** residual `{directive:}` occurrences in either |
+
+### One Definition-of-Done item the run never executed — now measured
+
+The skill's Definition of Done requires `parent-snapshots.sh detect` to exit 0 **for every parent**
+(§5.1b.5). `run.log` contains no `5.1b.5` line at all: the step was never run and never logged. The
+condition it guards did not arise — SUSHI reported 0 errors, and its "is missing a snapshot. Snapshot
+is required for import." signal never appeared — but "it did not fire" is an inference, so it was
+measured:
+
+| Parent (source pin) | `detect` result |
+|---|---|
+| `de.medizininformatikinitiative.kerndatensatz.base@2026.0.0` | `structure_definitions=14 with_snapshot=14 without_snapshot=0`, derivation chain flat, **exit 0** |
+| `de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0` | `structure_definitions=2 with_snapshot=2 without_snapshot=0`, **exit 0** |
+| `de.ihe-d.terminology@3.0.1` | `no-structuredefinitions: the package contains none`, **exit 2** |
+| `dvmd.kdl.r4@2025.0.1` | `no-structuredefinitions:`, **exit 2** |
+| `ihe.formatcode.fhir@1.4.0` | `no-structuredefinitions:` , **exit 2** |
+
+The three `exit 2` packages are terminology-only (CodeSystems/ValueSets); no profile in this module
+derives from them, so they are not parents in the §5.1b.5 sense. The script says so rather than
+reporting a misleading "all snapshots present" over an empty survey. **No snapshot was generated and
+none was needed.**
+
+### The run logs now travel with the report
+
+`.gitignore` carried a blanket `*.log`, so the protocol section above cited `migration-log/run.log`
+while that file was **not in the branch** — the protocol was unverifiable from the PR alone. The
+ignore now exempts `migration-log/*.log` and the logs are committed: `run.log` (756 lines),
+`qa-build.log`, `sushi-build.log`, `sushi-verify.log`, `sushi-pages.log`, `fql-scan.log`,
+`fql-scan-strict.log`, `gen-page-title-po.log`, `ig-analysis.log`.
+
+### Two things this run could not close
+
+* **Upstream's own CI workflows came back with the master reset.** `.github/workflows/` now carries
+  the template's set *and* four workflows that belong to the source repository — `build-ig.yml`
+  (*IG Publisher*), `build-profiles.yml` (*Build FHIR Profiles*), `compare-profiles.yml` (*FHIR
+  Profile Comparison*) and `main.yml` (*CI (FHIR Validation)*). A previous attempt had retired them
+  (PR #5); resetting `master` to the pristine mirror correctly restored them, and this migration did
+  not re-retire them. They fail on this branch and their failures are noise on the PR — notably
+  `compare-profiles.yml` tries to `git push` comparison output into `docs/` and exits 128. **Gate A:**
+  decide per workflow whether it is superseded by the template's equivalent or still wanted.
+* **The template's own `validation.yml` (*FHIR validation*) fails** — that is D14: the test fixtures
+  `tests/profiles/profiles.json` and `tests/profiles/valid/example-patient-valid.json` still name the
+  deleted template example.

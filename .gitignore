@@ -21,6 +21,10 @@ node_modules/
 # --- OS / editor noise ---
 .DS_Store
 *.log
+# ...except the migration run logs. The migration report's protocol section is
+# generated FROM migration-log/run.log and cites it by name, so the log has to
+# travel with the report or the protocol is unverifiable from the repo alone.
+!migration-log/*.log
 
 # --- IG Publisher byproducts written into the repo root (2.2.11) ---
 # Regenerated on every build; not migration content.
