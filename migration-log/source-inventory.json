@@ -1,0 +1,609 @@
+{
+  "generated": "2026-08-06T15:19:17Z",
+  "source_repo": "https://github.com/medizininformatik-initiative/kerndatensatz-dokument",
+  "source_commit": "9f76fed80cb810c0f39a263d0162c9c2e64abc1e",
+  "source_shape": "A",
+  "artefacts": [
+    {
+      "kind": "Alias",
+      "name": "$mii-lm-dokument",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-cps-dokument",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-pr-dokument",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-vs-dokument-einrichtungsart",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-vs-dokument-fachgebiet",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-vs-dokument-sct-dokument-kategorie",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-vs-dokument-sct-dokument-typ",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-ex-dokument-nlp-processing-status",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-cs-dokument-nlp-processing-status",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-vs-dokument-nlp-processing-status",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$mii-vs-dokument-format-code",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$cps-exp",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$shared-cs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$shared-vs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$dkgev-fachabteilungsschluessel",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$dvmd-kdl",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$dvmd-kdl-vs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-class-code",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-class-code-vs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-type-code",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-type-code-vs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-event-code-vs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-formatcode",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-formatcode-vs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-format-code-vs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-format-code-intl-vs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-healthcare-facility-type-code-vs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-healthcare-facility-type-code-patient-bezogen-vs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-healthcare-facility-type-code-nicht-patient-bezogen-vs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-patient-bezogene-gesundheitsversorgung",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-practice-setting-code",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-xds-practice-setting-code-vs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-aerztliche-fachrichtungen",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-nicht-aerztliche-fachrichtungen",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$ihe-fallkontext-bei-dokumentenerstellung",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$v2-0203",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$v3-act-code",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$v3-act-reason",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$v3-confidentiality",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$LNC",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$lnc-doc-type-code-vs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$lnc-doc-class-code-vs",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "Alias",
+      "name": "$SCT",
+      "source": "input/fsh/aliases.fsh"
+    },
+    {
+      "kind": "CodeSystem",
+      "name": "MII_CS_Dokument_NLP_Processing_Status",
+      "source": "input/fsh/terminology/mii-cs-dokument-nlp-processing-status.fsh"
+    },
+    {
+      "kind": "ValueSet",
+      "name": "MII_VS_Dokument_Einrichtungsart",
+      "source": "input/fsh/terminology/mii-vs-dokument-einrichtungsart.fsh"
+    },
+    {
+      "kind": "ValueSet",
+      "name": "MII_VS_Dokument_Fachgebiet",
+      "source": "input/fsh/terminology/mii-vs-dokument-fachgebiet.fsh"
+    },
+    {
+      "kind": "ValueSet",
+      "name": "MII_VS_Dokument_Format_Code",
+      "source": "input/fsh/terminology/mii-vs-dokument-format-code.fsh"
+    },
+    {
+      "kind": "ValueSet",
+      "name": "MII_VS_Dokument_NLP_Processing_Status",
+      "source": "input/fsh/terminology/mii-vs-dokument-nlp-processing-status.fsh"
+    },
+    {
+      "kind": "ValueSet",
+      "name": "MII_VS_Dokument_SCT_Dokument_Kategorie",
+      "source": "input/fsh/terminology/mii-vs-dokument-sct-dokument-kategorie.fsh"
+    },
+    {
+      "kind": "ValueSet",
+      "name": "MII_VS_Dokument_SCT_Dokument_Typ",
+      "source": "input/fsh/terminology/mii-vs-dokument-sct-dokument-typ.fsh"
+    },
+    {
+      "kind": "Logical",
+      "name": "MII_LM_Dokument",
+      "source": "input/fsh/logical-model/mii-lm-dokument.fsh"
+    },
+    {
+      "kind": "Mapping",
+      "name": "MII_MAP_Dokument",
+      "source": "input/fsh/logical-model/mii-map-dokument.fsh"
+    },
+    {
+      "kind": "Extension",
+      "name": "MII_EX_Dokument_NLP_Processing_Status",
+      "source": "input/fsh/extensions/mii-ex-dokument-nlp-processing-status.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Header",
+      "source": "input/fsh/common/Header.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "PR_Header",
+      "source": "input/fsh/common/Header.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "EX_Header(url)",
+      "source": "input/fsh/common/Header.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "CS_Header(url)",
+      "source": "input/fsh/common/Header.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "VS_Header(url)",
+      "source": "input/fsh/common/Header.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "LM_Header(url)",
+      "source": "input/fsh/common/Header.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Meta",
+      "source": "input/fsh/common/Meta.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "CS_VS_Meta(url)",
+      "source": "input/fsh/common/Meta.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "CS_Meta(url)",
+      "source": "input/fsh/common/Meta.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "VS_Meta(url)",
+      "source": "input/fsh/common/Meta.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "EX_Meta(url)",
+      "source": "input/fsh/common/Meta.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "LM_Meta(url)",
+      "source": "input/fsh/common/Meta.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Publisher",
+      "source": "input/fsh/common/Publisher.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "SP_Publisher",
+      "source": "input/fsh/common/Publisher.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Status",
+      "source": "input/fsh/common/Status.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Version",
+      "source": "input/fsh/common/Version.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "PR_CS_VS_Version",
+      "source": "input/fsh/common/Version.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "SupportResource(resource,",
+      "source": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Profile(profile,",
+      "source": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "SupportProfile(profile,",
+      "source": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "SupportInteraction(interaction,",
+      "source": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "SupportSearchParam(name,",
+      "source": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Description(path,",
+      "source": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "DescriptionIntl(path,",
+      "source": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "CommentedDescription(path,",
+      "source": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "CommentedDescriptionIntl(path,",
+      "source": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "RuleSet",
+      "name": "Translation(path,",
+      "source": "input/fsh/common/rulesets.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "AmandaAlzheimerAnnotiertesDokument",
+      "source": "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-annotiert.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "AmandaAlzheimerDeIdentifiziertesDokument",
+      "source": "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-de-identifiziert.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "AmandaAlzheimerOriginalDokument",
+      "source": "input/fsh/examples/alzheimer/mii-exa-dokument-document-nlp-original.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "AmandaAlzheimerAbteilungskontakt",
+      "source": "input/fsh/examples/alzheimer/mii-exa-dokument-encounter-abteilungskontakt.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "AmandaAlzheimerEinrichtungskontakt",
+      "source": "input/fsh/examples/alzheimer/mii-exa-dokument-encounter-einrichtungskontakt.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "AmandaAlzheimerVersorgungsstellenKontakt",
+      "source": "input/fsh/examples/alzheimer/mii-exa-dokument-encounter-versorgungstellenkontakt.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "AmandaAlzheimer",
+      "source": "input/fsh/examples/alzheimer/mii-exa-dokument-patient-alzheimer.fsh"
+    },
+    {
+      "kind": "Invariant",
+      "name": "mii-iv-dokument-dokument-category",
+      "source": "input/fsh/profiles/mii-iv-dokument-dokument-category.fsh"
+    },
+    {
+      "kind": "Invariant",
+      "name": "mii-iv-dokument-dokument-type",
+      "source": "input/fsh/profiles/mii-iv-dokument-dokument-type.fsh"
+    },
+    {
+      "kind": "Profile",
+      "name": "MII_PR_Dokument_Dokument",
+      "source": "input/fsh/profiles/mii-pr-dokument-dokument.fsh"
+    },
+    {
+      "kind": "Instance",
+      "name": "mii-cps-dokument-capabilitystatement",
+      "source": "input/fsh/definitions/mii-cps-dokument-capabilitystatement.fsh"
+    }
+  ],
+  "narrative": [
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Beschreibung.page.md",
+      "lines": 24
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/HinweisTemplate.page.md",
+      "lines": 4
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Index.page.md",
+      "lines": 58
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Kontext-Bezuege.page.md",
+      "lines": 33
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Referenzen.page.md",
+      "lines": 27
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/Release-Notes.page.md",
+      "lines": 17
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/CapabilityStatement.page.md",
+      "lines": 18
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Conformance.page.md",
+      "lines": 73
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Index.page.md",
+      "lines": 6
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Kompatibilitaet.page.md",
+      "lines": 177
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/Terminologien.page.md",
+      "lines": 192
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Dokument-DocumentReference.page.md",
+      "lines": 322
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/Index.page.md",
+      "lines": 106
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/NLP-Processing-Status-Extension.page.md",
+      "lines": 133
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Datensaetze.page.md",
+      "lines": 50
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Index.page.md",
+      "lines": 6
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/Szenarien.page.md",
+      "lines": 47
+    },
+    {
+      "page": "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/UML.page.md",
+      "lines": 14
+    },
+    {
+      "page": "input/pagecontent/index.md",
+      "lines": 3
+    }
+  ],
+  "assets": [
+    "implementation-guides/images/.gitkeep",
+    "implementation-guides/images/ExterneDokumentennutzung.png",
+    "implementation-guides/images/Informationsmodell.png",
+    "implementation-guides/images/InterneDokumentennutzung.png",
+    "implementation-guides/images/NLP-Pipeline.png",
+    "implementation-guides/images/Paketabhaengigkeiten.png",
+    "implementation-guides/images/Warning.jpg",
+    "implementation-guides/mii-ig-dokument-de/styles/MIICustomIGStyle/master.html",
+    "implementation-guides/mii-ig-dokument-de/styles/MIICustomIGStyle/settings.style",
+    "implementation-guides/mii-ig-dokument-de/styles/MIICustomIGStyle/style.css",
+    "implementation-guides/binaries/Amanda_Alzheimer.txt",
+    "implementation-guides/binaries/Annotat.zip",
+    "implementation-guides/binaries/De-ID.txt",
+    "input/plantuml/Informationsmodell.png",
+    "input/plantuml/Informationsmodell.puml",
+    "input/plantuml/Informationsmodell.svg",
+    "input/plantuml/NLP-Pipeline.png",
+    "input/plantuml/NLP-Pipeline.puml",
+    "input/plantuml/NLP-Pipeline.svg",
+    "input/plantuml/Paketabhaengigkeiten.png",
+    "input/plantuml/Paketabhaengigkeiten.puml",
+    "input/plantuml/Paketabhaengigkeiten.svg",
+    "input/plantuml/Anwendungsszenarien/ExterneDokumentennutzung.png",
+    "input/plantuml/Anwendungsszenarien/ExterneDokumentennutzung.puml",
+    "input/plantuml/Anwendungsszenarien/ExterneDokumentennutzung.svg",
+    "input/plantuml/Anwendungsszenarien/InterneDokumentennutzung.png",
+    "input/plantuml/Anwendungsszenarien/InterneDokumentennutzung.puml",
+    "input/plantuml/Anwendungsszenarien/InterneDokumentennutzung.svg"
+  ],
+  "guide_trees": [
+    {
+      "tree": "implementation-guides/mii-ig-dokument-de",
+      "language": "de",
+      "version": "2026.0.1",
+      "pages": 18,
+      "disposition": "authoritative — the ONLY guide tree; no parallel-language and no historical tree exists (spec 5.1a)"
+    }
+  ],
+  "generated_resources": [
+    "CapabilityStatement-mii-cps-dokument-capabilitystatement.json",
+    "CodeSystem-mii-cs-dokument-nlp-processing-status.json",
+    "DocumentReference-AmandaAlzheimerAnnotiertesDokument.json",
+    "DocumentReference-AmandaAlzheimerDeIdentifiziertesDokument.json",
+    "DocumentReference-AmandaAlzheimerOriginalDokument.json",
+    "Encounter-AmandaAlzheimerAbteilungskontakt.json",
+    "Encounter-AmandaAlzheimerEinrichtungskontakt.json",
+    "Encounter-AmandaAlzheimerVersorgungsstellenKontakt.json",
+    "ImplementationGuide-mii-ig-dokument.json",
+    "Patient-AmandaAlzheimer.json",
+    "StructureDefinition-mii-ex-dokument-nlp-processing-status.json",
+    "StructureDefinition-mii-lm-dokument.json",
+    "StructureDefinition-mii-pr-dokument-dokument.json",
+    "ValueSet-mii-vs-dokument-einrichtungsart.json",
+    "ValueSet-mii-vs-dokument-fachgebiet.json",
+    "ValueSet-mii-vs-dokument-format-code.json",
+    "ValueSet-mii-vs-dokument-nlp-processing-status.json",
+    "ValueSet-mii-vs-dokument-sct-dokument-kategorie.json",
+    "ValueSet-mii-vs-dokument-sct-dokument-typ.json"
+  ],
+  "toc": [
+    "implementation-guides/mii-ig-dokument-de/guide.yaml",
+    "implementation-guides/mii-ig-dokument-de/toc.yaml",
+    "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/toc.yaml",
+    "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/toc.yaml",
+    "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/TechnischeImplementierung/FHIRProfile/toc.yaml",
+    "implementation-guides/mii-ig-dokument-de/MIIIGModulDokument/AnwendungsflleInformationsmodell/toc.yaml"
+  ]
+}

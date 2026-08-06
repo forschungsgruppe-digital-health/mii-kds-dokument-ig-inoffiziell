@@ -1,0 +1,43 @@
+2026-08-06T15:17:44Z	packageId	P	package/package.json	de.medizininformatikinitiative.kerndatensatz.dokument	2.1	package-identity
+2026-08-06T15:17:44Z	version	P	package/package.json	2026.0.1	2.1	package-identity
+2026-08-06T15:17:44Z	description	P	package/package.json	Medizininformatik Initiative - Modul Dokument	2.1	package-identity
+2026-08-06T15:17:44Z	fhirVersions	P	package/package.json	["4.0.1"]	2.1	package-identity
+2026-08-06T15:17:44Z	jurisdiction	P	package/package.json	http://unstats.un.org/unsd/methods/m49/m49.htm#276	2.1	package-identity
+2026-08-06T15:17:44Z	canonical	P	package/package.json	https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument	2.1	package-identity
+2026-08-06T15:17:44Z	title	P	package/package.json	MII IG Dokument	2.1	package-identity
+2026-08-06T15:17:44Z	license	P	package/package.json	CC0-1.0	2.1	package-identity
+2026-08-06T15:17:44Z	homepage	P	package/package.json	https://www.medizininformatik-initiative.de	2.1	package-identity
+2026-08-06T15:17:44Z	dependency:de.ihe-d.terminology	P	package/package.json (source pin)	3.0.1	2.1	package-identity
+2026-08-06T15:17:44Z	dependency:de.medizininformatikinitiative.kerndatensatz.base	P	package/package.json (source pin)	2026.0.0	2.1	package-identity
+2026-08-06T15:17:44Z	dependency:de.medizininformatikinitiative.kerndatensatz.meta	P	package/package.json (source pin)	2026.0.0	2.1	package-identity
+2026-08-06T15:17:44Z	dependency:dvmd.kdl.r4	P	package/package.json (source pin)	2025.0.1	2.1	package-identity
+2026-08-06T15:17:44Z	dependency:ihe.formatcode.fhir	P	package/package.json (source pin)	1.4.0	2.1	package-identity
+2026-08-06T15:17:44Z	canonical	P	packaged resource urls (10 of 10 agree)	https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument	2.1	package-identity
+2026-08-06T15:18:08Z	title	R	README.md first heading	Medizininformatik-Initiative KDS-Modul Dokument	2.1	repo-identity
+2026-08-06T15:18:29Z	id	C	sushi-config.yaml (repo root, source commit 9f76fed)	mii-ig-dokument	2.1	read-identity
+2026-08-06T15:18:29Z	name	C	sushi-config.yaml (repo root, source commit 9f76fed)	MII_IG_Dokument	2.1	read-identity
+2026-08-06T15:18:29Z	title	C	sushi-config.yaml (repo root, source commit 9f76fed)	MII IG Dokument	2.1	read-identity
+2026-08-06T15:18:29Z	description	C	sushi-config.yaml (repo root, source commit 9f76fed)	Medizininformatik Initiative - KDS-Modul Dokument	2.1	read-identity
+2026-08-06T15:18:29Z	canonical	C	sushi-config.yaml (repo root, source commit 9f76fed)	https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument	2.1	read-identity
+2026-08-06T15:18:29Z	packageId	C	sushi-config.yaml (repo root, source commit 9f76fed)	de.medizininformatikinitiative.kerndatensatz.dokument	2.1	read-identity
+2026-08-06T15:18:29Z	version	C	sushi-config.yaml (repo root, source commit 9f76fed)	2026.0.1	2.1	read-identity
+2026-08-06T15:18:29Z	status	C	sushi-config.yaml (repo root, source commit 9f76fed)	draft	2.1	read-identity
+2026-08-06T15:18:29Z	releaseLabel	C	sushi-config.yaml (repo root, source commit 9f76fed)	ci-build	2.1	read-identity
+2026-08-06T15:18:29Z	license	C	sushi-config.yaml (repo root, source commit 9f76fed)	CC0-1.0	2.1	read-identity
+2026-08-06T15:18:29Z	copyrightYear	C	sushi-config.yaml (repo root, source commit 9f76fed)	2026+	2.1	read-identity
+2026-08-06T15:18:29Z	jurisdiction	C	sushi-config.yaml (repo root, source commit 9f76fed)	http://unstats.un.org/unsd/methods/m49/m49.htm#276	2.1	read-identity
+2026-08-06T15:18:29Z	fhirVersion	C	sushi-config.yaml (repo root, source commit 9f76fed)	4.0.1	2.1	read-identity
+2026-08-06T15:18:29Z	publisher	C	sushi-config.yaml (repo root, source commit 9f76fed)	Medizininformatik-Initiative	2.1	read-identity
+2026-08-06T15:18:30Z	title	J	package.json (repo root, source commit 9f76fed)	MII IG Dokument	2.1	read-identity
+2026-08-06T15:18:30Z	license	J	package.json (repo root, source commit 9f76fed)	CC0-1.0	2.1	read-identity
+2026-08-06T15:18:30Z	packageId	J	package.json (repo root, source commit 9f76fed)	de.medizininformatikinitiative.kerndatensatz.dokument	2.1	read-identity
+2026-08-06T15:18:30Z	version	J	package.json (repo root, source commit 9f76fed)	2026.0.1	2.1	read-identity
+2026-08-06T15:18:30Z	canonical	J	package.json (repo root, source commit 9f76fed)	https://www.medizininformatik-initiative.de/fhir/ext/modul-dokument/ImplementationGuide/mii-ig-dokument	2.1	read-identity
+2026-08-06T15:18:53Z	id	I	fsh-generated/resources/ImplementationGuide-mii-ig-dokument.json (generated, source commit)	mii-ig-dokument	2.1	read-identity
+2026-08-06T15:18:53Z	name	I	fsh-generated/resources/ImplementationGuide-mii-ig-dokument.json (generated, source commit)	MII_IG_Dokument	2.1	read-identity
+2026-08-06T15:18:53Z	version	I	fsh-generated/resources/ImplementationGuide-mii-ig-dokument.json (generated, source commit)	2026.0.1	2.1	read-identity
+2026-08-06T15:18:53Z	status	I	fsh-generated/resources/ImplementationGuide-mii-ig-dokument.json (generated, source commit)	draft	2.1	read-identity
+2026-08-06T15:18:53Z	license	I	fsh-generated/resources/ImplementationGuide-mii-ig-dokument.json (generated, source commit)	CC0-1.0	2.1	read-identity
+2026-08-06T15:18:53Z	packageId	I	fsh-generated/resources/ImplementationGuide-mii-ig-dokument.json (generated, source commit)	de.medizininformatikinitiative.kerndatensatz.dokument	2.1	read-identity
+2026-08-06T15:18:53Z	title	I	fsh-generated/resources/ImplementationGuide-mii-ig-dokument.json (generated, source commit)	MII IG Dokument	2.1	read-identity
+2026-08-06T15:18:53Z	publisher	I	fsh-generated/resources/ImplementationGuide-mii-ig-dokument.json (generated, source commit)	Medizininformatik-Initiative	2.1	read-identity

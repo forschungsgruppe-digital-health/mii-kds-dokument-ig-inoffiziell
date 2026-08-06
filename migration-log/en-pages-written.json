@@ -1,0 +1,18 @@
+[
+  "capability-statements.md",
+  "changes.md",
+  "conformance.md",
+  "datasets-and-descriptions.md",
+  "examples.md",
+  "general-requirements.md",
+  "guidance.md",
+  "implementer-guidance.md",
+  "index.md",
+  "logical-models.md",
+  "missing-data.md",
+  "must-support.md",
+  "profiles-and-extensions.md",
+  "search-parameters-and-operations.md",
+  "terminology.md",
+  "uml-diagrams.md"
+]
